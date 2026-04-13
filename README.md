@@ -85,15 +85,15 @@
 
 | 天数       | 任务描述                                           | 交付产出物                       | 依赖项                | Trae 辅助点           |
 | :--------- | :------------------------------------------------- | :------------------------------- | :-------------------- | :-------------------- |
-**  初始化Django/Flask环境，配置Redis缓存。| `settings.py`, `redis_config.py` |无|自动生成后端配置|
-**  扩展数据库表结构，提供前端所需的Mock接口。| `models.py`, `mock_views.py`     |前端需求清单|自动生成SQL与Mock|
-**  实现`/api/v2/predict/disease``（增强原有功能）。| `disease_api.py`                 |无|编写 API 视图逻辑|
-** 实现`/api/v2/predict/ggi``（调用人员B的推理类）。| `ggi_api.py`                     |人员B的`engine.py` |处理异步计算队列|
-**  开发网络数据聚合接口，支持虚实线字段区分。| `network_api.py`                 |无|编写图数据聚合算法|
-****  编写统一的异常处理机制与API文档。| `middleware.py`, `swagger.json`  |无|自动生成Swagger文档|
-**  前端与模型联调，确保全量数据流转通畅。| `集成日志`                |前端A & 模型B|诊断跨域与格式错误|
-**  |配置Docker容器化环境，优化Nginx静态分发。| `Dockerfile`, `nginx.conf`       |无|自动生成部署配置文件|
-| **第9天**  |编写自动化测试脚本，进行全量压力测试。| `test_suite.py`                  |无|自动生成测试用例|
+| **Day 1**  | 初始化 Django/Flask 环境，配置 Redis 缓存。        | `settings.py`, `redis_config.py` | 无                    | 自动生成后端配置      |
+| **Day 2**  | 扩展数据库表结构，提供前端所需的 Mock 接口。       | `models.py`, `mock_views.py`     | 前端需求清单          | 自动生成 SQL 与 Mock  |
+| **Day 3**  | 实现 `/api/v2/predict/disease` (增强原有功能)。    | `disease_api.py`                 | 无                    | 编写 API 视图逻辑     |
+| **Day 4**  | 实现 `/api/v2/predict/ggi` (调用人员 B 的推理类)。 | `ggi_api.py`                     | 人员 B 的 `engine.py` | 处理异步计算队列      |
+| **Day 5**  | 开发网络数据聚合接口，支持虚实线字段区分。         | `network_api.py`                 | 无                    | 编写图数据聚合算法    |
+| **Day 6**  | 编写统一的异常处理机制与 API 文档。                | `middleware.py`, `swagger.json`  | 无                    | 自动生成 Swagger 文档 |
+| **Day 7**  | 联调前端与模型，确保全量数据流转通畅。             | `Integration_Log`                | 前端 A & 模型 B       | 诊断跨域与格式错误    |
+| **Day 8**  | 配置 Docker 容器化环境，优化 Nginx 静态分发。      | `Dockerfile`, `nginx.conf`       | 无                    | 自动生成部署配置文件  |
+| **Day 9**  | 编写自动化测试脚本，进行全量压力测试。             | `test_suite.py`                  | 无                    | 自动生成测试用例      |
 | **Day 10** | 汇总项目文档，完成最终系统集成。                   | 最终项目交付包                   | 全员成果              | 整理并汇总技术报告    |
 
 ---
