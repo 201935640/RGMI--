@@ -1,0 +1,693 @@
+[
+  {
+    "disease_id": "C0007786",
+    "name": "Ischemic encephalopathy",
+    "definition": "Localized reduction of blood flow to brain tissue due to arterial obstruction or systemic hypoperfusion. This frequently occurs in conjunction with brain hypoxia (HYPOXIA, BRAIN). Prolonged ischemia is associated with BRAIN INFARCTION.",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6351",
+        "5321",
+        "360",
+        "596",
+        "3725",
+        "2912",
+        "6776",
+        "3588",
+        "1440",
+        "3976"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-429",
+        "rno-miR-217-3p",
+        "hsa-miR-410-3p",
+        "hsa-miR-24-3p",
+        "hsa-let-7f-5p",
+        "hsa-let-7c",
+        "rno-miR-375-3p",
+        "rno-miR-7a-5p",
+        "rno-miR-429",
+        "hsa-miR-135b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0948008",
+    "name": "Ischemic stroke",
+    "definition": "A stroke is an acute neurologic event leading to death of neural tissue of the brain and resulting in loss of motor, sensory and/or cognitive function. It is said to be the third leading cause of death in the United States. Gunel and Lifton (1996) noted that about 20% of strokes are hemorrhagic, resulting in bleeding into the brain. Ischemic strokes, resulting from vascular occlusion, account for the majority of strokes. Bersano et al. (2008) reviewed genetic polymorphisms that have been implicated in the development of stroke. Candidate genes include those involved in hemostasis (see, e.g., F5; 612309), the renin-angiotensin-aldosterone system (see, e.g., ACE; 106180), homocysteine (see, e.g., MTHFR; 607093), and lipoprotein metabolism (see, e.g., APOE; 107741). See also hemorrhagic stroke, or intracerebral hemorrhage (ICH; 614519).",
+    "similarity": 0.9864935874938965,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "1577",
+        "340348",
+        "2669",
+        "3898",
+        "462",
+        "55349",
+        "2821",
+        "55638",
+        "410"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-126a-5p",
+        "hsa-miR-361-3p",
+        "hsa-miR-98-5p",
+        "hsa-miR-151a-3p",
+        "hsa-miR-1287-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-127-3p",
+        "hsa-miR-29c-5p",
+        "hsa-miR-34c-3p",
+        "hsa-miR-34b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027055",
+    "name": "Myocardial Reperfusion Injury",
+    "definition": "Damage to the MYOCARDIUM resulting from MYOCARDIAL REPERFUSION (restoration of blood flow to ischemic areas of the HEART.) Reperfusion takes place when there is spontaneous thrombolysis, THROMBOLYTIC THERAPY, collateral flow from other coronary vascular beds, or reversal of vasospasm.",
+    "similarity": 0.9802695512771606,
+    "attributes": {
+      "semantictype": "Pathologic Function",
+      "associated_gene_names": [
+        "331",
+        "10019",
+        "6548",
+        "5467",
+        "7412",
+        "5733",
+        "6546",
+        "513",
+        "22914",
+        "154"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-3099-5p",
+        "mmu-miR-1224-3p",
+        "mmu-miR-144-3p",
+        "mmu-miR-194-5p",
+        "mmu-miR-132-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-138-5p",
+        "mmu-miR-17-5p",
+        "rno-miR-1-3p",
+        "rno-miR-19a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0243026",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9795094728469849,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "728",
+        "5319",
+        "6857",
+        "56940",
+        "1673",
+        "705",
+        "6929",
+        "1909",
+        "3263"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-5132-3p",
+        "mmu-miR-125b-5p",
+        "mmu-miR-125a-5p",
+        "mmu-miR-181c-3p",
+        "hsa-miR-545-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-132-3p",
+        "mmu-miR-203-3p",
+        "mmu-miR-182-5p",
+        "mmu-miR-129-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0034069",
+    "name": "Pulmonary fibrosis",
+    "definition": "Replacement of normal lung tissues by fibroblasts and collagen.",
+    "similarity": 0.978751540184021,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "871",
+        "56288",
+        "2922",
+        "5321",
+        "64798",
+        "1440",
+        "6591",
+        "3326",
+        "1237"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-484",
+        "hsa-miR-218-5p",
+        "hsa-miR-212-3p",
+        "rno-miR-27a-3p",
+        "rno-miR-21-3p",
+        "hsa-miR-18a-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-122-3p",
+        "hsa-miR-214-3p",
+        "mmu-miR-30a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020443",
+    "name": "Hypercholesterolemia",
+    "definition": "An increased concentration of cholesterol in the blood.",
+    "similarity": 0.9784477949142456,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "9367",
+        "1066",
+        "8856",
+        "7124",
+        "54541",
+        "6754",
+        "7097",
+        "55775",
+        "3308"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4667-5p",
+        "hsa-miR-3609",
+        "hsa-miR-1244",
+        "hsa-miR-30b-5p",
+        "hsa-miR-33b-3p",
+        "hsa-miR-483-5p",
+        "hsa-miR-33a-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-126-5p",
+        "mmu-miR-128-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0242383",
+    "name": "Age-related macular degeneration",
+    "definition": "Age-related macular degeneration mainly affects central vision, which is needed for detailed tasks such as reading, driving, and recognizing faces. The vision loss in this condition results from a gradual deterioration of light-sensing cells in the tissue at the back of the eye that detects light and color (the retina). Specifically, age-related macular degeneration affects a small area near the center of the retina, called the macula, which is responsible for central vision. Side (peripheral) vision and night vision are generally not affected, but slow adjustment of vision to darkness (dark adaptation) and reduced dim light (scotopic) vision often occur in the early stages of the disease.\\n\\nIn 10 to 15 percent of affected individuals, the dry form progresses to the wet form of age-related macular degeneration. The wet form is characterized by the growth of abnormal, fragile blood vessels underneath the macula. These vessels leak blood and fluid, which damages the macula and makes central vision appear blurry and distorted. The wet form of age-related macular degeneration is associated with severe vision loss that can worsen rapidly.\\n\\nResearchers have described two major types of age-related macular degeneration, known as the dry form and the wet form. The dry form is much more common, accounting for 85 to 90 percent of all cases of age-related macular degeneration. It is characterized by a buildup of yellowish deposits called drusen beneath the retina and vision loss that worsens slowly over time. The most advanced stage of dry age-related macular degeneration is known as geographic atrophy, in which areas of the macula waste away (atrophy), resulting in severe vision loss. Dry age-related macular degeneration typically affects vision in both eyes, although vision loss often occurs in one eye before the other.\\n\\nAge-related macular degeneration is an eye disease that is a leading cause of vision loss in older people in developed countries. Subtle abnormalities indicating changes in vision may occur in a person's forties or fifties. Distorted vision and vision loss usually become noticeable in a person's sixties or seventies and tend to worsen over time.",
+    "similarity": 0.9777737259864807,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "27306",
+        "857",
+        "122402",
+        "30813",
+        "51129",
+        "2331",
+        "7096",
+        "25978",
+        "2669"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-6499-3p",
+        "hsa-miR-17-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-320a-3p",
+        "hsa-miR-340-3p",
+        "hsa-miR-184",
+        "hsa-mir-17"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0009324",
+    "name": "Ulcerative colitis",
+    "definition": "A chronic inflammatory bowel disease that includes characteristic ulcers, or open sores, in the colon. The main symptom of active disease is usually constant diarrhea mixed with blood, of gradual onset and intermittent periods of exacerbated symptoms contrasting with periods that are relatively symptom-free. In contrast to Crohn's disease this special form of colitis begins in the distal parts of the rectum, spreads continually upwards and affects only mucose and submucose tissue of the colon.",
+    "similarity": 0.9776328802108765,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7481",
+        "7124",
+        "5319",
+        "6857",
+        "438",
+        "1673",
+        "6776",
+        "6667",
+        "23418",
+        "655"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-223",
+        "rno-miR-98-5p",
+        "hsa-miR-155-3p",
+        "hsa-let-7i-5p",
+        "hsa-miR-183-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-140-3p",
+        "mmu-miR-31-3p",
+        "hsa-miR-133a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0014070",
+    "name": "Encephalomyelitis",
+    "definition": "A disorder characterised by inflammation of both the brain and the spinal cord.",
+    "similarity": 0.9775478839874268,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "84634",
+        "114836",
+        "54474",
+        "154",
+        "10803",
+        "3263",
+        "6857",
+        "5319",
+        "596",
+        "9481"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-25-3p",
+        "hsa-miR-331-3p",
+        "hsa-let-7d",
+        "hsa-miR-409-3p",
+        "hsa-miR-326",
+        "hsa-miR-24-3p",
+        "hsa-let-7f-5p",
+        "hsa-let-7c",
+        "hsa-miR-339-3p",
+        "rno-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0036472",
+    "name": "Scrub typhus",
+    "definition": "Scrub typhus is a rare dust mite-borne infectious disease caused by the <i>Orientia tsutsugamushi</i> bacterium and characterized clinically by an eruptive fever which is potentially serious.",
+    "similarity": 0.9766665697097778,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "51182",
+        "7965",
+        "3439",
+        "2875",
+        "6857",
+        "3725",
+        "3727",
+        "7097",
+        "7124"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-30e-5p",
+        "mmu-miR-484",
+        "mmu-miR-378a-3p",
+        "mmu-miR-192-5p",
+        "mmu-let-7a-5p",
+        "mmu-miR-434-3p",
+        "mmu-miR-103-3p",
+        "mmu-miR-186-5p",
+        "mmu-let-7d-5p",
+        "mmu-miR-133a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C3250443",
+    "name": "Steinert myotonic dystrophy syndrome",
+    "definition": "Myotonic dystrophy type 1 (DM1) is a multisystem disorder that affects skeletal and smooth muscle as well as the eye, heart, endocrine system, and central nervous system. The clinical findings, which span a continuum from mild to severe, have been categorized into three somewhat overlapping phenotypes: mild, classic, and congenital. Mild DM1 is characterized by cataract and mild myotonia (sustained muscle contraction); life span is normal. Classic DM1 is characterized by muscle weakness and wasting, myotonia, cataract, and often cardiac conduction abnormalities; adults may become physically disabled and may have a shortened life span. Congenital DM1 is characterized by hypotonia and severe generalized weakness at birth, often with respiratory insufficiency and early death; intellectual disability is common.",
+    "similarity": 0.9751348495483398,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "26033",
+        "2669",
+        "3811",
+        "7124",
+        "2065",
+        "4982",
+        "4318",
+        "6366",
+        "3187",
+        "5891"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-215-3p",
+        "hsa-miR-518e-3p",
+        "mmu-miR-17-3p",
+        "mmu-miR-26a-5p",
+        "mmu-miR-146b-3p",
+        "mmu-miR-18a-3p",
+        "mmu-miR-34b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-181c-3p",
+        "mmu-miR-181a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0151650",
+    "name": "Renal fibrosis",
+    "definition": "Renal fibrosis is the consequence of an excessive accumulation of extracellular matrix that occurs in virtually every type of chronic kidney disease.",
+    "similarity": 0.9749263525009155,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5594",
+        "26503",
+        "7097",
+        "152007",
+        "25",
+        "4233",
+        "596",
+        "1080",
+        "54778",
+        "655"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-299a-5p",
+        "mmu-miR-200b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-129-5p",
+        "hsa-miR-214-3p",
+        "mmu-miR-146b-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-382-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020456",
+    "name": "Hyperglycemia",
+    "definition": "An increased concentration of glucose in the blood.",
+    "similarity": 0.9741315841674805,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "7450",
+        "3673",
+        "3725",
+        "596",
+        "84701",
+        "3308",
+        "1545",
+        "5914",
+        "115123",
+        "3727"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-125a-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-141-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-26a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0017668",
+    "name": "Focal segmental glomerulosclerosis",
+    "definition": "Segmental accumulation of scar tissue in individual (but not all) glomeruli.",
+    "similarity": 0.9736037254333496,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "8573",
+        "578",
+        "9349",
+        "55558",
+        "4619",
+        "1282",
+        "1894",
+        "4628",
+        "10096",
+        "23417"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-1915",
+        "hsa-miR-30a-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-150-3p",
+        "hsa-miR-490-3p",
+        "hsa-miR-30b-3p",
+        "hsa-miR-34a-3p",
+        "hsa-miR-193a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-186-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0520679",
+    "name": "Obstructive sleep apnea syndrome",
+    "definition": "Obstructive sleep apnea is a common, chronic, complex disease associated with serious cardiovascular and neuropsychologic sequelae and with substantial social and economic costs (Palmer et al., 2003).",
+    "similarity": 0.9715589284896851,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "472",
+        "4204",
+        "3280",
+        "7124",
+        "345643",
+        "6462",
+        "4810",
+        "1291",
+        "7097"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-1955-5p",
+        "mmu-miR-3098-5p",
+        "rno-miR-126a-3p",
+        "mmu-miR-326-5p",
+        "hsa-miR-320e",
+        "hsa-miR-224-5p",
+        "mmu-miR-3086-3p",
+        "mmu-miR-298-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-145-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0001787",
+    "name": "Age-related osteoporosis",
+    "definition": "No definition",
+    "similarity": 0.9714781045913696,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3418",
+        "6776",
+        "5686",
+        "6648",
+        "4982",
+        "8600",
+        "1588",
+        "6462",
+        "57154",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-374b-5p",
+        "hsa-miR-942-5p",
+        "hsa-miR-212-3p",
+        "hsa-miR-195-5p",
+        "hsa-miR-93-3p",
+        "hsa-miR-18a-3p",
+        "hsa-miR-135b-5p",
+        "hsa-miR-129-5p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-132-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0221406",
+    "name": "Pituitary dependent hypercortisolism",
+    "definition": "Adrenocorticotropic hormone (ACTH) hypersecretion by corticotroph adenomas of the pituitary result in excess cortisol secretion, or Cushing disease. The clinical features of Cushing disease include central obesity, moon facies, 'buffalo hump,' diabetes, hypertension, fatigue, easy bruising, depression, and reproductive disorders. Cushing disease is associated with increased morbidity and mortality, mainly due to cardiovascular or cerebrovascular disease and infections (summary by Perez-Rivas et al., 2015). Mutations in the USP8 gene, leading to an upregulated epidermal growth factor receptor (EGFR; 131550) pathway, have been identified in about 36 to 62% of corticotroph adenomas (summary by Mete and Lopes, 2017).",
+    "similarity": 0.9707283973693848,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5594",
+        "3164",
+        "652",
+        "3553",
+        "3290",
+        "553",
+        "2695",
+        "1027",
+        "2048",
+        "51738"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-211-5p",
+        "hsa-miR-145-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-16-1-3p",
+        "hsa-miR-345-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-16-2-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-141-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011570",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9706538915634155,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "5324",
+        "5319",
+        "438",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "154",
+        "3351"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011581",
+    "name": "Depression",
+    "definition": "Frequently experiencing feelings of being down, miserable, and/or hopeless; struggling to recover from these moods; having a pessimistic outlook on the future; feeling a pervasive sense of shame; having a low self-worth; experiencing thoughts of suicide and engaging in suicidal behavior.",
+    "similarity": 0.9706016778945923,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "1813",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "54832",
+        "154",
+        "3351",
+        "27286"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0009319",
+    "name": "Colitis",
+    "definition": "Ulcerative colitis is a chronic disorder that affects the digestive system. This condition is characterized by abnormal inflammation of the inner surface (epithelium) of the rectum and colon. The rectum and colon make up most of the length of the large intestine. The inflammation usually causes open sores (ulcers) to develop in the large intestine. Ulcerative colitis usually appears between the age of 15 and 30, although it can develop at any age. The inflammation tends to flare up multiple times throughout a person's life, which causes recurring signs and symptoms.\\n\\nThe most common symptoms of ulcerative colitis are cramping abdominal pain and frequent diarrhea, often with blood, pus, or mucus in the stool. Other signs and symptoms include nausea, loss of appetite, bowel urgency, fatigue, and fevers. Chronic bleeding from the inflamed and ulcerated intestinal tissue can cause a shortage of red blood cells (anemia) in some affected individuals. People with this disorder have difficulty absorbing enough fluids and nutrients from their diet and often experience weight loss. Affected children usually grow more slowly than normal. Less commonly, ulcerative colitis causes problems with the skin, joints, eyes, kidneys, or liver, which are most likely due to abnormal inflammation.\\n\\nToxic megacolon is a rare complication of ulcerative colitis that can be life-threatening. Toxic megacolon involves a widening (dilation) of the colon and an overwhelming inflammatory response. Ulcerative colitis also increases the risk of developing colon cancer, especially in people whose entire colon is inflamed and in those who have had ulcerative colitis for 8 years or more.\\n\\nUlcerative colitis is one common form of inflammatory bowel disease (IBD). Another type of IBD, Crohn's disease, also causes chronic inflammation of the intestines. Unlike ulcerative colitis, which affects only the inner surface of the large intestine, Crohn's disease can cause inflammation in any part of the digestive system, and the inflammation extends deeper into the intestinal tissue.",
+    "similarity": 0.9701984524726868,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3698",
+        "197259",
+        "682",
+        "23476",
+        "3557",
+        "4544",
+        "4953",
+        "3581",
+        "728",
+        "2770"
+      ],
+      "associated_miRNA_names": [
+        "mmu-let-7k",
+        "hsa-miR-491-3p",
+        "mmu-miR-124-3p",
+        "hsa-miR-146a-3p",
+        "hsa-let-7e",
+        "hsa-miR-133a-3p",
+        "mmu-miR-31-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-155-3p",
+        "hsa-miR-146b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0745103",
+    "name": "Hypercholesterolemia, familial, 1",
+    "definition": "Familial hypercholesterolemia (FH) is characterized by significantly elevated low-density lipoprotein cholesterol (LDL-C) that leads to atherosclerotic plaque deposition in the coronary arteries and proximal aorta at an early age and increases the risk of premature cardiovascular events such as angina and myocardial infarction; stroke occurs more rarely. Xanthomas (cholesterol deposits in tendons) may be visible in the Achilles tendons or tendons of the hands and worsen with age as a result of extremely high cholesterol levels. Xanthelasmas (yellowish, waxy deposits) can occur around the eyelids. Individuals with FH may develop corneal arcus (white, gray, or blue opaque ring in the corneal margin as a result of cholesterol deposition) at a younger age than those without FH. Individuals with a more severe phenotype, often as a result of biallelic variants, can present with very significant elevations in LDL-C (>500 mg/dL), early-onset coronary artery disease (CAD; presenting as early as childhood in some), and calcific aortic valve disease.",
+    "similarity": 0.9695349931716919,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2729",
+        "4982",
+        "55349",
+        "1298",
+        "241",
+        "6929",
+        "6667",
+        "5554",
+        "84174",
+        "7124"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4667-5p",
+        "hsa-miR-3609",
+        "hsa-miR-1244",
+        "hsa-miR-30b-5p",
+        "hsa-miR-33b-3p",
+        "hsa-miR-483-5p",
+        "hsa-miR-33a-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-126-5p",
+        "mmu-miR-128-3p"
+      ]
+    }
+  }
+]

@@ -1,0 +1,689 @@
+[
+  {
+    "disease_id": "C0154409",
+    "name": "Recurrent major depressive episodes",
+    "definition": "Evidence of major depressive disorder, recurrent.",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "1576",
+        "551",
+        "627",
+        "10611",
+        "1815",
+        "6532",
+        "3084",
+        "775",
+        "553",
+        "2917"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1269683",
+    "name": "Major depressive disorder",
+    "definition": "Depression (also known as major depression or major depressive disorder) is a psychiatric disorder that affects mood, behavior, and overall health. It causes prolonged feelings of sadness, emptiness, or hopelessness, and a loss of interest in activities that were once enjoyed. People with depression may also have changes in appetite (leading to overeating or not eating enough), changes in sleeping patterns (sleeping too much or not being able to sleep), loss of energy, and difficulty concentrating. Although depression is considered primarily a mental health disorder, it can also have physical features including headaches, other unexplained aches and pains, unusually slow or fast movements, and digestive problems. To be diagnosed with depression, an individual must have signs and symptoms nearly every day for at least 2 weeks. However, the features of this condition vary widely.\\n\\nDepression most commonly begins in late adolescence or early adulthood, although it can appear at any age. If untreated, episodes of depression can last for weeks, months, or years, and can go away and come back (recur). Affected individuals may have difficulty functioning in their daily lives, including at school or work. People with depression have a higher risk of substance abuse problems and dying by suicide than the general population.\\n\\nSeveral health conditions are closely related to depression or have depression as a characteristic feature. These include dysthymia (which has long-lasting signs and symptoms that are similar to, but not as severe as, those of depression), perinatal or postpartum depression (which occurs around or following the birth of a child), seasonal affective disorder (which is triggered by the changing of the seasons), bipolar disorder (which can include both \"highs,\" or manic episodes, and depressive episodes), and generalized anxiety disorder. In people with schizoaffective disorder, depression or another mood disorder occurs together with features of schizophrenia (a brain disorder that affects a person's thinking, sense of self, and perceptions).",
+    "similarity": 0.966022789478302,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "2623",
+        "57084",
+        "10777",
+        "6929",
+        "1909",
+        "84650",
+        "8859",
+        "3351",
+        "1440",
+        "5173"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011570",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9651238322257996,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "5324",
+        "5319",
+        "438",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "154",
+        "3351"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003469",
+    "name": "Anxiety disorder",
+    "definition": "A category of psychiatric disorders which are characterized by anxious feelings or fear often accompanied by physical symptoms associated with anxiety.",
+    "similarity": 0.9611647129058838,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "6869",
+        "186",
+        "8811",
+        "1586",
+        "5324",
+        "3351",
+        "154",
+        "84650",
+        "1909"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-466c-3p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p",
+        "mmu-miR-3095-3p",
+        "mmu-miR-709"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011581",
+    "name": "Depression",
+    "definition": "Frequently experiencing feelings of being down, miserable, and/or hopeless; struggling to recover from these moods; having a pessimistic outlook on the future; feeling a pervasive sense of shame; having a low self-worth; experiencing thoughts of suicide and engaging in suicidal behavior.",
+    "similarity": 0.9576080441474915,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "1813",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "54832",
+        "154",
+        "3351",
+        "27286"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0014556",
+    "name": "Temporal lobe epilepsy",
+    "definition": "An epileptic seizure originating within unilateral networks limited to the temporal lobe. Temporal lobe seizures are characterised by behavioural arrest and impaired awareness. There may be sensory (auditory), emotional (fear), cognitive (deja vu) or autonomic features (epigastric sensation, tachycardia, colour change) in isolation or prior to onset of impaired awareness. Postictal confusion typically occurs.",
+    "similarity": 0.9479162096977234,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6351",
+        "9425",
+        "2912",
+        "3326",
+        "7296",
+        "186",
+        "1393",
+        "5173",
+        "3557",
+        "102"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-6328",
+        "rno-miR-212-3p",
+        "hsa-miR-30d-5p",
+        "rno-miR-19a-3p",
+        "hsa-let-7b",
+        "rno-miR-324-5p",
+        "hsa-miR-134-3p",
+        "hsa-miR-663b",
+        "rno-let-7e",
+        "rno-miR-346"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0086132",
+    "name": "Symptoms of depression",
+    "definition": "No definition",
+    "similarity": 0.9467829465866089,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "2623",
+        "9388",
+        "1545",
+        "3725",
+        "3423",
+        "5319",
+        "23530",
+        "6929",
+        "1909",
+        "84650"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0005697",
+    "name": "Neurogenic bladder",
+    "definition": "A type of bladder dysfunction caused by neurologic damage. Neurogenic bladder can be flaccid or spastic. Common manifestatios of neurogenic bladder are overflow incontinence, frequency, urgency, urge incontinence, and retention.",
+    "similarity": 0.946681022644043,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "253738",
+        "55823",
+        "1291",
+        "2065",
+        "493856",
+        "155",
+        "23400",
+        "25793",
+        "91949",
+        "55331"
+      ],
+      "associated_miRNA_names": [
+        "mmu-let-7b-5p",
+        "mmu-miR-23b-3p",
+        "mmu-miR-22-3p",
+        "mmu-let-7f-5p",
+        "mmu-let-7d-5p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-99a-3p",
+        "mmu-miR-29c-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-26b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0030193",
+    "name": "Pain",
+    "definition": "An unpleasant sensory and emotional experience associated with actual or potential tissue damage, or described in terms of such damage.",
+    "similarity": 0.9459220170974731,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "6869",
+        "5173",
+        "84650",
+        "5631",
+        "154",
+        "63910",
+        "3351",
+        "5324",
+        "2232",
+        "57084"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-107-3p",
+        "hsa-miR-103a-2-5p",
+        "hsa-miR-3613-3p",
+        "hsa-miR-135a-3p",
+        "hsa-miR-183-3p",
+        "mmu-miR-23a-3p",
+        "rno-miR-146a-3p",
+        "hsa-miR-182-3p",
+        "hsa-miR-23b-3p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0344315",
+    "name": "Depressed mood",
+    "definition": "An emotional state characterized by feelings of sadness, emptiness, and/or tearfulness.",
+    "similarity": 0.9417076110839844,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "6925",
+        "4987",
+        "3423",
+        "2039",
+        "6822",
+        "3483",
+        "5319",
+        "6857",
+        "438",
+        "23451"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003467",
+    "name": "Anxiety",
+    "definition": "Intense feelings of nervousness, tension, or panic often arise in response to interpersonal stresses. There is worry about the negative effects of past unpleasant experiences and future negative possibilities. Individuals may feel fearful, apprehensive, or threatened by uncertainty, and they may also have fears of falling apart or losing control.",
+    "similarity": 0.9367278814315796,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "5054",
+        "154",
+        "54832",
+        "84650",
+        "1909",
+        "23451",
+        "2039",
+        "8301",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-3095-3p",
+        "mmu-miR-466c-3p",
+        "mmu-miR-669c-5p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0149931",
+    "name": "Migraine",
+    "definition": "Migraine is a chronic neurological disorder characterized by episodic attacks of headache and associated symptoms.",
+    "similarity": 0.9362383484840393,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "1289",
+        "744",
+        "27030",
+        "8645",
+        "1909",
+        "3351",
+        "6687",
+        "27286",
+        "5324"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-382-5p",
+        "hsa-let-7g",
+        "hsa-miR-155-3p",
+        "hsa-miR-126-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751207",
+    "name": "Akinetic-Rigid Variant of Huntington Disease",
+    "definition": "No definition",
+    "similarity": 0.9353793859481812,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3064",
+        "2668",
+        "51447",
+        "4968",
+        "9131",
+        "4128",
+        "56616",
+        "1827",
+        "4129",
+        "2030"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-135b",
+        "hsa-miR-212-3p",
+        "mmu-miR-146b-5p",
+        "mmu-miR-429-3p",
+        "hsa-miR-421",
+        "mmu-miR-29b-2-5p",
+        "mmu-miR-132-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-182-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751208",
+    "name": "Juvenile Huntington disease",
+    "definition": "Adult-onset Huntington's disease, the most common form of this disorder, usually appears in a person's thirties or forties. Early signs and symptoms can include irritability, depression, small involuntary movements, poor coordination, and trouble learning new information or making decisions. Many people with Huntington's disease develop involuntary jerking or twitching movements known as chorea. As the disease progresses, these movements become more pronounced. Affected individuals may have trouble walking, speaking, and swallowing. People with this disorder also experience changes in personality and a decline in thinking and reasoning abilities. Individuals with the adult-onset form of Huntington's disease usually live about 15 to 20 years after signs and symptoms begin.\\n\\nA less common form of Huntington's disease known as the juvenile form begins in childhood or adolescence. It also involves movement problems and mental and emotional changes. Additional signs of the juvenile form include slow movements, clumsiness, frequent falling, rigidity, slurred speech, and drooling. School performance declines as thinking and reasoning abilities become impaired. Seizures occur in 30 percent to 50 percent of children with this condition. Juvenile Huntington's disease tends to progress more quickly than the adult-onset form; affected individuals usually live 10 to 15 years after signs and symptoms appear.\\n\\nHuntington's disease is a progressive brain disorder that causes uncontrolled movements, emotional problems, and loss of thinking ability (cognition).",
+    "similarity": 0.9353793859481812,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3064",
+        "2668",
+        "51447",
+        "4968",
+        "9131",
+        "4128",
+        "56616",
+        "1827",
+        "4129",
+        "2030"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-135b",
+        "hsa-miR-212-3p",
+        "mmu-miR-146b-5p",
+        "mmu-miR-429-3p",
+        "hsa-miR-421",
+        "mmu-miR-29b-2-5p",
+        "mmu-miR-132-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-182-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0393574",
+    "name": "Late onset Huntington disease",
+    "definition": "No definition",
+    "similarity": 0.9353793859481812,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3064",
+        "2668",
+        "51447",
+        "4968",
+        "9131",
+        "4128",
+        "56616",
+        "1827",
+        "4129",
+        "2030"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-135b",
+        "hsa-miR-212-3p",
+        "mmu-miR-146b-5p",
+        "mmu-miR-429-3p",
+        "hsa-miR-421",
+        "mmu-miR-29b-2-5p",
+        "mmu-miR-132-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-182-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0038868",
+    "name": "Progressive supranuclear palsy",
+    "definition": "A rare late-onset neurodegenerative disease with characteristics of supranuclear gaze palsy, postural instability, progressive rigidity, and mild dementia. Five clinical variants have been described with clinicopathological correlations, with Richardson''s syndrome the most common clinical variant. The disease has neuropathological manifestations of neuronal loss, gliosis with astrocytic plaques and accumulation of tau-immunoreactive neurofibrillary tangles in specific brain areas. The differences in the rate and areas of accumulation of phosphorylated tau protein correlate with the five clinical variants. The disease is a 4R tauopathy composed of a preponderance of four-repeat (exon 10 positive) tau isoforms and a characteristic biochemical profile (doublet tau 64 and tau 69). The MAPT H1-clade specific sub-haplotype, H1c, is a risk factor for this disease.",
+    "similarity": 0.9336442947387695,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "120892",
+        "1191",
+        "5913",
+        "4593",
+        "4905",
+        "3667",
+        "23025",
+        "1520",
+        "9520",
+        "728458"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4700-3p",
+        "hsa-miR-6740-3p",
+        "hsa-miR-615-3p",
+        "hsa-miR-328-5p",
+        "hsa-miR-137-3p",
+        "hsa-miR-3156-3p",
+        "hsa-miR-25-3p",
+        "hsa-miR-615-5p",
+        "hsa-miR-30c-2-3p",
+        "hsa-miR-1275"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0948008",
+    "name": "Ischemic stroke",
+    "definition": "A stroke is an acute neurologic event leading to death of neural tissue of the brain and resulting in loss of motor, sensory and/or cognitive function. It is said to be the third leading cause of death in the United States. Gunel and Lifton (1996) noted that about 20% of strokes are hemorrhagic, resulting in bleeding into the brain. Ischemic strokes, resulting from vascular occlusion, account for the majority of strokes. Bersano et al. (2008) reviewed genetic polymorphisms that have been implicated in the development of stroke. Candidate genes include those involved in hemostasis (see, e.g., F5; 612309), the renin-angiotensin-aldosterone system (see, e.g., ACE; 106180), homocysteine (see, e.g., MTHFR; 607093), and lipoprotein metabolism (see, e.g., APOE; 107741). See also hemorrhagic stroke, or intracerebral hemorrhage (ICH; 614519).",
+    "similarity": 0.930342435836792,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "1577",
+        "340348",
+        "2669",
+        "3898",
+        "462",
+        "55349",
+        "2821",
+        "55638",
+        "410"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-126a-5p",
+        "hsa-miR-361-3p",
+        "hsa-miR-98-5p",
+        "hsa-miR-151a-3p",
+        "hsa-miR-1287-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-127-3p",
+        "hsa-miR-29c-5p",
+        "hsa-miR-34c-3p",
+        "hsa-miR-34b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003868",
+    "name": "Gouty arthropathy",
+    "definition": "Arthritis, especially of the great toe, as a result of gout. Acute gouty arthritis often is precipitated by trauma, infection, surgery, etc. The initial attacks are usually monoarticular but later attacks are often polyarticular. Acute and chronic gouty arthritis are associated with accumulation of MONOSODIUM URATE in and around affected joints.",
+    "similarity": 0.929784893989563,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "26263",
+        "5496",
+        "8884",
+        "5467",
+        "8854",
+        "3251",
+        "3131",
+        "9507",
+        "10524",
+        "53942"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-520g-3p",
+        "hsa-miR-30c-5p",
+        "hsa-miR-192-3p",
+        "hsa-miR-519d-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-520a-3p",
+        "hsa-miR-519e-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0032897",
+    "name": "Prader-Willi syndrome",
+    "definition": "Prader-Willi syndrome (PWS) is characterized by severe hypotonia, poor appetite, and feeding difficulties in early infancy, followed in early childhood by excessive eating and gradual development of morbid obesity (unless food intake is strictly controlled). Motor milestones and language development are delayed. All individuals have some degree of cognitive impairment. Hypogonadism is present in both males and females and manifests as genital hypoplasia, incomplete pubertal development, and, in most, infertility. Short stature is common (if not treated with growth hormone). A distinctive behavioral phenotype (temper tantrums, stubbornness, manipulative behavior, and obsessive-compulsive characteristics) is common. Characteristic facial features, strabismus, and scoliosis are often present.",
+    "similarity": 0.9289222359657288,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23569",
+        "114791",
+        "7681",
+        "5293",
+        "5894",
+        "2011",
+        "9883",
+        "410",
+        "26585",
+        "57730"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-151a-5p",
+        "hsa-miR-541-3p",
+        "hsa-miR-619-5p",
+        "hsa-miR-4656",
+        "hsa-miR-106b-5p",
+        "hsa-miR-4507",
+        "hsa-miR-92a-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-122-5p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027796",
+    "name": "Neuralgia",
+    "definition": "Pain (An unpleasant sensory and emotional experience) along the course of a nerve.",
+    "similarity": 0.9283219575881958,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "6523",
+        "1843",
+        "3557",
+        "4544",
+        "10000",
+        "4953",
+        "728",
+        "7298",
+        "5173",
+        "1813"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-328a-5p",
+        "rno-miR-1-3p",
+        "rno-miR-138-5p",
+        "mmu-miR-122-5p",
+        "rno-miR-22-3p",
+        "rno-miR-129-5p",
+        "rno-miR-124-3p",
+        "mmu-miR-351-5p",
+        "mmu-miR-10a-5p",
+        "rno-miR-214-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027888",
+    "name": "Hereditary motor and sensory neuropathy",
+    "definition": "A group of slowly progressive inherited disorders affecting motor and sensory peripheral nerves. Subtypes include HMSNs I-VII. HMSN I and II both refer to CHARCOT-MARIE-Tooth DISEASE. HMSN III refers to hypertrophic neuropathy of infancy. HMSN IV refers to REFSUM DISEASE. HMSN V refers to a condition marked by a hereditary motor and sensory neuropathy associated with spastic paraplegia (see SPASTIC PARAPLEGIA, HEREDITARY). HMSN VI refers to HMSN associated with an inherited optic atrophy (OPTIC ATROPHIES, HEREDITARY), and HMSN VII refers to HMSN associated with retinitis pigmentosa. (From Adams et al., Principles of Neurology, 6th ed, p1343)",
+    "similarity": 0.9281667470932007,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23299",
+        "6687",
+        "1200",
+        "9131",
+        "3098",
+        "2617",
+        "9927",
+        "3855",
+        "50717",
+        "3931"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4718",
+        "hsa-miR-4476",
+        "hsa-miR-5008-5p",
+        "hsa-miR-4462",
+        "hsa-miR-4539",
+        "hsa-miR-1290",
+        "hsa-miR-619-5p",
+        "hsa-miR-204-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  }
+]

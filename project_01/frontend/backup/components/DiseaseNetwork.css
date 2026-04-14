@@ -1,0 +1,280 @@
+.network-visualization-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.network-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.controls-row {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-icon {
+  color: #1890ff;
+  cursor: pointer;
+}
+
+.network-description {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.network-container {
+  height: 700px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  background-color: #f8faff;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.03);
+}
+
+.network-container:fullscreen {
+  background-color: #f0f4fd;
+  height: 100vh;
+  padding: 20px;
+}
+
+.network-svg {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  transform-origin: center center;
+}
+
+.network-svg:active {
+  cursor: grabbing;
+}
+
+/* 背景网格线样式 */
+.grid-lines line {
+  opacity: 0.15;
+  stroke-dasharray: 2, 2;
+  stroke: #aaa;
+}
+
+/* 缩放容器 */
+.zoom-container {
+  will-change: transform;
+  transition: transform 0.05s linear;
+}
+
+.node-group {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+  z-index: 5;
+}
+
+.node-group:hover {
+  filter: brightness(1.2) drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  z-index: 10;
+}
+
+/* 中心节点样式 */
+.central-node {
+  filter: drop-shadow(0 0 10px rgba(231, 76, 60, 0.3));
+  z-index: 6;
+}
+
+.central-highlight {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; r: 45; }
+  50% { opacity: 0.7; r: 50; }
+  100% { opacity: 0.4; r: 45; }
+}
+
+/* 拖拽状态样式 */
+.node-group.dragging {
+  cursor: grabbing;
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+  z-index: 100;
+}
+
+.node-circle {
+  stroke: white;
+  stroke-width: 2px;
+  transition: all 0.2s ease;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+}
+
+.node-group:hover .node-circle {
+  stroke: #333;
+  stroke-width: 3px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+}
+
+/* 选中节点样式 */
+.selected-node .node-circle {
+  stroke: #f39c12;
+  stroke-width: 4px;
+  filter: drop-shadow(0 0 8px rgba(243, 156, 18, 0.6));
+}
+
+/* 节点文本样式 */
+.node-text {
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  fill: #333;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.8);
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+/* 中心节点文本样式 */
+.central-node-text {
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  fill: #e74c3c;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 连接线样式 */
+.link-line {
+  stroke: #d0d0d0;
+  transition: all 0.3s ease;
+  stroke-linecap: round;
+}
+
+.baseline-link {
+  stroke: #a0a0a0;
+  stroke-width: 2px;
+}
+
+/* 活跃连接线 */
+.active-link {
+  stroke: #4a90e2 !important;
+  stroke-opacity: 0.9 !important;
+  stroke-width: 3px !important;
+  filter: drop-shadow(0 0 3px rgba(74, 144, 226, 0.5));
+  z-index: 5;
+}
+
+/* 非活跃连接线 */
+.inactive-link {
+  stroke-opacity: 0.15 !important;
+}
+
+.link-line:hover {
+  stroke-opacity: 0.9;
+  stroke-width: 4px;
+}
+
+/* 3D视图相关样式 */
+.view-3d {
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+/* 性能优化 */
+.network-container {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .controls-row > div {
+    margin-bottom: 10px;
+  }
+  
+  .network-container {
+    height: 500px;
+  }
+}
+
+/* 鼠标悬停时的提示框样式 */
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  font: 13px sans-serif;
+  background: rgba(30, 30, 30, 0.9);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  max-width: 250px;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* D3 tooltip样式 */
+.d3-tooltip {
+  position: absolute;
+  text-align: left;
+  padding: 10px;
+  font: 13px sans-serif;
+  background: rgba(40, 44, 52, 0.9);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  max-width: 250px;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.d3-tooltip div {
+  margin: 3px 0;
+}
+
+/* 图例样式 */
+.legend {
+  font-size: 12px;
+}
+
+.legend-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* 全屏模式下的样式调整 */
+.network-visualization-container:fullscreen {
+  padding: 20px;
+  background: white;
+}
+
+.network-visualization-container:fullscreen .network-card {
+  height: calc(100vh - 40px);
+  margin: 0;
+  box-shadow: none;
+}
+
+.network-visualization-container:fullscreen .network-container {
+  height: calc(100vh - 200px);
+} 

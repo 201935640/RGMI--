@@ -1,0 +1,586 @@
+[
+  {
+    "disease_id": "C0221155",
+    "name": "Systolic hypertension",
+    "definition": "Abnormally high systolic blood pressure.",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "348",
+        "8991",
+        "1401",
+        "5468",
+        "5740",
+        "6462",
+        "1813",
+        "2006",
+        "8740",
+        "92086"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-92a-3p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-451a",
+        "hsa-miR-222-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-24-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0024421",
+    "name": "Macroglossia",
+    "definition": "Increased length and width of the tongue.",
+    "similarity": 0.4921337366104126,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "7849",
+        "6392",
+        "5604",
+        "65082",
+        "6528",
+        "2304",
+        "7252",
+        "9569",
+        "6598"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-223-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-93-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0409338",
+    "name": "Elbow flexion contracture",
+    "definition": "An elbow contracture that limits the ability of the elbow joint to be extended (straightened), meaning that the elbow is fixed in an flexed (bent) position.",
+    "similarity": 0.49186936020851135,
+    "attributes": {
+      "semantictype": "",
+      "associated_gene_names": [
+        "23387",
+        "157570",
+        "122622",
+        "9427",
+        "64207",
+        "1836",
+        "57190",
+        "84992",
+        "5352",
+        "1291"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-221-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-155-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-29b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0162298",
+    "name": "Joint stiffness",
+    "definition": "Joint stiffness is a perceived sensation of tightness in a joint or joints when attempting to move them after a period of inactivity. Joint stiffness typically subsides over time.",
+    "similarity": 0.49084386229515076,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "3418",
+        "473",
+        "1291",
+        "2969",
+        "6910",
+        "4204",
+        "5352",
+        "4318",
+        "493856",
+        "9569"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-155-5p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-150-5p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-20a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1837108",
+    "name": "Decreased muscle mass",
+    "definition": "No definition",
+    "similarity": 0.4907325208187103,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "2200",
+        "1890",
+        "7043",
+        "80025",
+        "1291",
+        "2521",
+        "4204",
+        "6678",
+        "2992",
+        "50484"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-143-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1184923",
+    "name": "Lumbar hyperlordosis",
+    "definition": "An abnormal accentuation of the inward curvature of the spine in the lumbar region.",
+    "similarity": 0.48968446254730225,
+    "attributes": {
+      "semantictype": "Anatomical Abnormality",
+      "associated_gene_names": [
+        "54496",
+        "5339",
+        "2261",
+        "57190",
+        "3490",
+        "4018",
+        "84665",
+        "7124",
+        "1798",
+        "4148"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-451a",
+        "hsa-miR-223-3p",
+        "hsa-miR-155-5p",
+        "hsa-miR-34a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1845847",
+    "name": "Coarse facial features",
+    "definition": "Absence of fine and sharp appearance of brows, nose, lips, mouth, and chin, usually because of rounded and heavy features or thickened skin with or without thickening of subcutaneous and bony tissues.",
+    "similarity": 0.4896601736545563,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "6925",
+        "80232",
+        "84992",
+        "93627",
+        "6598",
+        "9569",
+        "29072",
+        "7252",
+        "2304",
+        "6528"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-29b-3p",
+        "hsa-miR-145-5p",
+        "hsa-miR-143-3p",
+        "hsa-miR-221-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-27a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0201976",
+    "name": "",
+    "definition": "",
+    "similarity": 0.48957815766334534,
+    "attributes": {
+      "associated_gene_names": [
+        "54496",
+        "9057",
+        "51422",
+        "1601",
+        "92",
+        "11054",
+        "779",
+        "84665",
+        "11136",
+        "23094"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-222-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-29a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003886",
+    "name": "Arthrogryposis",
+    "definition": "A rare, non-progressive congenital disorder characterized by multiple joint contractures which are present at birth.",
+    "similarity": 0.4886421859264374,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23299",
+        "6331",
+        "2074",
+        "4649",
+        "25972",
+        "5339",
+        "84467",
+        "10269",
+        "23522",
+        "5554"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-383-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-200c-3p",
+        "hsa-miR-221-3p",
+        "hsa-miR-126-3p",
+        "hsa-miR-128-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-629-3p",
+        "hsa-miR-625-3p",
+        "hsa-miR-17-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0748540",
+    "name": "Limited cutaneous systemic sclerosis",
+    "definition": "Limited cutaneous systemic sclerosis (lcSSc) is a subtype of systemic sclerosis (SSc; see this term) characterized by the association of Raynaud's phenomenon with skin fibrosis limited to the hands, face, feet and forearms.",
+    "similarity": 0.4886123836040497,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2200",
+        "3663",
+        "1235",
+        "9474",
+        "6775",
+        "1490",
+        "3123",
+        "55717",
+        "10631",
+        "857"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-92a-3p",
+        "hsa-miR-142-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0349231",
+    "name": "Phobia",
+    "definition": "Extreme, irrational, and persistent fears of certain objects, situations, activities, or persons can impede functioning in day-to-day life.",
+    "similarity": 0.48825332522392273,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "367",
+        "135",
+        "1401",
+        "6532",
+        "2004",
+        "117",
+        "2099",
+        "2100",
+        "1312",
+        "6886"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-466c-3p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p",
+        "mmu-miR-3095-3p",
+        "mmu-miR-709"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0026267",
+    "name": "Mitral valve prolapse",
+    "definition": "One or both of the leaflets (cusps) of the mitral valve bulges back into the left atrium upon contraction of the left ventricle.",
+    "similarity": 0.4879663288593292,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "9569",
+        "5328",
+        "84665",
+        "4982",
+        "2969",
+        "1289",
+        "29995",
+        "9968",
+        "7703"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-487a-3p",
+        "hsa-miR-323a-3p",
+        "hsa-miR-150-5p",
+        "hsa-miR-361-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-451a",
+        "hsa-miR-210-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-340-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4023722",
+    "name": "Abnormality of hair texture",
+    "definition": "An abnormality of the texture of the hair.",
+    "similarity": 0.48777633905410767,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "1041",
+        "26227",
+        "2068",
+        "10682",
+        "5230",
+        "64840",
+        "1281",
+        "284058",
+        "538",
+        "10312"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-26a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0241005",
+    "name": "Elevated circulating creatine kinase concentration",
+    "definition": "An elevation of the level of the enzyme creatine kinase (also known as creatine phosphokinase (CK; EC 2.7.3.2) in the blood. CK levels can be elevated in a number of clinical disorders such as myocardial infarction, rhabdomyolysis, and muscular dystrophy.",
+    "similarity": 0.4877098500728607,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "6445",
+        "148789",
+        "199857",
+        "5664",
+        "5339",
+        "1785",
+        "2218",
+        "6444",
+        "1798",
+        "1291"
+      ],
+      "associated_miRNA_names": []
+    }
+  },
+  {
+    "disease_id": "C0232466",
+    "name": "Feeding difficulties",
+    "definition": "Impaired ability to eat related to problems gathering food and getting ready to suck, chew, or swallow it.",
+    "similarity": 0.4872671961784363,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "6925",
+        "4726",
+        "150094",
+        "145258",
+        "84992",
+        "84665",
+        "128989",
+        "5913",
+        "60684",
+        "10166"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-451a",
+        "hsa-miR-26a-5p",
+        "hsa-miR-27a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0399526",
+    "name": "Mandibular prognathia",
+    "definition": "Abnormal prominence of the chin related to increased length of the mandible.",
+    "similarity": 0.48717623949050903,
+    "attributes": {
+      "semantictype": "Congenital Abnormality",
+      "associated_gene_names": [
+        "6134",
+        "3190",
+        "54345",
+        "84959",
+        "8600",
+        "5744",
+        "84992",
+        "92949",
+        "57190",
+        "5373"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-146a-5p",
+        "hsa-miR-17-5p",
+        "hsa-miR-223-3p",
+        "hsa-miR-145-5p",
+        "hsa-miR-126-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2751260",
+    "name": "Macrothrombocytopenia",
+    "definition": "No definition",
+    "similarity": 0.4868007302284241,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "2811",
+        "54822",
+        "10611",
+        "998",
+        "23218",
+        "3674",
+        "3690",
+        "60",
+        "9948"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-223-3p",
+        "hsa-miR-143-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-150-5p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-29a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0268147",
+    "name": "Glycogen phosphorylase kinase deficiency",
+    "definition": "Phosphorylase kinase (PhK) deficiency causing glycogen storage disease type IX (GSD IX) results from deficiency of the enzyme phosphorylase b kinase, which has a major regulatory role in the breakdown of glycogen. The two types of PhK deficiency are liver PhK deficiency (characterized by early childhood onset of hepatomegaly and growth restriction, and often, but not always, fasting ketosis and hypoglycemia) and muscle PhK deficiency, which is considerably rarer (characterized by any of the following: exercise intolerance, myalgia, muscle cramps, myoglobinuria, and progressive muscle weakness). While symptoms and biochemical abnormalities of liver PhK deficiency were thought to improve with age, it is becoming evident that affected individuals need to be monitored for long-term complications such as liver fibrosis and cirrhosis.",
+    "similarity": 0.48648446798324585,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "808",
+        "5257",
+        "353",
+        "5256",
+        "1351",
+        "2538",
+        "686",
+        "5255",
+        "2875",
+        "5261"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-92a-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-93-5p",
+        "hsa-miR-222-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-145-5p",
+        "hsa-miR-150-5p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-34a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0024796",
+    "name": "Marfan syndrome",
+    "definition": "FBN1-related Marfan syndrome (Marfan syndrome), a systemic disorder of connective tissue with a high degree of clinical variability, comprises a broad phenotypic continuum ranging from mild (features of Marfan syndrome in one or a few systems) to severe and rapidly progressive neonatal multiorgan disease. Cardinal manifestations involve the ocular, skeletal, and cardiovascular systems. Ocular findings include myopia (>50% of affected individuals); ectopia lentis (seen in approximately 60% of affected individuals); and an increased risk for retinal detachment, glaucoma, and early cataracts. Skeletal system manifestations include bone overgrowth and joint laxity; disproportionately long extremities for the size of the trunk (dolichostenomelia); overgrowth of the ribs that can push the sternum in (pectus excavatum) or out (pectus carinatum); and scoliosis that ranges from mild to severe and progressive. The major morbidity and early mortality in Marfan syndrome relate to the cardiovascular system and include dilatation of the aorta at the level of the sinuses of Valsalva (predisposing to aortic tear and rupture), mitral valve prolapse with or without regurgitation, tricuspid valve prolapse, and enlargement of the proximal pulmonary artery. Severe and prolonged regurgitation of the mitral and/or aortic valve can predispose to left ventricular dysfunction and occasionally heart failure. With proper management, the life expectancy of someone with Marfan syndrome approximates that of the general population.",
+    "similarity": 0.4861290156841278,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "54897",
+        "4318",
+        "2048",
+        "7124",
+        "4233",
+        "84467",
+        "7043",
+        "7965",
+        "6296"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-632",
+        "hsa-miR-26a-5p",
+        "hsa-miR-145-3p",
+        "hsa-miR-143-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0022107",
+    "name": "Feeling irritable",
+    "definition": "Excited response to stimuli.",
+    "similarity": 0.4857500493526459,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "113235",
+        "50814",
+        "249",
+        "445",
+        "374354",
+        "4436",
+        "2290",
+        "5805",
+        "10535",
+        "275"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-142-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0017639",
+    "name": "Gliosis",
+    "definition": "Gliosis is the focal proliferation of glial cells in the central nervous system.",
+    "similarity": 0.48555508255958557,
+    "attributes": {
+      "semantictype": "Pathologic Function",
+      "associated_gene_names": [
+        "120892",
+        "23203",
+        "5727",
+        "10342",
+        "55739",
+        "8878",
+        "3732",
+        "652",
+        "55737",
+        "3777"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-21-3p"
+      ]
+    }
+  }
+]

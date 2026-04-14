@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-tech-blue-dark text-gray-800 font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(240, 245, 255, 0.5) 100%),
+      linear-gradient(to right, rgba(0, 102, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 102, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+  }
+}
+
+@layer components {
+  .tech-card {
+    @apply bg-white border border-blue-100 rounded-lg shadow-md transition-all duration-300;
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.05);
+  }
+  .tech-card:hover {
+    @apply border-blue-300;
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.1);
+  }
+  .tech-button {
+    @apply px-4 py-2 bg-tech-blue hover:bg-tech-blue/90 text-white rounded transition-colors duration-200 font-medium;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-header {
+  background: linear-gradient(135deg, #1890ff, #722ed1);
+  padding: 0 50px;
+  height: 64px;
+  line-height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.ant-layout-content {
+  padding: 24px;
+}
+
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-right: 30px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+} 

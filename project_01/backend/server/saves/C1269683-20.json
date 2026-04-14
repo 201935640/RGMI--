@@ -1,0 +1,690 @@
+[
+  {
+    "disease_id": "C1269683",
+    "name": "Major depressive disorder",
+    "definition": "Depression (also known as major depression or major depressive disorder) is a psychiatric disorder that affects mood, behavior, and overall health. It causes prolonged feelings of sadness, emptiness, or hopelessness, and a loss of interest in activities that were once enjoyed. People with depression may also have changes in appetite (leading to overeating or not eating enough), changes in sleeping patterns (sleeping too much or not being able to sleep), loss of energy, and difficulty concentrating. Although depression is considered primarily a mental health disorder, it can also have physical features including headaches, other unexplained aches and pains, unusually slow or fast movements, and digestive problems. To be diagnosed with depression, an individual must have signs and symptoms nearly every day for at least 2 weeks. However, the features of this condition vary widely.\\n\\nDepression most commonly begins in late adolescence or early adulthood, although it can appear at any age. If untreated, episodes of depression can last for weeks, months, or years, and can go away and come back (recur). Affected individuals may have difficulty functioning in their daily lives, including at school or work. People with depression have a higher risk of substance abuse problems and dying by suicide than the general population.\\n\\nSeveral health conditions are closely related to depression or have depression as a characteristic feature. These include dysthymia (which has long-lasting signs and symptoms that are similar to, but not as severe as, those of depression), perinatal or postpartum depression (which occurs around or following the birth of a child), seasonal affective disorder (which is triggered by the changing of the seasons), bipolar disorder (which can include both \"highs,\" or manic episodes, and depressive episodes), and generalized anxiety disorder. In people with schizoaffective disorder, depression or another mood disorder occurs together with features of schizophrenia (a brain disorder that affects a person's thinking, sense of self, and perceptions).",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "2623",
+        "57084",
+        "10777",
+        "6929",
+        "1909",
+        "84650",
+        "8859",
+        "3351",
+        "1440",
+        "5173"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011581",
+    "name": "Depression",
+    "definition": "Frequently experiencing feelings of being down, miserable, and/or hopeless; struggling to recover from these moods; having a pessimistic outlook on the future; feeling a pervasive sense of shame; having a low self-worth; experiencing thoughts of suicide and engaging in suicidal behavior.",
+    "similarity": 0.9974638819694519,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "1813",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "54832",
+        "154",
+        "3351",
+        "27286"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011570",
+    "name": "",
+    "definition": "",
+    "similarity": 0.993817150592804,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "5324",
+        "5319",
+        "438",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "154",
+        "3351"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0948008",
+    "name": "Ischemic stroke",
+    "definition": "A stroke is an acute neurologic event leading to death of neural tissue of the brain and resulting in loss of motor, sensory and/or cognitive function. It is said to be the third leading cause of death in the United States. Gunel and Lifton (1996) noted that about 20% of strokes are hemorrhagic, resulting in bleeding into the brain. Ischemic strokes, resulting from vascular occlusion, account for the majority of strokes. Bersano et al. (2008) reviewed genetic polymorphisms that have been implicated in the development of stroke. Candidate genes include those involved in hemostasis (see, e.g., F5; 612309), the renin-angiotensin-aldosterone system (see, e.g., ACE; 106180), homocysteine (see, e.g., MTHFR; 607093), and lipoprotein metabolism (see, e.g., APOE; 107741). See also hemorrhagic stroke, or intracerebral hemorrhage (ICH; 614519).",
+    "similarity": 0.9819087386131287,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "1577",
+        "340348",
+        "2669",
+        "3898",
+        "462",
+        "55349",
+        "2821",
+        "55638",
+        "410"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-126a-5p",
+        "hsa-miR-361-3p",
+        "hsa-miR-98-5p",
+        "hsa-miR-151a-3p",
+        "hsa-miR-1287-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-127-3p",
+        "hsa-miR-29c-5p",
+        "hsa-miR-34c-3p",
+        "hsa-miR-34b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0030193",
+    "name": "Pain",
+    "definition": "An unpleasant sensory and emotional experience associated with actual or potential tissue damage, or described in terms of such damage.",
+    "similarity": 0.9804208874702454,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "6869",
+        "5173",
+        "84650",
+        "5631",
+        "154",
+        "63910",
+        "3351",
+        "5324",
+        "2232",
+        "57084"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-107-3p",
+        "hsa-miR-103a-2-5p",
+        "hsa-miR-3613-3p",
+        "hsa-miR-135a-3p",
+        "hsa-miR-183-3p",
+        "mmu-miR-23a-3p",
+        "rno-miR-146a-3p",
+        "hsa-miR-182-3p",
+        "hsa-miR-23b-3p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003469",
+    "name": "Anxiety disorder",
+    "definition": "A category of psychiatric disorders which are characterized by anxious feelings or fear often accompanied by physical symptoms associated with anxiety.",
+    "similarity": 0.9798609018325806,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "6869",
+        "186",
+        "8811",
+        "1586",
+        "5324",
+        "3351",
+        "154",
+        "84650",
+        "1909"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-466c-3p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p",
+        "mmu-miR-3095-3p",
+        "mmu-miR-709"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003467",
+    "name": "Anxiety",
+    "definition": "Intense feelings of nervousness, tension, or panic often arise in response to interpersonal stresses. There is worry about the negative effects of past unpleasant experiences and future negative possibilities. Individuals may feel fearful, apprehensive, or threatened by uncertainty, and they may also have fears of falling apart or losing control.",
+    "similarity": 0.9778040647506714,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "5054",
+        "154",
+        "54832",
+        "84650",
+        "1909",
+        "23451",
+        "2039",
+        "8301",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-3095-3p",
+        "mmu-miR-466c-3p",
+        "mmu-miR-669c-5p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020456",
+    "name": "Hyperglycemia",
+    "definition": "An increased concentration of glucose in the blood.",
+    "similarity": 0.975085973739624,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "7450",
+        "3673",
+        "3725",
+        "596",
+        "84701",
+        "3308",
+        "1545",
+        "5914",
+        "115123",
+        "3727"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-125a-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-141-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-26a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0032897",
+    "name": "Prader-Willi syndrome",
+    "definition": "Prader-Willi syndrome (PWS) is characterized by severe hypotonia, poor appetite, and feeding difficulties in early infancy, followed in early childhood by excessive eating and gradual development of morbid obesity (unless food intake is strictly controlled). Motor milestones and language development are delayed. All individuals have some degree of cognitive impairment. Hypogonadism is present in both males and females and manifests as genital hypoplasia, incomplete pubertal development, and, in most, infertility. Short stature is common (if not treated with growth hormone). A distinctive behavioral phenotype (temper tantrums, stubbornness, manipulative behavior, and obsessive-compulsive characteristics) is common. Characteristic facial features, strabismus, and scoliosis are often present.",
+    "similarity": 0.9746150970458984,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23569",
+        "114791",
+        "7681",
+        "5293",
+        "5894",
+        "2011",
+        "9883",
+        "410",
+        "26585",
+        "57730"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-151a-5p",
+        "hsa-miR-541-3p",
+        "hsa-miR-619-5p",
+        "hsa-miR-4656",
+        "hsa-miR-106b-5p",
+        "hsa-miR-4507",
+        "hsa-miR-92a-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-122-5p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0344315",
+    "name": "Depressed mood",
+    "definition": "An emotional state characterized by feelings of sadness, emptiness, and/or tearfulness.",
+    "similarity": 0.9702935218811035,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "6925",
+        "4987",
+        "3423",
+        "2039",
+        "6822",
+        "3483",
+        "5319",
+        "6857",
+        "438",
+        "23451"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0013080",
+    "name": "Down syndrome",
+    "definition": "Down syndrome is a chromosomal condition that is associated with intellectual disability, a characteristic facial appearance, and weak muscle tone (hypotonia) in infancy. All affected individuals experience cognitive delays, but the intellectual disability is usually mild to moderate.\\n\\nPeople with Down syndrome often have a characteristic facial appearance that includes a flattened appearance to the face, outside corners of the eyes that point upward (upslanting palpebral fissures), small ears, a short neck, and a tongue that tends to stick out of the mouth. Affected individuals may have a variety of birth defects. Many people with Down syndrome have small hands and feet and a single crease across the palms of the hands. About half of all affected children are born with a heart defect. Digestive abnormalities, such as a blockage of the intestine, are less common.\\n\\nIndividuals with Down syndrome have an increased risk of developing several medical conditions. These include gastroesophageal reflux, which is a backflow of acidic stomach contents into the esophagus, and celiac disease, which is an intolerance of a wheat protein called gluten. About 15 percent of people with Down syndrome have an underactive thyroid gland (hypothyroidism). The thyroid gland is a butterfly-shaped organ in the lower neck that produces hormones. Individuals with Down syndrome also have an increased risk of hearing and vision problems. Additionally, a small percentage of children with Down syndrome develop cancer of blood-forming cells (leukemia).\\n\\nDelayed development and behavioral problems are often reported in children with Down syndrome. Affected individuals can have growth problems and their speech and language develop later and more slowly than in children without Down syndrome. Additionally, speech may be difficult to understand in individuals with Down syndrome. Behavioral issues can include attention problems, obsessive/compulsive behavior, and stubbornness or tantrums. A small percentage of people with Down syndrome are also diagnosed with developmental conditions called autism spectrum disorders, which affect communication and social interaction.\\n\\nPeople with Down syndrome often experience a gradual decline in thinking ability (cognition) as they age, usually starting around age 50. Down syndrome is also associated with an increased risk of developing Alzheimer's disease, a brain disorder that results in a gradual loss of memory, judgment, and ability to function. Approximately half of adults with Down syndrome develop Alzheimer's disease. Although Alzheimer's disease is usually a disorder that occurs in older adults, people with Down syndrome commonly develop this condition earlier, in their fifties or sixties.",
+    "similarity": 0.9685895442962646,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "596",
+        "154",
+        "1909",
+        "83888",
+        "1373",
+        "6857",
+        "4782",
+        "56996",
+        "8301"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4328",
+        "hsa-miR-495-3p",
+        "hsa-miR-1247-3p",
+        "hsa-miR-124-5p",
+        "hsa-miR-590-3p",
+        "mmu-miR-138-5p",
+        "mmu-miR-182-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-23a-3p",
+        "mmu-miR-429-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0086132",
+    "name": "Symptoms of depression",
+    "definition": "No definition",
+    "similarity": 0.9684649705886841,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "2623",
+        "9388",
+        "1545",
+        "3725",
+        "3423",
+        "5319",
+        "23530",
+        "6929",
+        "1909",
+        "84650"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0010674",
+    "name": "Cystic fibrosis",
+    "definition": "Cystic fibrosis (CF) is a multisystem disease affecting epithelia of the respiratory tract, exocrine pancreas, intestine, hepatobiliary system, and exocrine sweat glands. Morbidities include recurrent sinusitis and bronchitis, progressive obstructive pulmonary disease with bronchiectasis, exocrine pancreatic deficiency and malnutrition, pancreatitis, gastrointestinal manifestations (meconium ileus, rectal prolapse, distal intestinal obstructive syndrome), liver disease, diabetes, male infertility due to hypoplasia or aplasia of the vas deferens, and reduced fertility or infertility in some women. Pulmonary disease is the major cause of morbidity and mortality in CF.",
+    "similarity": 0.9684646725654602,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "26762",
+        "6868",
+        "7097",
+        "133396",
+        "6754",
+        "9332",
+        "6348",
+        "4810",
+        "2837"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-23b",
+        "hsa-miR-16-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-27b-3p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-193a-5p",
+        "hsa-miR-31-3p",
+        "hsa-miR-885-5p",
+        "hsa-miR-99b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0041341",
+    "name": "Tuberous sclerosis syndrome",
+    "definition": "Tuberous sclerosis complex (TSC) involves abnormalities of the skin (hypomelanotic macules, confetti skin lesions, facial angiofibromas, shagreen patches, fibrous cephalic plaques, ungual fibromas); brain (subependymal nodules, cortical tubers, and subependymal giant cell astrocytomas [SEGAs], seizures, TSC-associated neuropsychiatric disorder [TAND]); kidneys (benign renal angiomyolipomas, epithelial cysts, oncocytoma, renal cell carcinoma); heart (rhabdomyomas, arrhythmias); and lungs (lymphangioleiomyomatosis [LAM], multifocal micronodular pneumonocyte hyperplasia). Central nervous system-related problems (including TAND) are the leading cause of morbidity, whereas kidney disease is the leading cause of mortality.",
+    "similarity": 0.9669760465621948,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "2729",
+        "4982",
+        "6383",
+        "5053",
+        "2875",
+        "55638",
+        "23417",
+        "10000",
+        "7298",
+        "5319"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-147b-3p",
+        "mmu-miR-125b-5p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-34a-3p",
+        "hsa-miR-21-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0005697",
+    "name": "Neurogenic bladder",
+    "definition": "A type of bladder dysfunction caused by neurologic damage. Neurogenic bladder can be flaccid or spastic. Common manifestatios of neurogenic bladder are overflow incontinence, frequency, urgency, urge incontinence, and retention.",
+    "similarity": 0.9664144515991211,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "253738",
+        "55823",
+        "1291",
+        "2065",
+        "493856",
+        "155",
+        "23400",
+        "25793",
+        "91949",
+        "55331"
+      ],
+      "associated_miRNA_names": [
+        "mmu-let-7b-5p",
+        "mmu-miR-23b-3p",
+        "mmu-miR-22-3p",
+        "mmu-let-7f-5p",
+        "mmu-let-7d-5p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-99a-3p",
+        "mmu-miR-29c-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-26b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0154409",
+    "name": "Recurrent major depressive episodes",
+    "definition": "Evidence of major depressive disorder, recurrent.",
+    "similarity": 0.9660227298736572,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "1576",
+        "551",
+        "627",
+        "10611",
+        "1815",
+        "6532",
+        "3084",
+        "775",
+        "553",
+        "2917"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0007786",
+    "name": "Ischemic encephalopathy",
+    "definition": "Localized reduction of blood flow to brain tissue due to arterial obstruction or systemic hypoperfusion. This frequently occurs in conjunction with brain hypoxia (HYPOXIA, BRAIN). Prolonged ischemia is associated with BRAIN INFARCTION.",
+    "similarity": 0.9655094742774963,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6351",
+        "5321",
+        "360",
+        "596",
+        "3725",
+        "2912",
+        "6776",
+        "3588",
+        "1440",
+        "3976"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-429",
+        "rno-miR-217-3p",
+        "hsa-miR-410-3p",
+        "hsa-miR-24-3p",
+        "hsa-let-7f-5p",
+        "hsa-let-7c",
+        "rno-miR-375-3p",
+        "rno-miR-7a-5p",
+        "rno-miR-429",
+        "hsa-miR-135b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0151650",
+    "name": "Renal fibrosis",
+    "definition": "Renal fibrosis is the consequence of an excessive accumulation of extracellular matrix that occurs in virtually every type of chronic kidney disease.",
+    "similarity": 0.9654772281646729,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5594",
+        "26503",
+        "7097",
+        "152007",
+        "25",
+        "4233",
+        "596",
+        "1080",
+        "54778",
+        "655"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-299a-5p",
+        "mmu-miR-200b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-129-5p",
+        "hsa-miR-214-3p",
+        "mmu-miR-146b-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-382-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0752347",
+    "name": "Lewy body dementia",
+    "definition": "Dementia with Lewy bodies (DLB) is a neurodegenerative disorder clinically characterized by dementia and parkinsonism, often with fluctuating cognitive function, visual hallucinations, falls, syncopal episodes, and sensitivity to neuroleptic medication. Pathologically, Lewy bodies are present in a pattern more widespread than usually observed in Parkinson disease (see PD; 168600). Alzheimer disease (AD; 104300)-associated pathology and spongiform changes may also be seen (McKeith et al., 1996; Mizutani, 2000; McKeith et al., 2005).",
+    "similarity": 0.965471625328064,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "79594",
+        "2521",
+        "3898",
+        "57030",
+        "5664",
+        "3482",
+        "1813",
+        "54832",
+        "6667",
+        "3483"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-555",
+        "hsa-miR-1250-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-224-3p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-212-3p",
+        "hsa-miR-455-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2931689",
+    "name": "Myotonic dystrophy type 2",
+    "definition": "Myotonic dystrophy type 2 (DM2) is characterized by myotonia and muscle dysfunction (proximal and axial weakness, myalgia, and stiffness), and less commonly by posterior subcapsular cataracts, cardiac conduction defects, insulin-insensitive type 2 diabetes mellitus, and other endocrine abnormalities. While myotonia (involuntary muscle contraction with delayed relaxation) has been reported during the first decade, onset is typically in the third to fourth decade, most commonly with fluctuating or episodic muscle pain that can be debilitating and proximal and axial weakness of the neck flexors and the hip flexors. Subsequently, weakness occurs in the elbow extensors and finger flexors. Facial weakness and weakness of the ankle dorsiflexors are less common. Myotonia rarely causes severe symptoms. In a subset of individuals, calf hypertrophy in combination with brisk reflexes is notable.",
+    "similarity": 0.9643992781639099,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "1535",
+        "7422",
+        "51182",
+        "6476",
+        "63976",
+        "1734",
+        "8776",
+        "155",
+        "1968",
+        "6517"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-215-3p",
+        "hsa-miR-518e-3p",
+        "mmu-miR-17-3p",
+        "mmu-miR-26a-5p",
+        "mmu-miR-146b-3p",
+        "mmu-miR-18a-3p",
+        "mmu-miR-34b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-181c-3p",
+        "mmu-miR-181a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020538",
+    "name": "Hypertensive disorder",
+    "definition": "The presence of chronic increased pressure in the systemic arterial system.",
+    "similarity": 0.964346170425415,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "54968",
+        "206358",
+        "3425",
+        "3483",
+        "5319",
+        "9376",
+        "6857",
+        "23530",
+        "6776"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-509-5p",
+        "hsa-miR-126-5p",
+        "hsa-miR-485-3p",
+        "hsa-miR-191-5p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-584-3p",
+        "hsa-miR-208b-3p",
+        "hsa-miR-122-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-146a-3p"
+      ]
+    }
+  }
+]

@@ -1,0 +1,108 @@
+.network-controls {
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #e8ecf1;
+}
+
+.network-controls .control-group {
+  margin-bottom: 8px;
+}
+
+.network-controls .control-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  color: #0d2b3e;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.network-controls .control-label span {
+  margin-left: 6px;
+}
+
+.network-controls .ant-slider {
+  margin: 6px 0;
+}
+
+.network-controls .ant-slider-track {
+  background-color: #1890ff;
+}
+
+.network-controls .ant-slider-handle {
+  border-color: #1890ff;
+}
+
+.view-toggle-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.network-summary {
+  color: #666;
+  font-size: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #e8e8e8;
+  margin-top: 8px;
+}
+
+.spacer {
+  width: 100%;
+  height: 1px;
+}
+
+/* 高级设置 */
+.advanced-settings {
+  width: 280px;
+  padding: 8px;
+}
+
+.settings-item {
+  margin-bottom: 16px;
+}
+
+.settings-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.settings-info-icon {
+  color: #1890ff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .network-controls {
+    padding: 12px;
+  }
+  
+  .action-buttons {
+    justify-content: center;
+    margin-top: 8px;
+  }
+  
+  .control-label {
+    font-size: 13px;
+  }
+  
+  .network-summary {
+    text-align: center;
+  }
+} 

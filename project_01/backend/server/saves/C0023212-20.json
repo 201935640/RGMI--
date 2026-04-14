@@ -1,0 +1,686 @@
+[
+  {
+    "disease_id": "C0023212",
+    "name": "Left heart failure",
+    "definition": "Failure of adequate output by the left ventricle despite an increase in distending pressure and in end-diastolic volume, with dyspnea, orthopnea, and other signs and symptoms of pulmonary congestion and edema.",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "478",
+        "35",
+        "7422",
+        "341",
+        "7498",
+        "4780",
+        "4973",
+        "81608",
+        "1906"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-25-3p",
+        "rno-miR-93-3p",
+        "rno-miR-20b-3p",
+        "rno-miR-423-5p",
+        "mmu-miR-1a-3p",
+        "mmu-miR-133a-3p",
+        "hsa-miR-155-5p",
+        "rno-miR-106b-3p",
+        "rno-miR-223-3p",
+        "rno-miR-16-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1961112",
+    "name": "Decompensation, Heart",
+    "definition": "No definition",
+    "similarity": 0.9998921155929565,
+    "attributes": {
+      "semantictype": "Pathologic Function",
+      "associated_gene_names": [
+        "7450",
+        "478",
+        "35",
+        "7422",
+        "341",
+        "7498",
+        "4780",
+        "4973",
+        "81608",
+        "1906"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-25-3p",
+        "rno-miR-93-3p",
+        "rno-miR-20b-3p",
+        "rno-miR-423-5p",
+        "mmu-miR-1a-3p",
+        "mmu-miR-133a-3p",
+        "hsa-miR-155-5p",
+        "rno-miR-106b-3p",
+        "rno-miR-223-3p",
+        "rno-miR-16-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1959583",
+    "name": "Myocardial failure",
+    "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+    "similarity": 0.9998832941055298,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "478",
+        "35",
+        "7422",
+        "341",
+        "7498",
+        "4780",
+        "4973",
+        "81608",
+        "1906"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-25-3p",
+        "rno-miR-93-3p",
+        "rno-miR-20b-3p",
+        "rno-miR-423-5p",
+        "mmu-miR-1a-3p",
+        "mmu-miR-133a-3p",
+        "hsa-miR-155-5p",
+        "rno-miR-106b-3p",
+        "rno-miR-223-3p",
+        "rno-miR-16-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0235527",
+    "name": "Right ventricular failure",
+    "definition": "Reduced ability of the right ventricle to perform its function (to receive blood from the right atrium and to eject blood into the pulmonary artery), often leading to pitting peripheral edema, ascites, and hepatomegaly.",
+    "similarity": 0.9989885091781616,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "478",
+        "35",
+        "7422",
+        "341",
+        "7498",
+        "4780",
+        "4134",
+        "4973",
+        "81608"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-25-3p",
+        "rno-miR-93-3p",
+        "rno-miR-20b-3p",
+        "rno-miR-423-5p",
+        "mmu-miR-1a-3p",
+        "mmu-miR-133a-3p",
+        "hsa-miR-155-5p",
+        "rno-miR-106b-3p",
+        "rno-miR-223-3p",
+        "rno-miR-16-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0018802",
+    "name": "Congestive heart failure",
+    "definition": "The presence of an abnormality of cardiac function that is responsible for the failure of the heart to pump blood at a rate that is commensurate with the needs of the tissues or a state in which abnormally elevated filling pressures are required for the heart to do so. Heart failure is frequently related to a defect in myocardial contraction.",
+    "similarity": 0.9911497235298157,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "6523",
+        "6925",
+        "23516",
+        "27183",
+        "51330",
+        "4160",
+        "5606",
+        "331",
+        "50506"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-25-3p",
+        "rno-miR-93-3p",
+        "rno-miR-20b-3p",
+        "rno-miR-423-5p",
+        "mmu-miR-1a-3p",
+        "mmu-miR-133a-3p",
+        "hsa-miR-155-5p",
+        "rno-miR-106b-3p",
+        "rno-miR-223-3p",
+        "rno-miR-16-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0018799",
+    "name": "Heart disease",
+    "definition": "A non-neoplastic or neoplastic disorder that affects the heart and/or the pericardium. Representative examples include endocarditis, pericarditis, atrial myxoma, cardiac myeloid sarcoma, and pericardial malignant mesothelioma.",
+    "similarity": 0.9721895456314087,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "6925",
+        "1946",
+        "5594",
+        "1535",
+        "2200",
+        "875",
+        "29979",
+        "9843",
+        "7422"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-433-3p",
+        "mmu-miR-361-3p",
+        "hsa-miR-1305",
+        "hsa-miR-3198",
+        "hsa-miR-3127-5p",
+        "hsa-miR-1908-3p",
+        "hsa-miR-4306",
+        "hsa-miR-30a-5p",
+        "mmu-miR-29b-3p",
+        "mmu-let-7i-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0026848",
+    "name": "Myopathy",
+    "definition": "A disorder of muscle unrelated to impairment of innervation or neuromuscular junction.",
+    "similarity": 0.9706083536148071,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "124093",
+        "64866",
+        "2729",
+        "23299",
+        "7148",
+        "23515",
+        "5308",
+        "23607",
+        "1576",
+        "50628"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-431-3p",
+        "hsa-miR-517b-3p",
+        "mmu-miR-30c-5p",
+        "mmu-miR-30b-3p",
+        "mmu-miR-30d-3p",
+        "mmu-miR-30e-3p",
+        "hsa-miR-369-3p",
+        "hsa-miR-20b-3p",
+        "hsa-miR-10b-3p",
+        "hsa-miR-130b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1383860",
+    "name": "Cardiac hypertrophy",
+    "definition": "Enlargement of the HEART due to chamber HYPERTROPHY, an increase in wall thickness without an increase in the number of cells (MYOCYTES, CARDIAC). It is the result of increase in myocyte size, mitochondrial and myofibrillar mass, as well as changes in extracellular matrix.",
+    "similarity": 0.9695700407028198,
+    "attributes": {
+      "semantictype": "Pathologic Function",
+      "associated_gene_names": [
+        "3418",
+        "23409",
+        "10616",
+        "2246",
+        "7351",
+        "5578",
+        "1375",
+        "400359",
+        "3270",
+        "1906"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-350",
+        "mmu-miR-19b-1-5p",
+        "mmu-miR-19b-2-5p",
+        "cfa-miR-30c",
+        "rno-miR-3596b",
+        "mmu-miR-30c-2-3p",
+        "mmu-let-7f-1-3p",
+        "rno-miR-195-3p",
+        "rno-miR-125b-1-3p",
+        "cfa-miR-19b"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0018800",
+    "name": "Cardiomegaly",
+    "definition": "Increased size of the heart, clinically defined as an increased transverse diameter of the cardiac silhouette that is greater than or equal to 50% of the transverse diameter of the chest (increased cardiothoracic ratio) on a posterior-anterior projection of a chest radiograph or a computed tomography.",
+    "similarity": 0.9679657816886902,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "3418",
+        "5594",
+        "79158",
+        "5159",
+        "2200",
+        "23409",
+        "5592",
+        "6271",
+        "10616",
+        "1585"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-350",
+        "mmu-miR-19b-1-5p",
+        "mmu-miR-19b-2-5p",
+        "cfa-miR-30c",
+        "rno-miR-3596b",
+        "mmu-miR-30c-2-3p",
+        "mmu-let-7f-1-3p",
+        "rno-miR-195-3p",
+        "rno-miR-125b-1-3p",
+        "cfa-miR-19b"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003504",
+    "name": "Aortic regurgitation",
+    "definition": "An insufficiency of the aortic valve, leading to regurgitation (backward flow) of blood from the aorta into the left ventricle.",
+    "similarity": 0.9661717414855957,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3418",
+        "51330",
+        "23493",
+        "27190",
+        "5594",
+        "222545",
+        "6499",
+        "9402",
+        "79158",
+        "5159"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-26a-2-3p",
+        "hsa-miR-195-3p",
+        "hsa-miR-26a-1-3p",
+        "hsa-miR-30b-3p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003507",
+    "name": "Aortic valve stenosis",
+    "definition": "The presence of a stenosis (narrowing) of the aortic valve.",
+    "similarity": 0.9614136815071106,
+    "attributes": {
+      "semantictype": "Pathologic Function",
+      "associated_gene_names": [
+        "7450",
+        "8483",
+        "929",
+        "2200",
+        "875",
+        "157570",
+        "79068",
+        "5360",
+        "4969",
+        "2597"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4268",
+        "hsa-miR-516a-3p",
+        "hsa-miR-630",
+        "hsa-miR-3138",
+        "hsa-miR-1972",
+        "hsa-miR-636",
+        "hsa-miR-3663-3p",
+        "hsa-miR-505-3p",
+        "hsa-miR-718",
+        "hsa-miR-575"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0008312",
+    "name": "Primary biliary cholangitis",
+    "definition": "Primary biliary cirrhosis (PBC) is a chronic, progressive cholestatic liver disease that usually affects middle-aged women and eventually leads to liver failure (summary by Kaplan, 1996). Genetic Heterogeneity of Primary Biliary Cirrhosis Primary biliary cirrhosis-1 (PBC1) is significantly associated with SNPs at the IL12A locus (161560) on chromosome 3q25.33. Significant association of PBC has also been shown with SNPs at the HLA-DQB1 locus (604305) on chromosome 6p21.3 (PBC2; 613007), at the IL12RB2 locus (601642) on chromosome 1p31.2 (PBC3; 613008), at the IRF5 (607218)-TNPO3 (610032) locus on chromosome 7q32 (PBC4; 614220), and at the ZPBP2 locus (608499) on chromosome 17q12-q21 (PBC5; 614221). See also Reynolds syndrome (613471), in which primary biliary cirrhosis is a feature.",
+    "similarity": 0.9590291380882263,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7297",
+        "1576",
+        "6499",
+        "26033",
+        "1581",
+        "929",
+        "643",
+        "3663",
+        "7422",
+        "200931"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-505",
+        "hsa-mir-197",
+        "hsa-miR-346",
+        "hsa-miR-432-3p",
+        "hsa-miR-197-3p",
+        "hsa-miR-483-3p",
+        "hsa-miR-30d-3p",
+        "hsa-miR-423-3p",
+        "hsa-miR-506-3p",
+        "hsa-miR-326"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0035078",
+    "name": "Kidney failure",
+    "definition": "An acute or chronic condition that is characterized by the inability of the kidneys to adequately filter the blood.",
+    "similarity": 0.9582377672195435,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "3418",
+        "79594",
+        "23569",
+        "23607",
+        "27190",
+        "5594",
+        "1576",
+        "26033",
+        "4488"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-221-3p",
+        "hsa-miR-10b-5p",
+        "hsa-miR-125b-2-3p",
+        "hsa-miR-378a-3p",
+        "hsa-miR-545-3p",
+        "hsa-miR-195-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0041948",
+    "name": "Uremia",
+    "definition": "A clinical syndrome associated with the retention of renal waste products or uremic toxins in the blood. It is usually the result of renal insufficiency. Most uremic toxins are end products of protein or nitrogen catabolism, such as urea or creatinine. Severe uremia can lead to multiple organ dysfunctions with a constellation of symptoms.",
+    "similarity": 0.957724928855896,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "4160",
+        "26033",
+        "3848",
+        "7422",
+        "7941",
+        "54808",
+        "5627",
+        "5578",
+        "3184",
+        "1906"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-221-3p",
+        "hsa-miR-10b-5p",
+        "hsa-miR-125b-2-3p",
+        "hsa-miR-378a-3p",
+        "hsa-miR-545-3p",
+        "hsa-miR-195-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003811",
+    "name": "Cardiac arrhythmia",
+    "definition": "Any cardiac rhythm other than the normal sinus rhythm. Such a rhythm may be either of sinus or ectopic origin and either regular or irregular. An arrhythmia may be due to a disturbance in impulse formation or conduction or both.",
+    "similarity": 0.9544898867607117,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "7450",
+        "2729",
+        "5190",
+        "7148",
+        "9892",
+        "50506",
+        "5308",
+        "6337",
+        "1523"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-19b-1-5p",
+        "mmu-miR-19b-2-5p",
+        "hsa-miR-3144-5p",
+        "mmu-miR-363-3p",
+        "mmu-miR-92a-2-5p",
+        "mmu-miR-106a-3p",
+        "hsa-miR-3679-5p",
+        "mmu-miR-25-3p",
+        "mmu-miR-18b-3p",
+        "mmu-miR-19a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4551595",
+    "name": "Primary biliary cholangitis 1",
+    "definition": "No definition",
+    "similarity": 0.9539390802383423,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7297",
+        "643",
+        "200931",
+        "1432",
+        "4780",
+        "3484",
+        "163486",
+        "3627",
+        "10537",
+        "5970"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-505",
+        "hsa-mir-197",
+        "hsa-miR-346",
+        "hsa-miR-432-3p",
+        "hsa-miR-197-3p",
+        "hsa-miR-483-3p",
+        "hsa-miR-30d-3p",
+        "hsa-miR-423-3p",
+        "hsa-miR-506-3p",
+        "hsa-miR-326"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0238065",
+    "name": "Secondary biliary cirrhosis",
+    "definition": "Biliary cirrhosis due to obstruction of the extrahepatic ducts.",
+    "similarity": 0.9539390802383423,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7297",
+        "643",
+        "200931",
+        "1432",
+        "4780",
+        "3484",
+        "163486",
+        "3627",
+        "10537",
+        "5970"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-505",
+        "hsa-mir-197",
+        "hsa-miR-346",
+        "hsa-miR-432-3p",
+        "hsa-miR-197-3p",
+        "hsa-miR-483-3p",
+        "hsa-miR-30d-3p",
+        "hsa-miR-423-3p",
+        "hsa-miR-506-3p",
+        "hsa-miR-326"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0085584",
+    "name": "Encephalopathy",
+    "definition": "Encephalopathy is a term that means brain disease, damage, or malfunction. In general, encephalopathy is manifested by an altered mental state.",
+    "similarity": 0.9525031447410583,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6925",
+        "6351",
+        "6505",
+        "238",
+        "30816",
+        "51112",
+        "478",
+        "51091",
+        "284111",
+        "5602"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-33b-5p",
+        "hsa-miR-483-5p",
+        "hsa-miR-30c-5p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-132-3p",
+        "hsa-miR-9-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-146b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0008370",
+    "name": "Cholestasis",
+    "definition": "Impairment of bile flow due to obstruction in bile ducts.",
+    "similarity": 0.9505476355552673,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "84068",
+        "6272",
+        "23493",
+        "5594",
+        "1576",
+        "7905",
+        "26033",
+        "1581",
+        "929",
+        "64241"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-130b-3p",
+        "mmu-miR-191-3p",
+        "rno-miR-21-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0007820",
+    "name": "Cerebrovascular disorder",
+    "definition": "A disorder resulting from inadequate blood flow in the vessels that supply the brain. Representative examples include cerebrovascular ischemia, cerebral embolism, and cerebral infarction.",
+    "similarity": 0.9494295120239258,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "1535",
+        "929",
+        "124220",
+        "7422",
+        "2169",
+        "55213",
+        "7941",
+        "9241",
+        "4780"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-29c-3p",
+        "mmu-miR-29a-3p",
+        "hsa-miR-125a-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-98-5p",
+        "mmu-miR-132-3p",
+        "mmu-miR-181c-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-124-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0030305",
+    "name": "Pancreatitis",
+    "definition": "The presence of inflammation in the pancreas.",
+    "similarity": 0.9489835500717163,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "6925",
+        "6869",
+        "331",
+        "1848",
+        "5594",
+        "3852",
+        "9402",
+        "473",
+        "929"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-375-3p",
+        "hsa-miR-1246",
+        "hsa-miR-24-3p",
+        "hsa-miR-582-5p",
+        "rno-let-7c-2-3p",
+        "rno-let-7b-3p",
+        "rno-miR-30d-5p",
+        "rno-miR-152-3p",
+        "hsa-miR-339-3p",
+        "rno-let-7i-5p"
+      ]
+    }
+  }
+]

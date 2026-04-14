@@ -1,0 +1,484 @@
+[
+  {
+    "disease_id": "C3165106",
+    "name": "",
+    "definition": "",
+    "similarity": -1.0,
+    "attributes": {
+      "associated_gene_names": [
+        "5159",
+        "9578",
+        "54822",
+        "2046",
+        "5585",
+        "2870",
+        "545",
+        "340156",
+        "85443",
+        "10420"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-145-5p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-20a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1275081",
+    "name": "Cardio-facio-cutaneous syndrome",
+    "definition": "Cardiofaciocutaneous (CFC) syndrome is characterized by cardiac abnormalities (pulmonic stenosis and other valve dysplasias, septal defects, hypertrophic cardiomyopathy, rhythm disturbances), distinctive craniofacial appearance, and cutaneous abnormalities (including xerosis, hyperkeratosis, ichthyosis, keratosis pilaris, ulerythema ophryogenes, eczema, pigmented moles, hemangiomas, and palmoplantar hyperkeratosis). The hair is typically sparse, curly, fine or thick, and woolly or brittle; eyelashes and eyebrows may be absent or sparse. Nails may be dystrophic or fast growing. Affected individuals typically have some form of neurologic and/or cognitive delay (ranging from mild to severe). Most individuals have severe feeding issues, which can contribute to poor growth, and many require nasogastric or gastrostomy tube feeding. Many affected individuals have eye findings, including strabismus, nystagmus, refractive errors, and optic nerve hypoplasia. Seizures may be present and can be refractory to therapy.",
+    "similarity": 0.48958396911621094,
+    "attributes": {
+      "semantictype": "Congenital Abnormality",
+      "associated_gene_names": [
+        "5594",
+        "55997",
+        "4893",
+        "5922",
+        "673",
+        "6654",
+        "5604",
+        "2048",
+        "5921",
+        "6237"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-451a",
+        "hsa-miR-125b-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-26a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1446783",
+    "name": "",
+    "definition": "",
+    "similarity": 0.48691773414611816,
+    "attributes": {
+      "associated_gene_names": [
+        "5594",
+        "7130",
+        "57045",
+        "2048"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-106b-5p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-20a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4698657",
+    "name": "",
+    "definition": "",
+    "similarity": 0.48640626668930054,
+    "attributes": {
+      "associated_gene_names": [
+        "81608",
+        "2045",
+        "8115",
+        "5156",
+        "4851",
+        "6886"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-451a",
+        "hsa-miR-93-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-142-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1531553",
+    "name": "Dendritic cell neoplasm",
+    "definition": "No definition",
+    "similarity": 0.4862349033355713,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "5594",
+        "5609",
+        "4684",
+        "2048",
+        "673",
+        "5530"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-27a-3p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-93-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-221-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0175704",
+    "name": "Noonan syndrome with multiple lentigines",
+    "definition": "Noonan syndrome with multiple lentigines (NSML) is a condition in which the cardinal features consist of lentigines, hypertrophic cardiomyopathy, short stature, pectus deformity, and dysmorphic facial features including widely spaced eyes and ptosis. Multiple lentigines present as dispersed flat, black-brown macules, mostly on the face, neck, and upper part of the trunk with sparing of the mucosa. In general, lentigines do not appear until age four to five years but then increase to the thousands by puberty. Some individuals with NSML do not exhibit lentigines. Approximately 85% of affected individuals have heart defects, including hypertrophic cardiomyopathy (typically appearing during infancy and sometimes progressive) and pulmonary valve stenosis. Postnatal growth restriction resulting in short stature occurs in fewer than 50% of affected persons, although most affected individuals have a height that is less than the 25th centile for age. Sensorineural hearing deficits, present in approximately 20% of affected individuals, are poorly characterized. Intellectual disability, typically mild, is observed in approximately 30% of persons with NSML.",
+    "similarity": 0.48560652136802673,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5594",
+        "5604",
+        "5609",
+        "5293",
+        "5894",
+        "22882",
+        "6237",
+        "23328",
+        "5921",
+        "2048"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-16-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-24-3p",
+        "hsa-miR-21-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2698750",
+    "name": "Pediatric-Type Follicular Lymphoma",
+    "definition": "A nodal follicular lymphoma with favorable prognosis. It lacks BCL-2 rearrangement and 14;18 translocation. Nearly all cases are localized. It is usually seen in the pediatric population but similar lymphomas may occur in adults.",
+    "similarity": 0.4845350384712219,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "5594",
+        "604",
+        "8764",
+        "3394",
+        "51750",
+        "596",
+        "2048",
+        "27086",
+        "8085",
+        "3662"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-150-5p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-143-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-145-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4551517",
+    "name": "Flared nostrils",
+    "definition": "No definition",
+    "similarity": 0.48320865631103516,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "8239",
+        "673",
+        "998",
+        "25942",
+        "64093",
+        "5160"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-125b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1849128",
+    "name": "Hereditary spastic paraplegia 15",
+    "definition": "Spastic paraplegia 15 (SPG15), typically an early-onset complex hereditary spastic paraplegia, is characterized by progressive spasticity that begins in the lower extremities and is associated with several manifestations resulting from central and peripheral nervous system dysfunction. While onset of spasticity is typically in mid- to late childhood or adolescence (i.e., between ages 5 and 18 years), other manifestations, such as developmental delay or learning disability, may be present earlier, often preceding motor involvement. Individuals with adult onset have also been reported.",
+    "similarity": 0.4828902781009674,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23503",
+        "80208",
+        "6683"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-92a-3p",
+        "hsa-miR-93-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4020962",
+    "name": "Enlarged thorax",
+    "definition": "No definition",
+    "similarity": 0.48263609409332275,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "2200",
+        "5894",
+        "3835",
+        "4893",
+        "9820",
+        "27238",
+        "5922",
+        "673",
+        "2626",
+        "6654"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-125b-5p",
+        "hsa-miR-29a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4021991",
+    "name": "Abnormal astrocyte morphology",
+    "definition": "An abnormality of astrocytes.",
+    "similarity": 0.4823159873485565,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "9131"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-29b-3p",
+        "hsa-miR-150-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1970887",
+    "name": "Abnormal middle ear reflexes",
+    "definition": "No definition",
+    "similarity": 0.4823159873485565,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "9131"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-222-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1970840",
+    "name": "",
+    "definition": "",
+    "similarity": 0.4823159873485565,
+    "attributes": {
+      "associated_gene_names": [
+        "9131"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-223-3p",
+        "hsa-miR-150-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-21-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C3151753",
+    "name": "Severe X-linked mitochondrial encephalomyopathy",
+    "definition": "Combined oxidative phosphorylation deficiency-6 (COXPD6) is an X-linked recessive severe encephalomyopathic disorder with onset in utero or in infancy. Affected patients have hypotonia and severely impaired psychomotor development associated with variably decreased enzymatic activity of mitochondrial respiratory complexes in skeletal muscle or fibroblasts. More variable features may include sensorimotor neuropathy, seizures, severe muscle weakness, abnormal signals in the basal ganglia, hypertrophic cardiomyopathy, deafness, swallowing difficulties, and respiratory insufficiency. Death in childhood may occur (summary by Berger et al., 2011). For a discussion of genetic heterogeneity of combined oxidative phosphorylation deficiency, see COXPD1 (609060).",
+    "similarity": 0.4823159873485565,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "9131"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-451a",
+        "hsa-miR-29a-3p",
+        "hsa-miR-125b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4304400",
+    "name": "X-linked hereditary sensory and autonomic neuropathy with hearing loss",
+    "definition": "This syndrome has characteristics of axonal sensory and autonomic neuropathy with hearing loss. It has been described in a large five-generation Chinese family. Onset occurred in the second decade of life with mild to severe hearing impairment due to degeneration of the auditory nerve, followed by late-onset of a diffuse and progressive peripheral sensory neuropathy. The causative gene was mapped to the AUNX1 locus on chromosome Xq23-27.3. Transmission was X-linked recessive.",
+    "similarity": 0.4823159873485565,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "9131"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-222-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-150-5p",
+        "hsa-miR-221-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4280736",
+    "name": "Large knee",
+    "definition": "Abnormally increased size of the knee joint.",
+    "similarity": 0.4823159873485565,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "9131"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-223-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-20a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1845095",
+    "name": "Deafness, X-linked 5",
+    "definition": "X-linked deafness-5 is a neurologic disorder characterized by childhood onset of auditory neuropathy and later onset of distal sensory impairment affecting the peripheral nervous system (summary by Zong et al., 2015).",
+    "similarity": 0.4823159873485565,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "9131"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-24-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4021815",
+    "name": "Abnormal palate morphology",
+    "definition": "Any abnormality of the palate, i.e., of roof of the mouth.",
+    "similarity": 0.48218902945518494,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "6925",
+        "1291",
+        "114548",
+        "25885",
+        "84168",
+        "9326",
+        "26137",
+        "55670",
+        "5193",
+        "2261"
+      ],
+      "associated_miRNA_names": []
+    }
+  },
+  {
+    "disease_id": "C0428419",
+    "name": "",
+    "definition": "",
+    "similarity": 0.48194655776023865,
+    "attributes": {
+      "associated_gene_names": [
+        "6300",
+        "23682",
+        "2048",
+        "2066",
+        "5581"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-146a-5p",
+        "hsa-miR-155-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-24-3p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-93-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0028326",
+    "name": "Noonan syndrome",
+    "definition": "Noonan syndrome (NS) is characterized by characteristic facies, short stature, congenital heart defect, and developmental delay of variable degree. Other findings can include broad or webbed neck, unusual chest shape with superior pectus carinatum and inferior pectus excavatum, cryptorchidism, varied coagulation defects, lymphatic dysplasias, and ocular abnormalities. Although birth length is usually normal, final adult height approaches the lower limit of normal. Congenital heart disease occurs in 50%-80% of individuals. Pulmonary valve stenosis, often with dysplasia, is the most common heart defect and is found in 20%-50% of individuals. Hypertrophic cardiomyopathy, found in 20%-30% of individuals, may be present at birth or develop in infancy or childhood. Other structural defects include atrial and ventricular septal defects, branch pulmonary artery stenosis, and tetralogy of Fallot. Up to one fourth of affected individuals have mild intellectual disability, and language impairments in general are more common in NS than in the general population.",
+    "similarity": 0.4813701808452606,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "79594",
+        "5250",
+        "54797",
+        "7391",
+        "1840",
+        "2048",
+        "5598",
+        "6128",
+        "6348",
+        "5921"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-151a-5p",
+        "hsa-miR-541-3p",
+        "hsa-miR-619-5p",
+        "hsa-miR-4656",
+        "hsa-miR-106b-5p",
+        "hsa-miR-4507",
+        "hsa-miR-92a-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-122-5p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1332969",
+    "name": "Childhood ganglioglioma",
+    "definition": "A ganglioglioma that arises from the central nervous system and occurs during childhood.",
+    "similarity": 0.48090147972106934,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "3418",
+        "673",
+        "1032",
+        "2048",
+        "27165",
+        "1730",
+        "4603",
+        "7091",
+        "65018",
+        "4255"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-143-3p",
+        "hsa-miR-221-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-451a"
+      ]
+    }
+  }
+]

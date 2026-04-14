@@ -1,0 +1,109 @@
+.global-network-container {
+  width: 100%;
+  position: relative;
+}
+
+.global-network-card {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.global-network-card .ant-card-head {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.card-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.control-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  background-color: #f6f6f6;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.info-text {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.select-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.slider-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.network-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.network-chart {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+/* 全屏模式下的样式 */
+:fullscreen .global-network-card {
+  height: 100vh;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+:fullscreen .network-chart {
+  height: calc(100vh - 150px) !important;
+}
+
+/* 适配移动设备 */
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .slider-section {
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  .network-chart {
+    height: 500px !important;
+  }
+} 

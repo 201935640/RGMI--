@@ -1,0 +1,148 @@
+.node-detail-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  height: 100%;
+  transition: all 0.3s;
+  overflow: auto;
+  max-height: 700px;
+}
+
+.node-detail-card .ant-card-body {
+  padding: 16px;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.disease-type-tag {
+  margin-bottom: 8px;
+}
+
+.disease-type-tag .ant-tag {
+  margin-right: 0;
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.disease-title {
+  margin: 8px 0 !important;
+  color: #303133;
+  overflow-wrap: break-word;
+}
+
+.disease-id {
+  color: #909399;
+  font-size: 13px;
+}
+
+.similarity-section {
+  margin: 16px 0;
+  position: relative;
+}
+
+.similarity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.similarity-value {
+  color: #1890ff;
+  font-size: 16px;
+}
+
+.similarity-progress {
+  height: 8px !important;
+  margin-bottom: 8px;
+}
+
+.similarity-progress .ant-progress-inner {
+  border-radius: 4px;
+}
+
+.threshold-indicator {
+  position: relative;
+  height: 16px;
+}
+
+.threshold-marker {
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: #ff4d4f;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.threshold-marker::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff4d4f;
+}
+
+.detail-divider {
+  margin: 12px 0;
+}
+
+.section-title {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #606266;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.definition-text {
+  color: #606266;
+  font-size: 14px;
+  text-align: justify;
+  margin-bottom: 0 !important;
+}
+
+.genes-section {
+  margin-bottom: 16px;
+}
+
+.gene-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.view-details-button {
+  width: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+}
+
+/* 悬停效果 */
+.node-detail-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .node-detail-card {
+    max-height: 400px;
+  }
+} 

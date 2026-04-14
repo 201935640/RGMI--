@@ -1,0 +1,94 @@
+.radar-chart-card {
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.radar-chart-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.radar-chart {
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.3s;
+}
+
+.radar-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.info-icon {
+  color: #1890ff;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.radar-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.radar-chart-description {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border-left: 4px solid #d35400;
+}
+
+.radar-chart-description h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.radar-chart-description ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.radar-chart-description li {
+  margin-bottom: 6px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.radar-chart-description strong {
+  color: #d35400;
+  font-weight: 600;
+}
+
+.chart-loading-container {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .radar-chart {
+    height: 300px !important;
+  }
+  
+  .radar-chart-description {
+    padding: 10px;
+  }
+  
+  .radar-chart-description ul {
+    padding-left: 15px;
+  }
+} 

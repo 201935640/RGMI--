@@ -1,0 +1,1629 @@
+[
+  {
+    "disease_id": "C0003467",
+    "name": "Anxiety",
+    "definition": "Intense feelings of nervousness, tension, or panic often arise in response to interpersonal stresses. There is worry about the negative effects of past unpleasant experiences and future negative possibilities. Individuals may feel fearful, apprehensive, or threatened by uncertainty, and they may also have fears of falling apart or losing control.",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "5054",
+        "154",
+        "54832",
+        "84650",
+        "1909",
+        "23451",
+        "2039",
+        "8301",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-3095-3p",
+        "mmu-miR-466c-3p",
+        "mmu-miR-669c-5p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003469",
+    "name": "Anxiety disorder",
+    "definition": "A category of psychiatric disorders which are characterized by anxious feelings or fear often accompanied by physical symptoms associated with anxiety.",
+    "similarity": 0.9847718477249146,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "6869",
+        "186",
+        "8811",
+        "1586",
+        "5324",
+        "3351",
+        "154",
+        "84650",
+        "1909"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-466c-3p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p",
+        "mmu-miR-3095-3p",
+        "mmu-miR-709"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1269683",
+    "name": "Major depressive disorder",
+    "definition": "Depression (also known as major depression or major depressive disorder) is a psychiatric disorder that affects mood, behavior, and overall health. It causes prolonged feelings of sadness, emptiness, or hopelessness, and a loss of interest in activities that were once enjoyed. People with depression may also have changes in appetite (leading to overeating or not eating enough), changes in sleeping patterns (sleeping too much or not being able to sleep), loss of energy, and difficulty concentrating. Although depression is considered primarily a mental health disorder, it can also have physical features including headaches, other unexplained aches and pains, unusually slow or fast movements, and digestive problems. To be diagnosed with depression, an individual must have signs and symptoms nearly every day for at least 2 weeks. However, the features of this condition vary widely.\\n\\nDepression most commonly begins in late adolescence or early adulthood, although it can appear at any age. If untreated, episodes of depression can last for weeks, months, or years, and can go away and come back (recur). Affected individuals may have difficulty functioning in their daily lives, including at school or work. People with depression have a higher risk of substance abuse problems and dying by suicide than the general population.\\n\\nSeveral health conditions are closely related to depression or have depression as a characteristic feature. These include dysthymia (which has long-lasting signs and symptoms that are similar to, but not as severe as, those of depression), perinatal or postpartum depression (which occurs around or following the birth of a child), seasonal affective disorder (which is triggered by the changing of the seasons), bipolar disorder (which can include both \"highs,\" or manic episodes, and depressive episodes), and generalized anxiety disorder. In people with schizoaffective disorder, depression or another mood disorder occurs together with features of schizophrenia (a brain disorder that affects a person's thinking, sense of self, and perceptions).",
+    "similarity": 0.9778039455413818,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "2623",
+        "57084",
+        "10777",
+        "6929",
+        "1909",
+        "84650",
+        "8859",
+        "3351",
+        "1440",
+        "5173"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0016667",
+    "name": "Fragile X syndrome",
+    "definition": "FMR1 disorders include fragile X syndrome (FXS), fragile X-associated tremor/ataxia syndrome (FXTAS), and fragile X-associated primary ovarian insufficiency (FXPOI). Fragile X syndrome occurs in individuals with an FMR1 full mutation or other loss-of-function variant and is nearly always characterized in affected males by developmental delay and intellectual disability along with a variety of behavioral issues. Autism spectrum disorder is present in 50%-70% of individuals with FXS. Affected males may have characteristic craniofacial features (which become more obvious with age) and medical problems including hypotonia, gastroesophageal reflux, strabismus, seizures, sleep disorders, joint laxity, pes planus, scoliosis, and recurrent otitis media. Adults may have mitral valve prolapse or aortic root dilatation. The physical and behavioral features seen in males with FXS have been reported in females heterozygous for the FMR1 full mutation, but with lower frequency and milder involvement. FXTAS occurs in individuals who have an FMR1 premutation and is characterized by late-onset, progressive cerebellar ataxia and intention tremor followed by cognitive impairment. Psychiatric disorders are common. Age of onset is typically between 60 and 65 years and is more common among males who are hemizygous for the premutation (40%) than among females who are heterozygous for the premutation (16%-20%). FXPOI, defined as hypergonadotropic hypogonadism before age 40 years, has been observed in 20% of women who carry a premutation allele compared to 1% in the general population.",
+    "similarity": 0.9771319627761841,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "55777",
+        "57532",
+        "5293",
+        "659",
+        "7903",
+        "5058",
+        "6383",
+        "3375",
+        "64506",
+        "9968"
+      ],
+      "associated_miRNA_names": [
+        "dme-miR-276a-3p",
+        "mmu-miR-146a-3p",
+        "hsa-miR-7-5p",
+        "hsa-miR-148b-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-139-5p",
+        "hsa-miR-134-3p",
+        "hsa-miR-598-3p",
+        "hsa-miR-130b-3p",
+        "mmu-miR-138-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0032897",
+    "name": "Prader-Willi syndrome",
+    "definition": "Prader-Willi syndrome (PWS) is characterized by severe hypotonia, poor appetite, and feeding difficulties in early infancy, followed in early childhood by excessive eating and gradual development of morbid obesity (unless food intake is strictly controlled). Motor milestones and language development are delayed. All individuals have some degree of cognitive impairment. Hypogonadism is present in both males and females and manifests as genital hypoplasia, incomplete pubertal development, and, in most, infertility. Short stature is common (if not treated with growth hormone). A distinctive behavioral phenotype (temper tantrums, stubbornness, manipulative behavior, and obsessive-compulsive characteristics) is common. Characteristic facial features, strabismus, and scoliosis are often present.",
+    "similarity": 0.9767769575119019,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23569",
+        "114791",
+        "7681",
+        "5293",
+        "5894",
+        "2011",
+        "9883",
+        "410",
+        "26585",
+        "57730"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-151a-5p",
+        "hsa-miR-541-3p",
+        "hsa-miR-619-5p",
+        "hsa-miR-4656",
+        "hsa-miR-106b-5p",
+        "hsa-miR-4507",
+        "hsa-miR-92a-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-122-5p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011581",
+    "name": "Depression",
+    "definition": "Frequently experiencing feelings of being down, miserable, and/or hopeless; struggling to recover from these moods; having a pessimistic outlook on the future; feeling a pervasive sense of shame; having a low self-worth; experiencing thoughts of suicide and engaging in suicidal behavior.",
+    "similarity": 0.9753996133804321,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "84634",
+        "1813",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "54832",
+        "154",
+        "3351",
+        "27286"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0036572",
+    "name": "Seizure",
+    "definition": "A seizure is an intermittent abnormality of nervous system physiology characterized by a transient occurrence of signs and/or symptoms due to abnormal excessive or synchronous neuronal activity in the brain.",
+    "similarity": 0.9739503860473633,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "7450",
+        "2557",
+        "3483",
+        "9992",
+        "8417",
+        "5319",
+        "6857",
+        "23530",
+        "197258",
+        "154881"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0086132",
+    "name": "Symptoms of depression",
+    "definition": "No definition",
+    "similarity": 0.9716963171958923,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "2623",
+        "9388",
+        "1545",
+        "3725",
+        "3423",
+        "5319",
+        "23530",
+        "6929",
+        "1909",
+        "84650"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270824",
+    "name": "Visual epilepsy",
+    "definition": "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as epilepsy or 'seizure disorder.'",
+    "similarity": 0.9677972793579102,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6925",
+        "8061",
+        "57030",
+        "3066",
+        "3737",
+        "2021",
+        "5173",
+        "1813",
+        "1843",
+        "3351"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0344315",
+    "name": "Depressed mood",
+    "definition": "An emotional state characterized by feelings of sadness, emptiness, and/or tearfulness.",
+    "similarity": 0.9664933681488037,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "6925",
+        "4987",
+        "3423",
+        "2039",
+        "6822",
+        "3483",
+        "5319",
+        "6857",
+        "438",
+        "23451"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0030193",
+    "name": "Pain",
+    "definition": "An unpleasant sensory and emotional experience associated with actual or potential tissue damage, or described in terms of such damage.",
+    "similarity": 0.9661738276481628,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "6869",
+        "5173",
+        "84650",
+        "5631",
+        "154",
+        "63910",
+        "3351",
+        "5324",
+        "2232",
+        "57084"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-107-3p",
+        "hsa-miR-103a-2-5p",
+        "hsa-miR-3613-3p",
+        "hsa-miR-135a-3p",
+        "hsa-miR-183-3p",
+        "mmu-miR-23a-3p",
+        "rno-miR-146a-3p",
+        "hsa-miR-182-3p",
+        "hsa-miR-23b-3p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0007959",
+    "name": "Charcot-Marie-Tooth disease",
+    "definition": "Charcot-Marie-Tooth disease encompasses a group of disorders called hereditary sensory and motor neuropathies that damage the peripheral nerves. Peripheral nerves connect the brain and spinal cord to muscles and to sensory cells that detect sensations such as touch, pain, heat, and sound. Damage to the peripheral nerves that worsens over time can result in alteration or loss of sensation and wasting (atrophy) of muscles in the feet, legs, and hands.\\n\\nCharcot-Marie-Tooth disease usually becomes apparent in adolescence or early adulthood, but onset may occur anytime from early childhood through late adulthood. Symptoms of Charcot-Marie-Tooth disease vary in severity and age of onset even among members of the same family. Some people never realize they have the disorder because their symptoms are so mild, but most have a moderate amount of physical disability. A small percentage of people experience severe weakness or other problems which, in very rare cases, can be life-threatening. In most affected individuals, however, Charcot-Marie-Tooth disease does not affect life expectancy.\\n\\nTypically, the earliest symptoms of Charcot-Marie-Tooth disease result from muscle atrophy in the feet. Affected individuals may have foot abnormalities such as high arches (pes cavus), flat feet (pes planus), or curled toes (hammer toes). They often have difficulty flexing the foot or walking on the heel of the foot. These difficulties may cause a higher than normal step (steppage gait) and increase the risk of ankle injuries and tripping. As the disease worsens, muscles in the lower legs usually weaken, but leg and foot problems rarely require the use of a wheelchair.\\n\\nAffected individuals may also develop weakness in the hands, causing difficulty with daily activities such as writing, fastening buttons, and turning doorknobs. People with Charcot-Marie-Tooth disease typically experience a decreased sensitivity to touch, heat, and cold in the feet and lower legs, but occasionally feel aching or burning sensations. In rare cases, affected individuals have loss of vision or gradual hearing loss that sometimes leads to deafness.\\n\\nThere are several types of Charcot-Marie-Tooth disease, which are differentiated by their effects on nerve cells and patterns of inheritance. Type 1 (CMT1) is characterized by abnormalities in myelin, the fatty substance that covers nerve cells, protecting them and helping to transmit nerve impulses. These abnormalities slow the transmission of nerve impulses and can affect the health of the nerve fiber. Type 2 (CMT2) is characterized by abnormalities in the fiber, or axon, that extends from a nerve cell body to muscles or to sense organs. These abnormalities reduce the strength of the nerve impulse. People with CMT2 may develop amyotrophic lateral sclerosis (ALS), a condition characterized by progressive muscle weakness, a loss of muscle mass, and an inability to control movement.In forms of Charcot-Marie-Tooth disease classified as intermediate type, the nerve impulses are both slowed and reduced in strength, probably due to abnormalities in both myelin and axons. Type 4 (CMT4) is distinguished from the other types by its pattern of inheritance; it can affect either the axons or the myelin. Type X Charcot-Marie-Tooth disease (CMTX) is caused by mutations in genes on the X chromosome, one of the two sex chromosomes. Within the various types of Charcot-Marie-Tooth disease, subtypes (such as CMT1A, CMT1B, CMT2A, CMT4A, and CMTX1) indicate different genetic causes.\\n\\nSometimes other, historical names are used to refer to particular forms of  Charcot-Marie-Tooth disease. For example, Roussy-Levy syndrome is a form of CMT11 with the additional feature of rhythmic shaking (tremors).  Dejerine-Sottas syndrome is a term sometimes used to describe a severe, early childhood form of Charcot-Marie-Tooth disease; it is also sometimes called type 3 (CMT3). Depending on the specific gene that is altered, this severe, early-onset form of the disorder may also be classified as CMT1 or CMT4. CMTX5 is also known as Rosenberg-Chutorian syndrome.",
+    "similarity": 0.9650821089744568,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "79594",
+        "2065",
+        "3798",
+        "1337",
+        "5375",
+        "121227",
+        "5631",
+        "6929",
+        "1785",
+        "84174"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4718",
+        "hsa-miR-4476",
+        "hsa-miR-5008-5p",
+        "hsa-miR-4462",
+        "hsa-miR-4539",
+        "hsa-miR-1290",
+        "hsa-miR-149-3p",
+        "hsa-miR-619-5p",
+        "hsa-miR-204-3p",
+        "hsa-miR-206"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0023882",
+    "name": "Spastic diplegia",
+    "definition": "Spasticity (neuromuscular hypertonia) primarily in the muscles of the legs, hips, and pelvis.",
+    "similarity": 0.9639243483543396,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "51091",
+        "3925",
+        "546",
+        "10381",
+        "10075",
+        "4860",
+        "2639",
+        "6683",
+        "22930",
+        "224"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-135b-3p",
+        "rno-miR-200a-3p",
+        "rno-miR-26a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011570",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9638456106185913,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "5324",
+        "5319",
+        "438",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "154",
+        "3351"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0752347",
+    "name": "Lewy body dementia",
+    "definition": "Dementia with Lewy bodies (DLB) is a neurodegenerative disorder clinically characterized by dementia and parkinsonism, often with fluctuating cognitive function, visual hallucinations, falls, syncopal episodes, and sensitivity to neuroleptic medication. Pathologically, Lewy bodies are present in a pattern more widespread than usually observed in Parkinson disease (see PD; 168600). Alzheimer disease (AD; 104300)-associated pathology and spongiform changes may also be seen (McKeith et al., 1996; Mizutani, 2000; McKeith et al., 2005).",
+    "similarity": 0.9628645181655884,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "79594",
+        "2521",
+        "3898",
+        "57030",
+        "5664",
+        "3482",
+        "1813",
+        "54832",
+        "6667",
+        "3483"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-555",
+        "hsa-miR-1250-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-224-3p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-212-3p",
+        "hsa-miR-455-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0016063",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9627773761749268,
+    "attributes": {
+      "associated_gene_names": [
+        "4142",
+        "5741",
+        "2690",
+        "860",
+        "8074",
+        "4091",
+        "2688",
+        "820",
+        "2353",
+        "8600"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-182-5p",
+        "hsa-miR-324-5p",
+        "hsa-miR-25-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-451a",
+        "hsa-miR-363-3p",
+        "hsa-miR-93-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0007789",
+    "name": "Cerebral palsy",
+    "definition": "Cerebral palsy describes a group of permanent disorders of the development of movement and posture, causing activity limitation, that are attributed to nonprogressive disturbances that occurred in the developing fetal or infant brain. The motor disorders of cerebral palsy are often accompanied by disturbances of sensation, perception, cognition, communication, and behavior, by epilepsy, and by secondary musculoskeletal problems.",
+    "similarity": 0.96152663230896,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "29803",
+        "9761",
+        "9242",
+        "5354",
+        "6598",
+        "10533",
+        "5373",
+        "3576",
+        "10850",
+        "5741"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-135b-3p",
+        "rno-miR-200a-3p",
+        "rno-miR-26a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2931689",
+    "name": "Myotonic dystrophy type 2",
+    "definition": "Myotonic dystrophy type 2 (DM2) is characterized by myotonia and muscle dysfunction (proximal and axial weakness, myalgia, and stiffness), and less commonly by posterior subcapsular cataracts, cardiac conduction defects, insulin-insensitive type 2 diabetes mellitus, and other endocrine abnormalities. While myotonia (involuntary muscle contraction with delayed relaxation) has been reported during the first decade, onset is typically in the third to fourth decade, most commonly with fluctuating or episodic muscle pain that can be debilitating and proximal and axial weakness of the neck flexors and the hip flexors. Subsequently, weakness occurs in the elbow extensors and finger flexors. Facial weakness and weakness of the ankle dorsiflexors are less common. Myotonia rarely causes severe symptoms. In a subset of individuals, calf hypertrophy in combination with brisk reflexes is notable.",
+    "similarity": 0.9611486196517944,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "1535",
+        "7422",
+        "51182",
+        "6476",
+        "63976",
+        "1734",
+        "8776",
+        "155",
+        "1968",
+        "6517"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-215-3p",
+        "hsa-miR-518e-3p",
+        "mmu-miR-17-3p",
+        "mmu-miR-26a-5p",
+        "mmu-miR-146b-3p",
+        "mmu-miR-18a-3p",
+        "mmu-miR-34b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-181c-3p",
+        "mmu-miR-181a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0005697",
+    "name": "Neurogenic bladder",
+    "definition": "A type of bladder dysfunction caused by neurologic damage. Neurogenic bladder can be flaccid or spastic. Common manifestatios of neurogenic bladder are overflow incontinence, frequency, urgency, urge incontinence, and retention.",
+    "similarity": 0.9610113501548767,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "253738",
+        "55823",
+        "1291",
+        "2065",
+        "493856",
+        "155",
+        "23400",
+        "25793",
+        "91949",
+        "55331"
+      ],
+      "associated_miRNA_names": [
+        "mmu-let-7b-5p",
+        "mmu-miR-23b-3p",
+        "mmu-miR-22-3p",
+        "mmu-let-7f-5p",
+        "mmu-let-7d-5p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-99a-3p",
+        "mmu-miR-29c-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-26b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4048158",
+    "name": "Convulsions",
+    "definition": "No definition",
+    "similarity": 0.9597271680831909,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "6925",
+        "57030",
+        "5173",
+        "1813",
+        "3351",
+        "5319",
+        "3308",
+        "4204",
+        "51738",
+        "4504"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C3714756",
+    "name": "Intellectual disability",
+    "definition": "Intellectual disability, previously referred to as mental retardation, is characterized by subnormal intellectual functioning that occurs during the developmental period. It is defined by an IQ score below 70.",
+    "similarity": 0.9593888521194458,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "2623",
+        "139285",
+        "3725",
+        "8913",
+        "3423",
+        "3425",
+        "4782",
+        "6857",
+        "438",
+        "55857"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-137-3p",
+        "hsa-miR-33b-5p",
+        "hsa-miR-483-5p",
+        "hsa-miR-137-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4083008",
+    "name": "Guillain-Barre syndrome, familial",
+    "definition": "Guillain-Barre syndrome (GBS) is an acute inflammatory demyelinating polyneuropathy characterized most commonly by symmetric limb weakness and loss of tendon reflexes. It is a putative autoimmune disorder presenting after an infectious illness, most commonly Campylobacter jejuni, a gram-negative bacterium that causes acute enteritis (Yuki and Tsujino, 1995; Koga et al., 2005). Approximately 1 in 1,000 individuals develops GBS after C. jejuni infection (Nachamkin, 2001). Although rare familial cases have been reported, GBS is considered to be a complex multifactorial disorder with both genetic and environmental factors rather than a disorder following simple mendelian inheritance (Geleijns et al., 2004).",
+    "similarity": 0.9589674472808838,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5594",
+        "25897",
+        "5599",
+        "3952",
+        "7965",
+        "5319",
+        "7124",
+        "3553",
+        "129831",
+        "151056"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-642b-5p",
+        "hsa-miR-4717-3p",
+        "hsa-miR-4717-5p",
+        "hsa-miR-642b-3p",
+        "hsa-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0031117",
+    "name": "Peripheral neuropathy",
+    "definition": "Peripheral neuropathy is a general term for any disorder of the peripheral nervous system. The main clinical features used to classify peripheral neuropathy are distribution, type (mainly demyelinating versus mainly axonal), duration, and course.",
+    "similarity": 0.9577380418777466,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6925",
+        "7298",
+        "22930",
+        "3557",
+        "1577",
+        "1337",
+        "4684",
+        "3798",
+        "410",
+        "57634"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4718",
+        "hsa-miR-4476",
+        "hsa-miR-5008-5p",
+        "hsa-miR-4462",
+        "hsa-miR-4539",
+        "hsa-miR-1290",
+        "hsa-miR-619-5p",
+        "hsa-miR-204-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027888",
+    "name": "Hereditary motor and sensory neuropathy",
+    "definition": "A group of slowly progressive inherited disorders affecting motor and sensory peripheral nerves. Subtypes include HMSNs I-VII. HMSN I and II both refer to CHARCOT-MARIE-Tooth DISEASE. HMSN III refers to hypertrophic neuropathy of infancy. HMSN IV refers to REFSUM DISEASE. HMSN V refers to a condition marked by a hereditary motor and sensory neuropathy associated with spastic paraplegia (see SPASTIC PARAPLEGIA, HEREDITARY). HMSN VI refers to HMSN associated with an inherited optic atrophy (OPTIC ATROPHIES, HEREDITARY), and HMSN VII refers to HMSN associated with retinitis pigmentosa. (From Adams et al., Principles of Neurology, 6th ed, p1343)",
+    "similarity": 0.9572048187255859,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23299",
+        "6687",
+        "1200",
+        "9131",
+        "3098",
+        "2617",
+        "9927",
+        "3855",
+        "50717",
+        "3931"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4718",
+        "hsa-miR-4476",
+        "hsa-miR-5008-5p",
+        "hsa-miR-4462",
+        "hsa-miR-4539",
+        "hsa-miR-1290",
+        "hsa-miR-619-5p",
+        "hsa-miR-204-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4317109",
+    "name": "Epileptic seizure",
+    "definition": "A transient occurrence of signs and/or symptoms due to abnormal excessive or synchronous neuronal activity in the brain, regardless of whether focal, generalized, or unknown onset, whether aware or impaired awareness, and whether motor or nonmotor.",
+    "similarity": 0.9557857513427734,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6925",
+        "6506",
+        "5293",
+        "23293",
+        "6281",
+        "9839",
+        "1143",
+        "6546",
+        "23369",
+        "126393"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0149931",
+    "name": "Migraine",
+    "definition": "Migraine is a chronic neurological disorder characterized by episodic attacks of headache and associated symptoms.",
+    "similarity": 0.9557377099990845,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "1289",
+        "744",
+        "27030",
+        "8645",
+        "1909",
+        "3351",
+        "6687",
+        "27286",
+        "5324"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-382-5p",
+        "hsa-let-7g",
+        "hsa-miR-155-3p",
+        "hsa-miR-126-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0494475",
+    "name": "Bilateral tonic-clonic seizure",
+    "definition": "A bilateral tonic-clonic seizure is a seizure defined by a tonic (bilateral increased tone, lasting seconds to minutes) and then a clonic (bilateral sustained rhythmic jerking) phase.",
+    "similarity": 0.9553632736206055,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "6925",
+        "5173",
+        "154881",
+        "5631",
+        "3351",
+        "139411",
+        "186",
+        "1813",
+        "3737",
+        "3418"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2362324",
+    "name": "Childhood obesity",
+    "definition": "Body mass index at or above 95th percentile as compared to children of the same age and sex",
+    "similarity": 0.9521613717079163,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6272",
+        "9227",
+        "51129",
+        "2875",
+        "27034",
+        "799",
+        "4544",
+        "1813",
+        "2232",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4777-3p",
+        "hsa-miR-642b-3p",
+        "mmu-miR-21a-5p",
+        "hsa-miR-107"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0013336",
+    "name": "Severe short stature",
+    "definition": "A severe degree of short stature, more than -4 SD from the mean corrected for age and sex.",
+    "similarity": 0.9514542818069458,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "1032",
+        "60684",
+        "2969",
+        "23203",
+        "9572",
+        "54809",
+        "2812",
+        "2719",
+        "129563"
+      ],
+      "associated_miRNA_names": [
+        "gga-miR-148a-3p",
+        "gga-miR-128-3p",
+        "mmu-miR-27a-3p",
+        "mmu-miR-96-3p",
+        "mmu-miR-29c-3p",
+        "mmu-miR-501-3p",
+        "mmu-miR-140-3p",
+        "mmu-miR-22-3p",
+        "mmu-miR-411-3p",
+        "mmu-miR-29b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0235025",
+    "name": "Motor nerve neuritis",
+    "definition": "Inflammation or degeneration of the peripheral motor nerves.",
+    "similarity": 0.9512526988983154,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "11022",
+        "10179",
+        "51305",
+        "4311",
+        "4287",
+        "2617",
+        "9927",
+        "5393",
+        "10280",
+        "400916"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4718",
+        "hsa-miR-4476",
+        "hsa-miR-5008-5p",
+        "hsa-miR-4462",
+        "hsa-miR-4539",
+        "hsa-miR-1290",
+        "hsa-miR-619-5p",
+        "hsa-miR-204-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020456",
+    "name": "Hyperglycemia",
+    "definition": "An increased concentration of glucose in the blood.",
+    "similarity": 0.950312614440918,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "7450",
+        "3673",
+        "3725",
+        "596",
+        "84701",
+        "3308",
+        "1545",
+        "5914",
+        "115123",
+        "3727"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-125a-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-141-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-26a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1263846",
+    "name": "Attention deficit hyperactivity disorder",
+    "definition": "Attention-deficit/hyperactivity disorder (ADHD) is a behavioral disorder that typically begins in childhood and is characterized by a short attention span (inattention), an inability to be calm and stay still (hyperactivity), and poor impulse control (impulsivity). Some people with ADHD have problems with only inattention or with hyperactivity and impulsivity, but most have problems related to all three features.\\n\\nIn people with ADHD, the characteristic behaviors are frequent and severe enough to interfere with the activities of daily living such as school, work, and relationships with others. Because of an inability to stay focused on tasks, people with inattention may be easily distracted, forgetful, avoid tasks that require sustained attention, have difficulty organizing tasks, or frequently lose items.\\n\\nHyperactivity is usually shown by frequent movement. Individuals with this feature often fidget or tap their foot when seated, leave their seat when it is inappropriate to do so (such as in the classroom), or talk a lot and interrupt others.\\n\\nImpulsivity can result in hasty actions without thought for the consequences. Individuals with poor impulse control may have difficulty waiting for their turn, deferring to others, or considering their actions before acting.\\n\\nMore than two-thirds of all individuals with ADHD have additional conditions, including insomnia, mood or anxiety disorders, learning disorders, or substance use disorders. Affected individuals may also have autism spectrum disorder, which is characterized by impaired communication and social interaction, or Tourette syndrome, which is a disorder characterized by repetitive and involuntary movements or noises called tics.\\n\\nIn most affected individuals, ADHD continues throughout life, but in about one-third of individuals, signs and symptoms of ADHD go away by adulthood.",
+    "similarity": 0.9490965008735657,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "6925",
+        "154",
+        "91752",
+        "1813",
+        "186",
+        "143689",
+        "4522",
+        "139411",
+        "27286",
+        "6687"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-211-5p",
+        "hsa-miR-132-3p",
+        "hsa-miR-96-3p",
+        "hsa-miR-29c-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-183-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-182-3p",
+        "hsa-miR-1-3p",
+        "hsa-miR-126-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C3250443",
+    "name": "Steinert myotonic dystrophy syndrome",
+    "definition": "Myotonic dystrophy type 1 (DM1) is a multisystem disorder that affects skeletal and smooth muscle as well as the eye, heart, endocrine system, and central nervous system. The clinical findings, which span a continuum from mild to severe, have been categorized into three somewhat overlapping phenotypes: mild, classic, and congenital. Mild DM1 is characterized by cataract and mild myotonia (sustained muscle contraction); life span is normal. Classic DM1 is characterized by muscle weakness and wasting, myotonia, cataract, and often cardiac conduction abnormalities; adults may become physically disabled and may have a shortened life span. Congenital DM1 is characterized by hypotonia and severe generalized weakness at birth, often with respiratory insufficiency and early death; intellectual disability is common.",
+    "similarity": 0.9487612247467041,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "26033",
+        "2669",
+        "3811",
+        "7124",
+        "2065",
+        "4982",
+        "4318",
+        "6366",
+        "3187",
+        "5891"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-215-3p",
+        "hsa-miR-518e-3p",
+        "mmu-miR-17-3p",
+        "mmu-miR-26a-5p",
+        "mmu-miR-146b-3p",
+        "mmu-miR-18a-3p",
+        "mmu-miR-34b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-181c-3p",
+        "mmu-miR-181a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0010674",
+    "name": "Cystic fibrosis",
+    "definition": "Cystic fibrosis (CF) is a multisystem disease affecting epithelia of the respiratory tract, exocrine pancreas, intestine, hepatobiliary system, and exocrine sweat glands. Morbidities include recurrent sinusitis and bronchitis, progressive obstructive pulmonary disease with bronchiectasis, exocrine pancreatic deficiency and malnutrition, pancreatitis, gastrointestinal manifestations (meconium ileus, rectal prolapse, distal intestinal obstructive syndrome), liver disease, diabetes, male infertility due to hypoplasia or aplasia of the vas deferens, and reduced fertility or infertility in some women. Pulmonary disease is the major cause of morbidity and mortality in CF.",
+    "similarity": 0.9479613304138184,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "26762",
+        "6868",
+        "7097",
+        "133396",
+        "6754",
+        "9332",
+        "6348",
+        "4810",
+        "2837"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-23b",
+        "hsa-miR-16-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-27b-3p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-193a-5p",
+        "hsa-miR-31-3p",
+        "hsa-miR-885-5p",
+        "hsa-miR-99b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1855520",
+    "name": "Postprandial hyperglycemia",
+    "definition": "An increased concentration of glucose in the blood following a meal.",
+    "similarity": 0.9473681449890137,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "23729",
+        "10008",
+        "2641",
+        "2876",
+        "6347",
+        "3952",
+        "6667",
+        "9332",
+        "779",
+        "1728"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-125a-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-141-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-26a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0018099",
+    "name": "Gout",
+    "definition": "Recurrent attacks of acute inflammatory arthritis of a joint or set of joints caused by elevated levels of uric acid in the blood which crystallize and are deposited in joints, tendons, and surrounding tissues.",
+    "similarity": 0.9472551345825195,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "26263",
+        "3576",
+        "2444",
+        "8884",
+        "5467",
+        "8854",
+        "3251",
+        "3131",
+        "10524",
+        "53942"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-520g-3p",
+        "hsa-miR-520h",
+        "hsa-miR-519d-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-520a-3p",
+        "hsa-miR-519e-3p",
+        "hsa-miR-30c-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0410702",
+    "name": "Adolescent idiopathic scoliosis",
+    "definition": "A scoliosis with no known cause arising in adolescent.",
+    "similarity": 0.947219967842102,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "131368",
+        "8856",
+        "56704",
+        "9242",
+        "320",
+        "81570",
+        "9630",
+        "10267",
+        "90627",
+        "3490"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-324-5p",
+        "hsa-miR-548x-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-503-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-17-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-181b-5p",
+        "hsa-miR-92a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0026847",
+    "name": "Spinal muscular atrophy",
+    "definition": "Spinal muscular atrophy (SMA) is characterized by muscle weakness and atrophy resulting from progressive degeneration and irreversible loss of the anterior horn cells in the spinal cord (i.e., lower motor neurons) and the brain stem nuclei. The onset of weakness ranges from before birth to adulthood. The weakness is symmetric, proximal greater than distal, and progressive. Before the genetic basis of SMA was understood, it was classified into clinical subtypes based on maximum motor function achieved; however, it is now apparent that the phenotype of SMN1-associated SMA spans a continuum without clear delineation of subtypes. With supportive care only, poor weight gain with growth failure, restrictive lung disease, scoliosis, and joint contractures are common complications; however, newly available targeted treatment options are changing the natural history of the disease.",
+    "similarity": 0.9469691514968872,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23299",
+        "7124",
+        "9572",
+        "54960",
+        "10285",
+        "596",
+        "1996",
+        "3483",
+        "6857",
+        "6776"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-206-3p",
+        "hsa-miR-335-5p",
+        "mmu-miR-9-3p",
+        "hsa-miR-324-5p",
+        "mmu-miR-132-3p",
+        "rno-miR-183-3p",
+        "hsa-miR-132-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-206",
+        "hsa-miR-1-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0025362",
+    "name": "Mental Retardation",
+    "definition": "A developmental disorder characterized by less than average intelligence and significant limitations in adaptive behavior with onset before the age of 18.",
+    "similarity": 0.9461870193481445,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "6925",
+        "1827",
+        "3425",
+        "6857",
+        "2218",
+        "1373",
+        "57522",
+        "27286",
+        "3556",
+        "186"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-137-3p",
+        "hsa-miR-33b-5p",
+        "hsa-miR-483-5p",
+        "hsa-miR-137-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0017160",
+    "name": "gastroenteritis",
+    "definition": "An inflammatory disorder that affects the upper and lower gastrointestinal tract. Most commonly, this is attributed to viruses; however bacteria, parasites or adverse reactions can also be the culprit. Symptoms include acute diarrhea and vomiting.",
+    "similarity": 0.9449344873428345,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6134",
+        "4045",
+        "7494",
+        "7124",
+        "140685",
+        "400668",
+        "5319",
+        "6857",
+        "3556",
+        "2694"
+      ],
+      "associated_miRNA_names": [
+        "mmu-let-7k",
+        "hsa-miR-491-3p",
+        "mmu-miR-124-3p",
+        "hsa-miR-146a-3p",
+        "hsa-let-7e",
+        "hsa-miR-133a-3p",
+        "mmu-miR-31-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-155-3p",
+        "hsa-miR-146b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0917713",
+    "name": "Becker muscular dystrophy",
+    "definition": "The dystrophinopathies cover a spectrum of X-linked muscle disease ranging from mild to severe that includes Duchenne muscular dystrophy, Becker muscular dystrophy, and DMD-associated dilated cardiomyopathy (DCM). The mild end of the spectrum includes the phenotypes of asymptomatic increase in serum concentration of creatine phosphokinase (CK) and muscle cramps with myoglobinuria. The severe end of the spectrum includes progressive muscle diseases that are classified as Duchenne/Becker muscular dystrophy when skeletal muscle is primarily affected and as DMD-associated DCM when the heart is primarily affected. Duchenne muscular dystrophy (DMD) usually presents in early childhood with delayed motor milestones including delays in walking independently and standing up from a supine position. Proximal weakness causes a waddling gait and difficulty climbing stairs, running, jumping, and standing up from a squatting position. DMD is rapidly progressive, with affected children being wheelchair dependent by age 12 years. Cardiomyopathy occurs in almost all individuals with DMD after age 18 years. Few survive beyond the third decade, with respiratory complications and progressive cardiomyopathy being common causes of death. Becker muscular dystrophy (BMD) is characterized by later-onset skeletal muscle weakness. With improved diagnostic techniques, it has been recognized that the mild end of the spectrum includes men with onset of symptoms after age 30 years who remain ambulatory even into their 60s. Despite the milder skeletal muscle involvement, heart failure from DCM is a common cause of morbidity and the most common cause of death in BMD. Mean age of death is in the mid-40s. DMD-associated DCM is characterized by left ventricular dilatation and congestive heart failure. Females heterozygous for a DMD pathogenic variant are at increased risk for DCM.",
+    "similarity": 0.9445091485977173,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "1837",
+        "6462",
+        "127933",
+        "6476",
+        "5741",
+        "10850",
+        "6442",
+        "4318",
+        "7124",
+        "3109"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-6396",
+        "hsa-miR-212-3p",
+        "rno-miR-214-3p",
+        "mmu-miR-1968-5p",
+        "mmu-miR-499-5p",
+        "mmu-miR-130b-5p",
+        "hsa-miR-199a-3p",
+        "mmu-miR-146a-3p",
+        "mmu-miR-138-5p",
+        "hsa-miR-181a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0234535",
+    "name": "Clonic seizure",
+    "definition": "A clonic seizure is a type of motor seizure characterized by sustained rhythmic jerking, that is regularly repetitive.",
+    "similarity": 0.9441235065460205,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6925",
+        "57030",
+        "29107",
+        "2353",
+        "10923",
+        "7779",
+        "6648",
+        "4504",
+        "51738",
+        "4204"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270823",
+    "name": "Generalized non-convulsive status epilepticus without coma",
+    "definition": "Generalized non-convulsive status epilepticus without coma is a type of status epilepticus without prominent motor signs, which is electrographically generalized. It is a prolonged absence seizure.",
+    "similarity": 0.9437328577041626,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7422",
+        "6754",
+        "55163",
+        "2353",
+        "4208",
+        "6753",
+        "3490",
+        "7124",
+        "6348",
+        "3727"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-181b-5p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-126-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0948008",
+    "name": "Ischemic stroke",
+    "definition": "A stroke is an acute neurologic event leading to death of neural tissue of the brain and resulting in loss of motor, sensory and/or cognitive function. It is said to be the third leading cause of death in the United States. Gunel and Lifton (1996) noted that about 20% of strokes are hemorrhagic, resulting in bleeding into the brain. Ischemic strokes, resulting from vascular occlusion, account for the majority of strokes. Bersano et al. (2008) reviewed genetic polymorphisms that have been implicated in the development of stroke. Candidate genes include those involved in hemostasis (see, e.g., F5; 612309), the renin-angiotensin-aldosterone system (see, e.g., ACE; 106180), homocysteine (see, e.g., MTHFR; 607093), and lipoprotein metabolism (see, e.g., APOE; 107741). See also hemorrhagic stroke, or intracerebral hemorrhage (ICH; 614519).",
+    "similarity": 0.9425103664398193,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "1577",
+        "340348",
+        "2669",
+        "3898",
+        "462",
+        "55349",
+        "2821",
+        "55638",
+        "410"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-126a-5p",
+        "hsa-miR-361-3p",
+        "hsa-miR-98-5p",
+        "hsa-miR-151a-3p",
+        "hsa-miR-1287-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-127-3p",
+        "hsa-miR-29c-5p",
+        "hsa-miR-34c-3p",
+        "hsa-miR-34b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0041671",
+    "name": "Attention Deficit Disorders",
+    "definition": "behavior disorder originating in childhood in which the essential features are signs of developmentally inappropriate inattention, impulsivity, and hyperactivity; although most individuals have symptoms of both inattention and hyperactivity-impulsivity, one or the other pattern may be predominant; symptoms often attenuate during late adolescence although a minority experience the full complement of symptoms into mid-adulthood.",
+    "similarity": 0.9422469735145569,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "6869",
+        "207",
+        "2911",
+        "1312",
+        "4204",
+        "2917",
+        "2245",
+        "139411",
+        "1813",
+        "91752"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-211-5p",
+        "hsa-miR-132-3p",
+        "hsa-miR-96-3p",
+        "hsa-miR-29c-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-183-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-182-3p",
+        "hsa-miR-1-3p",
+        "hsa-miR-126-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0242852",
+    "name": "Proliferative vitreoretinopathy",
+    "definition": "Vitreoretinal membrane shrinkage or contraction secondary to the proliferation of primarily retinal pigment epithelial cells and glial cells, particularly fibrous astrocytes, followed by membrane formation. The formation of fibrillar collagen and cellular proliferation appear to be the basis for the contractile properties of the epiretinal and vitreous membranes.",
+    "similarity": 0.9414112567901611,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5159",
+        "5293",
+        "7124",
+        "3308",
+        "596",
+        "56996",
+        "655",
+        "26585",
+        "27306",
+        "8398"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-1267",
+        "hsa-miR-21-5p",
+        "hsa-miR-139-5p",
+        "hsa-miR-93-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-423-5p",
+        "hsa-miR-223-5p",
+        "hsa-miR-361-5p",
+        "hsa-miR-133a-3p",
+        "hsa-miR-505-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1279420",
+    "name": "Anxiety Neuroses",
+    "definition": "Term was discontinued in 1997. In 2000, the term was removed from all records containing it, and replaced with ANXIETY DISORDERS, its postable counterpart.",
+    "similarity": 0.9413484334945679,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "54361",
+        "7124",
+        "2332",
+        "775",
+        "3553",
+        "2353",
+        "4204",
+        "5697",
+        "2969",
+        "276"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-466c-3p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p",
+        "mmu-miR-3095-3p",
+        "mmu-miR-709"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1096063",
+    "name": "Refractory epilepsy",
+    "definition": "Epilepsy that is refractory to treatment.",
+    "similarity": 0.9398534297943115,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "1576",
+        "23263",
+        "10667",
+        "1577",
+        "6857",
+        "2912",
+        "596",
+        "51304",
+        "7124",
+        "8856"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34c-5p",
+        "hsa-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027796",
+    "name": "Neuralgia",
+    "definition": "Pain (An unpleasant sensory and emotional experience) along the course of a nerve.",
+    "similarity": 0.9393537044525146,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "6523",
+        "1843",
+        "3557",
+        "4544",
+        "10000",
+        "4953",
+        "728",
+        "7298",
+        "5173",
+        "1813"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-328a-5p",
+        "rno-miR-1-3p",
+        "rno-miR-138-5p",
+        "mmu-miR-122-5p",
+        "rno-miR-22-3p",
+        "rno-miR-129-5p",
+        "rno-miR-124-3p",
+        "mmu-miR-351-5p",
+        "mmu-miR-10a-5p",
+        "rno-miR-214-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0349231",
+    "name": "Phobia",
+    "definition": "Extreme, irrational, and persistent fears of certain objects, situations, activities, or persons can impede functioning in day-to-day life.",
+    "similarity": 0.9392303824424744,
+    "attributes": {
+      "semantictype": "Mental or Behavioral Dysfunction",
+      "associated_gene_names": [
+        "367",
+        "135",
+        "1401",
+        "6532",
+        "2004",
+        "117",
+        "2099",
+        "2100",
+        "1312",
+        "6886"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-466c-3p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p",
+        "mmu-miR-3095-3p",
+        "mmu-miR-709"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4316903",
+    "name": "Generalized non-motor (absence) seizure",
+    "definition": "A generalized non-motor (absence) seizure is a type of a type of dialeptic seizure that is of electrographically generalized onset. It is a generalized seizure characterized by an interruption of activities, a blank stare, and usually the person will be unresponsive when spoken to. Any ictal motor phenomena are minor in comparison to these non-motor features.",
+    "similarity": 0.9391351938247681,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6925",
+        "7552",
+        "1143",
+        "6546",
+        "9968",
+        "57030",
+        "3737",
+        "5173",
+        "1813",
+        "186"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  }
+]

@@ -1,0 +1,661 @@
+[
+  {
+    "disease_id": "C0546264",
+    "name": "",
+    "definition": "",
+    "similarity": -1.0,
+    "attributes": {
+      "associated_gene_names": [
+        "124093",
+        "4000",
+        "58",
+        "54499",
+        "10585",
+        "60",
+        "7169",
+        "57731",
+        "1760",
+        "8929"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751951",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9924460053443909,
+    "attributes": {
+      "associated_gene_names": [
+        "4000",
+        "4625",
+        "51086",
+        "1785",
+        "2218",
+        "2042",
+        "779",
+        "57190",
+        "217",
+        "2280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270960",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9801080226898193,
+    "attributes": {
+      "associated_gene_names": [
+        "124093",
+        "401265",
+        "9200",
+        "6122",
+        "1785",
+        "10269",
+        "2218",
+        "779",
+        "859",
+        "57190"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2875316",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9732294082641602,
+    "attributes": {
+      "associated_gene_names": [
+        "4000",
+        "3679",
+        "9215",
+        "79147",
+        "55624",
+        "11041",
+        "2218",
+        "4534",
+        "10585",
+        "1120"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270962",
+    "name": "Multiminicore myopathy",
+    "definition": "A rare hereditary neuromuscular disorder characterized by multiple cores on muscle biopsy and clinical features of a congenital myopathy.",
+    "similarity": 0.9718794226646423,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "4000",
+        "7273",
+        "6261",
+        "3679",
+        "9215",
+        "79147",
+        "55624",
+        "11041",
+        "2218",
+        "57190"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0157738",
+    "name": "Chronic ulcer of skin",
+    "definition": "No definition",
+    "similarity": 0.9712381958961487,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5154",
+        "1634",
+        "54535",
+        "5156",
+        "4313",
+        "1437",
+        "9034",
+        "7124",
+        "27102"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-1226-5p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-1-3p",
+        "hsa-miR-19b-3p",
+        "hsa-miR-100-3p",
+        "hsa-miR-206",
+        "hsa-miR-195-3p",
+        "hsa-miR-125a-3p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-320d"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1869123",
+    "name": "Autosomal recessive limb-girdle muscular dystrophy type 2A",
+    "definition": "Calpainopathy is characterized by symmetric and progressive weakness of proximal limb-girdle muscles. Clinical findings of calpainopathy include the tendency to walk on tiptoe, difficulty in running, scapular winging, waddling gait, laxity of the abdominal muscles, Achilles tendon shortening, and scoliosis. Affected individuals typically do not have cardiac involvement or intellectual disability. Three autosomal recessive calpainopathy phenotypes have been identified based on the distribution of muscle weakness and age at onset: (1) pelvifemoral limb-girdle muscular dystrophy (LGMD) (Leyden-Möbius LGMD) phenotype, the most frequently observed calpainopathy phenotype, in which muscle weakness is first evident in the pelvic girdle and later in the shoulder girdle, with onset that may occur as early as before age 12 years or as late as after age 30 years; (2) scapulohumeral LGMD (Erb LGMD) phenotype, usually a milder phenotype with infrequent early onset, in which muscle weakness is first evident in the shoulder girdle and later in the pelvic girdle; (3) hyperCKemia, usually observed in children or young individuals, in which individuals are asymptomatic and have high serum creatine kinase (CK) concentrations. The autosomal dominant form of calpainopathy is clinically variable, ranging from almost asymptomatic to wheelchair dependence after age 60 years in a few individuals; phenotype is generally milder than the recessive form.",
+    "similarity": 0.970673680305481,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "83548",
+        "1769",
+        "10585",
+        "60",
+        "2688",
+        "673",
+        "203859",
+        "6444",
+        "2218",
+        "5339"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-518c-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-324-3p",
+        "hsa-miR-19a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-16-1-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0026850",
+    "name": "Muscular dystrophy",
+    "definition": "The term dystrophy means abnormal growth. However, muscular dystrophy is used to describe primary myopathies with a genetic basis and a progressive course characterized by progressive skeletal muscle weakness and wasting, defects in muscle proteins, and histological features of muscle fiber degeneration (necrosis) and regeneration. If possible, it is preferred to use other HPO terms to describe the precise phenotypic abnormalities.",
+    "similarity": 0.9660946130752563,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3418",
+        "6776",
+        "6444",
+        "84033",
+        "1291",
+        "60684",
+        "5481",
+        "3156",
+        "23534",
+        "3181"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-517-5p",
+        "hsa-miR-208b-3p",
+        "hsa-miR-485-3p",
+        "hsa-miR-133a-3p",
+        "hsa-miR-140-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-363-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-16-1-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0686353",
+    "name": "Limb-girdle muscular dystrophy",
+    "definition": "Limb-girdle muscular dystrophy is a term for a group of diseases that cause weakness and wasting of the muscles in the arms and legs. The muscles most affected are those closest to the body (proximal muscles), specifically the muscles of the shoulders, upper arms, pelvic area, and thighs.\\n\\nThe severity, age of onset, and features of limb-girdle muscle dystrophy vary among the many subtypes of this condition and may be inconsistent even within the same family. Signs and symptoms may first appear at any age and generally worsen with time, although in some cases they remain mild.\\n\\nIn the early stages of limb-girdle muscular dystrophy, affected individuals may have an unusual walking gait, such as waddling or walking on the balls of their feet, and may also have difficulty running. They may need to use their arms to press themselves up from a squatting position because of their weak thigh muscles. As the condition progresses, people with limb-girdle muscular dystrophy may eventually require wheelchair assistance.\\n\\nMuscle wasting may cause changes in posture or in the appearance of the shoulder, back, and arm. In particular, weak shoulder muscles tend to make the shoulder blades (scapulae) \"stick out\" from the back, a sign known as scapular winging. Affected individuals may also have an abnormally curved lower back (lordosis) or a spine that curves to the side (scoliosis). Some develop joint stiffness (contractures) that can restrict movement in their hips, knees, ankles, or elbows. Overgrowth (hypertrophy) of the calf muscles occurs in some people with limb-girdle muscular dystrophy.\\n\\nWeakening of the heart muscle (cardiomyopathy) occurs in some forms of limb-girdle muscular dystrophy. Some affected individuals experience mild to severe breathing problems related to the weakness of muscles needed for breathing. In some cases, the breathing problems are severe enough that affected individuals need to use a machine to help them breathe (mechanical ventilation).\\n\\nIntelligence is generally unaffected in limb-girdle muscular dystrophy; however, developmental delay and intellectual disability have been reported in rare forms of the disorder.",
+    "similarity": 0.9614132642745972,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "79594",
+        "2218",
+        "51725",
+        "6442",
+        "859",
+        "4318",
+        "3181",
+        "23534",
+        "5913",
+        "60684"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-517-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-16-1-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-196b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0206157",
+    "name": "Nemaline myopathy",
+    "definition": "Nemaline myopathy is a disorder that primarily affects skeletal muscles, which are muscles that the body uses for movement. People with nemaline myopathy have muscle weakness (myopathy) throughout the body, but it is typically most severe in the muscles of the face; neck; trunk; and other muscles close to the center of the body (proximal muscles), such as those of the upper arms and legs. This weakness can worsen over time.  Affected individuals may have feeding and swallowing difficulties, foot deformities, abnormal curvature of the spine (scoliosis), and joint deformities (contractures). Most people with nemaline myopathy are able to walk, although some affected children may begin walking later than usual.  As the condition progresses, some people may require wheelchair assistance. In severe cases, the muscles used for breathing are affected and life-threatening breathing difficulties can occur.\\n\\nNemaline myopathy is divided into six types.  In order of decreasing severity, the types are: severe congenital, Amish, intermediate congenital, typical congenital, childhood-onset, and adult-onset. The types are distinguished by the age when symptoms first appear and the severity of symptoms; however, there is overlap among the various types. The severe congenital type is the most life-threatening. Most individuals with this type do not survive past early childhood due to respiratory failure. The Amish type solely affects the Old Order Amish population of Pennsylvania and is typically fatal in early childhood. The most common type of nemaline myopathy is the typical congenital type, which is characterized by muscle weakness and feeding problems beginning in infancy. Most of these individuals do not have severe breathing problems and can walk unassisted. People with the childhood-onset type usually develop muscle weakness in adolescence. The adult-onset type is the mildest of all the various types. People with this type usually develop muscle weakness between ages 20 and 50.",
+    "similarity": 0.9613348245620728,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "57192",
+        "131377",
+        "10804",
+        "7352",
+        "11041",
+        "2218",
+        "84665",
+        "87",
+        "4625",
+        "59"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1565951",
+    "name": "Sphenoid Wing Meningioma",
+    "definition": "No definition",
+    "similarity": 0.9608756303787231,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "5243",
+        "23158",
+        "207"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0268381",
+    "name": "AL amyloidosis",
+    "definition": "A clonal B-cell disorder characterized by the aggregation and deposition of insoluble amyloid fibrils derived from misfolding of monoclonal immunoglobulin light chains. It usually presents as systemic AL amyloidosis with involvement of one or more parenchymal organ(s) and, less frequently, as localized amyloidosis with usually nodular deposits restricted to a single organ and/or system.",
+    "similarity": 0.9590557813644409,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6233",
+        "595",
+        "4684",
+        "1440",
+        "54474",
+        "1545",
+        "7276",
+        "7124",
+        "639",
+        "5204"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4436b-5p",
+        "hsa-miR-557",
+        "hsa-miR-27a-3p",
+        "hsa-miR-526b-3p",
+        "hsa-miR-545-3p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-204-3p",
+        "hsa-miR-500a-3p",
+        "hsa-miR-129-5p",
+        "hsa-miR-135b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0231528",
+    "name": "Myalgia",
+    "definition": "Pain in muscle.",
+    "similarity": 0.9581762552261353,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "124093",
+        "799",
+        "1289",
+        "26503",
+        "2232",
+        "6521",
+        "2218",
+        "5657",
+        "2812",
+        "60684"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4291",
+        "hsa-let-7i-5p",
+        "hsa-miR-652-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-451a",
+        "hsa-miR-23a-3p",
+        "hsa-miR-584-3p",
+        "hsa-miR-92a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2239290",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9565725326538086,
+    "attributes": {
+      "associated_gene_names": [
+        "6361",
+        "604",
+        "27087"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-3660",
+        "hsa-miR-129-5p",
+        "hsa-miR-196b-5p",
+        "hsa-miR-18a-3p",
+        "hsa-miR-93-3p",
+        "hsa-miR-494-3p",
+        "hsa-miR-195-5p",
+        "hsa-miR-140-5p",
+        "hsa-miR-455-3p",
+        "hsa-miR-34b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0264956",
+    "name": "Atheroma of artery",
+    "definition": "No definition",
+    "similarity": 0.954099178314209,
+    "attributes": {
+      "semantictype": "Pathologic Function",
+      "associated_gene_names": [
+        "348",
+        "142",
+        "682",
+        "8856",
+        "9971"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4726-5p",
+        "mmu-miR-377-3p",
+        "hsa-miR-135b-5p",
+        "hsa-miR-495-3p",
+        "hsa-miR-671-3p",
+        "hsa-miR-196a-5p",
+        "hsa-miR-18a-3p",
+        "hsa-miR-494-3p",
+        "mmu-miR-19b-3p",
+        "rno-miR-21-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1850808",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9526643753051758,
+    "attributes": {
+      "associated_gene_names": [
+        "825",
+        "8842",
+        "29780",
+        "8291",
+        "203859",
+        "119",
+        "1639"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-518c-3p",
+        "hsa-miR-324-3p",
+        "hsa-miR-224-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-186-3p",
+        "hsa-let-7e",
+        "hsa-miR-485-3p",
+        "hsa-miR-140-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-155-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4551973",
+    "name": "Miyoshi muscular dystrophy 1",
+    "definition": "Dysferlinopathy includes a spectrum of muscle disease characterized by two major phenotypes: Miyoshi muscular dystrophy (MMD) and limb-girdle muscular dystrophy type 2B (LGMD2B); and two minor phenotypes: asymptomatic hyperCKemia and distal myopathy with anterior tibial onset (DMAT). MMD (median age of onset 19 years) is characterized by muscle weakness and atrophy, most marked in the distal parts of the legs, especially the gastrocnemius and soleus muscles. Over a period of years, the weakness and atrophy spread to the thighs and gluteal muscles. The forearms may become mildly atrophic with decrease in grip strength; the small muscles of the hands are spared. LGMD2B is characterized by early weakness and atrophy of the pelvic and shoulder girdle muscles in adolescence or young adulthood, with slow progression. Other phenotypes in this spectrum are scapuloperoneal syndrome and congenital muscular dystrophy. Asymptomatic hyperCKemia is characterized by marked elevation of serum CK concentration only. DMAT is characterized by early and predominant distal muscle weakness, particularly of the muscles of the anterior compartment of the legs.",
+    "similarity": 0.9526643753051758,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "825",
+        "8842",
+        "29780",
+        "8291",
+        "203859",
+        "119",
+        "1639"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-518c-3p",
+        "hsa-miR-324-3p",
+        "hsa-miR-224-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-186-3p",
+        "hsa-let-7e",
+        "hsa-miR-485-3p",
+        "hsa-miR-140-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-155-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270715",
+    "name": "Degenerative disease of the central nervous system",
+    "definition": "A disorder of the central nervous system characterized by gradual and progressive loss of neural tissue and neurologic function.",
+    "similarity": 0.9517731666564941,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "120892",
+        "2949",
+        "9194",
+        "4137",
+        "6709",
+        "80025",
+        "6648",
+        "6414",
+        "2936",
+        "3620"
+      ],
+      "associated_miRNA_names": [
+        "cel-miR-800-3p",
+        "hsa-miR-338-3p",
+        "hsa-miR-328-3p",
+        "hsa-miR-7-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-367-3p",
+        "hsa-miR-10a-3p",
+        "hsa-miR-337-3p",
+        "hsa-let-7d-5p",
+        "mmu-miR-92b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0451819",
+    "name": "Simple obesity",
+    "definition": "No definition",
+    "similarity": 0.9516078233718872,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7351",
+        "1327",
+        "5972",
+        "3952",
+        "5973",
+        "1431",
+        "1401",
+        "55967"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-135a-2-3p",
+        "hsa-miR-4645-3p",
+        "hsa-miR-18a-3p",
+        "hsa-miR-93-3p",
+        "hsa-miR-494-3p",
+        "rno-miR-21-3p",
+        "hsa-miR-195-5p",
+        "rno-miR-27a-3p",
+        "hsa-miR-455-3p",
+        "rno-miR-138-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1833683",
+    "name": "Nephrolithiasis, calcium oxalate",
+    "definition": "Kleta (2006) reviewed aspects of renal stone disease. Nephrolithiasis and urolithiasis remain major public health problems of largely unknown cause. While disorders such as cystinuria (220100) and primary hyperoxaluria (see 259900) that have nephrolithiasis as a major feature have advanced understanding of the metabolic and physiologic processes of stone formation in general, they have not addressed the etiology of calcium oxalate stone formation, responsible for approximately 75% of urolithiasis cases in humans. Men are affected twice as often as women, but children show no such gender bias. The recurrence rate is also high. In populations of European ancestry, 5 to 10% of adults experience the painful precipitation of calcium oxalate in their urinary tracts. Thorleifsson et al. (2009) noted that between 35 and 65% of hypercalciuric stone formers and up to 70% of subjects with hypercalciuria have relatives with nephrolithiasis, and twin studies have estimated the heritability of kidney stones to be 56%. Genetic Heterogeneity of Calcium Oxalate Nephrolithiasis See also CAON2 (620374), caused by mutation in the OXGR1 gene (606922) on chromosome 13q32.",
+    "similarity": 0.9513757228851318,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "54363",
+        "23158",
+        "10861",
+        "65010",
+        "153201",
+        "340024",
+        "3553",
+        "2677",
+        "189",
+        "54716"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-124-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0041296",
+    "name": "Tuberculosis",
+    "definition": "Tuberculosis (TB) is a contagious-infectious disease caused mainly by <i>Mycobacterium tuberculosis</i> that in most individuals is usually asymptomatic but that in at risk individuals (e.g. with diabetes or with HIV infection) can cause weakness, fever, weight loss, night sweat, and respiratory anomalies such as chronic cough, chest pain, hemoptysis or respiratory insufficiency.",
+    "similarity": 0.9499801397323608,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "4795",
+        "7296",
+        "154",
+        "6355",
+        "51251",
+        "23216",
+        "197259",
+        "2232",
+        "2356",
+        "84650"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-520d",
+        "hsa-miR-20a-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-144-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-941",
+        "hsa-miR-146a-3p",
+        "hsa-miR-21-5p"
+      ]
+    }
+  }
+]

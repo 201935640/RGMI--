@@ -1,0 +1,1661 @@
+[
+  {
+    "disease_id": "C0157738",
+    "name": "Chronic ulcer of skin",
+    "definition": "No definition",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "5154",
+        "1634",
+        "54535",
+        "5156",
+        "4313",
+        "1437",
+        "9034",
+        "7124",
+        "27102"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-1226-5p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-1-3p",
+        "hsa-miR-19b-3p",
+        "hsa-miR-100-3p",
+        "hsa-miR-206",
+        "hsa-miR-195-3p",
+        "hsa-miR-125a-3p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-320d"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270960",
+    "name": "Congenital myopathy",
+    "definition": "No definition",
+    "similarity": 0.9737345576286316,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "124093",
+        "401265",
+        "9200",
+        "6122",
+        "1785",
+        "10269",
+        "2218",
+        "779",
+        "859",
+        "57190"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1527383",
+    "name": "Morphea",
+    "definition": "Isolated patches of hardened skin (scleroderma).",
+    "similarity": 0.9723631739616394,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3456",
+        "4000",
+        "7431",
+        "60",
+        "6678",
+        "7124",
+        "596",
+        "1440",
+        "3439",
+        "7040"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-129-2-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-30a-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-29b-1-5p",
+        "hsa-miR-31-3p",
+        "hsa-miR-503-3p",
+        "hsa-miR-30b-3p",
+        "hsa-miR-150-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0546264",
+    "name": "Congenital myopathy with fiber type disproportion",
+    "definition": "Congenital fiber-type disproportion is a condition that primarily affects skeletal muscles, which are muscles used for movement. People with this condition typically experience muscle weakness (myopathy), particularly in the muscles of the shoulders, upper arms, hips, and thighs. Weakness can also affect the muscles of the face and muscles that control eye movement (ophthalmoplegia), sometimes causing droopy eyelids (ptosis). Individuals with congenital fiber-type disproportion generally have a long face, a high arch in the roof of the mouth (high-arched palate), and crowded teeth.\\n\\nIndividuals with congenital fiber-type disproportion may have joint deformities (contractures) and an abnormally curved lower back (lordosis) or a spine that curves to the side (scoliosis). Approximately 30 percent of people with this disorder experience mild to severe breathing problems related to weakness of muscles needed for breathing. Some people who experience these breathing problems require use of a machine to help regulate their breathing at night (noninvasive mechanical ventilation), and occasionally during the day as well. About 30 percent of affected individuals have difficulty swallowing due to muscle weakness in the throat. Rarely, people with this condition have a weakened and enlarged heart muscle (dilated cardiomyopathy).\\n\\nThe severity of congenital fiber-type disproportion varies widely. It is estimated that up to 25 percent of affected individuals experience severe muscle weakness at birth and die in infancy or childhood. Others have only mild muscle weakness that becomes apparent in adulthood. Most often, the signs and symptoms of this condition appear by age 1. The first signs of this condition are usually decreased muscle tone (hypotonia) and muscle weakness. In most cases, muscle weakness does not worsen over time, and in some instances it may improve. Although motor skills such as standing and walking may be delayed, many affected children eventually learn to walk. These individuals often have less stamina than their peers, but they remain active. Rarely, people with this condition have a progressive decline in muscle strength over time. These individuals may lose the ability to walk and require wheelchair assistance.",
+    "similarity": 0.9712382555007935,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "124093",
+        "4000",
+        "58",
+        "54499",
+        "10585",
+        "60",
+        "7169",
+        "57731",
+        "1760",
+        "8929"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751951",
+    "name": "Central core disease",
+    "definition": "An inherited neuromuscular disorder with characteristics of central cores on muscle biopsy and clinical features of a congenital myopathy. Typical presentation is in infancy with hypotonia and motor developmental delay and predominantly proximal weakness pronounced in the hip girdle. Caused by (predominantly dominant) mutations in the skeletal muscle ryanodine receptor (RYR1) gene, encoding the principal skeletal muscle sarcoplasmic reticulum calcium release channel (RyR1). Altered excitability and/or changes in calcium homeostasis within muscle cells due to mutation-induced conformational changes in the RyR protein are considered to be the main pathogenetic mechanism(s).",
+    "similarity": 0.9711114764213562,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "4000",
+        "4625",
+        "51086",
+        "1785",
+        "2218",
+        "2042",
+        "779",
+        "57190",
+        "217",
+        "2280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0334611",
+    "name": "Transitional meningioma",
+    "definition": "A WHO grade I meningioma characterized by the coexistence of meningothelial cells and fibrous architectural patterns.",
+    "similarity": 0.9706833362579346,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "6422",
+        "207",
+        "4311"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0025284",
+    "name": "Tumor of meninges",
+    "definition": "A benign or malignant neoplasm that affects the meninges. The majority of the neoplasms arise from meningothelial cells and are called meningiomas. Non-meningothelial cell neoplasms include mesenchymal, non-meningothelial tumors, hemangiopericytomas, and melanocytic lesions.",
+    "similarity": 0.9706445932388306,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "7422",
+        "2130",
+        "8438",
+        "5241",
+        "1390",
+        "316",
+        "3308",
+        "3576",
+        "6778",
+        "29937"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0686353",
+    "name": "Limb-girdle muscular dystrophy",
+    "definition": "Limb-girdle muscular dystrophy is a term for a group of diseases that cause weakness and wasting of the muscles in the arms and legs. The muscles most affected are those closest to the body (proximal muscles), specifically the muscles of the shoulders, upper arms, pelvic area, and thighs.\\n\\nThe severity, age of onset, and features of limb-girdle muscle dystrophy vary among the many subtypes of this condition and may be inconsistent even within the same family. Signs and symptoms may first appear at any age and generally worsen with time, although in some cases they remain mild.\\n\\nIn the early stages of limb-girdle muscular dystrophy, affected individuals may have an unusual walking gait, such as waddling or walking on the balls of their feet, and may also have difficulty running. They may need to use their arms to press themselves up from a squatting position because of their weak thigh muscles. As the condition progresses, people with limb-girdle muscular dystrophy may eventually require wheelchair assistance.\\n\\nMuscle wasting may cause changes in posture or in the appearance of the shoulder, back, and arm. In particular, weak shoulder muscles tend to make the shoulder blades (scapulae) \"stick out\" from the back, a sign known as scapular winging. Affected individuals may also have an abnormally curved lower back (lordosis) or a spine that curves to the side (scoliosis). Some develop joint stiffness (contractures) that can restrict movement in their hips, knees, ankles, or elbows. Overgrowth (hypertrophy) of the calf muscles occurs in some people with limb-girdle muscular dystrophy.\\n\\nWeakening of the heart muscle (cardiomyopathy) occurs in some forms of limb-girdle muscular dystrophy. Some affected individuals experience mild to severe breathing problems related to the weakness of muscles needed for breathing. In some cases, the breathing problems are severe enough that affected individuals need to use a machine to help them breathe (mechanical ventilation).\\n\\nIntelligence is generally unaffected in limb-girdle muscular dystrophy; however, developmental delay and intellectual disability have been reported in rare forms of the disorder.",
+    "similarity": 0.9704281091690063,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "79594",
+        "2218",
+        "51725",
+        "6442",
+        "859",
+        "4318",
+        "3181",
+        "23534",
+        "5913",
+        "60684"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-517-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-16-1-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-196b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C3178801",
+    "name": "Lacunar stroke",
+    "definition": "A stroke related to a small infarct (2-20 mm in diameter) in the deep cerebral white matter, basal ganglia, or pons, that is presumed to result from the occlusion of a single small perforating artery supplying the subcortical areas of the brain.",
+    "similarity": 0.9700548648834229,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "8997",
+        "255738",
+        "7010",
+        "3553",
+        "1282",
+        "4524",
+        "4313",
+        "4854",
+        "1636",
+        "11277"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-611",
+        "hsa-miR-106a-3p",
+        "hsa-miR-361-5p",
+        "hsa-miR-224-3p",
+        "hsa-let-7i",
+        "hsa-miR-19b-3p",
+        "hsa-miR-3149",
+        "hsa-miR-195-3p",
+        "hsa-miR-423-5p",
+        "hsa-miR-4429"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0349604",
+    "name": "Intracranial meningioma",
+    "definition": "A meningioma that arises within the cranial cavity.",
+    "similarity": 0.9698811173439026,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "7422",
+        "7298",
+        "4311",
+        "472",
+        "4313",
+        "842",
+        "4292",
+        "1514",
+        "4436",
+        "2065"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0268381",
+    "name": "AL amyloidosis",
+    "definition": "A clonal B-cell disorder characterized by the aggregation and deposition of insoluble amyloid fibrils derived from misfolding of monoclonal immunoglobulin light chains. It usually presents as systemic AL amyloidosis with involvement of one or more parenchymal organ(s) and, less frequently, as localized amyloidosis with usually nodular deposits restricted to a single organ and/or system.",
+    "similarity": 0.9698495864868164,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6233",
+        "595",
+        "4684",
+        "1440",
+        "54474",
+        "1545",
+        "7276",
+        "7124",
+        "639",
+        "5204"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4436b-5p",
+        "hsa-miR-557",
+        "hsa-miR-27a-3p",
+        "hsa-miR-526b-3p",
+        "hsa-miR-545-3p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-204-3p",
+        "hsa-miR-500a-3p",
+        "hsa-miR-129-5p",
+        "hsa-miR-135b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0018621",
+    "name": "Seasonal allergy",
+    "definition": "An allergy experienced at a particular time of year when trees or grasses pollinate and elicit an allergic reaction.",
+    "similarity": 0.9694046974182129,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6351",
+        "3725",
+        "57105",
+        "151056",
+        "9314",
+        "125",
+        "56005",
+        "9575",
+        "4318",
+        "8856"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-195-5p",
+        "hsa-miR-101-3p",
+        "mmu-miR-182-5p",
+        "hsa-miR-874-3p",
+        "hsa-miR-125a-3p",
+        "hsa-miR-19b-3p",
+        "mmu-miR-155-3p",
+        "hsa-miR-224-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-92a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1565951",
+    "name": "Sphenoid Wing Meningioma",
+    "definition": "No definition",
+    "similarity": 0.9686493873596191,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "5243",
+        "23158",
+        "207"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270715",
+    "name": "Degenerative disease of the central nervous system",
+    "definition": "A disorder of the central nervous system characterized by gradual and progressive loss of neural tissue and neurologic function.",
+    "similarity": 0.967674970626831,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "120892",
+        "2949",
+        "9194",
+        "4137",
+        "6709",
+        "80025",
+        "6648",
+        "6414",
+        "2936",
+        "3620"
+      ],
+      "associated_miRNA_names": [
+        "cel-miR-800-3p",
+        "hsa-miR-338-3p",
+        "hsa-miR-328-3p",
+        "hsa-miR-7-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-367-3p",
+        "hsa-miR-10a-3p",
+        "hsa-miR-337-3p",
+        "hsa-let-7d-5p",
+        "mmu-miR-92b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0231528",
+    "name": "Myalgia",
+    "definition": "Pain in muscle.",
+    "similarity": 0.9675867557525635,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "124093",
+        "799",
+        "1289",
+        "26503",
+        "2232",
+        "6521",
+        "2218",
+        "5657",
+        "2812",
+        "60684"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4291",
+        "hsa-let-7i-5p",
+        "hsa-miR-652-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-451a",
+        "hsa-miR-23a-3p",
+        "hsa-miR-584-3p",
+        "hsa-miR-92a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0347515",
+    "name": "Spinal meningioma",
+    "definition": "A meningioma that affects the spinal cord.",
+    "similarity": 0.9670590162277222,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "6605",
+        "8028",
+        "6598",
+        "6608",
+        "3280",
+        "1514",
+        "207",
+        "6624",
+        "51684",
+        "5241"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751304",
+    "name": "Parasagittal meningioma",
+    "definition": "A meningioma that affects the superior sagittal sinus and invades the parasagittal angle.",
+    "similarity": 0.9665182828903198,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "7422",
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0265004",
+    "name": "Aortic dilatation",
+    "definition": "A pathologic widening of the aortic lumen. It is often associated with hypertensive vascular disease and may progress to dissection and rupture.",
+    "similarity": 0.9663759469985962,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "2200",
+        "3934",
+        "5595",
+        "4883",
+        "7040",
+        "2006",
+        "3425",
+        "3725",
+        "3727",
+        "4982"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-489-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-126-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-15a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0334605",
+    "name": "Meningothelial meningioma",
+    "definition": "A WHO grade I meningioma characterized by the presence of tumor cells that form lobules. The tumor cells are generally uniform. Whorls and psammoma bodies are usually not present.",
+    "similarity": 0.9663703441619873,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "6750",
+        "207",
+        "1514"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0036420",
+    "name": "Localized scleroderma",
+    "definition": "Localized scleroderma is the skin localized form of scleroderma (see this term) characterized by fibrosis of the skin causing cutaneous plaques or strips.",
+    "similarity": 0.965158224105835,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3456",
+        "6352",
+        "7040",
+        "3439",
+        "1440",
+        "596",
+        "25",
+        "390598",
+        "7124",
+        "6362"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-129-2-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-30a-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-29b-1-5p",
+        "hsa-miR-31-3p",
+        "hsa-miR-503-3p",
+        "hsa-miR-30b-3p",
+        "hsa-miR-150-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0026850",
+    "name": "Muscular dystrophy",
+    "definition": "The term dystrophy means abnormal growth. However, muscular dystrophy is used to describe primary myopathies with a genetic basis and a progressive course characterized by progressive skeletal muscle weakness and wasting, defects in muscle proteins, and histological features of muscle fiber degeneration (necrosis) and regeneration. If possible, it is preferred to use other HPO terms to describe the precise phenotypic abnormalities.",
+    "similarity": 0.9646354913711548,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "3418",
+        "6776",
+        "6444",
+        "84033",
+        "1291",
+        "60684",
+        "5481",
+        "3156",
+        "23534",
+        "3181"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-517-5p",
+        "hsa-miR-208b-3p",
+        "hsa-miR-485-3p",
+        "hsa-miR-133a-3p",
+        "hsa-miR-140-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-363-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-16-1-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1285162",
+    "name": "Degenerative disorder",
+    "definition": "A disorder characterized by the progressive loss of function and/or structure of the affected tissues.",
+    "similarity": 0.9621217250823975,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "120892",
+        "3553",
+        "6683",
+        "8398",
+        "1909",
+        "23418",
+        "1080",
+        "6754",
+        "7276",
+        "7124"
+      ],
+      "associated_miRNA_names": [
+        "cel-miR-800-3p",
+        "hsa-miR-338-3p",
+        "hsa-miR-328-3p",
+        "hsa-miR-7-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-367-3p",
+        "hsa-miR-10a-3p",
+        "hsa-miR-337-3p",
+        "hsa-let-7d-5p",
+        "mmu-miR-92b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0334606",
+    "name": "Fibrous meningioma",
+    "definition": "A WHO grade I meningioma characterized by the presence of spindle cells that form bundles in a collagen matrix.",
+    "similarity": 0.9619777202606201,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1756",
+        "1514"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1527197",
+    "name": "Angioblastic meningioma",
+    "definition": "No definition",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1384408",
+    "name": "Microcystic meningioma",
+    "definition": "A WHO grade I meningioma characterized by the presence of intercellular microcystic spaces that contain mucinous fluid.",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751303",
+    "name": "Cerebral convexity meningioma",
+    "definition": "A meningioma that affects the cerebral sulcus.",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1565950",
+    "name": "Posterior cranial fossa meningioma",
+    "definition": "A meningioma that affects the posterior cranial fossa.",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1334261",
+    "name": "Intraorbital meningioma",
+    "definition": "A meningioma that affects the intraorbital structures.",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0457190",
+    "name": "Xanthomatous meningioma",
+    "definition": "No definition",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0334609",
+    "name": "Hemangioblastic Meningioma",
+    "definition": "An obsolete term referring to hemangiopericytoma of the central nervous system.",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0334610",
+    "name": "Hemangiopericytic Meningioma",
+    "definition": "No definition",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1335107",
+    "name": "Olfactory groove meningioma",
+    "definition": "A meningioma that affects the olfactory sulcus.",
+    "similarity": 0.9615694880485535,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0431121",
+    "name": "Clear cell meningioma",
+    "definition": "A WHO grade II morphologic variant of meningioma characterized by the presence of clear glycogen-rich polygonal cells.",
+    "similarity": 0.9612035751342773,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "6605",
+        "1476",
+        "4771",
+        "768",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0041296",
+    "name": "Tuberculosis",
+    "definition": "Tuberculosis (TB) is a contagious-infectious disease caused mainly by <i>Mycobacterium tuberculosis</i> that in most individuals is usually asymptomatic but that in at risk individuals (e.g. with diabetes or with HIV infection) can cause weakness, fever, weight loss, night sweat, and respiratory anomalies such as chronic cough, chest pain, hemoptysis or respiratory insufficiency.",
+    "similarity": 0.9611293077468872,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "4795",
+        "7296",
+        "154",
+        "6355",
+        "51251",
+        "23216",
+        "197259",
+        "2232",
+        "2356",
+        "84650"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-520d",
+        "hsa-miR-20a-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-144-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-941",
+        "hsa-miR-146a-3p",
+        "hsa-miR-21-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0206157",
+    "name": "Nemaline myopathy",
+    "definition": "Nemaline myopathy is a disorder that primarily affects skeletal muscles, which are muscles that the body uses for movement. People with nemaline myopathy have muscle weakness (myopathy) throughout the body, but it is typically most severe in the muscles of the face; neck; trunk; and other muscles close to the center of the body (proximal muscles), such as those of the upper arms and legs. This weakness can worsen over time.  Affected individuals may have feeding and swallowing difficulties, foot deformities, abnormal curvature of the spine (scoliosis), and joint deformities (contractures). Most people with nemaline myopathy are able to walk, although some affected children may begin walking later than usual.  As the condition progresses, some people may require wheelchair assistance. In severe cases, the muscles used for breathing are affected and life-threatening breathing difficulties can occur.\\n\\nNemaline myopathy is divided into six types.  In order of decreasing severity, the types are: severe congenital, Amish, intermediate congenital, typical congenital, childhood-onset, and adult-onset. The types are distinguished by the age when symptoms first appear and the severity of symptoms; however, there is overlap among the various types. The severe congenital type is the most life-threatening. Most individuals with this type do not survive past early childhood due to respiratory failure. The Amish type solely affects the Old Order Amish population of Pennsylvania and is typically fatal in early childhood. The most common type of nemaline myopathy is the typical congenital type, which is characterized by muscle weakness and feeding problems beginning in infancy. Most of these individuals do not have severe breathing problems and can walk unassisted. People with the childhood-onset type usually develop muscle weakness in adolescence. The adult-onset type is the mildest of all the various types. People with this type usually develop muscle weakness between ages 20 and 50.",
+    "similarity": 0.9606186151504517,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "57192",
+        "131377",
+        "10804",
+        "7352",
+        "11041",
+        "2218",
+        "84665",
+        "87",
+        "4625",
+        "59"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0035220",
+    "name": "Congenital alveolar dysplasia",
+    "definition": "Arrest of lung development in the cananicular stage (weeks 18 to 26 of human gestation) resulting in simplified acinar spaces, frequently with abundant intervening mesenchyme and no alveoli. In later arrest growth stages early saccular formations may be seen. May resemble the lobular maldevelopment often seen in alveolar capillary dysplasia/misaligment of the pulmonary veins without vein misalignment or marked hypertensive changes of the pulmonary arteries.",
+    "similarity": 0.9601675868034363,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "8399",
+        "5319",
+        "5810",
+        "8398",
+        "27306",
+        "462",
+        "5339",
+        "1577",
+        "655",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-184",
+        "hsa-miR-545-3p",
+        "hsa-miR-132-3p",
+        "hsa-miR-214-3p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-125a-3p",
+        "hsa-miR-195-3p",
+        "hsa-miR-206",
+        "hsa-miR-100-3p",
+        "hsa-miR-19b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0279680",
+    "name": "Transitional cell carcinoma of the bladder",
+    "definition": "The presence of a carcinoma of the urinary bladder with origin in a transitional epithelial cell.",
+    "similarity": 0.9585475325584412,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "5594",
+        "54541",
+        "596",
+        "23451",
+        "5324",
+        "54474",
+        "79366",
+        "9043",
+        "3306",
+        "5664"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-5187-5p",
+        "hsa-miR-134-5p",
+        "hsa-miR-23b-5p",
+        "hsa-miR-134-3p",
+        "hsa-miR-33a-5p",
+        "hsa-miR-663b",
+        "hsa-miR-615-3p",
+        "hsa-miR-1247-3p",
+        "hsa-miR-139-5p",
+        "hsa-miR-3195"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751713",
+    "name": "Sporadic inclusion body myositis",
+    "definition": "No definition",
+    "similarity": 0.9584842920303345,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "22926",
+        "7099",
+        "25825",
+        "8878",
+        "79443",
+        "129831",
+        "3553",
+        "56244",
+        "7494",
+        "7276"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-520h",
+        "hsa-miR-155-3p",
+        "hsa-miR-381-3p",
+        "hsa-miR-340-3p",
+        "hsa-miR-196b-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-296-3p",
+        "hsa-miR-133b",
+        "hsa-miR-101-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0205834",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9576902389526367,
+    "attributes": {
+      "associated_gene_names": [
+        "6605",
+        "51684",
+        "3204",
+        "6598",
+        "6608",
+        "3280",
+        "1514",
+        "207",
+        "3206",
+        "1476"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0205944",
+    "name": "",
+    "definition": "",
+    "similarity": 0.957371711730957,
+    "attributes": {
+      "associated_gene_names": [
+        "4288",
+        "5290",
+        "4313",
+        "79947",
+        "947",
+        "445",
+        "7040",
+        "1437",
+        "4170",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-3150b-5p",
+        "hsa-miR-191-5p",
+        "hsa-miR-18a-3p",
+        "hsa-miR-671-3p",
+        "hsa-miR-495-3p",
+        "hsa-miR-129-5p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-126-5p",
+        "hsa-miR-214-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0021364",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9572081565856934,
+    "attributes": {
+      "associated_gene_names": [
+        "6505",
+        "161582",
+        "51727",
+        "1588",
+        "1961",
+        "57727",
+        "160065",
+        "7124",
+        "6462",
+        "8900"
+      ],
+      "associated_miRNA_names": [
+        "bta-miR-296-3p",
+        "hsa-miR-190a-5p",
+        "hsa-miR-1288-3p",
+        "hsa-miR-513b-5p",
+        "hsa-miR-656-3p",
+        "hsa-miR-513a-5p",
+        "hsa-miR-597-3p",
+        "hsa-miR-181d-5p",
+        "mmu-miR-96-5p",
+        "hsa-miR-651-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751956",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9570262432098389,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "10019",
+        "5894",
+        "3659",
+        "340348",
+        "22882",
+        "3557",
+        "6687",
+        "1909",
+        "5328"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-188-5p",
+        "mmu-miR-20a-3p",
+        "hsa-miR-19b-3p",
+        "hsa-miR-3149",
+        "hsa-miR-195-3p",
+        "hsa-miR-423-5p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-4429",
+        "hsa-miR-320d",
+        "hsa-miR-874-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0010072",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9566534161567688,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "6648",
+        "960",
+        "2811",
+        "8398",
+        "5319",
+        "3673",
+        "4318",
+        "5054",
+        "929"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-802-5p",
+        "mmu-miR-23a-5p",
+        "rno-miR-22-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-138-5p",
+        "mmu-miR-10a-5p",
+        "hsa-miR-330-3p",
+        "rno-miR-92a-3p",
+        "rno-miR-34c-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4277682",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9549452066421509,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "2180",
+        "9376",
+        "1373",
+        "3263",
+        "1440",
+        "23476",
+        "2021",
+        "10096",
+        "2875"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-5589-5p",
+        "hsa-miR-15b-3p",
+        "hsa-miR-424-5p",
+        "mmu-miR-150-3p",
+        "hsa-miR-1-3p",
+        "hsa-miR-122-3p",
+        "hsa-miR-485-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-22-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0006287",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9545735716819763,
+    "attributes": {
+      "associated_gene_names": [
+        "8399",
+        "2922",
+        "1545",
+        "5657",
+        "596",
+        "655",
+        "1909",
+        "3351",
+        "1440",
+        "7296"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-421-3p",
+        "hsa-miR-19a-3p",
+        "hsa-miR-382-3p",
+        "hsa-let-7i-5p",
+        "hsa-miR-103a-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-451a",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1384406",
+    "name": "",
+    "definition": "",
+    "similarity": 0.954194962978363,
+    "attributes": {
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "2335",
+        "5728",
+        "9368",
+        "1471",
+        "5241",
+        "8028",
+        "207"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1334271",
+    "name": "",
+    "definition": "",
+    "similarity": 0.953982949256897,
+    "attributes": {
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "2670",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "207",
+        "1514"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270962",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9535942673683167,
+    "attributes": {
+      "associated_gene_names": [
+        "4000",
+        "7273",
+        "6261",
+        "3679",
+        "9215",
+        "79147",
+        "55624",
+        "11041",
+        "2218",
+        "57190"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-20a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-196b-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1850889",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9535874128341675,
+    "attributes": {
+      "associated_gene_names": [
+        "8557",
+        "80347",
+        "1639",
+        "358",
+        "26509",
+        "6519",
+        "7871",
+        "859",
+        "1756",
+        "7421"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-501-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-382-3p",
+        "hsa-miR-140-3p",
+        "hsa-miR-497-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0263409",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9533970355987549,
+    "attributes": {
+      "associated_gene_names": [
+        "4000",
+        "10950",
+        "3569",
+        "11095",
+        "25928",
+        "7040",
+        "1440",
+        "7124",
+        "4087"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-129-2-3p",
+        "hsa-miR-146b-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-30a-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-29b-1-5p",
+        "hsa-miR-31-3p",
+        "hsa-miR-503-3p",
+        "hsa-miR-30b-3p",
+        "hsa-miR-150-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0348426",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9533939361572266,
+    "attributes": {
+      "associated_gene_names": [
+        "1654"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-191-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-186-5p",
+        "hsa-miR-185-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  }
+]

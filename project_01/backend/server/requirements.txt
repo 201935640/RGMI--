@@ -1,0 +1,32 @@
+# --- Web Server & API ---
+flask==3.0.0
+flask-cors==4.0.0
+werkzeug==3.0.1
+waitress==3.0.0
+gunicorn==21.2.0
+
+# --- Deep Learning (PyTorch) ---
+# Python 3.8 stable versions
+torch>=2.0.0,<2.5.0
+torchvision>=0.15.0,<0.20.0
+torchaudio>=2.0.0,<2.5.0
+
+# --- Graph Neural Networks ---
+# Version 2.4.0 is the last to support Python 3.8
+torch-geometric==2.4.0
+networkx>=2.8,<3.2
+
+# --- Scientific Computing ---
+# Downgraded for Python 3.8 compatibility
+numpy>=1.24.0,<2.0.0
+pandas>=1.5.0,<2.1.0
+scipy>=1.10.0,<1.11.0
+scikit-learn>=1.2.0,<1.3.0
+
+# --- Database & Data Fetching ---
+pymysql==1.1.0
+requests==2.31.0
+tqdm==4.66.1
+
+# --- Utilities ---
+python-dotenv==1.0.0

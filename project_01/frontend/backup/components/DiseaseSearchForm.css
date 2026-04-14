@@ -1,0 +1,362 @@
+.disease-search-form-container {
+  padding: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.disease-search-form-container:hover {
+  background-color: #f0f7ff;
+}
+
+.search-mode-switch {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.search-input-item,
+.search-select-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-button-item {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.search-loading {
+  margin-top: 20px;
+  text-align: center;
+  padding: 16px;
+  background-color: rgba(24, 144, 255, 0.05);
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.search-loading-hint {
+  color: #888;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.search-error {
+  margin-top: 20px;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+  0% {
+    background-color: rgba(24, 144, 255, 0.05);
+  }
+  50% {
+    background-color: rgba(24, 144, 255, 0.1);
+  }
+  100% {
+    background-color: rgba(24, 144, 255, 0.05);
+  }
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .search-input-item,
+  .search-select-item,
+  .search-button-item {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .search-button-item {
+    margin-top: 10px;
+  }
+}
+
+.search-form-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.disease-search-card {
+  position: relative;
+  overflow: visible;
+}
+
+.disease-search-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1a2980, #26d0ce);
+  z-index: 1;
+}
+
+.search-form-title {
+  color: #1a2980;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.search-form-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #26d0ce;
+}
+
+.search-autocomplete {
+  width: 100%;
+}
+
+.search-dropdown .ant-select-item-option {
+  padding: 10px 12px;
+  transition: all 0.2s ease;
+}
+
+.search-dropdown .ant-select-item-option-active {
+  background-color: rgba(38, 208, 206, 0.1);
+}
+
+.autocomplete-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.disease-name {
+  font-weight: 500;
+}
+
+.disease-id {
+  color: #1a2980;
+  font-size: 12px;
+}
+
+.search-button {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, #1a2980, #26d0ce);
+  border: none;
+  box-shadow: 0 2px 8px rgba(26, 41, 128, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 41, 128, 0.3);
+  background: linear-gradient(90deg, #1a2980, #1f90c4);
+}
+
+.search-button-wrapper {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+/* 搜索历史 */
+.search-history {
+  padding-top: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+.history-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 41, 128, 0.15);
+  border-color: rgba(26, 41, 128, 0.2);
+}
+
+/* 标签页样式 */
+.search-tabs .ant-tabs-nav {
+  margin-bottom: 20px;
+}
+
+.search-tabs .ant-tabs-tab {
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+}
+
+.search-tabs .ant-tabs-tab:hover {
+  color: #26d0ce;
+}
+
+.search-tabs .ant-tabs-tab-active {
+  color: #1a2980 !important;
+  font-weight: 600;
+}
+
+.search-tabs .ant-tabs-ink-bar {
+  background: linear-gradient(90deg, #1a2980, #26d0ce);
+  height: 3px;
+}
+
+/* 疾病示例部分 */
+.disease-examples-container {
+  padding: 10px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.examples-intro {
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.example-disease-card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.example-disease-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(26, 41, 128, 0.15);
+  border-color: rgba(26, 41, 128, 0.1);
+}
+
+.example-disease-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a2980;
+  margin-bottom: 4px;
+}
+
+.example-disease-id {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 8px;
+}
+
+.example-disease-desc {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.65);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 搜索结果样式 */
+.search-results {
+  animation: fadeIn 0.5s ease;
+}
+
+.result-card {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 16px;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 41, 128, 0.15);
+  border-color: rgba(26, 41, 128, 0.1);
+}
+
+.selected-result-card {
+  border-color: #1a2980;
+  background-color: rgba(26, 41, 128, 0.03);
+  box-shadow: 0 5px 15px rgba(26, 41, 128, 0.1);
+}
+
+.result-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.disease-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a2980;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.disease-definition {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.disease-type {
+  margin-bottom: 10px;
+}
+
+.similarity-score {
+  font-size: 13px;
+}
+
+/* 动画效果 */
+.slide-in-up {
+  animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .result-card-header {
+    flex-direction: column;
+  }
+  
+  .search-form-wrapper {
+    padding: 16px;
+  }
+  
+  .example-cards {
+    margin-top: 10px;
+  }
+} 

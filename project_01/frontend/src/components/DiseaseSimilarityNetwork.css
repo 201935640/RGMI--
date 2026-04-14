@@ -1,0 +1,293 @@
+.disease-network-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.disease-network-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 24px;
+}
+
+.disease-network-card .ant-card-head-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2980;
+}
+
+.disease-network-card .ant-card-body {
+  padding: 16px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.network-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.network-graph {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  background-color: #fcfcfc;
+}
+
+.network-info {
+  padding: 8px 16px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #f0f0f0;
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.network-info .anticon {
+  margin-right: 8px;
+  color: #1a2980;
+}
+
+.network-controls {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  padding: 16px;
+  height: 100%;
+}
+
+.control-section, .legend-section, .network-stats {
+  margin-bottom: 16px;
+}
+
+.control-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a2980;
+  margin-bottom: 12px;
+}
+
+.control-item {
+  margin-bottom: 12px;
+}
+
+.item-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.item-value {
+  font-weight: 600;
+  color: #1a2980;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.legend-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.legend-line {
+  width: 30px;
+  height: 3px;
+  margin-right: 8px;
+  border-radius: 1px;
+}
+
+.legend-dashed {
+  height: 2px;
+  background-image: linear-gradient(to right, currentColor 50%, transparent 50%);
+  background-size: 6px 100%;
+  background-repeat: repeat-x;
+}
+
+.control-subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stats-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.stats-item strong {
+  color: #1a2980;
+}
+
+/* 修复滑块样式 */
+.ant-slider {
+  width: 100%;
+  margin: 14px 0 20px 0;
+}
+
+.ant-slider-rail {
+  height: 8px !important;
+  background-color: #e1e1e1 !important;
+  border-radius: 4px !important;
+}
+
+.ant-slider-track {
+  height: 8px !important;
+  background-color: #1a2980 !important;
+  border-radius: 4px !important;
+}
+
+.ant-slider-handle {
+  width: 18px !important;
+  height: 18px !important;
+  margin-top: -5px !important;
+  background-color: #fff !important;
+  border: 2px solid #1a2980 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.ant-slider-handle::after {
+  display: none !important;
+}
+
+.ant-slider-mark {
+  margin-top: 10px !important;
+  font-size: 12px;
+}
+
+.ant-slider-mark-text {
+  color: #666 !important;
+}
+
+.ant-slider-dot {
+  display: none !important;
+}
+
+/* 适配暗色主题 */
+.dark-theme .disease-network-card {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .network-controls,
+.dark-theme .network-container,
+.dark-theme .network-graph {
+  background-color: #262626;
+  border-color: #333;
+}
+
+.dark-theme .network-info {
+  background-color: #222;
+  border-color: #333;
+  color: #ccc;
+}
+
+.dark-theme .control-title {
+  color: #26d0ce;
+}
+
+.dark-theme .stats-item strong {
+  color: #26d0ce;
+}
+
+.dark-theme .ant-slider-rail {
+  background-color: #444 !important;
+}
+
+.dark-theme .ant-slider-track {
+  background-color: #26d0ce !important;
+}
+
+.dark-theme .ant-slider-handle {
+  border-color: #26d0ce !important;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .network-controls {
+    margin-bottom: 16px;
+  }
+  
+  .disease-network-card .ant-card-body {
+    padding: 12px;
+  }
+  
+  .network-graph {
+    height: 400px !important;
+  }
+}
+
+/* 网络图说明样式 */
+.network-explanation {
+  margin-top: 20px;
+  background-color: rgba(240, 248, 255, 0.5);
+  border-radius: 8px;
+  padding: 10px 15px;
+  border-left: 3px solid #1a2980;
+}
+
+.explanation-title {
+  font-size: 16px;
+  color: #1a2980;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.explanation-list {
+  padding-left: 20px;
+  margin: 10px 0 5px;
+}
+
+.explanation-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.explanation-list strong {
+  color: #1a2980;
+}
+
+/* 暗色模式下的网络图说明 */
+.dark-theme .network-explanation {
+  background-color: rgba(26, 41, 128, 0.1);
+  border-left: 3px solid #26d0ce;
+}
+
+.dark-theme .explanation-title {
+  color: #26d0ce;
+}
+
+.dark-theme .explanation-list li {
+  color: #ddd;
+}
+
+.dark-theme .explanation-list strong {
+  color: #26d0ce;
+} 

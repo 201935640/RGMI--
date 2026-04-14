@@ -1,0 +1,201 @@
+.disease-similarity-container {
+  width: 100%;
+  position: relative;
+}
+
+.disease-similarity-card {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.disease-similarity-card .ant-card-head {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+/* 欢迎指南样式 */
+.welcome-guide {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.welcome-guide .ant-result-icon {
+  margin-bottom: 30px;
+}
+
+.welcome-guide .ant-result-icon > .anticon {
+  font-size: 72px;
+}
+
+.welcome-guide .ant-result-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1890ff;
+}
+
+.welcome-guide .ant-result-subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.guide-description {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.guide-description ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.guide-description li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  background-color: #f5f7fa;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.info-text {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.controls-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.search-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.graph-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-item span {
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.graph-container {
+  position: relative;
+  margin-top: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.similarity-chart {
+  min-height: 600px;
+}
+
+/* 全屏模式样式 */
+:fullscreen .disease-similarity-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:fullscreen .disease-similarity-card {
+  flex: 1;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+:fullscreen .graph-container {
+  flex: 1;
+}
+
+:fullscreen .similarity-chart {
+  height: calc(100vh - 200px) !important;
+}
+
+/* 疾病详情抽屉样式 */
+.disease-detail-drawer .ant-drawer-header {
+  padding: 14px 20px;
+  background-color: #f8f9fa;
+}
+
+.detail-drawer-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.disease-detail-content {
+  padding: 10px 0;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section h5 {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.detail-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .graph-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .control-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .similarity-chart {
+    height: 450px !important;
+  }
+} 

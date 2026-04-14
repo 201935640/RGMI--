@@ -1,0 +1,25 @@
+# 环境与依赖
+node_modules/
+venv/
+venv38/
+dist/
+build/
+.env
+.env.local
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 编辑器与系统
+.idea/
+.vscode/
+.DS_Store
+*.dll
+*.lib
+
+# 数据集与模型权重 (可选，根据需求决定是否忽略)
+# project_01/backend/Dataset/
+# *.pth
+# *.pt

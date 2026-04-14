@@ -1,0 +1,690 @@
+[
+  {
+    "disease_id": "C1153706",
+    "name": "Endometrium adenocarcinoma",
+    "definition": "An adenocarcinoma arising from the uterine body cavity. This is the most frequent malignant tumor affecting the uterine body, and is linked to estrogen therapy. Most patients present with uterine bleeding and are over age 40 at the time of diagnosis. The prognosis depends on the stage of the tumor, the depth of the uterine wall invasion, and the histologic subtype. Endometrioid adenocarcinoma is the most frequently seen morphologic variant of endometrial adenocarcinoma.",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1848",
+        "2248",
+        "6364",
+        "4012",
+        "3659",
+        "1827",
+        "682",
+        "54206",
+        "79366",
+        "3976"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-543",
+        "hsa-miR-204-3p",
+        "hsa-miR-200c-3p",
+        "hsa-miR-200b-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-99b-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-200a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1336905",
+    "name": "Endometrial endometrioid adenocarcinoma",
+    "definition": "A primary endometrial adenocarcinoma composed of neoplastic cells that form complex glandular patterns associated with budding and branching of the neoplastic glands. The neoplastic glands resemble those of the normal endometrium and may or may not be associated with sheet-like proliferation of malignant cells. Endometrioid adenocarcinoma is the most commonly seen morphologic variant of endometrial adenocarcinoma.",
+    "similarity": 0.9905850887298584,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "5594",
+        "3294",
+        "1499",
+        "6422",
+        "8840",
+        "5426",
+        "675",
+        "581",
+        "4292",
+        "6424"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-543",
+        "hsa-miR-204-3p",
+        "hsa-miR-200c-3p",
+        "hsa-miR-200b-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-99b-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-200a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1569637",
+    "name": "Endometrioid adenocarcinoma",
+    "definition": "An adenocarcinoma characterized by the presence of malignant glandular epithelial cells resembling endometrial cells. It can arise from the uterine body, ovary, fallopian tube, cervix, vagina, and uterine ligament.",
+    "similarity": 0.9822118282318115,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "64866",
+        "5293",
+        "5778",
+        "10923",
+        "6598",
+        "10671",
+        "216",
+        "3667",
+        "6678",
+        "6462"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-498-5p",
+        "hsa-miR-182-3p",
+        "hsa-miR-141-3p",
+        "hsa-miR-424-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-345-3p",
+        "hsa-miR-652-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4721509",
+    "name": "Usual interstitial pneumonia",
+    "definition": "Temporal and spatial heterogeneity in lungs based on presence of fibrosis and honeycombing.",
+    "similarity": 0.9812020063400269,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7422",
+        "6366",
+        "947",
+        "1236",
+        "6347",
+        "7474",
+        "29126",
+        "51750",
+        "5657",
+        "1287"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-614",
+        "hsa-miR-424-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-148a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-15a-3p",
+        "hsa-miR-22-3p",
+        "hsa-miR-185-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-140-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0206687",
+    "name": "Endometrioid carcinoma",
+    "definition": "An adenocarcinoma characterized by the presence of cells resembling the glandular cells of the ENDOMETRIUM. It is a common histological type of ovarian CARCINOMA and ENDOMETRIAL CARCINOMA. There is a high frequency of co-occurrence of this form of adenocarcinoma in both tissues.",
+    "similarity": 0.9760962724685669,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "64866",
+        "2719",
+        "5058",
+        "4170",
+        "8436",
+        "891",
+        "10643",
+        "2922",
+        "1843",
+        "64798"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-498-5p",
+        "hsa-miR-182-3p",
+        "hsa-miR-141-3p",
+        "hsa-miR-424-3p",
+        "hsa-miR-210-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-101-3p",
+        "hsa-miR-345-3p",
+        "hsa-miR-652-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0334590",
+    "name": "Anaplastic oligodendroglioma",
+    "definition": "A rare glial tumor characterized by a grade III oligodendroglial tumour with focal or diffuse anaplastic features. It typically occurs in the supratentorial white matter. Histologically, the cells are enlarged and epithelioid with pleomorphic and increased size nuclei, a vesicular chromatin pattern and prominent nucleoli. Most patients present with seizures.",
+    "similarity": 0.9738419055938721,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "3418",
+        "3280",
+        "6750",
+        "3925",
+        "1019",
+        "79947",
+        "3981",
+        "23462",
+        "8605",
+        "4255"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-3074-5p",
+        "hsa-miR-155-3p",
+        "hsa-miR-134-3p",
+        "hsa-let-7b",
+        "hsa-miR-330-3p",
+        "hsa-miR-455-3p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-132-3p",
+        "hsa-miR-9-3p",
+        "hsa-miR-92b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0017658",
+    "name": "Glomerulonephritis",
+    "definition": "Inflammation of the renal glomeruli.",
+    "similarity": 0.973392128944397,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "6523",
+        "2184",
+        "231",
+        "10318",
+        "6391",
+        "4318",
+        "6357",
+        "608",
+        "26762",
+        "4982"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-423-5p",
+        "rno-miR-29a-3p",
+        "hsa-miR-93-3p",
+        "hsa-miR-18a-3p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-126-5p",
+        "hsa-miR-214-3p",
+        "mmu-miR-26a-5p",
+        "mmu-miR-17-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0206663",
+    "name": "Primitive neuroectodermal tumor",
+    "definition": "A tumor that originates in cells from the primitive neural crest. This group of tumors is characteirzed by the presence of primitive cells with elements of neuronal and/or glial differentiation.",
+    "similarity": 0.972987174987793,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "2729",
+        "6678",
+        "6591",
+        "51251",
+        "6929",
+        "438",
+        "596",
+        "9071",
+        "29",
+        "3280"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-3678-5p",
+        "hsa-miR-199a-3p",
+        "mmu-miR-191-3p",
+        "mmu-miR-139-5p",
+        "mmu-miR-132-3p",
+        "mmu-let-7e",
+        "mmu-miR-23a-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-99b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0017185",
+    "name": "Neoplasm of the gastrointestinal tract",
+    "definition": "A tumor (abnormal growth of tissue) of the gastrointestinal tract.",
+    "similarity": 0.9724867343902588,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "6925",
+        "867",
+        "8856",
+        "8772",
+        "838",
+        "5598",
+        "2048",
+        "6391",
+        "3039",
+        "2272"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-1260a",
+        "hsa-miR-365a-3p",
+        "hsa-miR-200a-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-451a",
+        "hsa-miR-122-5p",
+        "hsa-miR-133b",
+        "hsa-miR-148a-3p",
+        "hsa-let-7a-1",
+        "hsa-miR-210-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0035412",
+    "name": "Rhabdomyosarcoma",
+    "definition": "A malignant soft tissue tumor which develops from cells of striated muscle. It is the most common form of tumor found in children and adolescents.",
+    "similarity": 0.9714725613594055,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "238",
+        "5054",
+        "4294",
+        "80013",
+        "2057",
+        "6352",
+        "5744",
+        "54540",
+        "6608",
+        "2042"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-29a",
+        "mmu-mir-29c",
+        "hsa-miR-29a-3p",
+        "hsa-miR-126-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-30b-3p",
+        "hsa-miR-29b-1-5p",
+        "hsa-miR-29c-3p",
+        "hsa-miR-133b"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0023827",
+    "name": "Liposarcoma",
+    "definition": "Malignant neoplasms which probably originate in primitive mesenchymal stem cell populations differentiating down a lipomatous pathway.",
+    "similarity": 0.9697179198265076,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "5594",
+        "2521",
+        "57104",
+        "29126",
+        "7069",
+        "23118",
+        "8436",
+        "10818",
+        "5324",
+        "3725"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-412-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-195-3p",
+        "hsa-miR-20b-5p",
+        "hsa-miR-19b-3p",
+        "hsa-miR-1-3p",
+        "hsa-miR-224-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-92b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027809",
+    "name": "Schwannoma",
+    "definition": "A benign nerve sheath tumor composed of Schwann cells.",
+    "similarity": 0.9685272574424744,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "79594",
+        "9332",
+        "54894",
+        "410",
+        "4684",
+        "54474",
+        "6687",
+        "6929",
+        "8844",
+        "6776"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-659-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-340-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-29c-3p",
+        "hsa-miR-145-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0263477",
+    "name": "Female pattern alopecia",
+    "definition": "No definition",
+    "similarity": 0.9682871103286743,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "367",
+        "5573",
+        "142",
+        "7538",
+        "1244",
+        "6832",
+        "7421",
+        "1392",
+        "8797",
+        "4524"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-520d-5p",
+        "hsa-miR-26b-3p",
+        "hsa-miR-221-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-34a-3p",
+        "hsa-miR-133b",
+        "hsa-miR-144-3p",
+        "hsa-miR-4286",
+        "hsa-miR-151a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0205824",
+    "name": "Dedifferentiated liposarcoma",
+    "definition": "Dedifferentiated liposarcoma (DDLS) is a high-grade subtype of liposarcoma (LS; see this term) that progresses from well-differentiated liposarcoma (WDLS; see this term), and most often occurs in the retroperitoneum. It is defined as a region of nonlipogenic sarcoma associated with WDLS. .",
+    "similarity": 0.9682589769363403,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "238",
+        "11335",
+        "6778",
+        "811",
+        "5168",
+        "8795",
+        "6598",
+        "2521",
+        "727837",
+        "7124"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-412-3p",
+        "hsa-miR-181b-3p",
+        "hsa-miR-106a-3p",
+        "hsa-miR-195-3p",
+        "hsa-miR-20b-5p",
+        "hsa-miR-19b-3p",
+        "hsa-miR-1-3p",
+        "hsa-miR-224-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-92b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0008479",
+    "name": "Chondrosarcoma",
+    "definition": "A slowly growing malignant neoplasm derived from cartilage cells.",
+    "similarity": 0.9680323600769043,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1946",
+        "7124",
+        "2048",
+        "7114",
+        "374",
+        "6352",
+        "5744",
+        "8600",
+        "6608",
+        "4507"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-518b",
+        "hsa-miR-21-5p",
+        "hsa-miR-141-3p",
+        "hsa-miR-30a-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-524-5p",
+        "hsa-miR-185-3p",
+        "hsa-miR-222-3p",
+        "hsa-miR-23b-3p",
+        "hsa-miR-192-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1527303",
+    "name": "Chronic airflow obstruction",
+    "definition": "No definition",
+    "similarity": 0.9680279493331909,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2052",
+        "4843",
+        "59341",
+        "4323",
+        "6441",
+        "8288",
+        "1543",
+        "3576",
+        "4318",
+        "7124"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-5007-3p",
+        "hsa-miR-19b-3p",
+        "hsa-miR-126-5p",
+        "mmu-miR-122-3p",
+        "hsa-miR-214-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-320d",
+        "hsa-miR-423-5p",
+        "hsa-miR-206",
+        "hsa-miR-20b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0032914",
+    "name": "Preeclampsia",
+    "definition": "Preeclampsia is a complication of pregnancy in which affected women develop high blood pressure (hypertension); they can also have abnormally high levels of protein in their urine (proteinuria). This condition usually occurs in the last few months of pregnancy and often requires early delivery of the infant. However, this condition can also appear shortly after giving birth (postpartum preeclampsia).\\n\\nMany women with mild preeclampsia do not feel ill, and the condition is often first detected through blood pressure and urine testing in their doctor's office. In addition to hypertension and proteinuria, signs and symptoms of preeclampsia can include excessive swelling (edema) of the face or hands and a weight gain of more than 3 to 5 pounds in a week due to fluid retention. Affected women may also experience headaches, dizziness, irritability, shortness of breath, a decrease in urination, upper abdominal pain, and nausea or vomiting. Vision changes may develop, including flashing lights or spots, increased sensitivity to light (photophobia), blurry vision, or temporary blindness.\\n\\nIn many cases, symptoms of preeclampsia go away within a few days after the baby is born. In severe cases, however, preeclampsia can damage the mother's organs, such as the heart, liver, and kidneys, and can lead to life-threatening complications. Extremely high blood pressure in the mother can cause bleeding in the brain (hemorrhagic stroke). The effects of high blood pressure on the brain (hypertensive encephalopathy) may also result in seizures. If seizures occur, the condition is considered to have worsened to eclampsia, which can result in coma. About 1 in 200 women with untreated preeclampsia develop eclampsia. Eclampsia can also develop without any obvious signs of preeclampsia.\\n\\nBetween 10 and 20 percent of women with severe preeclampsia develop another potentially life-threatening complication called HELLP syndrome. HELLP stands for hemolysis (premature red blood cell breakdown), elevated liver enzyme levels, and low platelets (cells involved in blood clotting), which are the key features of this condition.\\n\\nWomen who have had preeclampsia have approximately twice the lifetime risk of heart disease and stroke than do women in the general population. Researchers suggest that preeclampsia, heart disease, and stroke may share common risk factors. Women who have diseases such as obesity, hypertension, heart disease, diabetes, or kidney disease before they become pregnant have an increased risk of developing preeclampsia. Preeclampsia is most likely to occur in a woman's first pregnancy, although it can occur in subsequent pregnancies, particularly in women with other health conditions.\\n\\nSevere preeclampsia can also affect the fetus, with impairment of blood and oxygen flow leading to growth problems or stillbirth. Infants delivered early due to preeclampsia may have complications associated with prematurity, such as breathing problems caused by underdeveloped lungs.",
+    "similarity": 0.9679986238479614,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "7450",
+        "7099",
+        "6866",
+        "186",
+        "154",
+        "10269",
+        "7097",
+        "7124",
+        "8521",
+        "6352"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-518c",
+        "hsa-miR-134-5p",
+        "hsa-miR-590-3p",
+        "hsa-let-7b",
+        "hsa-miR-3186-5p",
+        "hsa-miR-342-3p",
+        "hsa-miR-3135a",
+        "hsa-miR-149-5p",
+        "hsa-miR-218-5p",
+        "hsa-miR-520a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0205647",
+    "name": "Follicular adenoma",
+    "definition": "No definition",
+    "similarity": 0.9678089022636414,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "2346",
+        "7428",
+        "7296",
+        "6857",
+        "596",
+        "1733",
+        "1545",
+        "2719",
+        "8061",
+        "4318"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-556-3p",
+        "hsa-miR-342-3p",
+        "hsa-miR-122-3p",
+        "hsa-miR-200a-3p",
+        "hsa-miR-361-5p",
+        "hsa-miR-224-3p",
+        "hsa-miR-874-3p",
+        "hsa-miR-214-3p",
+        "hsa-miR-204-3p",
+        "hsa-miR-580-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0278601",
+    "name": "Inflammatory breast carcinoma",
+    "definition": "An advanced, invasive breast adenocarcinoma characterized by the presence of distinct changes in the overlying skin. These changes include diffuse erythema, edema, peau d''orange (skin of an orange) appearance, tenderness, induration, warmth, enlargement, and in some cases a palpable mass. The skin changes are the consequence of lymphatic obstruction from the underlying invasive breast adenocarcinoma. Microscopically, the dermal lymphatics show prominent infiltration by malignant cells. The invasive breast adenocarcinoma is usually of ductal, NOS type. There is not significant inflammatory cell infiltrate present, despite the name of this carcinoma.",
+    "similarity": 0.9674698114395142,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "3418",
+        "238",
+        "50943",
+        "29126",
+        "857",
+        "5058",
+        "4170",
+        "5935",
+        "1894",
+        "5664"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-181b-5p",
+        "hsa-miR-222-3p",
+        "hsa-let-7a-5p",
+        "hsa-miR-200b-3p",
+        "hsa-miR-200c-3p",
+        "hsa-miR-203a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0162810",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9672884941101074,
+    "attributes": {
+      "associated_gene_names": [
+        "4327",
+        "8856",
+        "23476",
+        "186",
+        "154",
+        "655",
+        "56996",
+        "596",
+        "7124",
+        "3036"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-190a-3p",
+        "mmu-miR-192-5p",
+        "hsa-miR-200b-3p",
+        "hsa-miR-21-3p",
+        "hsa-miR-27b-3p",
+        "hsa-miR-222-3p",
+        "hsa-miR-145-3p",
+        "hsa-miR-141-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-181b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0001430",
+    "name": "Adenoma",
+    "definition": "A neoplasm arising from the epithelium. It may be encapsulated or non-encapsulated but non-invasive. The neoplastic epithelial cells may or may not display cellular atypia or dysplasia. In the gastrointestinal tract, when dysplasia becomes severe it is sometimes called carcinoma in situ. Representative examples are pituitary gland adenoma, follicular adenoma of the thyroid gland, and adenomas (or adenomatous polyps) of the gastrointestinal tract.",
+    "similarity": 0.9672110080718994,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "6925",
+        "2065",
+        "54968",
+        "6693",
+        "596",
+        "4233",
+        "3308",
+        "1545",
+        "2719",
+        "744"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-556-3p",
+        "hsa-miR-556-5p",
+        "hsa-miR-200a-3p",
+        "hsa-miR-361-5p",
+        "hsa-miR-224-3p",
+        "hsa-miR-874-3p",
+        "hsa-miR-214-3p",
+        "hsa-miR-204-3p",
+        "hsa-miR-580-3p",
+        "hsa-miR-494-3p"
+      ]
+    }
+  }
+]

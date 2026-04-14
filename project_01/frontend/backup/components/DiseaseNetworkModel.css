@@ -1,0 +1,170 @@
+.disease-network-model-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #26d0ce 0%, #1a2980 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.rgmi-model-content {
+  margin-top: 20px;
+}
+
+.search-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-button-form-item {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.model-stats-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.graph-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graph-container {
+  height: 500px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fbfbfb;
+}
+
+.empty-graph-placeholder {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+  color: #d9d9d9;
+  margin-bottom: 16px;
+}
+
+.graph-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  z-index: 100;
+}
+
+.legend-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.similar-diseases-card, 
+.selected-disease-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.similar-disease-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.disease-node-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.similarity-badge {
+  background-color: #1890ff;
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.search-history {
+  margin-top: 16px;
+}
+
+.history-tag {
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.history-tag:hover {
+  opacity: 0.8;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .graph-container {
+    height: 350px;
+  }
+  
+  .graph-legend {
+    max-width: 200px;
+    font-size: 11px;
+  }
+  
+  .similar-disease-list {
+    max-height: 300px;
+  }
+} 

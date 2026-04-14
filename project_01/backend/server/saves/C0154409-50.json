@@ -1,0 +1,1595 @@
+[
+  {
+    "disease_id": "C0154409",
+    "name": "",
+    "definition": "",
+    "similarity": -1.0,
+    "attributes": {
+      "associated_gene_names": [
+        "1576",
+        "551",
+        "627",
+        "10611",
+        "1815",
+        "6532",
+        "3084",
+        "775",
+        "553",
+        "2917"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1269683",
+    "name": "",
+    "definition": "",
+    "similarity": 0.966022789478302,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "57084",
+        "10777",
+        "6929",
+        "1909",
+        "84650",
+        "8859",
+        "3351",
+        "1440",
+        "5173"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011570",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9651238918304443,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "5324",
+        "5319",
+        "438",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "154",
+        "3351"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003469",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9611647129058838,
+    "attributes": {
+      "associated_gene_names": [
+        "84634",
+        "6869",
+        "186",
+        "8811",
+        "1586",
+        "5324",
+        "3351",
+        "154",
+        "84650",
+        "1909"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-466c-3p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p",
+        "mmu-miR-3095-3p",
+        "mmu-miR-709"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0011581",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9576081037521362,
+    "attributes": {
+      "associated_gene_names": [
+        "84634",
+        "1813",
+        "23451",
+        "6929",
+        "1909",
+        "84650",
+        "54832",
+        "154",
+        "3351",
+        "27286"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-34a-3p",
+        "hsa-let-7e-5p",
+        "hsa-miR-589-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-324-5p",
+        "hsa-miR-543",
+        "hsa-miR-369-3p",
+        "hsa-miR-7-1-3p",
+        "hsa-miR-758-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0014556",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9479161500930786,
+    "attributes": {
+      "associated_gene_names": [
+        "6351",
+        "9425",
+        "2912",
+        "3326",
+        "7296",
+        "186",
+        "1393",
+        "5173",
+        "3557",
+        "102"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-6328",
+        "rno-miR-212-3p",
+        "hsa-miR-30d-5p",
+        "rno-miR-19a-3p",
+        "hsa-let-7b",
+        "rno-miR-324-5p",
+        "hsa-miR-134-3p",
+        "hsa-miR-663b",
+        "rno-let-7e",
+        "rno-miR-346"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0086132",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9467829465866089,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "9388",
+        "1545",
+        "3725",
+        "3423",
+        "5319",
+        "23530",
+        "6929",
+        "1909",
+        "84650"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0005697",
+    "name": "",
+    "definition": "",
+    "similarity": 0.946681022644043,
+    "attributes": {
+      "associated_gene_names": [
+        "253738",
+        "55823",
+        "1291",
+        "2065",
+        "493856",
+        "155",
+        "23400",
+        "25793",
+        "91949",
+        "55331"
+      ],
+      "associated_miRNA_names": [
+        "mmu-let-7b-5p",
+        "mmu-miR-23b-3p",
+        "mmu-miR-22-3p",
+        "mmu-let-7f-5p",
+        "mmu-let-7d-5p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-99a-3p",
+        "mmu-miR-29c-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-26b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0030193",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9459220170974731,
+    "attributes": {
+      "associated_gene_names": [
+        "6869",
+        "5173",
+        "84650",
+        "5631",
+        "154",
+        "63910",
+        "3351",
+        "5324",
+        "2232",
+        "57084"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-107-3p",
+        "hsa-miR-103a-2-5p",
+        "hsa-miR-3613-3p",
+        "hsa-miR-135a-3p",
+        "hsa-miR-183-3p",
+        "mmu-miR-23a-3p",
+        "rno-miR-146a-3p",
+        "hsa-miR-182-3p",
+        "hsa-miR-23b-3p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0344315",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9417076110839844,
+    "attributes": {
+      "associated_gene_names": [
+        "6925",
+        "4987",
+        "3423",
+        "2039",
+        "6822",
+        "3483",
+        "5319",
+        "6857",
+        "438",
+        "23451"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-470-5p",
+        "mmu-miR-298-5p",
+        "hsa-miR-197-3p",
+        "hsa-miR-135a-3p",
+        "mmu-miR-96-3p",
+        "hsa-miR-218-5p",
+        "rno-miR-26a-3p",
+        "hsa-miR-30d-5p",
+        "mmu-miR-17-5p",
+        "mmu-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003467",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9367278814315796,
+    "attributes": {
+      "associated_gene_names": [
+        "84634",
+        "5054",
+        "154",
+        "54832",
+        "84650",
+        "1909",
+        "23451",
+        "2039",
+        "8301",
+        "596"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-378d",
+        "mmu-miR-3095-3p",
+        "mmu-miR-466c-3p",
+        "mmu-miR-669c-5p",
+        "mmu-miR-466p-3p",
+        "mmu-miR-466a-3p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-466b-3p",
+        "mmu-miR-133a-3p",
+        "mmu-miR-338-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0149931",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9362383484840393,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "1289",
+        "744",
+        "27030",
+        "8645",
+        "1909",
+        "3351",
+        "6687",
+        "27286",
+        "5324"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-382-5p",
+        "hsa-let-7g",
+        "hsa-miR-155-3p",
+        "hsa-miR-126-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751208",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9353793859481812,
+    "attributes": {
+      "associated_gene_names": [
+        "3064",
+        "2668",
+        "51447",
+        "4968",
+        "9131",
+        "4128",
+        "56616",
+        "1827",
+        "4129",
+        "2030"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-135b",
+        "hsa-miR-212-3p",
+        "mmu-miR-146b-5p",
+        "mmu-miR-429-3p",
+        "hsa-miR-421",
+        "mmu-miR-29b-2-5p",
+        "mmu-miR-132-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-182-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0393574",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9353793859481812,
+    "attributes": {
+      "associated_gene_names": [
+        "3064",
+        "2668",
+        "51447",
+        "4968",
+        "9131",
+        "4128",
+        "56616",
+        "1827",
+        "4129",
+        "2030"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-135b",
+        "hsa-miR-212-3p",
+        "mmu-miR-146b-5p",
+        "mmu-miR-429-3p",
+        "hsa-miR-421",
+        "mmu-miR-29b-2-5p",
+        "mmu-miR-132-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-182-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751207",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9353793859481812,
+    "attributes": {
+      "associated_gene_names": [
+        "3064",
+        "2668",
+        "51447",
+        "4968",
+        "9131",
+        "4128",
+        "56616",
+        "1827",
+        "4129",
+        "2030"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-135b",
+        "hsa-miR-212-3p",
+        "mmu-miR-146b-5p",
+        "mmu-miR-429-3p",
+        "hsa-miR-421",
+        "mmu-miR-29b-2-5p",
+        "mmu-miR-132-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-182-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0038868",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9336442947387695,
+    "attributes": {
+      "associated_gene_names": [
+        "120892",
+        "1191",
+        "5913",
+        "4593",
+        "4905",
+        "3667",
+        "23025",
+        "1520",
+        "9520",
+        "728458"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4700-3p",
+        "hsa-miR-6740-3p",
+        "hsa-miR-615-3p",
+        "hsa-miR-328-5p",
+        "hsa-miR-137-3p",
+        "hsa-miR-3156-3p",
+        "hsa-miR-25-3p",
+        "hsa-miR-615-5p",
+        "hsa-miR-30c-2-3p",
+        "hsa-miR-1275"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0948008",
+    "name": "",
+    "definition": "",
+    "similarity": 0.930342435836792,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "1577",
+        "340348",
+        "2669",
+        "3898",
+        "462",
+        "55349",
+        "2821",
+        "55638",
+        "410"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-126a-5p",
+        "hsa-miR-361-3p",
+        "hsa-miR-98-5p",
+        "hsa-miR-151a-3p",
+        "hsa-miR-1287-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-127-3p",
+        "hsa-miR-29c-5p",
+        "hsa-miR-34c-3p",
+        "hsa-miR-34b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003868",
+    "name": "",
+    "definition": "",
+    "similarity": 0.929784893989563,
+    "attributes": {
+      "associated_gene_names": [
+        "26263",
+        "5496",
+        "8884",
+        "5467",
+        "8854",
+        "3251",
+        "3131",
+        "9507",
+        "10524",
+        "53942"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-520g-3p",
+        "hsa-miR-30c-5p",
+        "hsa-miR-192-3p",
+        "hsa-miR-519d-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-520a-3p",
+        "hsa-miR-519e-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0032897",
+    "name": "",
+    "definition": "",
+    "similarity": 0.928922176361084,
+    "attributes": {
+      "associated_gene_names": [
+        "23569",
+        "114791",
+        "7681",
+        "5293",
+        "5894",
+        "2011",
+        "9883",
+        "410",
+        "26585",
+        "57730"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-151a-5p",
+        "hsa-miR-541-3p",
+        "hsa-miR-619-5p",
+        "hsa-miR-4656",
+        "hsa-miR-106b-5p",
+        "hsa-miR-4507",
+        "hsa-miR-92a-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-122-5p",
+        "hsa-miR-34a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027796",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9283219575881958,
+    "attributes": {
+      "associated_gene_names": [
+        "6523",
+        "1843",
+        "3557",
+        "4544",
+        "10000",
+        "4953",
+        "728",
+        "7298",
+        "5173",
+        "1813"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-328a-5p",
+        "rno-miR-1-3p",
+        "rno-miR-138-5p",
+        "mmu-miR-122-5p",
+        "rno-miR-22-3p",
+        "rno-miR-129-5p",
+        "rno-miR-124-3p",
+        "mmu-miR-351-5p",
+        "mmu-miR-10a-5p",
+        "rno-miR-214-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027888",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9281666278839111,
+    "attributes": {
+      "associated_gene_names": [
+        "23299",
+        "6687",
+        "1200",
+        "9131",
+        "3098",
+        "2617",
+        "9927",
+        "3855",
+        "50717",
+        "3931"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4718",
+        "hsa-miR-4476",
+        "hsa-miR-5008-5p",
+        "hsa-miR-4462",
+        "hsa-miR-4539",
+        "hsa-miR-1290",
+        "hsa-miR-619-5p",
+        "hsa-miR-204-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4317109",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9278859496116638,
+    "attributes": {
+      "associated_gene_names": [
+        "6925",
+        "6506",
+        "5293",
+        "23293",
+        "6281",
+        "9839",
+        "1143",
+        "6546",
+        "23369",
+        "126393"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0740391",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9278116226196289,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "3066",
+        "25978",
+        "340348",
+        "8321",
+        "55638",
+        "1827",
+        "51765",
+        "4684",
+        "1440"
+      ],
+      "associated_miRNA_names": [
+        "rno-mir-30a",
+        "mmu-miR-369-3p",
+        "mmu-miR-425-3p",
+        "mmu-miR-677-3p",
+        "mmu-miR-467e-3p",
+        "mmu-miR-697",
+        "hsa-miR-505-3p",
+        "mmu-miR-369-5p",
+        "hsa-miR-532-3p",
+        "mmu-miR-34c-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0030521",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9267433285713196,
+    "attributes": {
+      "associated_gene_names": [
+        "5949",
+        "1027",
+        "2057",
+        "6754",
+        "5921",
+        "596",
+        "1909",
+        "54474",
+        "10818",
+        "6616"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-517c-3p",
+        "hsa-miR-199b-3p",
+        "hsa-miR-146b-5p",
+        "hsa-miR-27a-5p",
+        "hsa-miR-139-3p",
+        "hsa-miR-134-5p",
+        "hsa-miR-342-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-381-3p",
+        "hsa-miR-222-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0013080",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9249657988548279,
+    "attributes": {
+      "associated_gene_names": [
+        "2623",
+        "596",
+        "154",
+        "1909",
+        "83888",
+        "1373",
+        "6857",
+        "4782",
+        "56996",
+        "8301"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4328",
+        "hsa-miR-495-3p",
+        "hsa-miR-1247-3p",
+        "hsa-miR-124-5p",
+        "hsa-miR-590-3p",
+        "mmu-miR-138-5p",
+        "mmu-miR-182-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-23a-3p",
+        "mmu-miR-429-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0270824",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9246789216995239,
+    "attributes": {
+      "associated_gene_names": [
+        "6925",
+        "8061",
+        "57030",
+        "3066",
+        "3737",
+        "2021",
+        "5173",
+        "1813",
+        "1843",
+        "3351"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-760-5p",
+        "mmu-miR-466d-3p",
+        "hsa-miR-502-3p",
+        "mmu-miR-532-3p",
+        "mmu-miR-34c-5p",
+        "mmu-miR-1192",
+        "mmu-miR-27b-3p",
+        "mmu-miR-221-5p",
+        "mmu-miR-467a-3p",
+        "mmu-miR-467b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020456",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9236885905265808,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "3673",
+        "3725",
+        "596",
+        "84701",
+        "3308",
+        "1545",
+        "5914",
+        "115123",
+        "3727"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-125a-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-141-3p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-26a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020179",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9230074882507324,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "48",
+        "22861",
+        "4543",
+        "6195",
+        "4750",
+        "6462",
+        "7276",
+        "54541",
+        "345643"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-135b",
+        "hsa-miR-328-3p",
+        "mmu-miR-150-3p",
+        "mmu-miR-182-3p",
+        "mmu-miR-138-5p",
+        "hsa-miR-330-3p",
+        "mmu-miR-146a-3p",
+        "mmu-miR-205-3p",
+        "hsa-miR-330-5p",
+        "hsa-miR-199a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0030201",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9219935536384583,
+    "attributes": {
+      "associated_gene_names": [
+        "1848",
+        "11280",
+        "2890",
+        "1312",
+        "4318",
+        "7124",
+        "6462",
+        "221955",
+        "3308",
+        "1237"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-145-5p",
+        "hsa-miR-130b-3p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0020443",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9218301773071289,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "9367",
+        "1066",
+        "8856",
+        "7124",
+        "54541",
+        "6754",
+        "7097",
+        "55775",
+        "3308"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4667-5p",
+        "hsa-miR-3609",
+        "hsa-miR-1244",
+        "hsa-miR-30b-5p",
+        "hsa-miR-33b-3p",
+        "hsa-miR-483-5p",
+        "hsa-miR-33a-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-126-5p",
+        "mmu-miR-128-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0014059",
+    "name": "",
+    "definition": "",
+    "similarity": 0.92164146900177,
+    "attributes": {
+      "associated_gene_names": [
+        "238",
+        "3119",
+        "2705",
+        "3113",
+        "129831",
+        "1437",
+        "3123",
+        "6285",
+        "3127",
+        "3918"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-155",
+        "mmu-miR-195a-5p",
+        "mmu-miR-27b-3p",
+        "mmu-miR-101a-3p",
+        "mmu-miR-92a-3p",
+        "rno-miR-181a-5p",
+        "mmu-miR-181a-1-3p",
+        "mmu-miR-298-5p",
+        "mmu-miR-598-3p",
+        "mmu-miR-466e-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0362046",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9212948083877563,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "7124",
+        "3172",
+        "799",
+        "4544",
+        "148113",
+        "26503",
+        "4233",
+        "7097",
+        "4810"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-208b-3p",
+        "hsa-miR-145-5p",
+        "hsa-miR-193b-3p",
+        "hsa-miR-93-3p",
+        "hsa-miR-122-3p",
+        "hsa-miR-192-3p",
+        "hsa-miR-34a-3p",
+        "hsa-miR-143-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1704228",
+    "name": "",
+    "definition": "",
+    "similarity": 0.921049952507019,
+    "attributes": {
+      "associated_gene_names": [
+        "4916"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-516a-3p",
+        "hsa-miR-1-3p",
+        "hsa-miR-200a-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-182-3p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-26b-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-17-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0036472",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9209474325180054,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "51182",
+        "7965",
+        "3439",
+        "2875",
+        "6857",
+        "3725",
+        "3727",
+        "7097",
+        "7124"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-30e-5p",
+        "mmu-miR-484",
+        "mmu-miR-378a-3p",
+        "mmu-miR-192-5p",
+        "mmu-let-7a-5p",
+        "mmu-miR-434-3p",
+        "mmu-miR-103-3p",
+        "mmu-miR-186-5p",
+        "mmu-let-7d-5p",
+        "mmu-miR-133a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0018099",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9206199049949646,
+    "attributes": {
+      "associated_gene_names": [
+        "26263",
+        "3576",
+        "2444",
+        "8884",
+        "5467",
+        "8854",
+        "3251",
+        "3131",
+        "10524",
+        "53942"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-520g-3p",
+        "hsa-miR-520h",
+        "hsa-miR-519d-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-17-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-520a-3p",
+        "hsa-miR-519e-3p",
+        "hsa-miR-30c-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0520679",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9205517768859863,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "472",
+        "4204",
+        "3280",
+        "7124",
+        "345643",
+        "6462",
+        "4810",
+        "1291",
+        "7097"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-1955-5p",
+        "mmu-miR-3098-5p",
+        "rno-miR-126a-3p",
+        "mmu-miR-326-5p",
+        "hsa-miR-320e",
+        "hsa-miR-224-5p",
+        "mmu-miR-3086-3p",
+        "mmu-miR-298-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-145-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0150055",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9201308488845825,
+    "attributes": {
+      "associated_gene_names": [
+        "5594",
+        "3553",
+        "28982",
+        "54858",
+        "4245",
+        "5293",
+        "9457",
+        "7965",
+        "29126",
+        "23396"
+      ],
+      "associated_miRNA_names": [
+        "rno-miR-664-3p",
+        "mmu-miR-138-5p",
+        "hsa-miR-423-3p",
+        "hsa-miR-449b-3p",
+        "hsa-miR-28-3p",
+        "hsa-miR-645",
+        "hsa-let-7c",
+        "hsa-miR-34b-3p",
+        "rno-miR-7a-5p",
+        "rno-miR-146b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0041341",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9199519157409668,
+    "attributes": {
+      "associated_gene_names": [
+        "2729",
+        "4982",
+        "6383",
+        "5053",
+        "2875",
+        "55638",
+        "23417",
+        "10000",
+        "7298",
+        "5319"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-147b-3p",
+        "mmu-miR-125b-5p",
+        "hsa-miR-146a-3p",
+        "hsa-miR-155-3p",
+        "hsa-miR-34a-3p",
+        "hsa-miR-21-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0010674",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9197210073471069,
+    "attributes": {
+      "associated_gene_names": [
+        "7450",
+        "26762",
+        "6868",
+        "7097",
+        "133396",
+        "6754",
+        "9332",
+        "6348",
+        "4810",
+        "2837"
+      ],
+      "associated_miRNA_names": [
+        "hsa-mir-23b",
+        "hsa-miR-16-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-27b-3p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-193a-5p",
+        "hsa-miR-31-3p",
+        "hsa-miR-885-5p",
+        "hsa-miR-99b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0007959",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9197009205818176,
+    "attributes": {
+      "associated_gene_names": [
+        "79594",
+        "2065",
+        "3798",
+        "1337",
+        "5375",
+        "121227",
+        "5631",
+        "6929",
+        "1785",
+        "84174"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4718",
+        "hsa-miR-4476",
+        "hsa-miR-5008-5p",
+        "hsa-miR-4462",
+        "hsa-miR-4539",
+        "hsa-miR-1290",
+        "hsa-miR-149-3p",
+        "hsa-miR-619-5p",
+        "hsa-miR-204-3p",
+        "hsa-miR-206"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0021359",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9187122583389282,
+    "attributes": {
+      "associated_gene_names": [
+        "8481",
+        "51314",
+        "64072",
+        "1586",
+        "352909",
+        "676",
+        "1770",
+        "1767",
+        "7784",
+        "8820"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-3154",
+        "hsa-let-7b",
+        "mmu-miR-146a-5p",
+        "mmu-miR-483-5p",
+        "mmu-miR-222-3p",
+        "hsa-miR-196a-5p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-20b-5p",
+        "hsa-miR-19b-1-5p",
+        "hsa-miR-21-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0016063",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9186378121376038,
+    "attributes": {
+      "associated_gene_names": [
+        "4142",
+        "5741",
+        "2690",
+        "860",
+        "8074",
+        "4091",
+        "2688",
+        "820",
+        "2353",
+        "8600"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-182-5p",
+        "hsa-miR-324-5p",
+        "hsa-miR-25-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-451a",
+        "hsa-miR-363-3p",
+        "hsa-miR-93-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751265",
+    "name": "",
+    "definition": "",
+    "similarity": 0.918562650680542,
+    "attributes": {
+      "associated_gene_names": [
+        "9892",
+        "5741",
+        "1175",
+        "4905",
+        "4204",
+        "4810",
+        "596",
+        "8301",
+        "8913",
+        "1996"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-137-3p",
+        "hsa-miR-33b-5p",
+        "hsa-miR-483-5p",
+        "hsa-miR-137-3p",
+        "hsa-miR-15b-5p",
+        "hsa-miR-106b-3p",
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4317171",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9176238179206848,
+    "attributes": {
+      "associated_gene_names": [
+        "79068",
+        "80339",
+        "79191",
+        "1401",
+        "672",
+        "3105",
+        "9370",
+        "4544",
+        "4170",
+        "3952"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4777-3p",
+        "hsa-miR-642b-3p",
+        "mmu-miR-21a-5p",
+        "hsa-miR-107"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0740392",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9172214269638062,
+    "attributes": {
+      "associated_gene_names": [
+        "9892",
+        "215",
+        "4137",
+        "2074",
+        "1440",
+        "871",
+        "596",
+        "3308",
+        "7124",
+        "10135"
+      ],
+      "associated_miRNA_names": [
+        "rno-mir-30a",
+        "mmu-miR-369-3p",
+        "mmu-miR-425-3p",
+        "mmu-miR-677-3p",
+        "mmu-miR-467e-3p",
+        "mmu-miR-697",
+        "hsa-miR-505-3p",
+        "mmu-miR-369-5p",
+        "hsa-miR-532-3p",
+        "mmu-miR-34c-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2936719",
+    "name": "",
+    "definition": "",
+    "similarity": 0.91685950756073,
+    "attributes": {
+      "associated_gene_names": [
+        "6869",
+        "7099",
+        "22953",
+        "8856",
+        "7124",
+        "2917",
+        "7276",
+        "22861",
+        "3673",
+        "2912"
+      ],
+      "associated_miRNA_names": [
+        "mmu-let-7c-2",
+        "mmu-miR-151-3p",
+        "rno-miR-23a-3p",
+        "rno-miR-15b-3p",
+        "mmu-miR-139-3p",
+        "rno-miR-146b-3p",
+        "rno-miR-7a-5p",
+        "hsa-miR-338-3p",
+        "rno-miR-181a-5p",
+        "mmu-miR-223-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027126",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9162952303886414,
+    "attributes": {
+      "associated_gene_names": [
+        "6925",
+        "8776",
+        "4436",
+        "1549",
+        "9475",
+        "1052",
+        "2153",
+        "60677",
+        "8976",
+        "4137"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-215-3p",
+        "hsa-miR-518e-3p",
+        "mmu-miR-17-3p",
+        "mmu-miR-26a-5p",
+        "mmu-miR-146b-3p",
+        "mmu-miR-18a-3p",
+        "mmu-miR-34b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-181c-3p",
+        "mmu-miR-181a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0007786",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9161761999130249,
+    "attributes": {
+      "associated_gene_names": [
+        "6351",
+        "5321",
+        "360",
+        "596",
+        "3725",
+        "2912",
+        "6776",
+        "3588",
+        "1440",
+        "3976"
+      ],
+      "associated_miRNA_names": [
+        "mmu-mir-429",
+        "rno-miR-217-3p",
+        "hsa-miR-410-3p",
+        "hsa-miR-24-3p",
+        "hsa-let-7f-5p",
+        "hsa-let-7c",
+        "rno-miR-375-3p",
+        "rno-miR-7a-5p",
+        "rno-miR-429",
+        "hsa-miR-135b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1860787",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9151279926300049,
+    "attributes": {
+      "associated_gene_names": [
+        "6493",
+        "6387",
+        "1827",
+        "1909",
+        "9992",
+        "6754",
+        "7124",
+        "3150",
+        "873",
+        "80781"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4328",
+        "hsa-miR-495-3p",
+        "hsa-miR-1247-3p",
+        "hsa-miR-124-5p",
+        "hsa-miR-590-3p",
+        "mmu-miR-138-5p",
+        "mmu-miR-182-3p",
+        "hsa-miR-181a-3p",
+        "mmu-miR-23a-3p",
+        "mmu-miR-429-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0151650",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9143927693367004,
+    "attributes": {
+      "associated_gene_names": [
+        "5594",
+        "26503",
+        "7097",
+        "152007",
+        "25",
+        "4233",
+        "596",
+        "1080",
+        "54778",
+        "655"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-299a-5p",
+        "mmu-miR-200b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-129-5p",
+        "hsa-miR-214-3p",
+        "mmu-miR-146b-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-23a-3p",
+        "hsa-miR-382-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2931689",
+    "name": "",
+    "definition": "",
+    "similarity": 0.9142249822616577,
+    "attributes": {
+      "associated_gene_names": [
+        "1535",
+        "7422",
+        "51182",
+        "6476",
+        "63976",
+        "1734",
+        "8776",
+        "155",
+        "1968",
+        "6517"
+      ],
+      "associated_miRNA_names": [
+        "mmu-miR-215-3p",
+        "hsa-miR-518e-3p",
+        "mmu-miR-17-3p",
+        "mmu-miR-26a-5p",
+        "mmu-miR-146b-3p",
+        "mmu-miR-18a-3p",
+        "mmu-miR-34b-3p",
+        "hsa-miR-27a-3p",
+        "mmu-miR-181c-3p",
+        "mmu-miR-181a-5p"
+      ]
+    }
+  }
+]

@@ -1,0 +1,342 @@
+.disease-detail-page {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.detail-page-title {
+  margin-bottom: 20px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-page-id {
+  margin-left: 12px;
+}
+
+.disease-detail-container {
+  width: 100%;
+}
+
+.disease-info-card {
+  margin-bottom: 16px;
+}
+
+.related-diseases-card {
+  margin-bottom: 16px;
+}
+
+.visualizations-card {
+  height: 100%;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.external-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.disease-detail-tab-content {
+  padding: 16px 0;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.no-disease-container {
+  padding: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #26d0ce, #1a2980);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .detail-page-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .detail-page-id {
+    margin-left: 0;
+  }
+}
+
+/* 暗色主题适配 */
+.dark-theme .disease-detail-page {
+  background-color: #adadad;
+  color: #e0e0e0;
+}
+
+.dark-theme .disease-info-card,
+.dark-theme .related-diseases-card,
+.dark-theme .visualizations-card {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+}
+
+.dark-theme .gradient-text {
+  background: linear-gradient(45deg, #26d0ce, #1a2980);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 基本样式 */
+.disease-detail-card {
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: #e8e8ee !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.disease-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.disease-title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.disease-title {
+  margin-bottom: 0 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px !important;
+}
+
+.disease-id {
+  margin-top: 4px;
+}
+
+/* 定义卡片样式 */
+.definition-card {
+  margin-bottom: 16px;
+}
+
+.definition-header {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1a2980;
+}
+
+.definition-text {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+/* 侧边栏特定样式 */
+.sidebar-content {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.sidebar-tab-content {
+  max-height: calc(100vh - 350px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.sidebar-card {
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.sidebar-mini-card {
+  padding: 8px;
+}
+
+.sidebar-mini-card .ant-statistic-title {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.sidebar-mini-card .ant-statistic-content {
+  font-size: 14px;
+}
+
+/* 基因和miRNA名称样式 */
+.gene-name, .mirna-name {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* 相关疾病项样式 */
+.related-disease-item {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.disease-name {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* 评分条样式 */
+.score-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.score-bar {
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* 表格样式调整 */
+.sidebar-tab-content .ant-table-small {
+  font-size: 12px;
+}
+
+.sidebar-tab-content .ant-table-thead > tr > th {
+  padding: 6px 6px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.sidebar-tab-content .ant-table-tbody > tr > td {
+  padding: 4px 6px;
+  font-size: 12px;
+}
+
+/* 标签页样式 */
+.disease-tabs .ant-tabs-tab {
+  padding: 6px 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.disease-tabs .ant-tabs-tab-btn {
+  font-size: 12px;
+}
+
+.disease-tabs .ant-tabs-tab-active {
+  color: white !important;
+}
+
+.disease-tabs .ant-tabs-ink-bar {
+  background-color: white !important;
+}
+
+/* 自定义侧边栏样式 */
+.site-sidebar {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.site-sidebar .ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-sidebar .sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.site-sidebar .sidebar-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.site-sidebar .history-item {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.site-sidebar .history-item:hover {
+  background-color: #f6f6f6;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .disease-detail-card {
+    margin-bottom: 8px;
+  }
+  
+  .sidebar-tab-content {
+    max-height: 500px;
+  }
+}
+
+/* 加载状态容器 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 白色文本表格样式 */
+.white-text-table .ant-table {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.white-text-table .ant-table-thead > tr > th {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+.white-text-table .ant-table-tbody > tr > td {
+  color: white !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.white-text-table .ant-table-tbody > tr:hover > td {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.white-text-table .ant-empty-description {
+  color: white !important;
+}
+
+.white-text-table .ant-pagination-item-link {
+  color: white !important;
+}
+
+.white-text-table .ant-pagination-item a {
+  color: white !important;
+}
+
+/* 特殊疾病标题样式 */
+.special-disease-title {
+  font-weight: bold !important;
+  font-size: 24px !important;
+  color: white !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+  letter-spacing: 0.5px !important;
+} 

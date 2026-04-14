@@ -1,0 +1,1434 @@
+[
+  {
+    "disease_id": "C4025845",
+    "name": "Abnormality iris morphology",
+    "definition": "An abnormality of the iris, which is the pigmented muscular tissue between the cornea and the lens, that is perforated by an opening called the pupil.",
+    "similarity": -1.0,
+    "attributes": {
+      "semantictype": "Anatomical Abnormality",
+      "associated_gene_names": [
+        "2200",
+        "5592",
+        "4638",
+        "7042",
+        "7048",
+        "79147",
+        "4015",
+        "4653",
+        "8076",
+        "10716"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-223-3p",
+        "hsa-miR-92a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0344530",
+    "name": "Congenital keratoglobus",
+    "definition": "No definition",
+    "similarity": 0.4894093871116638,
+    "attributes": {
+      "semantictype": "Congenital Abnormality",
+      "associated_gene_names": [
+        "5308",
+        "91851",
+        "79158",
+        "2200",
+        "26277",
+        "1277",
+        "1301",
+        "3984",
+        "9215",
+        "6199"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-17-5p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-34a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C2265792",
+    "name": "",
+    "definition": "",
+    "similarity": 0.48934465646743774,
+    "attributes": {
+      "associated_gene_names": [
+        "4000",
+        "4089",
+        "3339",
+        "6329",
+        "6473",
+        "4359",
+        "55624",
+        "5346",
+        "857",
+        "5631"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-126-3p",
+        "hsa-miR-451a"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4551479",
+    "name": "Schwartz-Jampel syndrome type 1",
+    "definition": "Schwartz-Jampel syndrome type 1 (SJS1) is a rare autosomal recessive disorder characterized by muscle stiffness (myotonia) and chondrodysplasia. Affected individuals usually present in childhood with permanent muscle stiffness or bone deformities. Common clinical features include mask-like facies (narrow palpebral fissures, blepharospasm, and pursed lips); permanent muscle stiffness with continuous skeletal muscle activity recorded on electromyography; dwarfism; pectus carinatum; kyphoscoliosis; bowing of long bones; and epiphyseal, metaphyseal, and hip dysplasia. The disorder is slowly progressive but does not appear to alter life span (summary by Stum et al., 2006).",
+    "similarity": 0.4890478849411011,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7422",
+        "1301",
+        "50964",
+        "3339",
+        "10683",
+        "2316",
+        "6399",
+        "1280",
+        "596",
+        "1297"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-223-3p",
+        "hsa-miR-222-3p",
+        "hsa-miR-155-5p",
+        "hsa-miR-16-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1184923",
+    "name": "Lumbar hyperlordosis",
+    "definition": "An abnormal accentuation of the inward curvature of the spine in the lumbar region.",
+    "similarity": 0.48850634694099426,
+    "attributes": {
+      "semantictype": "Anatomical Abnormality",
+      "associated_gene_names": [
+        "54496",
+        "6445",
+        "2200",
+        "367",
+        "5832",
+        "54808",
+        "57492",
+        "4000",
+        "85365",
+        "6261"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-146a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4551488",
+    "name": "Bifid uvula",
+    "definition": "Uvula separated into two parts most easily seen at the tip.",
+    "similarity": 0.4878251850605011,
+    "attributes": {
+      "semantictype": "Congenital Abnormality",
+      "associated_gene_names": [
+        "79068",
+        "11285",
+        "5236",
+        "3664",
+        "219844",
+        "26227",
+        "1906",
+        "7273",
+        "274",
+        "6261"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-125b-5p",
+        "hsa-miR-222-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-34a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0241005",
+    "name": "Elevated circulating creatine kinase concentration",
+    "definition": "An elevation of the level of the enzyme creatine kinase (also known as creatine phosphokinase (CK; EC 2.7.3.2) in the blood. CK levels can be elevated in a number of clinical disorders such as myocardial infarction, rhabdomyolysis, and muscular dystrophy.",
+    "similarity": 0.4871733486652374,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "6445",
+        "79650",
+        "7112",
+        "367",
+        "788",
+        "2483",
+        "10616",
+        "8557",
+        "5224",
+        "7137"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-451a",
+        "hsa-miR-199a-5p",
+        "hsa-miR-17-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0024421",
+    "name": "Macroglossia",
+    "definition": "Increased length and width of the tongue.",
+    "similarity": 0.4869420826435089,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2623",
+        "7201",
+        "50506",
+        "79158",
+        "6445",
+        "79068",
+        "10483",
+        "5290",
+        "6390",
+        "1857"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-221-3p",
+        "hsa-miR-145-5p",
+        "hsa-miR-142-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1869123",
+    "name": "Autosomal recessive limb-girdle muscular dystrophy type 2A",
+    "definition": "Calpainopathy is characterized by symmetric and progressive weakness of proximal limb-girdle muscles. Clinical findings of calpainopathy include the tendency to walk on tiptoe, difficulty in running, scapular winging, waddling gait, laxity of the abdominal muscles, Achilles tendon shortening, and scoliosis. Affected individuals typically do not have cardiac involvement or intellectual disability. Three autosomal recessive calpainopathy phenotypes have been identified based on the distribution of muscle weakness and age at onset: (1) pelvifemoral limb-girdle muscular dystrophy (LGMD) (Leyden-Möbius LGMD) phenotype, the most frequently observed calpainopathy phenotype, in which muscle weakness is first evident in the pelvic girdle and later in the shoulder girdle, with onset that may occur as early as before age 12 years or as late as after age 30 years; (2) scapulohumeral LGMD (Erb LGMD) phenotype, usually a milder phenotype with infrequent early onset, in which muscle weakness is first evident in the shoulder girdle and later in the pelvic girdle; (3) hyperCKemia, usually observed in children or young individuals, in which individuals are asymptomatic and have high serum creatine kinase (CK) concentrations. The autosomal dominant form of calpainopathy is clinically variable, ranging from almost asymptomatic to wheelchair dependence after age 60 years in a few individuals; phenotype is generally milder than the recessive form.",
+    "similarity": 0.4860481023788452,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "83548",
+        "1769",
+        "7273",
+        "726",
+        "2487",
+        "825",
+        "79147",
+        "8291",
+        "1499",
+        "5339"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-518c-3p",
+        "hsa-miR-501-3p",
+        "hsa-miR-362-3p",
+        "hsa-miR-18b-3p",
+        "hsa-miR-432-3p",
+        "hsa-miR-299-3p",
+        "hsa-miR-379-3p",
+        "hsa-miR-502-3p",
+        "hsa-miR-493-3p",
+        "hsa-miR-199b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1837108",
+    "name": "Decreased muscle mass",
+    "definition": "No definition",
+    "similarity": 0.48568183183670044,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "2200",
+        "1778",
+        "427",
+        "7273",
+        "529",
+        "2673",
+        "9853",
+        "1487",
+        "5728",
+        "8924"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-221-3p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-155-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-181a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1842688",
+    "name": "Hypoplasia of the brainstem",
+    "definition": "Underdevelopment of the brainstem.",
+    "similarity": 0.4848082363605499,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "7846",
+        "114034",
+        "4621",
+        "80347",
+        "5119",
+        "22983",
+        "55640",
+        "56623",
+        "9215",
+        "27445"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-125b-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-222-3p",
+        "hsa-miR-145-5p",
+        "hsa-miR-155-5p",
+        "hsa-miR-17-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0003886",
+    "name": "Arthrogryposis",
+    "definition": "A rare, non-progressive congenital disorder characterized by multiple joint contractures which are present at birth.",
+    "similarity": 0.4846840798854828,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23299",
+        "23729",
+        "51091",
+        "91574",
+        "375790",
+        "367",
+        "3897",
+        "1778",
+        "10347",
+        "63925"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-383-3p",
+        "hsa-miR-425-5p",
+        "hsa-miR-199b-3p",
+        "hsa-miR-335-3p",
+        "hsa-miR-454-3p",
+        "hsa-let-7c",
+        "hsa-miR-99a-3p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-100-3p",
+        "hsa-miR-19b-1-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0432103",
+    "name": "Submucous cleft hard palate",
+    "definition": "Hard-palate submucous clefts are characterized by bony defects in the midline of the bony palate that are covered by the mucous membrane of the roof of the mouth. It may be possible to detect a submucous cleft hard palate upon palpation as a notch in the bony palate.",
+    "similarity": 0.48465657234191895,
+    "attributes": {
+      "semantictype": "Congenital Abnormality",
+      "associated_gene_names": [
+        "27245",
+        "219844",
+        "26227",
+        "4000",
+        "3845",
+        "990",
+        "10329",
+        "93986",
+        "9791",
+        "9215"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-142-3p",
+        "hsa-miR-21-5p",
+        "hsa-miR-155-5p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-16-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0241074",
+    "name": "Hyperextensible skin",
+    "definition": "A condition in which the skin can be stretched beyond normal, and then returns to its initial position.",
+    "similarity": 0.484089195728302,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "7148",
+        "5159",
+        "2200",
+        "5832",
+        "11285",
+        "1277",
+        "3845",
+        "6497",
+        "5781",
+        "113189"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-451a",
+        "hsa-miR-20a-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-24-3p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-155-5p",
+        "hsa-miR-16-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0221155",
+    "name": "Systolic hypertension",
+    "definition": "Abnormally high systolic blood pressure.",
+    "similarity": 0.4838411808013916,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "348",
+        "8991",
+        "4321",
+        "7052",
+        "54535",
+        "213",
+        "5972",
+        "4311",
+        "1628",
+        "92086"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-34a-5p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-145-5p",
+        "hsa-miR-29a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0026826",
+    "name": "Hypertonia",
+    "definition": "A condition in which there is increased muscle tone so that arms or legs, for example, are stiff and difficult to move.",
+    "similarity": 0.4832615256309509,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "8573",
+        "27229",
+        "25839",
+        "8270",
+        "79068",
+        "6224",
+        "79143",
+        "10347",
+        "5290",
+        "5309"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-17-5p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-143-3p",
+        "hsa-miR-451a",
+        "hsa-miR-150-5p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-222-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0162298",
+    "name": "Joint stiffness",
+    "definition": "Joint stiffness is a perceived sensation of tightness in a joint or joints when attempting to move them after a period of inactivity. Joint stiffness typically subsides over time.",
+    "similarity": 0.48317843675613403,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "3418",
+        "473",
+        "79158",
+        "2200",
+        "875",
+        "3897",
+        "9241",
+        "427",
+        "54808",
+        "4621"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-142-3p",
+        "hsa-miR-150-5p",
+        "hsa-miR-93-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-143-3p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-199a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0085682",
+    "name": "Hypophosphatemia",
+    "definition": "An abnormally decreased phosphate concentration in the blood.",
+    "similarity": 0.4828070402145386,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "2200",
+        "6569",
+        "359",
+        "613",
+        "10787",
+        "9247",
+        "120227",
+        "64343",
+        "1497",
+        "2778"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-222-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4023722",
+    "name": "Abnormality of hair texture",
+    "definition": "An abnormality of the texture of the hair.",
+    "similarity": 0.48271992802619934,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "1041",
+        "26227",
+        "2068",
+        "10682",
+        "5230",
+        "64840",
+        "1281",
+        "284058",
+        "538",
+        "10312"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-93-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4551863",
+    "name": "Supranuclear palsy, progressive, 1",
+    "definition": "The spectrum of clinical manifestations of MAPT-related frontotemporal dementia (MAPT-FTD) has expanded from its original description of frontotemporal dementia and parkinsonian manifestations to include changes in behavior, motor function, memory, and/or language. A recent retrospective study suggested that the majority of affected individuals have either behavioral changes consistent with a diagnosis of behavioral variant FTD (bvFTD) or, less commonly, a parkinsonian syndrome (i.e., progressive supranuclear palsy, corticobasal syndrome, or Parkinson disease). Fewer than 5% of people with MAPT-FTD have primary progressive aphasia or Alzheimer disease. Clinical presentation may differ between and within families with the same MAPT variant. MAPT-FTD is a progressive disorder that commonly ends with a relatively global dementia in which some affected individuals become mute. Progression of motor impairment in affected individuals results in some becoming chairbound and others bedbound. Mean disease duration is 9.3 (SD: 6.4) years but is individually variable and can be more than 30 years in some instances.",
+    "similarity": 0.48243817687034607,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "10228",
+        "4336",
+        "9451",
+        "6434",
+        "6427",
+        "4137"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4700-3p",
+        "hsa-miR-6740-3p",
+        "hsa-miR-5001-5p",
+        "hsa-miR-487b-5p",
+        "hsa-miR-6510-5p",
+        "hsa-miR-3190-5p",
+        "hsa-miR-3190-3p",
+        "hsa-miR-4327",
+        "hsa-miR-1909-3p",
+        "hsa-miR-3151-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C4551862",
+    "name": "Progressive supranuclear ophthalmoplegia",
+    "definition": "No definition",
+    "similarity": 0.48243817687034607,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "10228",
+        "4336",
+        "9451",
+        "6434",
+        "6427",
+        "4137"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-4700-3p",
+        "hsa-miR-6740-3p",
+        "hsa-miR-5001-5p",
+        "hsa-miR-487b-5p",
+        "hsa-miR-6510-5p",
+        "hsa-miR-3190-5p",
+        "hsa-miR-3190-3p",
+        "hsa-miR-4327",
+        "hsa-miR-1909-3p",
+        "hsa-miR-3151-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0409338",
+    "name": "Elbow flexion contracture",
+    "definition": "An elbow contracture that limits the ability of the elbow joint to be extended (straightened), meaning that the elbow is fixed in an flexed (bent) position.",
+    "similarity": 0.4824046194553375,
+    "attributes": {
+      "semantictype": "",
+      "associated_gene_names": [
+        "23387",
+        "157570",
+        "5832",
+        "4621",
+        "118429",
+        "163175",
+        "4000",
+        "79188",
+        "2706",
+        "3679"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-150-5p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-17-5p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-145-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0038016",
+    "name": "",
+    "definition": "",
+    "similarity": 0.4823785424232483,
+    "attributes": {
+      "associated_gene_names": [
+        "2200",
+        "268",
+        "55902",
+        "7048",
+        "4314",
+        "6094",
+        "650",
+        "6611",
+        "8106",
+        "1513"
+      ],
+      "associated_miRNA_names": []
+    }
+  },
+  {
+    "disease_id": "C1867103",
+    "name": "Limited elbow extension",
+    "definition": "Limited ability to straighten the arm at the elbow joint.",
+    "similarity": 0.48227185010910034,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "2200",
+        "55012",
+        "23529",
+        "1311",
+        "4322",
+        "538",
+        "4882",
+        "2316",
+        "55869",
+        "25836"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-20a-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-21-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1845847",
+    "name": "",
+    "definition": "",
+    "similarity": 0.4822293817996979,
+    "attributes": {
+      "associated_gene_names": [
+        "6925",
+        "6605",
+        "83480",
+        "7201",
+        "50506",
+        "55777",
+        "57192",
+        "63035",
+        "79158",
+        "55784"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-24-3p",
+        "hsa-miR-150-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-155-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0241654",
+    "name": "Abnormal heart valve morphology",
+    "definition": "Any structural abnormality of a cardiac valve.",
+    "similarity": 0.48207157850265503,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "473",
+        "79158",
+        "5832",
+        "2121",
+        "7273",
+        "274",
+        "6261",
+        "3845",
+        "6497",
+        "10516"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-16-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-222-3p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-451a",
+        "hsa-miR-29b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0399526",
+    "name": "Mandibular prognathia",
+    "definition": "Abnormal prominence of the chin related to increased length of the mandible.",
+    "similarity": 0.48206812143325806,
+    "attributes": {
+      "semantictype": "Congenital Abnormality",
+      "associated_gene_names": [
+        "6134",
+        "1848",
+        "2035",
+        "79158",
+        "2200",
+        "7422",
+        "808",
+        "10297",
+        "790",
+        "54808"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-106b-5p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-145-5p",
+        "hsa-miR-223-3p",
+        "hsa-miR-221-3p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-155-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-143-3p",
+        "hsa-miR-27a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0201976",
+    "name": "",
+    "definition": "",
+    "similarity": 0.4818077087402344,
+    "attributes": {
+      "associated_gene_names": [
+        "54496",
+        "6272",
+        "22884",
+        "55244",
+        "6569",
+        "7422",
+        "2646",
+        "3626",
+        "4036",
+        "90523"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-16-5p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-29b-3p",
+        "hsa-miR-150-5p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-181a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1842162",
+    "name": "",
+    "definition": "",
+    "similarity": 0.481803834438324,
+    "attributes": {
+      "associated_gene_names": [
+        "4625",
+        "57449",
+        "29954",
+        "59341"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-142-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-150-5p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-24-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0024796",
+    "name": "Marfan syndrome",
+    "definition": "FBN1-related Marfan syndrome (Marfan syndrome), a systemic disorder of connective tissue with a high degree of clinical variability, comprises a broad phenotypic continuum ranging from mild (features of Marfan syndrome in one or a few systems) to severe and rapidly progressive neonatal multiorgan disease. Cardinal manifestations involve the ocular, skeletal, and cardiovascular systems. Ocular findings include myopia (>50% of affected individuals); ectopia lentis (seen in approximately 60% of affected individuals); and an increased risk for retinal detachment, glaucoma, and early cataracts. Skeletal system manifestations include bone overgrowth and joint laxity; disproportionately long extremities for the size of the trunk (dolichostenomelia); overgrowth of the ribs that can push the sternum in (pectus excavatum) or out (pectus carinatum); and scoliosis that ranges from mild to severe and progressive. The major morbidity and early mortality in Marfan syndrome relate to the cardiovascular system and include dilatation of the aorta at the level of the sinuses of Valsalva (predisposing to aortic tear and rupture), mitral valve prolapse with or without regurgitation, tricuspid valve prolapse, and enlargement of the proximal pulmonary artery. Severe and prolonged regurgitation of the mitral and/or aortic valve can predispose to left ventricular dysfunction and occasionally heart failure. With proper management, the life expectancy of someone with Marfan syndrome approximates that of the general population.",
+    "similarity": 0.4817884862422943,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "5594",
+        "9402",
+        "2200",
+        "875",
+        "7422",
+        "55214",
+        "7078",
+        "1432",
+        "632"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-632",
+        "hsa-miR-26a-5p",
+        "hsa-miR-145-3p",
+        "hsa-miR-143-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0241181",
+    "name": "Fragile skin",
+    "definition": "Skin that splits easily with minimal injury.",
+    "similarity": 0.4817317724227905,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "5159",
+        "7389",
+        "1277",
+        "3675",
+        "113189",
+        "9509",
+        "4312",
+        "3077",
+        "1832",
+        "3691"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-222-3p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-17-5p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-125b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0333068",
+    "name": "Flexion contracture",
+    "definition": "A flexion contracture is a bent (flexed) joint that cannot be straightened actively or passively. It is thus a chronic loss of joint motion due to structural changes in muscle, tendons, ligaments, or skin that prevents normal movement of joints.",
+    "similarity": 0.4816500246524811,
+    "attributes": {
+      "semantictype": "Anatomical Abnormality",
+      "associated_gene_names": [
+        "23516",
+        "6445",
+        "2200",
+        "35",
+        "3848",
+        "55131",
+        "3663",
+        "55975",
+        "112939",
+        "6224"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-150-5p",
+        "hsa-miR-451a"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0796113",
+    "name": "Perlman syndrome",
+    "definition": "Perlman syndrome (PRLMNS) is an autosomal recessive congenital overgrowth syndrome with similarities to Beckwith-Wiedemann syndrome (BWS; 130650). Affected children are large at birth, are hypotonic, and show organomegaly, characteristic facial dysmorphisms (inverted V-shaped upper lip, prominent forehead, deep-set eyes, broad and flat nasal bridge, and low-set ears), renal anomalies (nephromegaly and hydronephrosis), frequent neurodevelopmental delay, and high neonatal mortality. Perlman syndrome is associated with a high risk of Wilms tumor, with a 64% incidence in infants surviving beyond the neonatal period. The tumor is diagnosed at an earlier age in these individuals compared with sporadic cases (less than 2 years and 3-4 years of age, respectively), and there is a high frequency of bilateral tumors (55%). Histologic examination of the kidneys in children with Perlman syndrome shows frequent nephroblastomatosis, which is a precursor lesion for Wilms tumor (summary by Astuti et al., 2012).",
+    "similarity": 0.48153257369995117,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "23318",
+        "2239",
+        "22894",
+        "1789",
+        "79670",
+        "129563",
+        "2719"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-483-3p",
+        "hsa-miR-20a-3p",
+        "hsa-miR-19b-1-5p",
+        "hsa-miR-19a-3p",
+        "hsa-miR-17-3p",
+        "hsa-miR-21-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0034935",
+    "name": "Babinski sign",
+    "definition": "Upturning of the big toe (and sometimes fanning of the other toes) in response to stimulation of the sole of the foot. If the Babinski sign is present it can indicate damage to the corticospinal tract.",
+    "similarity": 0.48043593764305115,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "23516",
+        "55280",
+        "91574",
+        "57192",
+        "7102",
+        "10613",
+        "389856",
+        "84706",
+        "5832",
+        "6253"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-125b-5p",
+        "hsa-miR-155-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0232466",
+    "name": "Feeding difficulties",
+    "definition": "Impaired ability to eat related to problems gathering food and getting ready to suck, chew, or swallow it.",
+    "similarity": 0.48041945695877075,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "6925",
+        "23299",
+        "6605",
+        "7201",
+        "51112",
+        "51091",
+        "284111",
+        "3852",
+        "473",
+        "2200"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-17-5p",
+        "hsa-miR-29b-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1565951",
+    "name": "Sphenoid Wing Meningioma",
+    "definition": "No definition",
+    "similarity": 0.4801757037639618,
+    "attributes": {
+      "semantictype": "Neoplastic Process",
+      "associated_gene_names": [
+        "1476",
+        "4771",
+        "210",
+        "5728",
+        "1471",
+        "5241",
+        "8028",
+        "5243",
+        "23158",
+        "207"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-515-3p",
+        "hsa-miR-190a-3p",
+        "hsa-miR-3651",
+        "hsa-miR-4281",
+        "hsa-miR-298",
+        "hsa-miR-374b-3p",
+        "hsa-miR-374a-3p",
+        "hsa-miR-30a-5p",
+        "hsa-miR-30e-3p",
+        "hsa-miR-3663-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0002418",
+    "name": "Amblyopia",
+    "definition": "Reduced visual acuity that is uncorrectable by lenses in the absence of detectable anatomic defects in the eye or visual pathways.",
+    "similarity": 0.48006629943847656,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "55777",
+        "5308",
+        "2200",
+        "875",
+        "84695",
+        "3832",
+        "4297",
+        "3052",
+        "8473",
+        "5781"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-222-3p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-142-3p",
+        "hsa-miR-93-5p",
+        "hsa-miR-155-5p",
+        "hsa-miR-20a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0751951",
+    "name": "Central core disease",
+    "definition": "Central core disease (CCD) is an inherited neuromuscular disorder characterised by central cores on muscle biopsy and clinical features of a congenital myopathy.",
+    "similarity": 0.4800528883934021,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "4000",
+        "6261",
+        "9499",
+        "81857",
+        "3679",
+        "11093",
+        "9215",
+        "79147",
+        "3569",
+        "5564"
+      ],
+      "associated_miRNA_names": [
+        "hsa-let-7f-1",
+        "hsa-miR-489-3p",
+        "hsa-miR-501-3p",
+        "hsa-miR-362-3p",
+        "hsa-miR-188-3p",
+        "hsa-miR-432-3p",
+        "hsa-miR-98-3p",
+        "hsa-miR-299-3p",
+        "hsa-miR-379-3p",
+        "hsa-miR-369-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0268147",
+    "name": "Glycogen phosphorylase kinase deficiency",
+    "definition": "Phosphorylase kinase (PhK) deficiency causing glycogen storage disease type IX (GSD IX) results from deficiency of the enzyme phosphorylase b kinase, which has a major regulatory role in the breakdown of glycogen. The two types of PhK deficiency are liver PhK deficiency (characterized by early childhood onset of hepatomegaly and growth restriction, and often, but not always, fasting ketosis and hypoglycemia) and muscle PhK deficiency, which is considerably rarer (characterized by any of the following: exercise intolerance, myalgia, muscle cramps, myoglobinuria, and progressive muscle weakness). While symptoms and biochemical abnormalities of liver PhK deficiency were thought to improve with age, it is becoming evident that affected individuals need to be monitored for long-term complications such as liver fibrosis and cirrhosis.",
+    "similarity": 0.4798993766307831,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "808",
+        "5257",
+        "353",
+        "5256",
+        "1351",
+        "2538",
+        "686",
+        "5255",
+        "2875",
+        "5261"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-150-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-155-5p",
+        "hsa-miR-17-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-143-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-93-5p",
+        "hsa-miR-221-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C3541456",
+    "name": "Spondyloepiphyseal dysplasia tarda, X-linked",
+    "definition": "X-linked spondyloepiphyseal dysplasia tarda (SEDT) is a skeletal disorder of vertebral and epiphyseal growth, primarily affecting the large proximal joints. Affected individuals have disproportionate short stature with a short trunk, barrel chest, and absence of systemic complications. Onset is usually between 5 and 10 years of age, with a radiologically normal skeleton up to 5 years of age (summary by Bar-Yosef et al., 2004).",
+    "similarity": 0.4798923134803772,
+    "attributes": {
+      "semantictype": "Congenital Abnormality",
+      "associated_gene_names": [
+        "7422",
+        "1301",
+        "50964",
+        "3339",
+        "6811",
+        "10683",
+        "2316",
+        "6399",
+        "1280",
+        "83696"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-150-5p",
+        "hsa-miR-34a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0027125",
+    "name": "",
+    "definition": "",
+    "similarity": 0.47985604405403137,
+    "attributes": {
+      "associated_gene_names": [
+        "4000",
+        "79188",
+        "7555",
+        "4154",
+        "3339",
+        "2010",
+        "773",
+        "23224",
+        "6329",
+        "2273"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-29a-3p",
+        "hsa-miR-20a-5p",
+        "hsa-miR-142-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0037763",
+    "name": "Muscle spasm",
+    "definition": "Sudden and involuntary contractions of one or more muscles.",
+    "similarity": 0.4796734154224396,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "120892",
+        "367",
+        "5832",
+        "6253",
+        "1738",
+        "54209",
+        "9829",
+        "79912",
+        "26227",
+        "6559"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-125b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1298820",
+    "name": "Aortic root aneurysm",
+    "definition": "An abnormal localized widening (dilatation) of the aortic root.",
+    "similarity": 0.4796314239501953,
+    "attributes": {
+      "semantictype": "Anatomical Abnormality",
+      "associated_gene_names": [
+        "2200",
+        "5592",
+        "118429",
+        "4638",
+        "4000",
+        "1584",
+        "7042",
+        "7048",
+        "83854",
+        "2201"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-150-5p",
+        "hsa-miR-126-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-451a",
+        "hsa-miR-34a-5p",
+        "hsa-miR-26a-5p",
+        "hsa-miR-155-5p",
+        "hsa-miR-93-5p",
+        "hsa-miR-125b-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0026267",
+    "name": "Mitral valve prolapse",
+    "definition": "One or both of the leaflets (cusps) of the mitral valve bulges back into the left atrium upon contraction of the left ventricle.",
+    "similarity": 0.47955814003944397,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "7450",
+        "7148",
+        "2200",
+        "875",
+        "29940",
+        "3329",
+        "1277",
+        "4000",
+        "7273",
+        "3052"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-487a-3p",
+        "hsa-miR-323a-3p",
+        "hsa-miR-150-5p",
+        "hsa-miR-361-5p",
+        "hsa-miR-140-3p",
+        "hsa-miR-451a",
+        "hsa-miR-210-3p",
+        "hsa-miR-223-3p",
+        "hsa-miR-340-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0151786",
+    "name": "Muscle weakness",
+    "definition": "Reduced strength of muscles.",
+    "similarity": 0.4793649911880493,
+    "attributes": {
+      "semantictype": "Sign or Symptom",
+      "associated_gene_names": [
+        "84634",
+        "124093",
+        "23299",
+        "10494",
+        "8573",
+        "23515",
+        "478",
+        "51091",
+        "91574",
+        "1848"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-146a-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1866934",
+    "name": "Reduced tendon reflexes",
+    "definition": "Diminution of tendon reflexes, which is an invariable sign of peripheral nerve disease.",
+    "similarity": 0.4793046712875366,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "5190",
+        "375790",
+        "4547",
+        "5309",
+        "8504",
+        "2671",
+        "2071",
+        "163175",
+        "7508",
+        "4000"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-20a-5p",
+        "hsa-miR-181a-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-27a-3p",
+        "hsa-miR-34a-5p",
+        "hsa-miR-21-5p",
+        "hsa-miR-199a-5p",
+        "hsa-miR-451a",
+        "hsa-miR-17-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1836696",
+    "name": "Lower limb hyperreflexia",
+    "definition": "Increased intensity of the a reflex in the leg.",
+    "similarity": 0.4791446924209595,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "5832",
+        "23503",
+        "547",
+        "123606",
+        "9101",
+        "8813",
+        "7054",
+        "6872",
+        "285362",
+        "9197"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-17-5p",
+        "hsa-miR-143-3p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C1853487",
+    "name": "Thick eyebrow",
+    "definition": "Increased density/number and/or increased diameter of eyebrow hairs.",
+    "similarity": 0.4787572920322418,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "6605",
+        "55777",
+        "54361",
+        "112939",
+        "5977",
+        "2186",
+        "57492",
+        "23363",
+        "4297",
+        "8091"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-106b-5p",
+        "hsa-miR-125b-5p",
+        "hsa-miR-92a-3p",
+        "hsa-miR-150-5p",
+        "hsa-miR-146a-5p",
+        "hsa-miR-16-5p",
+        "hsa-miR-451a",
+        "hsa-miR-20a-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0541794",
+    "name": "Muscular atrophy",
+    "definition": "The presence of skeletal muscular atrophy (which is also known as amyotrophy).",
+    "similarity": 0.4786931574344635,
+    "attributes": {
+      "semantictype": "Pathologic Function",
+      "associated_gene_names": [
+        "23299",
+        "7148",
+        "113235",
+        "91574",
+        "11284",
+        "6445",
+        "10613",
+        "55131",
+        "124997",
+        "114034"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-206",
+        "hsa-miR-133a-3p",
+        "hsa-miR-133b"
+      ]
+    }
+  },
+  {
+    "disease_id": "C3711370",
+    "name": "Spastic paraplegia type 7",
+    "definition": "A form of hereditary spastic ataxia characterised by an onset usually in adulthood (but ranging from 10-72 years) of progressive bilateral lower limb weakness and spasticity and sometimes predominant cerebellar ataxia. In addition to frequent sphincter dysfunction and decreased vibratory sense at the ankles, manifestations may include optical neuropathy, nystagmus, blepharoptosis, ophthalmoplegia, decreased hearing, scoliosis, pes cavus, motor and sensory neuropathy, muscle atrophy, parkinsonism, and dystonia.",
+    "similarity": 0.4786427915096283,
+    "attributes": {
+      "semantictype": "Disease or Syndrome",
+      "associated_gene_names": [
+        "9896",
+        "10939",
+        "29110",
+        "6687",
+        "2395"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-125b-5p",
+        "hsa-miR-221-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-145-5p",
+        "hsa-miR-24-3p",
+        "hsa-miR-142-3p",
+        "hsa-miR-106b-5p",
+        "hsa-miR-21-5p"
+      ]
+    }
+  },
+  {
+    "disease_id": "C0850703",
+    "name": "Frequent falls",
+    "definition": "No definition",
+    "similarity": 0.4785282015800476,
+    "attributes": {
+      "semantictype": "Finding",
+      "associated_gene_names": [
+        "55280",
+        "120892",
+        "6445",
+        "1778",
+        "427",
+        "5621",
+        "6390",
+        "23533",
+        "79912",
+        "5660"
+      ],
+      "associated_miRNA_names": [
+        "hsa-miR-181a-5p",
+        "hsa-miR-29a-3p",
+        "hsa-miR-16-5p",
+        "hsa-miR-17-5p"
+      ]
+    }
+  }
+]

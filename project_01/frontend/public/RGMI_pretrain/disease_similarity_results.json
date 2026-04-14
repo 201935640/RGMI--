@@ -1,0 +1,255 @@
+[
+    {
+        "disease_id": "C0023212",
+        "name": "Left heart failure",
+        "definition": "Failure of adequate output by the left ventricle despite an increase in distending pressure and in end-diastolic volume, with dyspnea, orthopnea, and other signs and symptoms of pulmonary congestion and edema.",
+        "similarity": -1.0,
+        "attributes": {
+            "semantictype": "Disease or Syndrome",
+            "associated_gene_names": [
+                "7450",
+                "27035",
+                "4878",
+                "5741",
+                "3576"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-25-3p",
+                "rno-miR-16-3p",
+                "hsa-miR-497-3p",
+                "hsa-miR-142-3p",
+                "hsa-miR-133b"
+            ]
+        }
+    },
+    {
+        "disease_id": "C1961112",
+        "name": "Decompensation, Heart",
+        "definition": "No definition",
+        "similarity": 0.9998921155929565,
+        "attributes": {
+            "semantictype": "Pathologic Function",
+            "associated_gene_names": [
+                "7450",
+                "1910",
+                "5054",
+                "27035",
+                "3553"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-25-3p",
+                "rno-miR-16-3p",
+                "hsa-miR-497-3p",
+                "hsa-miR-142-3p",
+                "hsa-miR-133b"
+            ]
+        }
+    },
+    {
+        "disease_id": "C1959583",
+        "name": "Myocardial failure",
+        "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+        "similarity": 0.999883234500885,
+        "attributes": {
+            "semantictype": "Disease or Syndrome",
+            "associated_gene_names": [
+                "7450",
+                "1909",
+                "3553",
+                "4878",
+                "5741"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-25-3p",
+                "rno-miR-16-3p",
+                "hsa-miR-497-3p",
+                "hsa-miR-142-3p",
+                "hsa-miR-133b"
+            ]
+        }
+    },
+    {
+        "disease_id": "C0235527",
+        "name": "Right ventricular failure",
+        "definition": "Reduced ability of the right ventricle to perform its function (to receive blood from the right atrium and to eject blood into the pulmonary artery), often leading to pitting peripheral edema, ascites, and hepatomegaly.",
+        "similarity": 0.9989885091781616,
+        "attributes": {
+            "semantictype": "Disease or Syndrome",
+            "associated_gene_names": [
+                "7450",
+                "6392",
+                "7097",
+                "7276",
+                "7124"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-25-3p",
+                "rno-miR-16-3p",
+                "hsa-miR-497-3p",
+                "hsa-miR-142-3p",
+                "hsa-miR-133b"
+            ]
+        }
+    },
+    {
+        "disease_id": "C0018802",
+        "name": "Congestive heart failure",
+        "definition": "The presence of an abnormality of cardiac function that is responsible for the failure of the heart to pump blood at a rate that is commensurate with the needs of the tissues or a state in which abnormally elevated filling pressures are required for the heart to do so. Heart failure is frequently related to a defect in myocardial contraction.",
+        "similarity": 0.9911497831344604,
+        "attributes": {
+            "semantictype": "Disease or Syndrome",
+            "associated_gene_names": [
+                "7450",
+                "728",
+                "23530",
+                "6776",
+                "2218"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-25-3p",
+                "rno-miR-16-3p",
+                "hsa-miR-497-3p",
+                "hsa-miR-142-3p",
+                "hsa-miR-133b"
+            ]
+        }
+    },
+    {
+        "disease_id": "C0018799",
+        "name": "Heart disease",
+        "definition": "A non-neoplastic or neoplastic disorder that affects the heart and/or the pericardium. Representative examples include endocarditis, pericarditis, atrial myxoma, cardiac myeloid sarcoma, and pericardial malignant mesothelioma.",
+        "similarity": 0.9721895456314087,
+        "attributes": {
+            "semantictype": "Disease or Syndrome",
+            "associated_gene_names": [
+                "7450",
+                "4233",
+                "23451",
+                "146862",
+                "1440"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-433-3p",
+                "mmu-miR-222-3p",
+                "rno-miR-22-3p",
+                "hsa-miR-421",
+                "mmu-miR-181a-5p"
+            ]
+        }
+    },
+    {
+        "disease_id": "C0026848",
+        "name": "Myopathy",
+        "definition": "A disorder of muscle unrelated to impairment of innervation or neuromuscular junction.",
+        "similarity": 0.9706083536148071,
+        "attributes": {
+            "semantictype": "Disease or Syndrome",
+            "associated_gene_names": [
+                "124093",
+                "6678",
+                "3483",
+                "54968",
+                "596"
+            ],
+            "associated_miRNA_names": [
+                "mmu-miR-431-3p",
+                "hsa-miR-517b-3p",
+                "hsa-miR-29a-3p",
+                "hsa-miR-106b-3p",
+                "hsa-miR-150-3p"
+            ]
+        }
+    },
+    {
+        "disease_id": "C1383860",
+        "name": "Cardiac hypertrophy",
+        "definition": "Enlargement of the HEART due to chamber HYPERTROPHY, an increase in wall thickness without an increase in the number of cells (MYOCYTES, CARDIAC). It is the result of increase in myocyte size, mitochondrial and myofibrillar mass, as well as changes in extracellular matrix.",
+        "similarity": 0.9695700407028198,
+        "attributes": {
+            "semantictype": "Pathologic Function",
+            "associated_gene_names": [
+                "3418",
+                "152",
+                "1545",
+                "9464",
+                "3976"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-350",
+                "mmu-miR-18a-3p",
+                "hsa-miR-211-3p",
+                "mmu-miR-26a-5p",
+                "mmu-miR-17-3p"
+            ]
+        }
+    },
+    {
+        "disease_id": "C0018800",
+        "name": "Cardiomegaly",
+        "definition": "Increased size of the heart, clinically defined as an increased transverse diameter of the cardiac silhouette that is greater than or equal to 50% of the transverse diameter of the chest (increased cardiothoracic ratio) on a posterior-anterior projection of a chest radiograph or a computed tomography.",
+        "similarity": 0.9679657816886902,
+        "attributes": {
+            "semantictype": "Finding",
+            "associated_gene_names": [
+                "3418",
+                "55869",
+                "4144",
+                "51778",
+                "10535"
+            ],
+            "associated_miRNA_names": [
+                "rno-miR-350",
+                "mmu-miR-18a-3p",
+                "hsa-miR-211-3p",
+                "mmu-miR-26a-5p",
+                "mmu-miR-17-3p"
+            ]
+        }
+    },
+    {
+        "disease_id": "C0003504",
+        "name": "Aortic regurgitation",
+        "definition": "An insufficiency of the aortic valve, leading to regurgitation (backward flow) of blood from the aorta into the left ventricle.",
+        "similarity": 0.9661716818809509,
+        "attributes": {
+            "semantictype": "Disease or Syndrome",
+            "associated_gene_names": [
+                "3418",
+                "7703",
+                "1586",
+                "5321",
+                "6237"
+            ],
+            "associated_miRNA_names": [
+                "hsa-miR-26a-2-3p",
+                "hsa-miR-195-3p",
+                "hsa-miR-26a-1-3p",
+                "hsa-miR-30b-3p",
+                "hsa-miR-125b-5p"
+            ]
+        }
+    },
+    {
+        "disease_id": "C0003507",
+        "name": "Aortic valve stenosis",
+        "definition": "The presence of a stenosis (narrowing) of the aortic valve.",
+        "similarity": 0.9614137411117554,
+        "attributes": {
+            "semantictype": "Pathologic Function",
+            "associated_gene_names": [
+                "7450",
+                "7097",
+                "682",
+                "54538",
+                "186"
+            ],
+            "associated_miRNA_names": [
+                "hsa-miR-4268",
+                "hsa-miR-99b-3p",
+                "hsa-miR-101-3p",
+                "hsa-miR-382-3p",
+                "hsa-miR-148a-3p"
+            ]
+        }
+    }
+]
