@@ -81,6 +81,7 @@ class NewApiService {
       this.apiConnected = response.data.status === 'healthy';
       this.isMockData = !response.data.model_available;
       
+      // this.log('info','response的值为:', response);
       this.log('info', `API连接状态: ${this.apiConnected ? '已连接' : '未连接'}, 使用模拟数据: ${this.isMockData}, 响应时间: ${endTime - startTime}ms`);
       this.log('debug', '服务器返回的健康状态详情:', response.data);
       

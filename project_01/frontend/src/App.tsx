@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Layout as AntLayout, Spin, Badge, notification, Button, Tabs, Switch, Card, Alert, Typography, Space, Avatar, Dropdown, Menu, Row, Col, List, Timeline, Modal, Divider, Radio, Form, Input, Empty, Select, InputNumber, Statistic, Slider, message, Descriptions, Tag } from 'antd';
 import { InfoCircleOutlined, HomeOutlined, AppstoreOutlined, AimOutlined, TranslationOutlined, ApiOutlined, UserOutlined, LogoutOutlined, SettingOutlined, TeamOutlined, SearchOutlined, NodeIndexOutlined, PieChartOutlined, LinkOutlined, QuestionCircleOutlined, BulbOutlined, FileTextOutlined, HistoryOutlined, DownOutlined, ExperimentOutlined, PartitionOutlined, DatabaseOutlined } from '@ant-design/icons';
 // 新组件
@@ -20,7 +21,6 @@ import './App.css';
 // 导入API服务
 import newApiService from './utils/newApiService';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { useApiStatus } from './contexts/ApiStatusContext';
 
 const { Header, Content, Sider } = AntLayout;
@@ -29,8 +29,10 @@ const { Text } = Typography;
 
 function App() {
   const { setIsLoading } = useUIStore();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   // 状态变量
-  const [appState, setAppState] = useState('welcome'); // welcome, login, register, main
   const [loading, setLoading] = useState(true);
   const [apiConnected, setApiConnected] = useState(false);
   const [usingMockData, setUsingMockData] = useState(false);
@@ -44,13 +46,37 @@ function App() {
   const [globalMiRNAData, setGlobalMiRNAData] = useState([]);
   const [globalDataLoaded, setGlobalDataLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
-  
+
+  // 监听路由变化，同步activeTab
+  useEffect(() => {
+    switch (location.pathname) {
+      case '/':
+        setActiveTab('home');
+        break;
+      case '/search':
+        setActiveTab('1'); // 疾病查询
+        break;
+      case '/network':
+        setActiveTab('3'); // 疾病相似性网络
+        break;
+      case '/history':
+        setActiveTab('home');
+        setShowHistoryModal(true); // 显示历史记录模态框
+        break;
+      case '/about':
+        setActiveTab('home');
+        setShowHelpModal(true); // 显示帮助模态框
+        break;
+      default:
+        break;
+    }
+  }, [location.pathname]);
+
   // 用户相关状态
   const [currentUser, setCurrentUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
-  
+
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
   
   // 新增状态变量
   const [themeMode, setThemeMode] = useState('light'); // 主题模式：light或dark
@@ -227,11 +253,11 @@ function App() {
   const handleWelcomeContinue = () => {
     // 如果用户已登录，直接进入主应用
     if (currentUser) {
-      setAppState('main');
-      setActiveTab('home'); // 确保进入主应用时显示首页
+      navigate('/');
+      setActiveTab('home');
     } else {
       // 否则进入登录页面
-      setAppState('login');
+      navigate('/login');
     }
   };
 
@@ -239,43 +265,38 @@ function App() {
   const handleLogin = (user) => {
     setCurrentUser(user);
     setIsAdmin(user.role === 'admin');
-    setAppState('main');
-    setActiveTab('home'); // 登录后显示首页
+    navigate('/');
+    setActiveTab('home');
   };
-  
+
   // 处理切换到注册界面
   const handleSwitchToRegister = () => {
-    setAppState('register');
+    navigate('/register');
   };
 
   // 处理切换到登录界面
   const handleSwitchToLogin = () => {
-    setAppState('login');
+    navigate('/login');
   };
 
   // 处理用户注册
   const handleRegister = (user) => {
     // 注册成功后自动切换到登录界面
-    setAppState('login');
+    navigate('/login');
   };
-  
+
   // 处理用户登出
   const handleLogout = () => {
     sessionStorage.removeItem('currentUser');
     setCurrentUser(null);
     setIsAdmin(false);
-    setAppState('welcome');
-    
+    navigate('/welcome');
+
     notification.success({
       message: t('logout'),
       description: t('logoutSuccess'),
       duration: 3
     });
-  };
-
-  // 处理返回欢迎页
-  const handleBackToWelcome = () => {
-    setAppState('welcome');
   };
 
   // 切换主题模式
@@ -357,7 +378,12 @@ function App() {
     });
     setShowHistoryModal(false); // 关闭历史记录模态框
   };
-  
+
+  // 查看搜索历史
+  const viewSearchHistory = () => {
+    setShowHistoryModal(true);
+  };
+
   // 从历史记录中选择疾病
   const selectDiseaseFromHistory = (diseaseId, topN = 20) => {
     // 查找疾病数据
@@ -806,7 +832,7 @@ function App() {
       <div className="help-content">
         <h3 style={{ color: '#1a2980', borderBottom: '2px solid #26d0ce', paddingBottom: '8px' }}>使用页面顶部的搜索栏搜索疾病</h3>
         <p>在页面顶部的搜索框中输入疾病名称或ID，系统将自动匹配相关疾病。您也可以使用示例疾病进行快速开始。</p>
-        
+
         <h3 style={{ color: '#1a2980', borderBottom: '2px solid #26d0ce', paddingBottom: '8px', marginTop: '20px' }}>在地图视图中探索疾病相似性网络</h3>
         <p>疾病相似性网络将通过图形化方式展示疾病之间的关联关系：</p>
         <ul>
@@ -815,26 +841,77 @@ function App() {
           <li><strong>交互方式</strong>：您可以拖动、缩放、点击节点进行交互，鼠标悬停可查看详情</li>
           <li><strong>相似度阈值</strong>：通过调整滑块控制显示的相似度阈值，筛选更相关的疾病</li>
         </ul>
-        
+
         <h3 style={{ color: '#1a2980', borderBottom: '2px solid #26d0ce', paddingBottom: '8px', marginTop: '20px' }}>点击疾病节点查看详细信息</h3>
         <p>点击任何疾病节点可以导航至该疾病的详细信息页面，查看疾病的基本信息、定义、语义类型等内容。</p>
-        
+
         <h3 style={{ color: '#1a2980', borderBottom: '2px solid #26d0ce', paddingBottom: '8px', marginTop: '20px' }}>在详情面板中查看相关基因和miRNA</h3>
         <p>在疾病详情页面，您可以查看与该疾病相关的基因和miRNA列表，了解疾病的分子标记特征。</p>
-        
+
         <Divider />
-        
+
         <h3 style={{ color: '#1a2980', borderBottom: '2px solid #26d0ce', paddingBottom: '8px' }}>{t('aboutSystem')}</h3>
         <p>本系统是一个基于多模态复杂网络构建的疾病相似性可视化平台，通过整合疾病、基因和miRNA数据，帮助研究人员探索疾病之间的潜在关联，发现生物标记物，进而推动疾病机制研究和药物研发。</p>
         <p>系统当前收录超过30,000种疾病，并提供丰富的交互式可视化工具，支持疾病网络分析和关联模式发现。</p>
-        
+
         <Divider />
-        
+
         <h3 style={{ color: '#1a2980', borderBottom: '2px solid #26d0ce', paddingBottom: '8px' }}>{t('contactSupport')}</h3>
         <p>{t('supportInfo')}</p>
       </div>
     </Modal>
   );
+
+  // 渲染历史记录模态框
+  const renderHistoryModal = () => {
+    const history = getSearchHistory();
+
+    return (
+      <Modal
+        title="搜索历史"
+        visible={showHistoryModal}
+        onCancel={() => setShowHistoryModal(false)}
+        footer={[
+          <Button key="clear" danger onClick={clearSearchHistory}>
+            清空历史
+          </Button>,
+          <Button key="close" onClick={() => setShowHistoryModal(false)}>
+            关闭
+          </Button>
+        ]}
+        width={600}
+      >
+        {history.length > 0 ? (
+          <List
+            dataSource={history}
+            renderItem={(item) => (
+              <List.Item
+                actions={[
+                  <Button
+                    type="link"
+                    onClick={() => {
+                      setShowHistoryModal(false);
+                      handleDiseaseSelect(item.id, 50);
+                    }}
+                  >
+                    查看
+                  </Button>
+                ]}
+              >
+                <List.Item.Meta
+                  avatar={<HistoryOutlined style={{ fontSize: 20, color: '#3B82F6' }} />}
+                  title={item.name}
+                  description={`ID: ${item.id} | ${new Date(item.timestamp).toLocaleString()}`}
+                />
+              </List.Item>
+            )}
+          />
+        ) : (
+          <Empty description="暂无搜索历史" />
+        )}
+      </Modal>
+    );
+  };
   
 
   
@@ -869,46 +946,164 @@ function App() {
     if (activeTab === 'home') {
       return (
         <div className="home-container">
-          <h2 className="module-title">疾视平台功能</h2>
-          <Row gutter={[24, 24]}>
-            <Col xs={24} sm={12} md={8} lg={6}>
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <h2 className="module-title" style={{ display: 'inline-block' }}>工作台控制面板</h2>
+            <p style={{ color: 'var(--text-secondary)', marginTop: -8 }}>欢迎使用疾视生物科技平台，请选择您要进行的操作</p>
+          </div>
+
+          <Row gutter={[40, 40]} justify="center" style={{ maxWidth: 1200, margin: '0 auto' }}>
+            <Col xs={24} sm={12} lg={10}>
               <Card
                 className="feature-card"
                 hoverable
-                cover={<div className="card-icon-container"><SearchOutlined className="feature-icon" /></div>}
-                onClick={() => setActiveTab('1')}
+                cover={
+                  <div className="card-icon-container" style={{
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)',
+                    height: 160,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px'
+                    }} />
+                    <SearchOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
+                  </div>
+                }
+                onClick={() => navigate('/search')}
               >
                 <div className="feature-title">疾病查询</div>
-                <div className="feature-desc">搜索和分析疾病信息，查看疾病详情</div>
+                <div className="feature-desc">通过疾病 ID 或名称搜索精准定位，设置相似度阈值</div>
               </Card>
             </Col>
-            
-            <Col xs={24} sm={12} md={8} lg={6}>
+
+            <Col xs={24} sm={12} lg={10}>
               <Card
                 className="feature-card"
                 hoverable
-                cover={<div className="card-icon-container"><InfoCircleOutlined className="feature-icon" /></div>}
-                onClick={() => setActiveTab('2')}
-              >
-                <div className="feature-title">疾病详情</div>
-                <div className="feature-desc">查看疾病详细信息、分子标记和相似疾病</div>
-              </Card>
-            </Col>
-            
-            <Col xs={24} sm={12} md={8} lg={6}>
-                <Card 
-                className="feature-card"
-                hoverable
-                cover={<div className="card-icon-container"><NodeIndexOutlined className="feature-icon" /></div>}
-                onClick={() => setActiveTab('3')}
+                cover={
+                  <div className="card-icon-container" style={{
+                    background: 'linear-gradient(135deg, #1E40AF 0%, #2563EB 100%)',
+                    height: 160,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px'
+                    }} />
+                    <NodeIndexOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
+                  </div>
+                }
+                onClick={() => navigate('/network')}
               >
                 <div className="feature-title">疾病相似性网络</div>
-                <div className="feature-desc">可视化疾病、基因和miRNA之间的关联关系</div>
+                <div className="feature-desc">交互式探索疾病-基因-miRNA 三元关系知识图谱</div>
+              </Card>
+            </Col>
+
+            <Col xs={24} sm={12} lg={10}>
+              <Card
+                className="feature-card"
+                hoverable
+                cover={
+                  <div className="card-icon-container" style={{
+                    background: 'linear-gradient(135deg, #6366F1 0%, #818CF8 100%)',
+                    height: 160,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px'
+                    }} />
+                    <HistoryOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
+                  </div>
+                }
+                onClick={() => setShowHistoryModal(true)}
+              >
+                <div className="feature-title">历史记录</div>
+                <div className="feature-desc">快速回顾过往查询记录，加速科研探索流程</div>
+              </Card>
+            </Col>
+
+            <Col xs={24} sm={12} lg={10}>
+              <Card
+                className="feature-card"
+                hoverable
+                cover={
+                  <div className="card-icon-container" style={{
+                    background: 'linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%)',
+                    height: 160,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px'
+                    }} />
+                    <BulbOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
+                  </div>
+                }
+                onClick={() => setShowHelpModal(true)}
+              >
+                <div className="feature-title">关于</div>
+                <div className="feature-desc">获取系统操作帮助，了解可视化组件的交互方式</div>
+              </Card>
+            </Col>
+
+            {isAdmin && (
+              <Col xs={24} sm={12} lg={10}>
+                <Card
+                  className="feature-card"
+                  hoverable
+                  cover={
+                    <div className="card-icon-container" style={{
+                      background: 'linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)',
+                      height: 160,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      overflow: 'hidden'
+                    }}>
+                      <div style={{
+                        position: 'absolute',
+                        inset: 0,
+                        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                        backgroundSize: '20px 20px'
+                      }} />
+                      <PartitionOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
+                    </div>
+                  }
+                  onClick={() => setActiveTab('admin')}
+                >
+                  <div className="feature-title">系统管理</div>
+                  <div className="feature-desc">用户权限管理、系统状态监控与数据维护</div>
                 </Card>
               </Col>
+            )}
           </Row>
-          
-
         </div>
       );
     }
@@ -1352,31 +1547,38 @@ function App() {
     }
   };
 
-  // 根据应用状态渲染不同的界面
-  if (appState === 'welcome') {
-    return <WelcomePage />;
-  }
-  
-  if (appState === 'login') {
-    return <Login onLogin={handleLogin} onSwitchToRegister={handleSwitchToRegister} />;
-  }
-
-  if (appState === 'register') {
-    return <Register onRegister={handleRegister} onBackToLogin={handleSwitchToLogin} />;
-  }
-
-  // 否则显示主应用
+  // 使用路由渲染不同的界面
   return (
-    <CustomLayout>
-      <div className="content-container">
-        {renderContent()}
-      </div>
-      
-      {/* 添加模态框 */}
-      {renderProfileModal()}
-      {renderSettingsModal()}
-      {renderHelpModal()}
-    </CustomLayout>
+    <Routes>
+      {/* 欢迎页 */}
+      <Route path="/welcome" element={<WelcomePage />} />
+
+      {/* 登录页 */}
+      <Route path="/login" element={<Login onLogin={handleLogin} onSwitchToRegister={handleSwitchToRegister} />} />
+
+      {/* 注册页 */}
+      <Route path="/register" element={<Register onRegister={handleRegister} onBackToLogin={handleSwitchToLogin} />} />
+
+      {/* 主应用 - 需要登录才能访问 */}
+      <Route path="/*" element={
+        currentUser ? (
+          <CustomLayout>
+            <div className="content-container">
+              {renderContent()}
+            </div>
+
+            {/* 添加模态框 */}
+            {renderProfileModal()}
+            {renderSettingsModal()}
+            {renderHelpModal()}
+            {renderHistoryModal()}
+          </CustomLayout>
+        ) : (
+          // 未登录则重定向到欢迎页
+          <WelcomePage />
+        )
+      } />
+    </Routes>
   );
 }
 

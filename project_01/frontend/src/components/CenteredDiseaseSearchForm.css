@@ -1,43 +1,87 @@
+/* ============================================
+   疾病搜索表单样式 - 科技蓝主题
+   ============================================ */
+
 .centered-disease-search {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  padding: 40px 0;
+  padding: 32px 16px;
 }
 
 .search-container {
   width: 100%;
-  max-width: 900px;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: 50px;
+  max-width: 860px;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  padding: 48px 52px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 顶部渐变条 */
+.search-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--grad-primary);
+}
+
+/* 右下角装饰 */
+.search-container::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+}
+
+/* 顶部图标区域 */
+.search-icon-wrapper {
+  width: 72px; height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(96,165,250,0.08));
+  border: 1px solid rgba(59,130,246,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .search-header {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .search-title {
-  font-size: 32px !important;
-  font-weight: 600 !important;
-  margin-bottom: 16px !important;
-  background: linear-gradient(45deg, #1a2980, #26d0ce);
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 10px !important;
+  background: var(--grad-primary) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
   color: transparent !important;
+  letter-spacing: 1px;
 }
 
 .search-subtitle {
-  font-size: 18px;
-  color: #666;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
+/* 搜索输入区域 */
 .search-input-wrapper {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .centered-search-input {
@@ -45,331 +89,286 @@
   display: flex !important;
   align-items: stretch !important;
   height: 60px;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(59,130,246,0.1), 0 0 0 1px rgba(59,130,246,0.2);
+  transition: var(--transition);
+}
+
+.centered-search-input:focus-within {
+  box-shadow: 0 4px 24px rgba(59,130,246,0.15), 0 0 0 2px rgba(59,130,246,0.4);
 }
 
 .centered-search-input .ant-input {
   height: 60px;
-  font-size: 18px;
-  padding-left: 55px;
-  border-radius: 30px 0 0 30px !important;
-  border: 1px solid #ddd;
-  box-shadow: none;
-  transition: all 0.3s;
+  font-size: 17px;
+  padding-left: 54px;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: white !important;
+  color: var(--text-primary);
   flex: 1;
 }
 
-.centered-search-input .ant-input:focus,
-.centered-search-input .ant-input:hover {
-  border-color: #ddd;
-  box-shadow: none;
+.centered-search-input .ant-input::placeholder {
+  color: var(--text-muted);
 }
 
 .centered-search-input .ant-input-prefix {
-  margin-right: 16px;
+  margin-right: 14px;
   font-size: 20px;
-  margin-left: 10px;
+  color: var(--primary-light) !important;
+  margin-left: 12px;
+}
+
+.centered-search-input .ant-input-affix-wrapper {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding-left: 16px;
+  background: white !important;
+}
+
+.centered-search-input .ant-input-affix-wrapper:focus,
+.centered-search-input .ant-input-affix-wrapper-focused {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .centered-search-input .ant-btn {
-  height: 60px;
-  border-radius: 0 30px 30px 0 !important;
-  background: linear-gradient(to right, #1a2980, #26d0ce);
-  border: none;
-  box-shadow: 0 4px 12px rgba(38, 208, 206, 0.3);
-  padding: 0 30px;
-  font-size: 18px;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 60px !important;
+  border-radius: 0 !important;
+  background: var(--grad-primary) !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px;
+  letter-spacing: 0.5px;
+  min-width: 100px;
+  transition: var(--transition) !important;
 }
 
 .centered-search-input .ant-btn:hover {
-  background: linear-gradient(to right, #15205f, #1ab3ae);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(38, 208, 206, 0.4);
+  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%) !important;
+  transform: none !important;
 }
 
+.centered-search-input .ant-btn:active {
+  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%) !important;
+}
+
+/* 搜索加载 */
 .search-loading {
-  position: absolute;
-  right: 80px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+  color: var(--primary-light) !important;
+  font-size: 18px;
 }
 
+/* 搜索结果下拉 */
 .search-results-dropdown {
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  max-height: 300px;
+  top: calc(100% + 8px);
+  left: 0; right: 0;
+  max-height: 320px;
   overflow-y: auto;
-  z-index: 10;
-  margin-top: 8px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  background-color: white;
-  border: 1px solid #eee;
+  z-index: 100;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background: white;
+  border: 1px solid var(--border);
+  text-align: left;
 }
 
 .search-result-item {
   cursor: pointer;
-  transition: all 0.2s;
-  padding: 16px 20px !important;
-  border-bottom: 1px solid #f0f0f0;
+  transition: var(--transition);
+  padding: 14px 20px !important;
+  border-bottom: 1px solid var(--border) !important;
 }
 
 .search-result-item:hover {
-  background-color: #f0f8ff;
-  transform: translateY(-1px);
+  background: var(--bg-section) !important;
 }
 
 .search-result-item:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .search-result-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  gap: 3px;
 }
 
 .search-result-name {
-  font-weight: 500;
-  font-size: 16px;
-  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-primary);
 }
 
 .search-result-id {
-  font-size: 14px;
-  color: #888;
-  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: monospace;
 }
 
+/* 相似疾病数量设置 */
 .similar-disease-count {
-  margin: 30px 0;
-  padding: 20px;
-  background-color: rgba(240, 248, 255, 0.5);
-  border-radius: 12px;
-  border: 1px solid rgba(26, 41, 128, 0.05);
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: var(--bg-section);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  text-align: left;
 }
 
 .similar-disease-count .ant-typography {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   display: block;
-  font-size: 16px;
-  color: #333;
-}
-
-.similar-disease-count .ant-slider {
-  margin: 12px 0;
-}
-
-.similar-disease-count .ant-slider-mark-text {
-  font-size: 14px;
-  color: #666;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .similar-disease-count .ant-slider-track {
-  background-color: #1a2980;
+  background: var(--primary) !important;
 }
 
 .similar-disease-count .ant-slider-handle {
-  border-color: #1a2980;
+  border: 2px solid var(--primary) !important;
+  box-shadow: 0 2px 8px rgba(13,94,63,0.3) !important;
 }
 
 .similar-disease-count .ant-slider-handle:focus {
-  box-shadow: 0 0 0 5px rgba(26, 41, 128, 0.2);
+  box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.2) !important;
 }
 
+/* 示例疾病 */
 .example-diseases {
-  margin: 24px 0;
+  margin: 24px 0 8px;
 }
 
 .example-disease-tag {
-  padding: 8px 16px;
-  font-size: 16px;
-  margin: 6px;
-  cursor: pointer;
-  transition: all 0.3s;
+  padding: 8px 18px !important;
+  font-size: 14px !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(16,185,129,0.3) !important;
+  background: rgba(16,185,129,0.08) !important;
+  color: var(--primary) !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
 }
 
 .example-disease-tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 41, 128, 0.2);
+  background: rgba(16,185,129,0.15) !important;
+  border-color: rgba(16,185,129,0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(13,94,63,0.15) !important;
 }
 
+/* 提示 */
 .search-tips {
-  margin-top: 30px;
-  text-align: center;
-  padding: 16px;
-  background-color: rgba(240, 248, 255, 0.5);
-  border-radius: 12px;
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: rgba(212,175,55,0.06);
+  border-radius: var(--radius);
+  border: 1px solid rgba(212,175,55,0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .search-tips .ant-typography {
-  font-size: 16px;
-  color: #666;
-  margin-right: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
 }
 
-/* 响应式设计 */
+/* Divider */
+.ant-divider-inner-text {
+  color: var(--text-muted) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* 滚动条样式 */
+.search-results-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-results-dropdown::-webkit-scrollbar-track {
+  background: var(--bg-section);
+  border-radius: 3px;
+}
+
+.search-results-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(16,185,129,0.3);
+  border-radius: 3px;
+}
+
+.search-results-dropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(16,185,129,0.5);
+}
+
+/* 响应式 */
 @media (max-width: 768px) {
   .search-container {
-    padding: 30px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    max-width: 95%;
+    padding: 32px 24px;
   }
-  
+
   .search-title {
-    font-size: 26px !important;
+    font-size: 1.6rem !important;
   }
-  
-  .search-subtitle {
-    font-size: 16px;
-  }
-  
+
   .centered-search-input {
-    height: 50px;
+    height: 52px;
   }
-  
+
   .centered-search-input .ant-input {
-    height: 50px;
-    font-size: 16px;
-    padding-left: 45px;
-    border-radius: 25px 0 0 25px !important;
+    height: 52px;
+    font-size: 15px;
+    padding-left: 46px;
   }
-  
-  .centered-search-input .ant-input-prefix {
-    font-size: 18px;
-    margin-left: 8px;
-  }
-  
+
   .centered-search-input .ant-btn {
-    height: 50px;
-    border-radius: 0 25px 25px 0 !important;
-    padding: 0 20px;
-    font-size: 16px;
+    height: 52px !important;
+    padding: 0 22px !important;
+    font-size: 15px !important;
   }
 }
 
 @media (max-width: 576px) {
   .search-container {
-    padding: 20px;
-    max-width: 100%;
+    padding: 24px 16px;
   }
-  
+
   .search-title {
-    font-size: 22px !important;
+    font-size: 1.4rem !important;
   }
-  
-  .search-subtitle {
+
+  .centered-search-input {
+    height: 48px;
+  }
+
+  .centered-search-input .ant-input {
+    height: 48px;
     font-size: 14px;
   }
-  
-  .centered-search-input {
-    height: 46px;
-  }
-  
-  .centered-search-input .ant-input {
-    height: 46px;
-    font-size: 15px;
-    padding-left: 40px;
-  }
-  
+
   .centered-search-input .ant-btn {
-    height: 46px;
-    padding: 0 15px;
-    font-size: 15px;
+    height: 48px !important;
+    padding: 0 16px !important;
+    font-size: 14px !important;
+  }
+
+  .similar-disease-count {
+    padding: 16px;
   }
 }
-
-/* 暗色主题适配 */
-.dark-theme .search-container {
-  background-color: #1f1f1f;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.dark-theme .search-title {
-  background: linear-gradient(45deg, #26d0ce, #76e6e4);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent !important;
-}
-
-.dark-theme .search-subtitle {
-  color: #bbb;
-}
-
-.dark-theme .centered-search-input .ant-input {
-  background-color: #2c2c2c;
-  border-color: #444;
-  color: #fff;
-}
-
-.dark-theme .centered-search-input .ant-input:focus,
-.dark-theme .centered-search-input .ant-input:hover {
-  border-color: #444;
-  box-shadow: none;
-}
-
-.dark-theme .search-result-item {
-  border-bottom-color: #333;
-}
-
-.dark-theme .search-result-item:hover {
-  background-color: #2a2a2a;
-}
-
-.dark-theme .search-result-name {
-  color: #eee;
-}
-
-.dark-theme .search-result-id {
-  color: #aaa;
-}
-
-.dark-theme .search-tips {
-  background-color: #2c2c2c;
-}
-
-.dark-theme .search-tips .ant-typography {
-  color: #bbb;
-}
-
-.dark-theme .search-tips .ant-btn-link {
-  color: #26d0ce;
-}
-
-.dark-theme .search-results-dropdown {
-  background-color: #1f1f1f;
-  border-color: #333;
-}
-
-.dark-theme .similar-disease-count {
-  background-color: #2c2c2c;
-  border-color: #333;
-}
-
-.dark-theme .similar-disease-count .ant-typography {
-  color: #eee;
-}
-
-.dark-theme .similar-disease-count .ant-slider-rail {
-  background-color: #444;
-}
-
-.dark-theme .similar-disease-count .ant-slider-track {
-  background-color: #26d0ce;
-}
-
-.dark-theme .similar-disease-count .ant-slider-handle {
-  border-color: #26d0ce;
-  background-color: #333;
-}
-
-.dark-theme .similar-disease-count .ant-slider-mark-text {
-  color: #bbb;
-} 

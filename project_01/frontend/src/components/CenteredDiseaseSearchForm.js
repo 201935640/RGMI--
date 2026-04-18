@@ -121,33 +121,36 @@ const CenteredDiseaseSearchForm = ({ diseaseData, onSearch, loading }) => {
   return (
     <div className="centered-disease-search">
       <div className="search-container">
+        {/* 顶部图标装饰 */}
+        <div className="search-icon-wrapper">
+          <SearchOutlined />
+        </div>
+
         <div className="search-header">
           <Title level={2} className="search-title">疾病查询</Title>
-          <Text className="search-subtitle">输入疾病名称或ID开始搜索相似疾病</Text>
+          <Text className="search-subtitle">输入疾病名称或ID开始搜索相似疾病，探索基因关联网络</Text>
         </div>
 
         <div className="search-input-wrapper">
-          <Input.Group compact className="centered-search-input">
+          <Space.Compact className="centered-search-input">
             <Input
               ref={inputRef}
               placeholder="输入疾病名称或ID (如 C2265792)"
-            value={searchTerm}
+              value={searchTerm}
               onChange={handleSearchChange}
               onPressEnter={handleSubmit}
-              prefix={<SearchOutlined style={{ color: '#1a2980', fontSize: '20px' }} />}
+              prefix={<SearchOutlined style={{ color: 'var(--primary-light)', fontSize: '20px' }} />}
               suffix={loading && <LoadingOutlined className="search-loading" />}
-              style={{ height: '60px', lineHeight: '60px' }}
+              allowClear
             />
-            <Button 
-              type="primary" 
+            <Button
+              type="primary"
               onClick={handleSubmit}
-            loading={loading}
-              icon={<SearchOutlined />}
-              style={{ height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              loading={loading}
             >
               搜索
             </Button>
-          </Input.Group>
+          </Space.Compact>
           
           {showResults && results.length > 0 && (
             <div className="search-results-dropdown">

@@ -50,13 +50,13 @@ const DiseaseSimilarityNetwork = ({
   
   // 颜色配置
   const colors = {
-    targetDisease: '#e74c3c',       // 目标疾病颜色
-    similarDisease: '#3498db',      // 相似疾病颜色
-    gene: '#2ecc71',                // 基因颜色
-    miRNA: '#9b59b6',               // miRNA颜色
-    linkDisease: '#95a5a6',         // 疾病间连接颜色
-    linkGene: '#27ae60',            // 疾病-基因连接颜色
-    linkMiRNA: '#8e44ad'            // 疾病-miRNA连接颜色
+    targetDisease: '#10B981',       // 目标疾病颜色 - 翠绿
+    similarDisease: '#0D5E3F',      // 相似疾病颜色 - 深绿
+    gene: '#D4AF37',                // 基因颜色 - 琥珀金
+    miRNA: '#6EE7B7',               // miRNA颜色 - 亮绿
+    linkDisease: 'rgba(16, 185, 129, 0.2)', // 疾病间连接颜色
+    linkGene: 'rgba(212, 175, 55, 0.3)',    // 疾病-基因连接颜色
+    linkMiRNA: 'rgba(110, 231, 183, 0.3)'   // 疾病-miRNA连接颜色
   };
   
   // 生成网络数据
@@ -316,15 +316,25 @@ const DiseaseSimilarityNetwork = ({
     
     const option = {
       title: {
-        text: '疾病相似性网络',
-        subtext: '展示疾病、基因和miRNA的关联关系',
-        left: 'center',
+        text: '疾病相似性关联网络',
+        subtext: '多维度展示疾病表型与分子标记的拓扑关系',
+        left: '20',
+        top: '20',
         textStyle: {
-          color: '#333',
-          fontSize: 18
+          color: '#0D5E3F',
+          fontSize: 20,
+          fontWeight: 'bold'
+        },
+        subtextStyle: {
+          color: '#64748b',
+          fontSize: 13
         }
       },
       tooltip: {
+        backgroundColor: 'rgba(255, 255, 255, 0.96)',
+        borderColor: 'rgba(16, 185, 129, 0.3)',
+        borderWidth: 1,
+        textStyle: { color: '#1e293b' },
         trigger: 'item',
         formatter: function(params) {
           if (params.dataType === 'node') {

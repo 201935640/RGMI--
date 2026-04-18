@@ -1,199 +1,281 @@
+/* ============================================
+   Login / Register 页面样式
+   主题：科技蓝 · 明亮清新
+   ============================================ */
+
+/* ---------- 容器：分屏布局 ---------- */
 .login-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  background-color: var(--background-color);
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(92, 107, 192, 0.05) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, rgba(245, 202, 92, 0.08) 0%, transparent 25%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 247, 250, 0.9) 100%);
-  padding: 20px;
   position: relative;
   overflow: hidden;
+  background: var(--bg-base);
 }
 
+/* 左侧装饰面板 */
 .login-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 400px;
-  background: linear-gradient(180deg, rgba(92, 107, 192, 0.1) 0%, transparent 100%);
+  content: '';
+  position: fixed;
+  left: 0; top: 0;
+  width: 45%;
+  height: 100vh;
+  background: var(--grad-hero);
   z-index: 0;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
 }
 
+/* 左侧网格纹理 */
+.login-container::after {
+  content: '';
+  position: fixed;
+  left: 0; top: 0;
+  width: 45%;
+  height: 100vh;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+/* 右侧表单区域 */
 .login-card {
   width: 100%;
-  max-width: 420px;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  background-color: var(--card-background);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 440px;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border: 1px solid var(--border) !important;
   position: relative;
-  z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.login-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-  z-index: 1;
+  z-index: 10;
+  margin: auto;
+  margin-right: 10%;
+  padding: 8px;
+  overflow: visible !important;
+  transition: var(--transition) !important;
 }
 
 .login-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(92, 107, 192, 0.2);
+  box-shadow: 0 24px 60px rgba(59, 130, 246, 0.18) !important;
+  transform: translateY(-4px) !important;
 }
 
+/* 顶部色条 */
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--grad-primary);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  z-index: 1;
+}
+
+/* Header 区域 */
 .login-header {
   text-align: center;
-  margin-bottom: 24px;
-  padding-top: 20px;
+  margin-bottom: 28px;
+  padding-top: 28px;
 }
 
 .login-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .login-logo svg {
-  margin-right: 10px;
-  filter: drop-shadow(0 0 5px rgba(38, 208, 206, 0.5));
-  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .login-logo:hover svg {
-  transform: rotate(15deg);
-  filter: drop-shadow(0 0 8px rgba(38, 208, 206, 0.8));
+  transform: rotate(20deg) scale(1.1);
+  filter: drop-shadow(0 0 14px rgba(59, 130, 246, 0.8));
 }
 
 .login-title {
-  margin-bottom: 8px !important;
-  color: var(--text-color) !important;
-  font-weight: 600;
-  display: block;
-  position: relative;
-}
-
-.login-title {
-  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 6px !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  background: var(--grad-primary) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
 }
 
 .login-title .beta-tag {
-  -webkit-text-fill-color: white;
-  background: #ff4d4f;
-  font-size: 14px;
-  padding: 2px 5px;
-  top: -10px;
-  color: white !important;
+  -webkit-text-fill-color: #3B1F00 !important;
+  background: var(--grad-accent) !important;
 }
 
 .login-subtitle {
   display: block;
-  margin-bottom: 16px;
-  color: var(--text-light);
+  color: var(--text-muted) !important;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 
+/* 表单内部 */
 .ant-form-item-label > label {
-  font-weight: 500;
-  color: var(--text-color);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
 }
 
 .site-form-item-icon {
-  color: var(--accent-color);
+  color: var(--primary-light) !important;
 }
 
+/* 示例账号区域 */
 .demo-accounts {
-  margin-top: 24px;
-  border-top: 1px dashed #e0e0e0;
-  padding-top: 24px;
+  margin-top: 20px;
+  border-top: 1px dashed var(--border-strong);
+  padding-top: 20px;
+  background: var(--bg-section);
+  border-radius: var(--radius);
+  padding: 16px;
 }
 
-/* 按钮样式 */
-.ant-btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), #3f51b5);
-  border-color: var(--accent-color);
-  transition: all 0.3s ease;
+/* 输入框样式（login 专属增强） */
+.login-card .ant-input,
+.login-card .ant-input-affix-wrapper {
+  height: 44px;
+  border-radius: var(--radius) !important;
+  border: 1.5px solid var(--border-strong) !important;
+  font-size: 14px;
+  background: var(--bg-base) !important;
+  transition: all 0.2s ease !important;
 }
 
-.ant-btn-primary:hover,
-.ant-btn-primary:focus {
-  background: linear-gradient(135deg, #7986cb, var(--accent-color));
-  border-color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(92, 107, 192, 0.3);
+.login-card .ant-input:hover,
+.login-card .ant-input-affix-wrapper:hover {
+  border-color: var(--primary-light) !important;
+  background: white !important;
 }
 
-.ant-btn-primary:active {
-  background: linear-gradient(135deg, #303f9f, #3f51b5);
-  border-color: #303f9f;
+.login-card .ant-input:focus,
+.login-card .ant-input-affix-wrapper:focus,
+.login-card .ant-input-affix-wrapper-focused {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15) !important;
+  background: white !important;
 }
 
-/* 单选按钮组样式 */
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
+/* 登录按钮 */
+.login-card .ant-btn-primary {
+  height: 48px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-radius: var(--radius) !important;
+  background: var(--grad-primary) !important;
+  border: none !important;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35) !important;
 }
 
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
-  background-color: var(--accent-color);
+.login-card .ant-btn-primary:hover {
+  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.45) !important;
 }
 
-.ant-radio-button-wrapper:hover {
-  color: var(--accent-color);
+.login-card .ant-btn-primary:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3) !important;
 }
 
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
-  color: #fff;
-  background: linear-gradient(135deg, var(--accent-color), #3f51b5);
+/* 默认按钮（注册/返回） */
+.login-card .ant-btn-default {
+  height: 44px !important;
+  border-radius: var(--radius) !important;
+  border: 1.5px solid var(--border-strong) !important;
+  color: var(--text-secondary) !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
 }
 
-/* 提示框样式 */
-.ant-alert-info {
-  background-color: rgba(92, 107, 192, 0.05);
-  border: 1px solid rgba(92, 107, 192, 0.1);
+.login-card .ant-btn-default:hover {
+  border-color: var(--primary-light) !important;
+  color: var(--primary) !important;
+  background: var(--bg-section) !important;
+  transform: translateY(-2px) !important;
 }
 
-.ant-alert-info .ant-alert-icon {
-  color: var(--accent-color);
+/* link 按钮 */
+.login-card .ant-btn-link {
+  color: var(--primary-light) !important;
+  font-weight: 600 !important;
 }
 
-.ant-alert-error {
-  background-color: rgba(245, 108, 108, 0.05);
-  border: 1px solid rgba(245, 108, 108, 0.1);
+.login-card .ant-btn-link:hover {
+  color: var(--primary) !important;
 }
 
-/* 输入框样式 */
-.ant-input-affix-wrapper:focus,
-.ant-input-affix-wrapper-focused {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(92, 107, 192, 0.2);
+/* Radio 按钮组 */
+.login-card .ant-radio-button-wrapper {
+  font-weight: 600;
+  border-color: var(--border-strong) !important;
+  color: var(--text-secondary);
+  transition: var(--transition) !important;
 }
 
-.ant-input-affix-wrapper:hover {
-  border-color: var(--accent-color);
+.login-card .ant-radio-button-wrapper:hover {
+  color: var(--primary) !important;
 }
 
-/* 响应式调整 */
+.login-card .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(13, 94, 63, 0.3);
+}
+
+/* Alert */
+.login-card .ant-alert {
+  border-radius: var(--radius) !important;
+  margin-bottom: 16px;
+}
+
+/* ---------- 左侧装饰内容（不是 CSS 实现，这里预留） ---------- */
+
+/* 响应式 */
+@media (max-width: 900px) {
+  .login-container::before,
+  .login-container::after {
+    display: none;
+  }
+
+  .login-container {
+    background: var(--grad-hero);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .login-card {
+    margin: auto !important;
+    max-width: 400px;
+    background: rgba(255,255,255,0.97);
+  }
+
+  .login-card .ant-input,
+  .login-card .ant-input-affix-wrapper {
+    background: white !important;
+  }
+}
+
 @media (max-width: 480px) {
   .login-card {
+    border-radius: var(--radius-lg) !important;
     max-width: 100%;
   }
-  
+
   .login-title {
     font-size: 22px !important;
   }
-} 
+}
