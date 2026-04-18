@@ -44,8 +44,8 @@ logger = logging.getLogger("RGMI-Backend")
 # 定义路径
 DATASET_PATH = os.path.join(project_root, "project_01", "backend", "Dataset")
 # 修正 Web 路径：增加 project_01 层级
-REAL_WEB_PATH = os.path.join(project_root, "project_01", "Web")
-
+REAL_WEB_PATH = os.path.join(project_root, "project_01", "Web", "RGMI_pretrain")
+SAVE_FILE_PATH = os.path.join(REAL_WEB_PATH, "disease_similarity_results.json")
 SAVE_PATH = os.path.join(project_root, "project_01", "backend", "saves")
 if not os.path.exists(SAVE_PATH):
     os.makedirs(SAVE_PATH)
@@ -994,22 +994,49 @@ def disease_options():
 # 新增接口：从保存的文件中获取疾病相似性数据
 @app.route('/api/get_saved_similarity/<disease_id>/<int:top_n>', methods=['GET'])
 def get_saved_similarity(disease_id, top_n=20):
-    """从保存的文件中获取疾病相似性数据"""
-    logger.info(f"尝试从保存文件获取疾病 {disease_id} 的相似性数据 (top_n={top_n})")
+    logger.info(f"正在检索疾病 {disease_id} 的预存数据...")
     
-    # 验证参数
-    if not disease_id:
-        return jsonify({"error": "未提供疾病ID"}), 400
+    # 自动探测路径（适配不同环境）
+    possible_paths = [
+        os.path.join(project_root, "project_01", "Web", "RGMI_pretrain", "disease_similarity_results.json"),
+        os.path.join(project_root, "project_01", "Web", "disease_similarity_results.json")
+    ]
     
-    # 从文件获取数据
-    data = get_similarity_from_file(disease_id, top_n)
+    target_file = None
+    for p in possible_paths:
+        if os.path.exists(p):
+            target_file = p
+            break
+            
+    if not target_file:
+        logger.error("所有预设路径均未找到汇总 JSON 文件")
+        return jsonify({"error": "缺失汇总数据文件", "checked_paths": possible_paths}), 404
     
-    if data:
-        # 添加miRNA数据（如果缺失）
-        enriched_data = enrich_mirna_data(data)
-        return jsonify(enriched_data)
-    else:
-        return jsonify({"error": f"未找到疾病 {disease_id} 的保存数据"}), 404
+    try:
+        with open(target_file, 'r', encoding='utf-8') as f:
+            all_data = json.load(f)
+        
+        # 查找匹配的疾病项
+        # 考虑到你的 JSON 可能是个对象数组
+        match = next((item for item in all_data if item.get('disease_id') == disease_id), None)
+        
+        if match:
+            # 构造返回给前端的统一格式
+            response_data = {
+                "target_disease": disease_id,
+                "name": match.get("name", "Unknown Disease"),
+                "attributes": match.get("attributes", {}),
+                "hpo_terms": match.get("hpo_terms", []),
+                # 如果有 top_diseases 字段则取前 top_n，否则返回空列表供前端判断
+                "top_diseases": match.get("top_diseases", [])[:top_n] 
+            }
+            return jsonify(response_data)
+            
+        return jsonify({"error": f"JSON 文件中未找到 ID 为 {disease_id} 的条目"}), 404
+        
+    except Exception as e:
+        logger.error(f"处理 JSON 时发生错误: {str(e)}")
+        return jsonify({"error": "服务器处理数据失败", "details": str(e)}), 500
 
 # 异常处理装饰器
 @app.errorhandler(Exception)
