@@ -483,6 +483,40 @@ class NewApiService {
     this.log('info', `缓存超时时间已更新为: ${timeout}ms`);
   }
 
+  /**
+   * 通用GET请求方法
+   * @param {string} endpoint API端点
+   * @param {Object} params 查询参数
+   * @returns {Promise<Object>} 响应数据
+   */
+  async get(endpoint, params = {}) {
+    try {
+      this.log('debug', `GET请求: ${endpoint}`, params);
+      const response = await apiClient.get(endpoint, { params });
+      return response.data;
+    } catch (error) {
+      this.log('error', `GET请求失败: ${endpoint}`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * 通用POST请求方法
+   * @param {string} endpoint API端点
+   * @param {Object} data 请求体数据
+   * @returns {Promise<Object>} 响应数据
+   */
+  async post(endpoint, data = {}) {
+    try {
+      this.log('debug', `POST请求: ${endpoint}`, data);
+      const response = await apiClient.post(endpoint, data);
+      return response.data;
+    } catch (error) {
+      this.log('error', `POST请求失败: ${endpoint}`, error);
+      throw error;
+    }
+  }
+
   // 从NCBI MedGen获取疾病详细信息
   async fetchDiseaseDetails(diseaseId) {
     try {
@@ -594,30 +628,146 @@ class NewApiService {
   }
 
   /**
+   * 获取基因交互数据（已知+预测）
+   * @param {string} diseaseId 疾病ID
+   * @returns {Promise<Object>} 基因交互数据
+   */
+  async getGeneInteractions(diseaseId) {
+    const cacheKey = `gene_interactions_${diseaseId}`;
+
+    // 检查缓存
+    if (this.cache[cacheKey] && (Date.now() - this.cache[cacheKey].timestamp < this.cacheTimeout)) {
+      this.log('info', `从缓存获取基因交互数据: ${diseaseId}`);
+      return this.cache[cacheKey].data;
+    }
+
+    try {
+      this.log('info', `正在获取基因交互数据: ${diseaseId}`);
+      const startTime = Date.now();
+
+      const response = await this.get('/gene_interactions', {
+        disease_id: this.cleanDiseaseId(diseaseId)
+      });
+
+      const loadTime = Date.now() - startTime;
+      this.log('info', `基因交互数据加载完成，耗时: ${loadTime}ms`);
+
+      // 缓存结果
+      this.cache[cacheKey] = {
+        data: response,
+        timestamp: Date.now()
+      };
+
+      return response;
+    } catch (error) {
+      this.log('error', `获取基因交互数据失败: ${diseaseId}`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * 比较两个疾病的多维相似度（HPO、miRNA、基因）
+   * @param {string} diseaseId1 疾病1的ID
+   * @param {string} diseaseId2 疾病2的ID
+   * @returns {Promise<Object>} 三维度相似度数据
+   */
+  async compareDiseases(diseaseId1, diseaseId2) {
+    const cacheKey = `compare_${diseaseId1}_${diseaseId2}`;
+
+    // 检查缓存
+    if (this.cache[cacheKey] && (Date.now() - this.cache[cacheKey].timestamp < this.cacheTimeout)) {
+      this.log('info', `从缓存获取疾病对比数据: ${diseaseId1} vs ${diseaseId2}`);
+      return this.cache[cacheKey].data;
+    }
+
+    try {
+      this.log('info', `正在比较疾病: ${diseaseId1} vs ${diseaseId2}`);
+      const startTime = Date.now();
+
+      const response = await this.post('/compare_diseases', {
+        id1: this.cleanDiseaseId(diseaseId1),
+        id2: this.cleanDiseaseId(diseaseId2)
+      });
+
+      const loadTime = Date.now() - startTime;
+      this.log('info', `疾病对比完成，耗时: ${loadTime}ms`);
+
+      // 缓存结果
+      this.cache[cacheKey] = {
+        data: response,
+        timestamp: Date.now()
+      };
+
+      return response;
+    } catch (error) {
+      this.log('error', `疾病对比失败: ${diseaseId1} vs ${diseaseId2}`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * 获取智能药物重定位推荐
+   * @param {string} diseaseId 疾病ID
+   * @returns {Promise<Object>} 药物推荐数据
+   */
+  async getDrugRepositioning(diseaseId) {
+    const cacheKey = `drug_repositioning_${diseaseId}`;
+
+    // 检查缓存
+    if (this.cache[cacheKey] && (Date.now() - this.cache[cacheKey].timestamp < this.cacheTimeout)) {
+      this.log('info', `从缓存获取药物重定位数据: ${diseaseId}`);
+      return this.cache[cacheKey].data;
+    }
+
+    try {
+      this.log('info', `正在获取药物重定位推荐: ${diseaseId}`);
+      const startTime = Date.now();
+
+      const response = await this.post('/drug_repositioning', {
+        disease_id: this.cleanDiseaseId(diseaseId)
+      });
+
+      const loadTime = Date.now() - startTime;
+      this.log('info', `药物重定位推荐加载完成，耗时: ${loadTime}ms`);
+
+      // 缓存结果
+      this.cache[cacheKey] = {
+        data: response,
+        timestamp: Date.now()
+      };
+
+      return response;
+    } catch (error) {
+      this.log('error', `获取药物重定位推荐失败: ${diseaseId}`, error);
+      throw error;
+    }
+  }
+
+  /**
    * 标准化疾病ID格式（确保是CXXXXXXX格式）
    * @param {string} diseaseId 原始疾病ID
    * @returns {string} 标准化的疾病ID
    */
   cleanDiseaseId(diseaseId) {
     if (!diseaseId) return '';
-    
+
     let id = diseaseId.toString().trim();
-    
+
     // 添加日志
     this.log('debug', `清理疾病ID: ${diseaseId}`);
-    
+
     // 如果ID是纯数字，添加C前缀
     if (/^\d+$/.test(id)) {
       id = `C${id}`;
       this.log('debug', `为纯数字ID添加C前缀: ${id}`);
     }
-    
+
     // 确保C大写
     if (id.startsWith('c')) {
       id = 'C' + id.substring(1);
       this.log('debug', `将小写c前缀转换为大写: ${id}`);
     }
-    
+
     return id;
   }
 }

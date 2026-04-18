@@ -6,6 +6,7 @@ import { GraphChart } from 'echarts/charts';
 import { LegendComponent, ToolboxComponent, TooltipComponent, TitleComponent, GridComponent } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
 import './DiseaseSimilarityNetwork.css';
+import newApiService from '../utils/newApiService';
 
 // 注册必要的ECharts组件
 echarts.use([
@@ -44,6 +45,8 @@ const DiseaseSimilarityNetwork = ({
   const [showMiRNAs, setShowMiRNAs] = useState(true);
   const [layoutType, setLayoutType] = useState('force');
   const [error, setError] = useState(null);
+  const [showPredicted, setShowPredicted] = useState(true);
+  const [geneInteractions, setGeneInteractions] = useState(null);
   // 新增状态变量，保存基因和miRNA映射，使其在整个组件中可用
   const [geneMap, setGeneMap] = useState(new Map());
   const [miRNAMap, setMiRNAMap] = useState(new Map());
@@ -284,7 +287,24 @@ const DiseaseSimilarityNetwork = ({
       setError('生成网络数据时出错: ' + err.message);
     }
   }, [targetDisease, similarDiseases, similarityThreshold, showGenes, showMiRNAs]);
-  
+
+  // 获取基因交互数据（AI预测）
+  useEffect(() => {
+    if (!targetDisease || !targetDisease.disease_id) return;
+
+    const fetchGeneInteractions = async () => {
+      try {
+        const data = await newApiService.getGeneInteractions(targetDisease.disease_id);
+        setGeneInteractions(data);
+      } catch (error) {
+        console.error('获取基因交互数据失败:', error);
+        // 不阻断主流程
+      }
+    };
+
+    fetchGeneInteractions();
+  }, [targetDisease]);
+
   // 初始化和更新图表
   useEffect(() => {
     if (!chartRef.current) return;
@@ -558,10 +578,20 @@ const DiseaseSimilarityNetwork = ({
                 <span className="item-label">显示基因</span>
                 <Switch checked={showGenes} onChange={setShowGenes} />
               </div>
-              
+
               <div className="control-item">
                 <span className="item-label">显示miRNA</span>
                 <Switch checked={showMiRNAs} onChange={setShowMiRNAs} />
+              </div>
+
+              <div className="control-item">
+                <span className="item-label">
+                  显示AI预测
+                  <Tooltip title="显示基于GDFM模型预测的基因交互关系（虚线）">
+                    <ExperimentOutlined style={{ marginLeft: 4, color: '#FFA500' }} />
+                  </Tooltip>
+                </span>
+                <Switch checked={showPredicted} onChange={setShowPredicted} />
               </div>
             </div>
             
@@ -608,6 +638,13 @@ const DiseaseSimilarityNetwork = ({
               <div className="legend-item">
                 <div className="legend-line legend-dashed" style={{ backgroundColor: colors.linkMiRNA }}></div>
                 <span>相关节点间关系 (虚线-miRNA)</span>
+              </div>
+              <div className="legend-item">
+                <div className="legend-line legend-dashed" style={{ backgroundColor: '#FFA500' }}></div>
+                <span>
+                  AI预测关系 (虚线)
+                  <Tag color="orange" style={{ marginLeft: 4, fontSize: '10px' }}>GDFM</Tag>
+                </span>
               </div>
             </div>
             

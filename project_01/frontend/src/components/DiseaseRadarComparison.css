@@ -1,0 +1,134 @@
+/* 疾病雷达图对比组件样式 */
+.disease-radar-comparison {
+  width: 100%;
+  min-height: 600px;
+}
+
+.radar-header {
+  margin-bottom: 24px;
+}
+
+.radar-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.radar-title .anticon {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+.disease-selector {
+  margin-bottom: 20px;
+}
+
+.disease-selector-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.radar-chart-container {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.statistics-grid {
+  margin-top: 24px;
+}
+
+.dimension-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.dimension-card:hover {
+  transform: translateY(-4px);
+}
+
+.dimension-card.hpo {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.dimension-card.mirna {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.dimension-card.gene {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.dimension-title {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.dimension-value {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.dimension-level {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.comparison-info {
+  background: #f0f5ff;
+  border-left: 4px solid #1890ff;
+  padding: 16px;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+
+.comparison-info-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1890ff;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #666;
+}
+
+.info-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.action-buttons {
+  margin-top: 24px;
+  text-align: right;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .dimension-card {
+    margin-bottom: 16px;
+  }
+
+  .dimension-value {
+    font-size: 24px;
+  }
+}

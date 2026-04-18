@@ -2,16 +2,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Layout as AntLayout, Spin, Badge, notification, Button, Tabs, Switch, Card, Alert, Typography, Space, Avatar, Dropdown, Menu, Row, Col, List, Timeline, Modal, Divider, Radio, Form, Input, Empty, Select, InputNumber, Statistic, Slider, message, Descriptions, Tag } from 'antd';
-import { InfoCircleOutlined, HomeOutlined, AppstoreOutlined, AimOutlined, TranslationOutlined, ApiOutlined, UserOutlined, LogoutOutlined, SettingOutlined, TeamOutlined, SearchOutlined, NodeIndexOutlined, PieChartOutlined, LinkOutlined, QuestionCircleOutlined, BulbOutlined, FileTextOutlined, HistoryOutlined, DownOutlined, ExperimentOutlined, PartitionOutlined, DatabaseOutlined } from '@ant-design/icons';
+import { InfoCircleOutlined, HomeOutlined, AppstoreOutlined, AimOutlined, TranslationOutlined, ApiOutlined, UserOutlined, LogoutOutlined, SettingOutlined, TeamOutlined, SearchOutlined, NodeIndexOutlined, PieChartOutlined, LinkOutlined, QuestionCircleOutlined, BulbOutlined, FileTextOutlined, HistoryOutlined, DownOutlined, ExperimentOutlined, PartitionOutlined, DatabaseOutlined, RadarChartOutlined, MedicineBoxOutlined } from '@ant-design/icons';
 // 新组件
 import CustomLayout from './components/Layout';
 import { useUIStore } from './store/uiStore';
-import NewDiseaseDetail from './components/NewDiseaseDetail';
 import NewDiseaseSearchForm from './components/NewDiseaseSearchForm';
 import CenteredDiseaseSearchForm from './components/CenteredDiseaseSearchForm';
 import WelcomePage from './components/WelcomePage';
 import NewDiseaseSimilarityGraph from './components/NewDiseaseSimilarityGraph';
 import DiseaseSimilarityNetwork from './components/DiseaseSimilarityNetwork';
+import DiseaseRadarComparison from './components/DiseaseRadarComparison';
+import DrugRepositioningPanel from './components/DrugRepositioningPanel';
 import Login from './components/Login';
 import Register from './components/Register';
 import UserAdmin from './components/UserAdmin';
@@ -46,6 +47,10 @@ function App() {
   const [globalMiRNAData, setGlobalMiRNAData] = useState([]);
   const [globalDataLoaded, setGlobalDataLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
+
+  // 新功能状态变量
+  const [radarModalVisible, setRadarModalVisible] = useState(false);
+  const [selectedCompareDisease, setSelectedCompareDisease] = useState(null);
 
   // 监听路由变化，同步activeTab
   useEffect(() => {
@@ -1133,9 +1138,9 @@ function App() {
             variant="borderless"
             extra={
               <Space>
-                <Button 
-                  type="primary" 
-                  size="small" 
+                <Button
+                  type="primary"
+                  size="small"
                   icon={<SearchOutlined />}
                   onClick={() => setActiveTab('1')}
                 >
@@ -1144,127 +1149,173 @@ function App() {
               </Space>
             }
           >
-            <Row gutter={[24, 24]}>
-              <Col xs={24} md={12}>
-                <div className="disease-info-section">
-                  <h3 className="section-title">基本信息</h3>
-                  <Descriptions bordered size="small">
-                    <Descriptions.Item label="疾病ID" span={3}>
-                      <Tag color="blue">{selectedDisease.disease_id}</Tag>
-                  </Descriptions.Item>
-                    <Descriptions.Item label="疾病名称" span={3}>
-                      {selectedDisease.name || "未知"}
-                  </Descriptions.Item>
-                    <Descriptions.Item label="定义" span={3}>
-                      {selectedDisease.definition || "暂无定义信息"}
-                  </Descriptions.Item>
-                    <Descriptions.Item label="语义类型" span={3}>
-                      {selectedDisease.attributes?.semantictype || "未知"}
-                    </Descriptions.Item>
-                    <Descriptions.Item label="外部链接" span={3}>
-                      <Button 
-                        type="link" 
-                        icon={<LinkOutlined />}
-                        href={`https://www.ncbi.nlm.nih.gov/medgen/${selectedDisease.disease_id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        NCBI MedGen
-                      </Button>
-                  </Descriptions.Item>
-                </Descriptions>
-                </div>
-              </Col>
-              
-              <Col xs={24} md={12}>
-                <div className="disease-molecular-section">
-                  <h3 className="section-title">分子标记</h3>
-                  <Card type="inner" title="相关基因" size="small">
-                    <div className="gene-list">
-                      {selectedDisease.attributes?.associated_gene_names?.length > 0 ? (
-                        <Space wrap>
-                          {selectedDisease.attributes.associated_gene_names.map((gene, index) => (
-                            <Tag 
-                              key={index} 
-                              color="green"
-                              onClick={() => window.open(`https://www.ncbi.nlm.nih.gov/gene/${gene}`, '_blank')}
-                              style={{ cursor: 'pointer' }}
-                            >
-                              {gene}
-                            </Tag>
-                          ))}
-                        </Space>
-                      ) : (
-                        <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="暂无相关基因数据" />
-                      )}
+            <Tabs defaultActiveKey="overview">
+              <TabPane tab="概览" key="overview">
+                <Row gutter={[24, 24]}>
+                  <Col xs={24} md={12}>
+                    <div className="disease-info-section">
+                      <h3 className="section-title">基本信息</h3>
+                      <Descriptions bordered size="small">
+                        <Descriptions.Item label="疾病ID" span={3}>
+                          <Tag color="blue">{selectedDisease.disease_id}</Tag>
+                      </Descriptions.Item>
+                        <Descriptions.Item label="疾病名称" span={3}>
+                          {selectedDisease.name || "未知"}
+                      </Descriptions.Item>
+                        <Descriptions.Item label="定义" span={3}>
+                          {selectedDisease.definition || "暂无定义信息"}
+                      </Descriptions.Item>
+                        <Descriptions.Item label="语义类型" span={3}>
+                          {selectedDisease.attributes?.semantictype || "未知"}
+                        </Descriptions.Item>
+                        <Descriptions.Item label="外部链接" span={3}>
+                          <Button
+                            type="link"
+                            icon={<LinkOutlined />}
+                            href={`https://www.ncbi.nlm.nih.gov/medgen/${selectedDisease.disease_id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            NCBI MedGen
+                          </Button>
+                      </Descriptions.Item>
+                    </Descriptions>
                     </div>
-              </Card>
-                  
-                  <Card type="inner" title="相关miRNA" size="small" style={{ marginTop: 16 }}>
-                    <div className="mirna-list">
-                      {selectedDisease.attributes?.associated_miRNA_names?.length > 0 ? (
-                        <Space wrap>
-                          {selectedDisease.attributes.associated_miRNA_names.map((mirna, index) => {
-                            // 根据miRNA ID前缀确定正确的链接
-                            let mirnaUrl = '';
-                            if (mirna.startsWith('hsa-') || mirna.startsWith('mmu-') || mirna.startsWith('rno-')) {
-                              // 使用mirBase的正确查询结果URL
-                              mirnaUrl = `https://mirbase.org/results/?query=${encodeURIComponent(mirna)}`;
-                            } else {
-                              // 其他miRNA，使用miRDB搜索
-                              mirnaUrl = `http://mirdb.org/cgi-bin/search.cgi?searchType=miRNA&searchBox=${encodeURIComponent(mirna)}`;
-                            }
-                            
-                            return (
-                              <Tag 
-                                key={index} 
-                                color="purple"
-                                onClick={() => window.open(mirnaUrl, '_blank')}
-                                style={{ cursor: 'pointer' }}
-                              >
-                                {mirna}
-                              </Tag>
-                            );
-                          })}
-                        </Space>
-                      ) : (
-                        <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="暂无相关miRNA数据" />
-                      )}
-                    </div>
+                  </Col>
+
+                  <Col xs={24} md={12}>
+                    <div className="disease-molecular-section">
+                      <h3 className="section-title">分子标记</h3>
+                      <Card type="inner" title="相关基因" size="small">
+                        <div className="gene-list">
+                          {selectedDisease.attributes?.associated_gene_names?.length > 0 ? (
+                            <Space wrap>
+                              {selectedDisease.attributes.associated_gene_names.map((gene, index) => (
+                                <Tag
+                                  key={index}
+                                  color="green"
+                                  onClick={() => window.open(`https://www.ncbi.nlm.nih.gov/gene/${gene}`, '_blank')}
+                                  style={{ cursor: 'pointer' }}
+                                >
+                                  {gene}
+                                </Tag>
+                              ))}
+                            </Space>
+                          ) : (
+                            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="暂无相关基因数据" />
+                          )}
+                        </div>
                   </Card>
-                </div>
-            </Col>
-          </Row>
-            
-            {similarDiseases && similarDiseases.length > 0 && (
-              <div className="similar-diseases-section">
-                <h3 className="section-title">相似疾病</h3>
-                <List
-                  grid={{ gutter: 16, xs: 1, sm: 2, md: 3, lg: 4 }}
-                  dataSource={similarDiseases}
-                  renderItem={item => (
-                    <List.Item>
-                      <Card 
-                        hoverable 
-                        size="small"
-                        onClick={() => handleDiseaseSelect(item.disease_id, 50)}
-                      >
-                        <div className="similar-disease-item">
-                          <div className="similar-disease-name">{item.name}</div>
-                          <div className="similar-disease-id">ID: {item.disease_id}</div>
-                          <div className="similar-disease-similarity">
-                            相似度: <span style={{ color: '#1a2980', fontWeight: 'bold' }}>
-                              {(item.similarity * 100).toFixed(1)}%
-                            </span>
-                          </div>
+
+                      <Card type="inner" title="相关miRNA" size="small" style={{ marginTop: 16 }}>
+                        <div className="mirna-list">
+                          {selectedDisease.attributes?.associated_miRNA_names?.length > 0 ? (
+                            <Space wrap>
+                              {selectedDisease.attributes.associated_miRNA_names.map((mirna, index) => {
+                                // 根据miRNA ID前缀确定正确的链接
+                                let mirnaUrl = '';
+                                if (mirna.startsWith('hsa-') || mirna.startsWith('mmu-') || mirna.startsWith('rno-')) {
+                                  // 使用mirBase的正确查询结果URL
+                                  mirnaUrl = `https://mirbase.org/results/?query=${encodeURIComponent(mirna)}`;
+                                } else {
+                                  // 其他miRNA，使用miRDB搜索
+                                  mirnaUrl = `http://mirdb.org/cgi-bin/search.cgi?searchType=miRNA&searchBox=${encodeURIComponent(mirna)}`;
+                                }
+
+                                return (
+                                  <Tag
+                                    key={index}
+                                    color="purple"
+                                    onClick={() => window.open(mirnaUrl, '_blank')}
+                                    style={{ cursor: 'pointer' }}
+                                  >
+                                    {mirna}
+                                  </Tag>
+                                );
+                              })}
+                            </Space>
+                          ) : (
+                            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="暂无相关miRNA数据" />
+                          )}
                         </div>
                       </Card>
-                    </List.Item>
-                  )}
-                />
-              </div>
-            )}
+                    </div>
+                </Col>
+              </Row>
+              </TabPane>
+
+              <TabPane tab="相关疾病" key="related">
+                {similarDiseases && similarDiseases.length > 0 ? (
+                  <List
+                    grid={{ gutter: 16, xs: 1, sm: 2, md: 3, lg: 4 }}
+                    dataSource={similarDiseases}
+                    renderItem={item => (
+                      <List.Item>
+                        <Card
+                          hoverable
+                          size="small"
+                        >
+                          <div className="similar-disease-item" onClick={() => handleDiseaseSelect(item.disease_id, 50)} style={{ cursor: 'pointer' }}>
+                            <div className="similar-disease-name">{item.name}</div>
+                            <div className="similar-disease-id">ID: {item.disease_id}</div>
+                            <div className="similar-disease-similarity">
+                              相似度: <span style={{ color: '#1a2980', fontWeight: 'bold' }}>
+                                {(item.similarity * 100).toFixed(1)}%
+                              </span>
+                            </div>
+                          </div>
+                          <Divider style={{ margin: '8px 0' }} />
+                          <Button
+                            type="link"
+                            size="small"
+                            icon={<RadarChartOutlined />}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setSelectedCompareDisease(item);
+                              setRadarModalVisible(true);
+                            }}
+                            block
+                          >
+                            对比
+                          </Button>
+                        </Card>
+                      </List.Item>
+                    )}
+                  />
+                ) : (
+                  <Empty description="暂无相关疾病数据" />
+                )}
+              </TabPane>
+
+              <TabPane
+                tab={
+                  <span>
+                    <MedicineBoxOutlined />
+                    AI药物推荐
+                    <Tag color="blue" style={{ marginLeft: 8 }}>AI</Tag>
+                  </span>
+                }
+                key="drugs"
+              >
+                <DrugRepositioningPanel diseaseId={selectedDisease.disease_id} />
+              </TabPane>
+            </Tabs>
           </Card>
+
+          <Modal
+            title="疾病多维对比"
+            open={radarModalVisible}
+            onCancel={() => setRadarModalVisible(false)}
+            footer={null}
+            width={800}
+          >
+            {selectedCompareDisease && (
+              <DiseaseRadarComparison
+                disease1={selectedDisease}
+                disease2={selectedCompareDisease}
+              />
+            )}
+          </Modal>
         </div>
       );
     }

@@ -1,0 +1,166 @@
+/* 智能药物重定位面板样式 */
+.drug-repositioning-panel {
+  width: 100%;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.info-card .panel-header {
+  color: white;
+}
+
+.info-card .ant-typography {
+  color: white !important;
+}
+
+.info-card .ant-statistic-title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.info-card .ant-statistic-content {
+  color: white;
+}
+
+.drug-list {
+  background: white;
+}
+
+.drug-item-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.drug-item-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.drug-item-card.high-confidence {
+  border-left-color: #52c41a;
+}
+
+.drug-item-card.medium-confidence {
+  border-left-color: #1890ff;
+}
+
+.drug-item-card.low-confidence {
+  border-left-color: #faad14;
+}
+
+.drug-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.drug-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1890ff;
+  margin: 0;
+}
+
+.drug-id {
+  font-size: 12px;
+  color: #999;
+  margin-left: 8px;
+}
+
+.confidence-section {
+  margin-bottom: 16px;
+}
+
+.confidence-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.reasoning-section {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.reasoning-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reasoning-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+.drug-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.ai-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .drug-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .drug-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .info-card .ant-row {
+    flex-direction: column;
+  }
+
+  .info-card .ant-col {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+/* 暗色主题适配 */
+.dark-theme .drug-item-card {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+}
+
+.dark-theme .drug-name {
+  color: #4facfe;
+}
+
+.dark-theme .reasoning-section {
+  background-color: #1a1a1a;
+}
+
+.dark-theme .reasoning-title,
+.dark-theme .reasoning-text {
+  color: #e0e0e0;
+}
