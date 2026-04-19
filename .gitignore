@@ -1,11 +1,16 @@
 # 环境与依赖
 node_modules/
 venv/
+.venv/
 venv38/
 dist/
 build/
 .env
 .env.local
+
+# 缓存与结果文件
+project_01/backend/server/saves/
+project_01/Web/RGMI_pretrain/disease_similarity_results.json
 
 # Python 缓存
 __pycache__/

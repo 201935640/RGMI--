@@ -327,7 +327,6 @@ def get_intersections(idx1, idx2, engine):
     """提取两个疾病索引之间的共同基因和共同症状 - 2026 大数据深度挖掘版"""
     # 1. 计算共同基因 (Shared Genes) - 基于稀疏矩阵权重排序
     row1_g = engine.safe_get_row(engine.d2g_matrix, idx1)
-    row2_g = engine.safe_get_row(engine.safe_get_row(engine.d2g_matrix, idx2), 0) # 修正之前重复调用的bug
     row2_g = engine.safe_get_row(engine.d2g_matrix, idx2)
     
     shared_genes = []
