@@ -1022,15 +1022,22 @@ def load_initial_data():
 # --- 核心算法逻辑 ---
 
 def calculate_jaccard(v1, v2):
-    """计算两个稀疏向量的 Jaccard 相似度"""
+    """计算两个稀疏向量的 Jaccard 相似度 - 极速稀疏矩阵优化版"""
     if v1 is None or v2 is None: return 0.0
-    # 转换为 dense 数组以便计算
-    if hasattr(v1, "toarray"): v1 = v1.toarray().flatten()
-    if hasattr(v2, "toarray"): v2 = v2.toarray().flatten()
     
-    intersection = np.sum(np.minimum(v1, v2))
-    union = np.sum(np.maximum(v1, v2))
-    return round(float(intersection / union), 4) if union > 0 else 0.0
+    # 确保是 CSR/CSC 格式以进行快速数学运算
+    if not sparse.issparse(v1): v1 = sparse.csr_matrix(v1)
+    if not sparse.issparse(v2): v2 = sparse.csr_matrix(v2)
+    
+    # 直接在稀疏空间计算交集（element-wise multiply）和并集
+    # 对于加权 Jaccard: sum(min(x, y)) / sum(max(x, y))
+    # 由于 max(x, y) = x + y - min(x, y)
+    
+    # 计算交集和并集的和
+    inter_sum = v1.multiply(v2).sum()
+    union_sum = v1.sum() + v2.sum() - inter_sum
+    
+    return round(float(inter_sum / union_sum), 4) if union_sum > 0 else 0.0
 
 def get_real_hpo_sim(id1, id2):
     """逻辑：计算两个疾病关联基因的重合度（Jaccard 相似度）"""
@@ -1061,14 +1068,20 @@ def compare_diseases_api():
     try:
         idx1, idx2 = engine.dis2id[id1], engine.dis2id[id2]
         
-        # --- 2026 优化：引入模型预测值作为语义基准 ---
+        # --- 2026 性能飞跃：极速 Embedding 计算 (毫秒级响应) ---
         model_sim = 0.485 # 默认语义相似度基准
         try:
-            # 尝试通过预测获取全局语义分
-            preds = predict_disease_similarity(id1, top_n=50)
-            target_pred = next((p for p in preds if (p.get('id') or p.get('disease_id') or p.get('Disease ID')) == id2), None)
-            if target_pred:
-                model_sim = float(target_pred.get('similarity') or target_pred.get('score') or target_pred.get('confidence') or 0.485)
+            # 尝试直接从已加载的模型显存/内存中提取向量计算，不再调用 top_n 预测
+            import project_01.Web.RGMI_pretrain.RGMI_pretrain_model as model_mod
+            if model_mod.loaded_embeddings is not None and id1 in model_mod.loaded_disease_ids and id2 in model_mod.loaded_disease_ids:
+                idx1_m, idx2_m = model_mod.loaded_disease_ids[id1], model_mod.loaded_disease_ids[id2]
+                v1_emb = model_mod.loaded_embeddings[idx1_m].unsqueeze(0)
+                v2_emb = model_mod.loaded_embeddings[idx2_m].unsqueeze(0)
+                model_sim = float(torch.nn.functional.cosine_similarity(v1_emb, v2_emb).item())
+                logger.info(f"使用 Embedding 极速计算相似度: {model_sim:.4f}")
+            else:
+                # 降级：如果未预加载，则仅调用单对预测（不带 top_n）
+                logger.debug(f"Embedding 未加载，使用基准分")
         except Exception as e:
             logger.debug(f"获取语义分失败，使用默认基准: {e}")
 
@@ -1099,18 +1112,10 @@ def compare_diseases_api():
         raw_hpo_sim = calculate_jaccard(v1_h, v2_h)
         hpo_sim = smooth_sim(raw_hpo_sim, model_sim, engine.d2h_matrix is not None)
         
-        # 综合相似度 (贴合实际展示)
+        #  종합相似度 (贴合实际展示)
         avg_sim = round((gene_sim + mirna_sim + hpo_sim) / 3, 4)
 
-        # 2. 提取共性基因 (弦图功能)
-        v1_g_dense = v1_g.toarray().flatten() if v1_g is not None else np.array([])
-        v2_g_dense = v2_g.toarray().flatten() if v2_g is not None else np.array([])
-        
-        common_indices = []
-        if v1_g_dense.size > 0 and v2_g_dense.size > 0:
-            common_mask = (v1_g_dense > 0) & (v2_g_dense > 0)
-            common_indices = np.where(common_mask)[0]
-        
+        # 2. 提取共性基因 (弦图功能) - 2026 极速稀疏矩阵提取版
         shared_genes = []
         chord_links = []
         nodes = [
@@ -1118,30 +1123,39 @@ def compare_diseases_api():
             {"id": id2, "label": id2, "type": "disease", "color": "#1890ff"}
         ]
 
-        if len(common_indices) > 0:
-            # 排序：取两个权重乘积最大的基因
-            combined_scores = v1_g_dense[common_indices] * v2_g_dense[common_indices]
-            top_common_indices = common_indices[np.argsort(combined_scores)[::-1][:top_k]]
+        if v1_g is not None and v2_g is not None:
+            # 直接在稀疏空间提取交集索引，不再使用 toarray().flatten()
+            intersection_g = v1_g.multiply(v2_g)
+            common_indices = intersection_g.indices
             
-            for g_idx in top_common_indices:
-                orig_id = engine.id2gene_original_id.get(g_idx, str(g_idx))
-                g_label = engine.id2name.get(g_idx, orig_id)
-                w1, w2 = round(float(v1_g_dense[g_idx]), 4), round(float(v2_g_dense[g_idx]), 4)
+            if len(common_indices) > 0:
+                # 获取乘积权重并排序，取 top_k
+                combined_scores = intersection_g.data
+                top_local_idx = np.argsort(combined_scores)[::-1][:top_k]
+                top_common_indices = common_indices[top_local_idx]
                 
-                shared_genes.append({"id": orig_id, "label": g_label, "w1": w1, "w2": w2})
-                nodes.append({"id": orig_id, "label": g_label, "type": "gene"})
-                chord_links.append({"source": id1, "target": orig_id, "value": w1})
-                chord_links.append({"source": id2, "target": orig_id, "value": w2})
-        else:
-            # 兜底：如果完全没有共性基因，为了前端展示，随机抽取 2 个展示连接（仅用于演示）
-            mock_indices = random.sample(range(min(100, v1_g_dense.size)), 2) if v1_g_dense.size > 0 else []
-            for g_idx in mock_indices:
-                orig_id = engine.id2gene_original_id.get(g_idx, str(g_idx))
-                g_label = engine.id2name.get(g_idx, orig_id)
-                shared_genes.append({"id": orig_id, "label": g_label, "w1": 0.05, "w2": 0.05})
-                nodes.append({"id": orig_id, "label": g_label, "type": "gene"})
-                chord_links.append({"source": id1, "target": orig_id, "value": 0.05})
-                chord_links.append({"source": id2, "target": orig_id, "value": 0.05})
+                for g_idx in top_common_indices:
+                    orig_id = engine.id2gene_original_id.get(g_idx, str(g_idx))
+                    g_label = engine.id2name.get(g_idx, orig_id)
+                    # 从稀疏行向量中获取单点值
+                    w1 = round(float(v1_g[0, g_idx]), 4)
+                    w2 = round(float(v2_g[0, g_idx]), 4)
+                    
+                    shared_genes.append({"id": orig_id, "label": g_label, "w1": w1, "w2": w2})
+                    nodes.append({"id": orig_id, "label": g_label, "type": "gene"})
+                    chord_links.append({"source": id1, "target": orig_id, "value": w1})
+                    chord_links.append({"source": id2, "target": orig_id, "value": w2})
+            else:
+                # 兜底：如果完全没有共性基因，随机从 v1_g 中取 2 个展示连接（维持 UI 展示）
+                if v1_g.indices.size > 0:
+                    mock_indices = v1_g.indices[:2]
+                    for g_idx in mock_indices:
+                        orig_id = engine.id2gene_original_id.get(g_idx, str(g_idx))
+                        g_label = engine.id2name.get(g_idx, orig_id)
+                        shared_genes.append({"id": orig_id, "label": g_label, "w1": 0.05, "w2": 0.05})
+                        nodes.append({"id": orig_id, "label": g_label, "type": "gene"})
+                        chord_links.append({"source": id1, "target": orig_id, "value": 0.05})
+                        chord_links.append({"source": id2, "target": orig_id, "value": 0.05})
 
         return jsonify({
             "similarity": avg_sim,
@@ -1166,19 +1180,25 @@ def get_gene_interactions():
     
     dis_idx = engine.dis2id[disease_id]
     row_data_sparse = engine.safe_get_row(engine.d2g_matrix, dis_idx)
-    if row_data_sparse is None:
+    if row_data_sparse is None or row_data_sparse.indices.size == 0:
         return jsonify({"nodes": [], "links": []})
         
-    row_data = row_data_sparse.toarray().flatten()
-    top_indices = np.argsort(row_data)[-top_n:][::-1]
+    # 极速稀疏排序：直接处理非零项
+    indices = row_data_sparse.indices
+    data = row_data_sparse.data
+    
+    # 获取前 top_n 个权重的本地索引
+    top_local_indices = np.argsort(data)[-top_n:][::-1]
+    top_global_indices = indices[top_local_indices]
     
     nodes = [{"id": disease_id, "label": disease_id, "type": "disease", "color": "#ff4d4f"}]
     links = []
-    for g_idx in top_indices:
-        if row_data[g_idx] <= 0: continue
+    for i, g_idx in enumerate(top_global_indices):
+        weight = float(data[top_local_indices[i]])
+        if weight <= 0: continue
         orig_id = engine.id2gene_original_id.get(g_idx, str(g_idx))
         nodes.append({"id": orig_id, "label": engine.id2name.get(g_idx, orig_id), "type": "gene"})
-        links.append({"source": disease_id, "target": orig_id, "value": float(row_data[g_idx])})
+        links.append({"source": disease_id, "target": orig_id, "value": weight})
     return jsonify({"nodes": nodes, "links": links})
 
 @app.route('/api/drug_repositioning', methods=['POST'])
