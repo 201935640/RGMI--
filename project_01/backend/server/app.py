@@ -971,80 +971,67 @@ def query_disease_api():
         raw_predictions = predict_disease_similarity(cleanedId, top_n=top_n)
         
         # --- 2026 修复：确保目标疾病始终在列表首位，满足前端 App.tsx 逻辑 ---
-        target_info = None
-        for pred in raw_predictions:
-            sim_dis_id = pred.get('disease_id') or pred.get('Disease ID') or pred.get('id')
-            if sim_dis_id == cleanedId:
-                target_info = {
-                    "disease_id": cleanedId,
-                    "name": pred.get('name') or pred.get('Name') or f"Disease {cleanedId}",
-                    "confidence": 1.0, # 自身相似度设为 1.0
-                    "intersections": get_intersections(target_idx, target_idx, engine)
-                }
-                break
-        
-        # 如果模型没返回目标疾病，手动创建一个基础信息
-        if not target_info:
-            target_info = {
-                "disease_id": cleanedId,
-                "name": f"Disease {cleanedId}",
-                "confidence": 1.0,
-                "intersections": get_intersections(target_idx, target_idx, engine)
-            }
+        target_info = {
+            "disease_id": cleanedId,
+            "name": engine.id2disease_name.get(cleanedId) or engine.id2name.get(cleanedId) or f"Disease {cleanedId}",
+            "confidence": 1.0,
+            "similarity": 1.0,
+            "intersections": get_intersections(target_idx, target_idx, engine)
+        }
 
         enhanced_results = [target_info]
         
-            for pred in raw_predictions:
-                # 兼容模型返回的各种键名 (大小写敏感)
-                sim_dis_id = pred.get('disease_id') or pred.get('Disease ID') or pred.get('id')
+        for pred in raw_predictions:
+            # 兼容模型返回的各种键名 (大小写敏感)
+            sim_dis_id = pred.get('disease_id') or pred.get('Disease ID') or pred.get('id')
+            
+            # 过滤掉目标疾病自身
+            if not sim_dis_id or sim_dis_id == cleanedId:
+                continue
                 
-                # 过滤掉目标疾病自身
-                if not sim_dis_id or sim_dis_id == cleanedId:
-                    continue
-                    
-                if sim_dis_id in engine.dis2id:
-                    sim_idx = engine.dis2id[sim_dis_id]
-                    
-                    # 提取模型预测的相似度得分 (极速 Embedding 校准版，确保不返回 0.0%)
-                    raw_score = pred.get('similarity') or pred.get('Similarity') or pred.get('score') or pred.get('confidence') or 0.0
-                    model_score = abs(float(raw_score))
-                    
-                    # --- 核心修复：如果模型分值过低或异常，使用 Embedding 实时计算 ---
-                    if model_score < 0.05:
-                        try:
-                            import project_01.Web.RGMI_pretrain.RGMI_pretrain_model as model_mod
-                            if model_mod.loaded_embeddings is not None and cleanedId in model_mod.loaded_disease_ids and sim_dis_id in model_mod.loaded_disease_ids:
-                                idx1_m, idx2_m = model_mod.loaded_disease_ids[cleanedId], model_mod.loaded_disease_ids[sim_dis_id]
-                                v1_emb, v2_emb = model_mod.loaded_embeddings[idx1_m].unsqueeze(0), model_mod.loaded_embeddings[idx2_m].unsqueeze(0)
-                                model_score = float(torch.nn.functional.cosine_similarity(v1_emb, v2_emb).item())
-                        except:
-                            # 如果计算失败，赋予一个合理的随机基准分，避免 0.0% 这种难看的数据
-                            import hashlib
-                            seed = int(hashlib.md5(f"{sim_dis_id}{cleanedId}".encode()).hexdigest(), 16)
-                            model_score = 0.38 + (seed % 100) / 1000.0
-                    
-                    # 统一分值校准：提升展示的一致性
-                    # 确保 90% 以上的关联在列表中看起来合理
-                    if model_score > 0.8:
-                        display_score = min(0.998, model_score + 0.02)
-                    else:
-                        display_score = min(0.95, model_score * 1.3 + 0.15) if model_score > 0.1 else model_score + 0.35
-                    
-                    # 计算交叉关联细节
-                    intersections = get_intersections(target_idx, sim_idx, engine)
-                    
-                    # 提取名称 (强化解析)
-                    dis_name = pred.get('name') or pred.get('Name') or pred.get('disease_name')
-                    if not dis_name or dis_name == '未知' or dis_name.startswith('Disease C'):
-                        dis_name = engine.id2disease_name.get(sim_dis_id) or engine.id2name.get(sim_dis_id, f"Disease {sim_dis_id}")
-                    
-                    enhanced_results.append({
-                        "disease_id": sim_dis_id,
-                        "name": dis_name,
-                        "confidence": round(display_score, 4),
-                        "similarity": round(display_score, 4), # 增加字段以适配不同前端版本
-                        "intersections": intersections
-                    })
+            if sim_dis_id in engine.dis2id:
+                sim_idx = engine.dis2id[sim_dis_id]
+                
+                # 提取模型预测的相似度得分 (极速 Embedding 校准版，确保不返回 0.0%)
+                raw_score = pred.get('similarity') or pred.get('Similarity') or pred.get('score') or pred.get('confidence') or 0.0
+                model_score = abs(float(raw_score))
+                
+                # --- 核心修复：如果模型分值过低或异常，使用 Embedding 实时计算 ---
+                if model_score < 0.05:
+                    try:
+                        import project_01.Web.RGMI_pretrain.RGMI_pretrain_model as model_mod
+                        if model_mod.loaded_embeddings is not None and cleanedId in model_mod.loaded_disease_ids and sim_dis_id in model_mod.loaded_disease_ids:
+                            idx1_m, idx2_m = model_mod.loaded_disease_ids[cleanedId], model_mod.loaded_disease_ids[sim_dis_id]
+                            v1_emb, v2_emb = model_mod.loaded_embeddings[idx1_m].unsqueeze(0), model_mod.loaded_embeddings[idx2_m].unsqueeze(0)
+                            model_score = float(torch.nn.functional.cosine_similarity(v1_emb, v2_emb).item())
+                    except:
+                        # 如果计算失败，赋予一个合理的随机基准分，避免 0.0% 这种难看的数据
+                        import hashlib
+                        seed = int(hashlib.md5(f"{sim_dis_id}{cleanedId}".encode()).hexdigest(), 16)
+                        model_score = 0.38 + (seed % 100) / 1000.0
+                
+                # 统一分值校准：提升展示的一致性
+                # 确保 90% 以上的关联在列表中看起来合理
+                if model_score > 0.8:
+                    display_score = min(0.998, model_score + 0.02)
+                else:
+                    display_score = min(0.95, model_score * 1.3 + 0.15) if model_score > 0.1 else model_score + 0.35
+                
+                # 计算交叉关联细节
+                intersections = get_intersections(target_idx, sim_idx, engine)
+                
+                # 提取名称 (强化解析)
+                dis_name = pred.get('name') or pred.get('Name') or pred.get('disease_name')
+                if not dis_name or dis_name == '未知' or dis_name.startswith('Disease C'):
+                    dis_name = engine.id2disease_name.get(sim_dis_id) or engine.id2name.get(sim_dis_id, f"Disease {sim_dis_id}")
+                
+                enhanced_results.append({
+                    "disease_id": sim_dis_id,
+                    "name": dis_name,
+                    "confidence": round(display_score, 4),
+                    "similarity": round(display_score, 4), # 增加字段以适配不同前端版本
+                    "intersections": intersections
+                })
 
         # 3. 补充 miRNA 数据并缓存
         final_result = enrich_mirna_data(enhanced_results)
@@ -1522,7 +1509,7 @@ def drug_repositioning():
                 
                 if sim_id in disease_to_drug_map:
                     # 针对大数据应用：提取具体共享基因作为药理依据
-                    shared_info, _ = get_intersections(engine.dis2id[target_disease_id], engine.dis2id[sim_id], engine)
+                    shared_info = get_intersections(engine.dis2id[target_disease_id], engine.dis2id[sim_id], engine)
                     top_genes = [g['label'] for g in shared_info[:2]]
                     gene_evidence = f"及核心靶点 {', '.join(top_genes)}" if top_genes else ""
 
