@@ -334,7 +334,7 @@ class NewApiService {
       
       // 检查是否可以从文件获取
       try {
-        const localFilePath = `server/saves/${cleanedId}-${topN}.json`;
+        const localFilePath = `server/saves/${encodeURIComponent(cleanedId)}-${topN}.json`;
         this.log('debug', `尝试从文件 ${localFilePath} 获取疾病相似性数据`);
       
         const response = await fetch(localFilePath);
@@ -362,18 +362,9 @@ class NewApiService {
             // 将相关疾病添加到目标疾病对象中
             targetDisease.related_diseases = relatedDiseases;
             this.log('info', `从文件缓存提取目标疾病 ${cleanedId} 的相关疾病数量: ${relatedDiseases.length}`);
-          } else if (result.length > 0) {
-            // 如果找不到目标疾病，使用第一个结果作为目标疾病
-            this.log('warn', `在文件缓存结果中未找到目标疾病 ${cleanedId}, 使用第一个结果作为目标疾病`);
-            targetDisease = { ...result[0] };
-            relatedDiseases = result
-              .slice(1)
-              .map(d => ({
-                ...d,
-                similarity: d.similarity || 0
-              }));
-            targetDisease.related_diseases = relatedDiseases;
-            this.log('info', `使用文件缓存的替代疾病作为目标, 相关疾病数量: ${relatedDiseases.length}`);
+          } else {
+            this.log('warn', `文件缓存结果中未找到目标疾病 ${cleanedId}, 忽略该文件缓存并改用API查询`);
+            throw new Error(`文件缓存不匹配目标疾病: ${cleanedId}`);
           }
           
           this.saveToCache(cacheKey, targetDisease);
@@ -419,20 +410,9 @@ class NewApiService {
         // 将相关疾病添加到目标疾病对象中
         targetDisease.related_diseases = relatedDiseases;
         this.log('info', `目标疾病 ${cleanedId} 的相关疾病数量: ${relatedDiseases.length}`);
-      } else if (result.length > 0) {
-        // 如果找不到目标疾病，使用第一个结果作为目标疾病
-        this.log('warn', `在结果中未找到目标疾病 ${cleanedId}, 使用第一个结果作为目标疾病`);
-        targetDisease = { ...result[0] };
-        relatedDiseases = result
-          .slice(1)
-          .map(d => ({
-            ...d,
-            similarity: d.similarity || 0
-          }));
-        targetDisease.related_diseases = relatedDiseases;
-        this.log('info', `使用替代疾病作为目标, 相关疾病数量: ${relatedDiseases.length}`);
       } else {
-        this.log('warn', `查询结果为空, 无法处理疾病 ${cleanedId} 的相似性数据`);
+        this.log('warn', `查询结果中未找到目标疾病 ${cleanedId}, 终止并提示错误`);
+        throw new Error(`API返回结果不包含目标疾病: ${cleanedId}`);
       }
       
       this.saveToCache(cacheKey, targetDisease);
