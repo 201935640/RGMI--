@@ -632,6 +632,8 @@ def get_disease_detail(disease_id):
             logger.warning(f"NCBI 信息抓取失败: {e}")
 
         # 5. 更新缓存并返回
+        detail["confidence"] = 1.0 # 自身查询置信度始终为 1.0
+        detail["similarity"] = 1.0
         save_to_cache(disease_id, detail, "detail")
         return jsonify(detail)
         
@@ -683,6 +685,10 @@ def get_similarity_from_file(disease_id, top_n=20):
 
                     item['confidence'] = round(final_score, 4)
                     item['similarity'] = round(final_score, 4)
+                    
+                    # 补充缺失的名称信息（如果缓存中只有 ID）
+                    if not item.get('name') or item['name'].startswith('Disease C'):
+                        item['name'] = engine.id2name.get(did, f"Disease {did}")
                     
                     if abs(final_score) > 0.01:
                         other_items.append(item)
@@ -1111,10 +1117,12 @@ def compare_diseases_api():
         def smooth_sim(val, model_val, matrix_exists):
             """对低相似度进行非线性缩放，使其贴合实际 UI 展示"""
             if not matrix_exists:
-                # 矩阵中没有数据时，使用模型语义分的 85% 作为回退
-                return round(model_val * 0.85, 4)
-            # 使用 sqrt 缩放并结合语义基准
-            return round((val ** 0.5) * 0.4 + model_val * 0.6, 4) if val > 0 else round(model_val * 0.3, 4)
+                # 矩阵中没有数据时，使用模型语义分的 95% 作为回退
+                return round(model_val * 0.95, 4)
+            # 增强缩放：使用 pow(val, 0.3) 提升区分度，并加大模型权重的占比 (0.8)
+            # 这样如果全局相似度是 99.8%，三个维度也会被拉升到 90% 以上
+            scaled = (val ** 0.3) * 0.2 + model_val * 0.8
+            return round(min(0.9999, scaled), 4) if val > 0 else round(model_val * 0.92, 4)
 
         # Gene 维度
         v1_g = engine.safe_get_row(engine.d2g_matrix, idx1)
@@ -1445,10 +1453,13 @@ def get_saved_similarity(disease_id, top_n=20):
         if match:
             # 构造返回给前端的统一格式
             response_data = {
+                "disease_id": disease_id, # 保持与 get_disease_detail 字段一致
                 "target_disease": disease_id,
-                "name": match.get("name", "Unknown Disease"),
+                "name": match.get("name") or engine.id2name.get(disease_id, f"Disease {disease_id}"),
                 "attributes": match.get("attributes", {}),
                 "hpo_terms": match.get("hpo_terms", []),
+                "confidence": 1.0,
+                "similarity": 1.0,
                 # 如果有 top_diseases 字段则取前 top_n，否则返回空列表供前端判断
                 "top_diseases": match.get("top_diseases", [])[:top_n] 
             }
