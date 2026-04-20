@@ -25,7 +25,7 @@ const CenteredDiseaseSearchForm = ({ diseaseData, onSearch, loading }) => {
   const exampleDiseases = [
     { id: 'C2265792', name: 'Skeletal muscle hypertrophy' },
     { id: 'C4025845', name: 'Abnormality iris morphology' },
-    { id: 'C1269683', name: 'Limb-girdle muscular dystrophy' }
+    { id: 'C1269683', name: 'Major depressive disorder' }
   ];
 
   // 处理搜索词变化
