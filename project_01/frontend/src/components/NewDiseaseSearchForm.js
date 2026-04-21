@@ -96,7 +96,10 @@ const NewDiseaseSearchForm = ({ diseaseData = [], onSearch, history = [], clearH
     const disease = diseaseData.find(d => d.disease_id === diseaseId);
     if (disease) {
       onSearch([disease]);
+      return;
     }
+    
+    onSearch(diseaseId);
   };
 
   // 清除历史
