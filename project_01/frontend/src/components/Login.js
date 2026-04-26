@@ -334,11 +334,11 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
               </Text>
               {userType === 'user' ? (
                 <Space direction="vertical" size={6} style={{ width: '100%' }}>
-                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user1 / user123</Text>
-                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user2 / user123</Text>
+                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user1/ user123</Text>
+                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user2/ user123</Text>
                 </Space>
               ) : (
-                <Text code style={{ borderRadius: 6, fontSize: 13 }}>admin / admin123</Text>
+                <Text code style={{ borderRadius: 6, fontSize: 13 }}>admin/ admin123</Text>
               )}
             </div>
           )}

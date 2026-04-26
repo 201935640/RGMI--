@@ -1128,35 +1128,37 @@ function App() {
               </Card>
             </Col>
 
-            <Col xs={24} sm={12} lg={10}>
-              <Card
-                className="feature-card"
-                hoverable
-                cover={
-                  <div className="card-icon-container" style={{
-                    background: 'linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%)',
-                    height: 160,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}>
-                    <div style={{
-                      position: 'absolute',
-                      inset: 0,
-                      backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                      backgroundSize: '20px 20px'
-                    }} />
-                    <BulbOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
-                  </div>
-                }
-                onClick={() => setShowHelpModal(true)}
-              >
-                <div className="feature-title">关于</div>
-                <div className="feature-desc">获取系统操作帮助，了解可视化组件的交互方式</div>
-              </Card>
-            </Col>
+            {!isAdmin && (
+              <Col xs={24} sm={12} lg={10}>
+                <Card
+                  className="feature-card"
+                  hoverable
+                  cover={
+                    <div className="card-icon-container" style={{
+                      background: 'linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%)',
+                      height: 160,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      overflow: 'hidden'
+                    }}>
+                      <div style={{
+                        position: 'absolute',
+                        inset: 0,
+                        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                        backgroundSize: '20px 20px'
+                      }} />
+                      <BulbOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
+                    </div>
+                  }
+                  onClick={() => setShowHelpModal(true)}
+                >
+                  <div className="feature-title">关于</div>
+                  <div className="feature-desc">获取系统操作帮助，了解可视化组件的交互方式</div>
+                </Card>
+              </Col>
+            )}
 
             {isAdmin && (
               <Col xs={24} sm={12} lg={10}>
