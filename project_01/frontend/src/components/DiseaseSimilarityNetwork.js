@@ -578,21 +578,6 @@ const DiseaseSimilarityNetwork = ({
                 <span className="item-label">显示基因</span>
                 <Switch checked={showGenes} onChange={setShowGenes} />
               </div>
-
-              <div className="control-item">
-                <span className="item-label">显示miRNA</span>
-                <Switch checked={showMiRNAs} onChange={setShowMiRNAs} />
-              </div>
-
-              <div className="control-item">
-                <span className="item-label">
-                  显示AI预测
-                  <Tooltip title="显示基于GDFM模型预测的基因交互关系（虚线）">
-                    <ExperimentOutlined style={{ marginLeft: 4, color: '#FFA500' }} />
-                  </Tooltip>
-                </span>
-                <Switch checked={showPredicted} onChange={setShowPredicted} />
-              </div>
             </div>
             
             <Divider style={{ margin: '12px 0' }} />
@@ -638,13 +623,6 @@ const DiseaseSimilarityNetwork = ({
               <div className="legend-item">
                 <div className="legend-line legend-dashed" style={{ backgroundColor: colors.linkMiRNA }}></div>
                 <span>相关节点间关系 (虚线-miRNA)</span>
-              </div>
-              <div className="legend-item">
-                <div className="legend-line legend-dashed" style={{ backgroundColor: '#FFA500' }}></div>
-                <span>
-                  AI预测关系 (虚线)
-                  <Tag color="orange" style={{ marginLeft: 4, fontSize: '10px' }}>GDFM</Tag>
-                </span>
               </div>
             </div>
             
