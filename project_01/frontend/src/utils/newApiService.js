@@ -321,6 +321,18 @@ class NewApiService {
       // 标准化疾病ID
       const cleanedId = this.cleanDiseaseId(diseaseId);
       this.log('info', `查询疾病 ${diseaseId} 的相似性, 标准化ID: ${cleanedId}, topN: ${topN}`);
+
+      const isPlaceholderName = (name, id) => {
+        if (!name) return true;
+        const n = String(name).trim();
+        if (!n) return true;
+        if (n === id) return true;
+        if (n === '未知') return true;
+        if (/^\d+$/.test(n)) return true;
+        if (/^disease\s+/i.test(n)) return true;
+        if (/^disease\s*C\d+/i.test(n)) return true;
+        return false;
+      };
       
       // 生成缓存键
       const cacheKey = `disease_sim_${cleanedId}_${topN}`;
@@ -362,6 +374,14 @@ class NewApiService {
             // 将相关疾病添加到目标疾病对象中
             targetDisease.related_diseases = relatedDiseases;
             this.log('info', `从文件缓存提取目标疾病 ${cleanedId} 的相关疾病数量: ${relatedDiseases.length}`);
+
+            const badTarget = isPlaceholderName(targetDisease.name, cleanedId);
+            const badRelatedCount = relatedDiseases.filter(d => isPlaceholderName(d.name, d.disease_id)).length;
+            const total = relatedDiseases.length + 1;
+            if (badTarget || badRelatedCount >= Math.ceil(total * 0.5)) {
+              this.log('warn', `文件缓存名称信息质量过低(目标占位符=${badTarget}, 相关占位符=${badRelatedCount}/${relatedDiseases.length}), 忽略该文件缓存并改用API查询`);
+              throw new Error(`文件缓存名称质量过低: ${cleanedId}`);
+            }
           } else {
             this.log('warn', `文件缓存结果中未找到目标疾病 ${cleanedId}, 忽略该文件缓存并改用API查询`);
             throw new Error(`文件缓存不匹配目标疾病: ${cleanedId}`);

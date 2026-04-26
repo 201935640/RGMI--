@@ -89,6 +89,7 @@ function App() {
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [showHelpModal, setShowHelpModal] = useState(false);
   const [showHistoryModal, setShowHistoryModal] = useState(false);
+  const [searchHistory, setSearchHistory] = useState([]);
   
   // 新增系统设置相关状态
   const [networkSettings, setNetworkSettings] = useState({
@@ -331,27 +332,51 @@ function App() {
   }, []);
 
   // 查看搜索历史记录
-  const getSearchHistory = () => {
-    // 从localStorage获取搜索历史
-    const history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
-    return history;
+  const normalizeHistoryItem = (item) => {
+    if (!item) return null;
+
+    const id = (item.id || item.disease_id || item.diseaseId || '').toString().trim();
+    const timestamp = item.timestamp || item.time || item.date || new Date().toISOString();
+    const name = (item.name || item.disease_name || item.diseaseName || id).toString().trim();
+
+    if (!id) return null;
+    return { id, name, timestamp };
+  };
+
+  const isPlaceholderDiseaseName = (name, id) => {
+    if (!name) return true;
+    const trimmed = name.toString().trim();
+    if (!trimmed) return true;
+    if (trimmed === id) return true;
+    if (/^\d+$/.test(trimmed)) return true;
+    if (/^disease\s+/i.test(trimmed)) return true;
+    if (/^unknown$/i.test(trimmed)) return true;
+    return false;
+  };
+
+  const loadSearchHistory = () => {
+    const raw = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+    const normalized = Array.isArray(raw)
+      ? raw.map(normalizeHistoryItem).filter(Boolean)
+      : [];
+
+    setSearchHistory(normalized);
+    return normalized;
   };
   
   // 记录搜索历史
   const recordSearchHistory = (disease) => {
     if (!disease) return;
     
-    // 获取现有历史
-    const history = getSearchHistory();
-    
-    // 构建疾病ID和名称
-    const diseaseId = disease.disease_id || disease.id;
-    const diseaseName = disease.name || disease.id || diseaseId;
-    
-    if (!diseaseId) return;
+    const history = loadSearchHistory();
+
+    const cleanedId = newApiService.cleanDiseaseId(disease.disease_id || disease.id);
+    const diseaseName = (disease.name || cleanedId).toString();
+
+    if (!cleanedId) return;
     
     // 检查是否已存在相同记录
-    const existingIndex = history.findIndex(item => item.id === diseaseId);
+    const existingIndex = history.findIndex(item => item.id === cleanedId);
     if (existingIndex !== -1) {
       // 移除旧记录
       history.splice(existingIndex, 1);
@@ -359,7 +384,7 @@ function App() {
     
     // 添加新记录到最前面
     history.unshift({
-      id: diseaseId,
+      id: cleanedId,
       name: diseaseName,
       timestamp: new Date().toISOString()
     });
@@ -369,13 +394,15 @@ function App() {
     
     // 保存回localStorage
     localStorage.setItem('searchHistory', JSON.stringify(limitedHistory));
+    setSearchHistory(limitedHistory);
     
-    console.log(`已记录搜索历史: ${diseaseName} (${diseaseId})`);
+    console.log(`已记录搜索历史: ${diseaseName} (${cleanedId})`);
   };
   
   // 清除搜索历史
   const clearSearchHistory = () => {
     localStorage.removeItem('searchHistory');
+    setSearchHistory([]);
     notification.success({
       message: t('historyClearedTitle'),
       description: t('historyCleared'),
@@ -391,29 +418,65 @@ function App() {
 
   // 从历史记录中选择疾病
   const selectDiseaseFromHistory = (diseaseId, topN = 20) => {
-    // 查找疾病数据
-    const disease = diseaseData.find(d => d.disease_id === diseaseId);
-    if (disease) {
-      setLoading(true);
-      
-      // 使用handleDiseaseSelect并传递相似疾病数量
-      handleDiseaseSelect(disease, topN);
-      
-      // 关闭历史记录模态框（如果打开）
-      setShowHistoryModal(false);
-      
-      // 切换到详情标签页
-      setActiveTab('detail');
-      
-      console.log(`从历史记录中选择疾病: ${disease.name} (${disease.disease_id}), 相似疾病数量: ${topN}`);
-    } else {
-      notification.warning({
-        message: '疾病未找到',
-        description: '在当前数据中未找到该疾病，可能已被移除或更新',
-        duration: 3
+    if (!diseaseId) return;
+    setLoading(true);
+    handleDiseaseSelect(diseaseId, topN);
+    setShowHistoryModal(false);
+    setActiveTab('detail');
+  };
+
+  const refreshHistoryNames = async () => {
+    const history = loadSearchHistory();
+    if (!history.length) return;
+
+    const diseaseNameById = new Map(diseaseData.map(d => [d.disease_id, d.name]));
+
+    let changed = false;
+    const nextHistory = [];
+
+    for (const item of history) {
+      const cleanedId = newApiService.cleanDiseaseId(item.id);
+
+      let nextName = item.name;
+      const fromList = diseaseNameById.get(cleanedId);
+      if (fromList && !isPlaceholderDiseaseName(fromList, cleanedId)) {
+        nextName = fromList;
+      } else if (isPlaceholderDiseaseName(nextName, cleanedId)) {
+        try {
+          const details = await newApiService.fetchDiseaseDetails(cleanedId);
+          if (details?.name && !isPlaceholderDiseaseName(details.name, cleanedId)) {
+            nextName = details.name;
+          }
+        } catch (e) {
+          // ignore
+        }
+      }
+
+      if (cleanedId !== item.id || nextName !== item.name) {
+        changed = true;
+      }
+
+      nextHistory.push({
+        ...item,
+        id: cleanedId,
+        name: nextName
       });
     }
+
+    if (!changed) return;
+
+    localStorage.setItem('searchHistory', JSON.stringify(nextHistory));
+    setSearchHistory(nextHistory);
   };
+
+  useEffect(() => {
+    loadSearchHistory();
+  }, []);
+
+  useEffect(() => {
+    if (!showHistoryModal) return;
+    void refreshHistoryNames();
+  }, [showHistoryModal, diseaseData]);
   
   // 处理搜索操作
   const handleSearch = (results, topN = 20) => {
@@ -516,6 +579,26 @@ function App() {
       if (!processedData.attributes.associated_miRNA_names) {
         processedData.attributes.associated_miRNA_names = [];
       }
+
+      const diseaseNameById = new Map(diseaseData.map(d => [d.disease_id, d.name]));
+      const resolveName = (did, currentName) => {
+        const id = newApiService.cleanDiseaseId(did);
+        const mapped = diseaseNameById.get(id);
+        if (mapped && !isPlaceholderDiseaseName(mapped, id)) return mapped;
+        if (currentName && !isPlaceholderDiseaseName(currentName, id)) return currentName;
+        return mapped || currentName || id;
+      };
+
+      processedData.disease_id = newApiService.cleanDiseaseId(processedData.disease_id || diseaseIdStr);
+      processedData.name = resolveName(processedData.disease_id, processedData.name);
+      processedData.related_diseases = (processedData.related_diseases || []).map(d => {
+        const did = newApiService.cleanDiseaseId(d.disease_id || d.id);
+        return {
+          ...d,
+          disease_id: did,
+          name: resolveName(did, d.name)
+        };
+      });
       
       // 详细记录获取到的数据
       console.log(`成功处理疾病 ${diseaseIdStr} 相似性数据:`, { 
@@ -551,14 +634,14 @@ function App() {
             
             // 如果是从本地文件加载的完整数据，直接使用它
             Object.assign(processedData, {
-              name: detailedInfo.name || processedData.name,
+              name: detailedInfo.name && !isPlaceholderDiseaseName(detailedInfo.name, processedData.disease_id) ? detailedInfo.name : processedData.name,
               definition: detailedInfo.definition || processedData.definition,
               attributes: detailedInfo.attributes
             });
         } else {
             // 仅合并详细信息到主疾病对象，但不覆盖属性字段
             Object.assign(processedData, {
-              name: detailedInfo.name || processedData.name,
+              name: detailedInfo.name && !isPlaceholderDiseaseName(detailedInfo.name, processedData.disease_id) ? detailedInfo.name : processedData.name,
               definition: detailedInfo.definition || processedData.definition
             });
             
@@ -869,8 +952,6 @@ function App() {
 
   // 渲染历史记录模态框
   const renderHistoryModal = () => {
-    const history = getSearchHistory();
-
     return (
       <Modal
         title="搜索历史"
@@ -886,9 +967,9 @@ function App() {
         ]}
         width={600}
       >
-        {history.length > 0 ? (
+        {searchHistory.length > 0 ? (
           <List
-            dataSource={history}
+            dataSource={searchHistory}
             renderItem={(item) => (
               <List.Item
                 actions={[

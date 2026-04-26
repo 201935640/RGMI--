@@ -628,17 +628,21 @@ def get_disease_detail(disease_id):
     logger.info(f"收到获取疾病详情请求: {disease_id}")
     
     try:
+        disease_id = str(disease_id).strip().upper()
+
         # 1. 优先检查缓存
         cached_data = get_from_cache(disease_id)
         
         # 2. 解析真实名称 (核心修复：优先从本地映射中找)
-        real_name = engine.id2disease_name.get(disease_id) or engine.id2name.get(disease_id)
-        if not real_name:
-            # 尝试从 dis2id.txt 加载的映射中反向寻找
-            for name, did in engine.dis2id.items():
-                if did == disease_id:
-                    real_name = name
-                    break
+        real_name = engine.id2disease_name.get(disease_id)
+        if (not real_name or str(real_name).startswith('Disease C')) and model_available:
+            try:
+                info = fetch_disease_info(disease_id)
+                if info and not info.get('error') and info.get('name'):
+                    real_name = info['name']
+                    engine.id2disease_name[disease_id] = real_name
+            except:
+                pass
         
         # 如果缓存中的名称是占位符，且我们找到了真实名称，则强制更新缓存
         if cached_data and isinstance(cached_data, dict):
@@ -703,15 +707,6 @@ def get_disease_detail(disease_id):
                     if ncbi_info.get('attributes'):
                         detail["attributes"]["semantictype"] = ncbi_info['attributes'].get('semantictype') or detail["attributes"]["semantictype"]
             
-            # --- 最终兜底：知识合成 (针对竞赛展示优化) ---
-            if detail["name"].startswith("Disease C"):
-                # 如果还是 ID 占位符，尝试利用关联基因合成一个描述性名称 (大数据应用特色)
-                if detail["attributes"]["associated_gene_names"]:
-                    main_gene = detail["attributes"]["associated_gene_names"][0]
-                    detail["name"] = f"{main_gene}-related Clinical Phenotype"
-                else:
-                    detail["name"] = f"Genetic Syndrome {disease_id}"
-
             if detail["definition"] == "正在检索详细定义..." or not detail["definition"]:
                 gene_count = len(detail["attributes"]["associated_gene_names"])
                 mirna_count = len(detail["attributes"]["associated_miRNA_names"])
@@ -756,6 +751,21 @@ def get_similarity_from_file(disease_id, top_n=20):
                 data = json.load(f)
             
             if isinstance(data, list):
+                has_target = any(
+                    (it.get('disease_id') or it.get('Disease ID')) == disease_id
+                    for it in data
+                    if isinstance(it, dict)
+                )
+                if not has_target:
+                    try:
+                        base = os.path.basename(save_file)
+                        mismatch_name = f"{base}.mismatch.{int(time.time())}.json"
+                        os.rename(save_file, os.path.join(save_dir, mismatch_name))
+                    except:
+                        pass
+                    return None
+
+                fetch_budget = 20
                 target_item = None
                 other_items = []
                 
@@ -764,16 +774,18 @@ def get_similarity_from_file(disease_id, top_n=20):
                     # --- 核心修复：名称补全 ---
                     # 如果名称缺失或为占位符，尝试实时补全
                     if not item.get('name') or item['name'].startswith('Disease C') or item['name'] == '未知':
-                        # 优先从引擎映射中找
-                        real_name = engine.id2name.get(did)
-                        if not real_name:
-                            # 尝试反向查找 dis2id
-                            for n, d_id in engine.dis2id.items():
-                                if d_id == did:
-                                    real_name = n
-                                    break
+                        real_name = engine.id2disease_name.get(did)
+                        if not real_name and model_available and fetch_budget > 0:
+                            try:
+                                info = fetch_disease_info(did)
+                                if info and not info.get('error') and info.get('name'):
+                                    real_name = info['name']
+                                    fetch_budget -= 1
+                            except:
+                                pass
                         if real_name:
                             item['name'] = real_name
+                            engine.id2disease_name[did] = real_name
 
                     # --- 终极校准逻辑：彻底消除 97.9% 虚高现象 ---
                     raw_sim = float(item.get('similarity') or item.get('Similarity') or 0.0)
@@ -816,15 +828,52 @@ def get_similarity_from_file(disease_id, top_n=20):
                     
                     # 补充缺失的名称信息（如果缓存中只有 ID）
                     if not item.get('name') or item['name'].startswith('Disease C'):
-                        item['name'] = engine.id2disease_name.get(did, f"Disease {did}")
+                        real_name = engine.id2disease_name.get(did)
+                        if not real_name and model_available and fetch_budget > 0:
+                            try:
+                                info = fetch_disease_info(did)
+                                if info and not info.get('error') and info.get('name'):
+                                    real_name = info['name']
+                                    fetch_budget -= 1
+                            except:
+                                pass
+                        if real_name:
+                            engine.id2disease_name[did] = real_name
+                        item['name'] = real_name or f"Disease {did}"
                     
                     if abs(final_score) > 0.01:
                         other_items.append(item)
                 
+                if any(
+                    (it.get('disease_id') or it.get('Disease ID')) != disease_id
+                    and float(it.get('similarity') or 0.0) >= 0.999
+                    for it in other_items
+                    if isinstance(it, dict)
+                ):
+                    try:
+                        base = os.path.basename(save_file)
+                        mismatch_name = f"{base}.mismatch.{int(time.time())}.json"
+                        os.rename(save_file, os.path.join(save_dir, mismatch_name))
+                    except:
+                        pass
+                    return None
+
                 final_list = []
-                if target_item: final_list.append(target_item)
-                else:
-                    final_list.append({"disease_id": disease_id, "name": f"Disease {disease_id}", "confidence": 1.0, "similarity": 1.0})
+                if target_item:
+                    if not target_item.get('name') or str(target_item.get('name')).startswith('Disease C'):
+                        real_name = engine.id2disease_name.get(disease_id)
+                        if not real_name and model_available:
+                            try:
+                                info = fetch_disease_info(disease_id)
+                                if info and not info.get('error') and info.get('name'):
+                                    real_name = info['name']
+                            except:
+                                pass
+                        if real_name:
+                            engine.id2disease_name[disease_id] = real_name
+                        target_item['name'] = real_name or f"Disease {disease_id}"
+
+                    final_list.append(target_item)
                 
                 # 按校准后的分值重新排序
                 other_items.sort(key=lambda x: x['similarity'], reverse=True)
@@ -950,16 +999,28 @@ def query_disease_api():
     file_data = get_similarity_from_file(cleanedId, top_n)
     if file_data:
         file_data = _ensure_target_first(cleanedId, file_data) or file_data
+        fetch_budget = 10
         for item in file_data:
-            did = item.get('disease_id') or item.get('id')
-            if did and (not item.get('name') or item['name'].startswith('Disease C')):
-                item['name'] = engine.id2disease_name.get(did) or engine.id2name.get(did)
-                if not item['name']:
-                    for name, d_id in engine.dis2id.items():
-                        if d_id == did:
-                            item['name'] = name
-                            break
-                if not item['name']: item['name'] = f"Disease {did}"
+            did = (item.get('disease_id') or item.get('id') or '').strip().upper()
+            if not did:
+                continue
+
+            name = item.get('name')
+            if not name or str(name).startswith('Disease C') or str(name) == '未知':
+                name = engine.id2disease_name.get(did)
+
+            if (not name or str(name).startswith('Disease C')) and model_available and fetch_budget > 0:
+                try:
+                    info = fetch_disease_info(did)
+                    if info and not info.get('error') and info.get('name'):
+                        name = info['name']
+                        engine.id2disease_name[did] = name
+                        fetch_budget -= 1
+                except:
+                    pass
+
+            item['disease_id'] = did
+            item['name'] = name or f"Disease {did}"
         return jsonify(enrich_mirna_data(file_data))
 
     # 2. 调用模型进行预测
@@ -1119,16 +1180,7 @@ def _ensure_target_first(disease_id, items):
             target['name'] = engine.id2disease_name.get(disease_id) or f"Disease {disease_id}"
         normalized.insert(0, target)
         return normalized
-    target_info = {
-        "disease_id": disease_id,
-        "name": engine.id2disease_name.get(disease_id) or f"Disease {disease_id}",
-        "confidence": 1.0,
-        "similarity": 1.0
-    }
-    if disease_id in engine.dis2id:
-        idx = engine.dis2id[disease_id]
-        target_info["intersections"] = get_intersections(idx, idx, engine)
-    return [target_info] + normalized
+    return None
 
 def sanitize_similarity_cache_dir(save_dir):
     if not save_dir or not os.path.isdir(save_dir):
@@ -1162,7 +1214,11 @@ def sanitize_similarity_cache_dir(save_dir):
             continue
         normalized = _ensure_target_first(target_id, raw)
         if normalized is None:
-            ignored += 1
+            try:
+                os.rename(path, os.path.join(save_dir, f"{base}.mismatch.{int(time.time())}.json"))
+                fixed += 1
+            except:
+                corrupt += 1
             continue
         if len(raw) != len(normalized) or (normalized and (raw[0] if isinstance(raw[0], dict) else None) != normalized[0]):
             try:
@@ -1560,7 +1616,9 @@ def get_gene_interactions():
 @cross_origin()
 def drug_repositioning():
     data = request.json
-    target_disease_id = data.get('disease_id') # 目标疾病，如 C0023212
+    target_disease_id = str((data or {}).get('disease_id') or '').strip().upper()
+    if not target_disease_id or target_disease_id not in engine.dis2id:
+        return jsonify({"error": "未提供疾病ID或ID无效", "disease_id": target_disease_id}), 400
     
     # 扩展后的高质量药物-疾病知识库 (用于演示与竞赛，基于真实药理学)
     disease_to_drug_map = {
@@ -1578,7 +1636,9 @@ def drug_repositioning():
         "C0011581": ["Sertraline (舍曲林)", "Escitalopram (艾司西酞普兰)"],
         # 肿瘤与免疫
         "C0006826": ["Tamoxifen (三苯氧胺)", "Trastuzumab (曲妥珠单抗)"],
-        "C0002871": ["Methotrexate (甲氨蝶呤)", "Adalimumab (阿达木单抗)"]
+        "C0002871": ["Methotrexate (甲氨蝶呤)", "Adalimumab (阿达木单抗)"],
+        # 肌肉骨骼系统
+        "C2265792": ["Creatine (肌酸)", "HMB (β-羟基-β-甲基丁酸)", "Protein Supplements (蛋白质补充剂)"]
     }
 
     try:
