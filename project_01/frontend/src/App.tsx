@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import { Layout as AntLayout, Spin, Badge, notification, Button, Tabs, Switch, Card, Alert, Typography, Space, Avatar, Dropdown, Menu, Row, Col, List, Timeline, Modal, Divider, Radio, Form, Input, Empty, Select, InputNumber, Statistic, Slider, message, Descriptions, Tag } from 'antd';
+import { Layout as AntLayout, Spin, Badge, notification, Button, Tabs, Switch, Card, Alert, Typography, Space, Avatar, Dropdown, Menu, Row, Col, List, Timeline, Modal, Divider, Radio, Form, Input, Empty, Select, InputNumber, Statistic, Slider, message, Descriptions, Tag, Tooltip } from 'antd';
 import { InfoCircleOutlined, HomeOutlined, AppstoreOutlined, AimOutlined, TranslationOutlined, ApiOutlined, UserOutlined, LogoutOutlined, SettingOutlined, TeamOutlined, SearchOutlined, NodeIndexOutlined, PieChartOutlined, LinkOutlined, QuestionCircleOutlined, BulbOutlined, FileTextOutlined, HistoryOutlined, DownOutlined, ExperimentOutlined, PartitionOutlined, DatabaseOutlined, RadarChartOutlined, MedicineBoxOutlined } from '@ant-design/icons';
 // 新组件
 import CustomLayout from './components/Layout';
@@ -1329,42 +1329,328 @@ function App() {
 
               <TabPane tab="相关疾病" key="related">
                 {similarDiseases && similarDiseases.length > 0 ? (
-                  <List
-                    grid={{ gutter: 16, xs: 1, sm: 2, md: 3, lg: 4 }}
-                    dataSource={similarDiseases}
-                    renderItem={item => (
-                      <List.Item>
-                        <Card
-                          hoverable
-                          size="small"
-                        >
-                          <div className="similar-disease-item" onClick={() => handleDiseaseSelect(item.disease_id, 50)} style={{ cursor: 'pointer' }}>
-                            <div className="similar-disease-name">{item.name}</div>
-                            <div className="similar-disease-id">ID: {item.disease_id}</div>
-                            <div className="similar-disease-similarity">
-                              相似度: <span style={{ color: '#1a2980', fontWeight: 'bold' }}>
-                                {(item.similarity * 100).toFixed(1)}%
-                              </span>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    {similarDiseases.map((item, index) => {
+                      const similarity = item.similarity * 100;
+
+                      const tooltipContent = (
+                        <div style={{
+                          padding: '20px',
+                          background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+                          borderRadius: '16px',
+                          backdropFilter: 'blur(20px)',
+                          border: '2px solid #3B82F6',
+                          boxShadow: '0 12px 40px rgba(59, 130, 246, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.8)'
+                        }}>
+                          {/* 顶部装饰线 */}
+                          <div style={{
+                            height: '4px',
+                            background: 'linear-gradient(90deg, transparent, #3B82F6, transparent)',
+                            marginBottom: '14px',
+                            borderRadius: '2px'
+                          }} />
+
+                          {/* 疾病名称 */}
+                          <div style={{
+                            marginBottom: '14px'
+                          }}>
+                            <div style={{
+                              fontSize: '16px',
+                              color: '#3B82F6',
+                              fontWeight: 800,
+                              textTransform: 'uppercase',
+                              letterSpacing: '1px',
+                              marginBottom: '6px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px'
+                            }}>
+                              <span style={{
+                                width: '4px',
+                                height: '4px',
+                                background: '#3B82F6',
+                                borderRadius: '50%'
+                              }} />
+                              疾病名称
+                            </div>
+                            <div style={{
+                              fontSize: '16px',
+                              fontWeight: 800,
+                              color: '#1e40af',
+                              lineHeight: '1.5'
+                            }}>
+                              {item.name}
                             </div>
                           </div>
-                          <Divider style={{ margin: '8px 0' }} />
-                          <Button
-                            type="link"
-                            size="small"
-                            icon={<RadarChartOutlined />}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setSelectedCompareDisease(item);
-                              setRadarModalVisible(true);
+
+                          {/* 分割线 */}
+                          <div style={{
+                            height: '1px',
+                            background: 'linear-gradient(90deg, transparent, #3B82F6, transparent)',
+                            marginBottom: '16px'
+                          }} />
+
+                          {/* 相似度 */}
+                          <div style={{
+                            marginBottom: '8px',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center'
+                          }}>
+                            <div>
+                              <div style={{
+                                fontSize: '16px',
+                                color: '#3B82F6',
+                                fontWeight: 800,
+                                textTransform: 'uppercase',
+                                letterSpacing: '1px',
+                                marginBottom: '6px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '6px'
+                              }}>
+                                <span style={{
+                                  width: '4px',
+                                  height: '4px',
+                                  background: '#3B82F6',
+                                  borderRadius: '50%'
+                                }} />
+                                相似度
+                              </div>
+                              <div style={{
+                                fontSize: '20px',
+                                fontWeight: 900,
+                                background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                backgroundClip: 'text'
+                              }}>
+                                {similarity.toFixed(1)}%
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* 分割线 */}
+                          <div style={{
+                            height: '1px',
+                            background: 'linear-gradient(90deg, transparent, #3B82F6, transparent)',
+                            marginBottom: '16px'
+                          }} />
+
+                          {/* 定义 */}
+                          <div>
+                            <div style={{
+                              fontSize: '16px',
+                              color: '#3B82F6',
+                              fontWeight: 800,
+                              textTransform: 'uppercase',
+                              letterSpacing: '1px',
+                              marginBottom: '8px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px'
+                            }}>
+                              <span style={{
+                                width: '4px',
+                                height: '4px',
+                                background: '#3B82F6',
+                                borderRadius: '50%'
+                              }} />
+                              定义
+                            </div>
+                            <div style={{
+                              fontSize: '13px',
+                              color: '#1e40af',
+                              lineHeight: '1.6',
+                              maxHeight: '100px',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              display: '-webkit-box',
+                              WebkitLineClamp: 3,
+                              WebkitBoxOrient: 'vertical',
+                              padding: '12px 14px',
+                              background: 'linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%)',
+                              borderRadius: '8px',
+                              border: '1.5px solid #bfdbfe'
+                            }}>
+                              {item.definition || '暂无定义信息'}
+                            </div>
+                          </div>
+                        </div>
+                      );
+
+                      return (
+                        <Tooltip
+                          key={index}
+                          title={tooltipContent}
+                          placement="top"
+                          overlayStyle={{
+                            maxWidth: '380px'
+                          }}
+                          overlayInnerStyle={{
+                            padding: '0',
+                            background: 'transparent',
+                            boxShadow: 'none'
+                          }}
+                        >
+                          <div
+                            style={{
+                              padding: '24px',
+                              background: 'linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%)',
+                              border: '2px solid #d4e6f7',
+                              borderRadius: '16px',
+                              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                              cursor: 'pointer',
+                              boxShadow: '0 4px 12px rgba(59, 130, 246, 0.08)'
                             }}
-                            block
+                            onClick={() => handleDiseaseSelect(item.disease_id, 50)}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.boxShadow = '0 12px 32px rgba(59, 130, 246, 0.2)';
+                              e.currentTarget.style.transform = 'translateY(-4px)';
+                              e.currentTarget.style.borderColor = '#3B82F6';
+                              e.currentTarget.style.background = 'linear-gradient(135deg, #e6f2ff 0%, #d4e6f7 100%)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.boxShadow = '0 4px 12px rgba(59, 130, 246, 0.08)';
+                              e.currentTarget.style.transform = 'translateY(0)';
+                              e.currentTarget.style.borderColor = '#d4e6f7';
+                              e.currentTarget.style.background = 'linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%)';
+                            }}
                           >
-                            对比
-                          </Button>
-                        </Card>
-                      </List.Item>
-                    )}
-                  />
+                            <div style={{
+                              display: 'flex',
+                              justifyContent: 'space-between',
+                              alignItems: 'flex-start',
+                              marginBottom: '20px'
+                            }}>
+                              <div style={{ flex: 1 }}>
+                                <div style={{
+                                  fontSize: '20px',
+                                  fontWeight: 700,
+                                  color: '#1e40af',
+                                  marginBottom: '8px',
+                                  transition: 'color 0.3s'
+                                }}>
+                                  {item.name}
+                                </div>
+                                <div style={{
+                                  fontSize: '13px',
+                                  color: '#3b82f6',
+                                  fontFamily: 'monospace',
+                                  letterSpacing: '0.5px',
+                                  fontWeight: 600
+                                }}>
+                                  ID: {item.disease_id}
+                                </div>
+                              </div>
+                              <Button
+                                type="primary"
+                                size="large"
+                                icon={<RadarChartOutlined />}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSelectedCompareDisease(item);
+                                  setRadarModalVisible(true);
+                                }}
+                                style={{
+                                  marginLeft: '20px',
+                                  borderRadius: '8px',
+                                  fontWeight: 600,
+                                  background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
+                                  border: 'none',
+                                  boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)'
+                                }}
+                              >
+                                对比分析
+                              </Button>
+                            </div>
+
+                            <div style={{
+                              display: 'flex',
+                              alignItems: 'flex-end',
+                              gap: '20px'
+                            }}>
+                              <div style={{
+                                display: 'flex',
+                                alignItems: 'baseline',
+                                gap: '6px',
+                                minWidth: '140px',
+                                paddingBottom: '2px'
+                              }}>
+                                <span style={{
+                                  fontSize: '12px',
+                                  color: '#475569',
+                                  fontWeight: 600,
+                                  textTransform: 'uppercase',
+                                  letterSpacing: '0.5px'
+                                }}>
+                                  相似度
+                                </span>
+                                <span style={{
+                                  fontSize: '20px',
+                                  fontWeight: 900,
+                                  background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
+                                  WebkitBackgroundClip: 'text',
+                                  WebkitTextFillColor: 'transparent',
+                                  backgroundClip: 'text',
+                                  lineHeight: '1'
+                                }}>
+                                  {similarity.toFixed(1)}
+                                </span>
+                                <span style={{
+                                  fontSize: '16px',
+                                  color: '#3B82F6',
+                                  fontWeight: 700,
+                                  lineHeight: '1'
+                                }}>
+                                  %
+                                </span>
+                              </div>
+
+                              <div style={{
+                                flex: 1,
+                                display: 'flex',
+                                alignItems: 'flex-end',
+                                gap: '16px',
+                                paddingBottom: '7px'
+                              }}>
+                                <div style={{
+                                  flex: 1,
+                                  height: '10px',
+                                  background: 'linear-gradient(90deg, #e0e7ff 0%, #dbeafe 100%)',
+                                  borderRadius: '6px',
+                                  overflow: 'hidden',
+                                  position: 'relative',
+                                  boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.05)'
+                                }}>
+                                  <div style={{
+                                    height: '100%',
+                                    width: `${similarity}%`,
+                                    background: `linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%)`,
+                                    borderRadius: '6px',
+                                    transition: 'width 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+                                    boxShadow: `0 0 16px rgba(59, 130, 246, 0.5)`
+                                  }} />
+                                </div>
+                                <div style={{
+                                  fontSize: '16px',
+                                  color: '#1e40af',
+                                  fontWeight: 800,
+                                  minWidth: '50px',
+                                  textAlign: 'right',
+                                  textTransform: 'uppercase',
+                                  letterSpacing: '0.5px',
+                                  lineHeight: '1'
+                                }}>
+                                  {similarity > 70 ? '极高' : similarity > 50 ? '高' : similarity > 30 ? '中' : '低'}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </Tooltip>
+                      );
+                    })}
+                  </div>
                 ) : (
                   <Empty description="暂无相关疾病数据" />
                 )}
