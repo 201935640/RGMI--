@@ -128,7 +128,7 @@ const WelcomePage = () => {
         
         <div className="welcome-content">
           <div className="animate-title">
-            <h1 className="welcome-title">疾视</h1>
+            <h1 className="welcome-title">病影药寻</h1>
             <p className="welcome-subtitle">{t('welcome.subtitle')}</p>
           </div>
           
@@ -268,9 +268,9 @@ const WelcomePage = () => {
               <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#26d0ce"/>
               <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#26d0ce" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span className="footer-logo-text">疾视 - Disease Relationship Visualization</span>
+            <span className="footer-logo-text">病影药寻 - Disease Relationship Visualization</span>
           </div>
-          <span className="welcome-footer-text">© 2025 疾视可视化平台</span>
+          <span className="welcome-footer-text">© 2025 病影药寻可视化平台</span>
         </div>
       </div>
     </div>

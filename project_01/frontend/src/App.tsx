@@ -953,7 +953,7 @@ function App() {
         <div className="home-container">
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <h2 className="module-title" style={{ display: 'inline-block' }}>工作台控制面板</h2>
-            <p style={{ color: 'var(--text-secondary)', marginTop: -8 }}>欢迎使用疾视生物科技平台，请选择您要进行的操作</p>
+            <p style={{ color: 'var(--text-secondary)', marginTop: -8 }}>欢迎使用病影药寻生物科技平台，请选择您要进行的操作</p>
           </div>
 
           <Row gutter={[40, 40]} justify="center" style={{ maxWidth: 1200, margin: '0 auto' }}>

@@ -187,7 +187,7 @@ const WelcomePage = () => {
             </div>
 
             <h1 className="welcome-title">
-              疾视
+              病影药寻
               <sup className="beta-tag">BETA</sup>
             </h1>
             <p className="welcome-subtitle">{t('welcome.subtitle')}</p>
@@ -529,12 +529,12 @@ const WelcomePage = () => {
               <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#60A5FA" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <span className="footer-logo-text">
-              疾视<sup className="beta-tag" style={{ fontSize: '8px', top: '-5px', padding: '1px 3px' }}>BETA</sup>
+              病影药寻<sup className="beta-tag" style={{ fontSize: '8px', top: '-5px', padding: '1px 3px' }}>BETA</sup>
               &nbsp;· Disease Relationship Visualization
             </span>
           </div>
           <span className="welcome-footer-text">
-            © 2025 疾视 可视化平台 · 基于 RGMI 模型构建
+            © 2025 病影药寻 可视化平台 · 基于 RGMI 模型构建
           </span>
         </div>
       </footer>

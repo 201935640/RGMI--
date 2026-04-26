@@ -503,7 +503,7 @@ const DiseaseDetail = ({ disease, language = 'zh' }) => {
           title={
             <Space>
               <NodeIndexOutlined />
-              <span className="gradient-text">疾视 - {t('疾病详情', 'Disease Detail')}</span>
+              <span className="gradient-text">病影药寻 - {t('疾病详情', 'Disease Detail')}</span>
             </Space>
           }
         >
@@ -535,7 +535,7 @@ const DiseaseDetail = ({ disease, language = 'zh' }) => {
                 title={
                   <Space>
                     <NodeIndexOutlined />
-                    <span>疾视 - {t('疾病相似性网络', 'Disease Similarity Network')}</span>
+                    <span>病影药寻 - {t('疾病相似性网络', 'Disease Similarity Network')}</span>
                   </Space>
                 }
               >

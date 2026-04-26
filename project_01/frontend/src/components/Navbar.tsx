@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
               </div>
               <div className="ml-3 flex flex-col">
                 <span className="text-xl font-black text-white tracking-tight leading-none drop-shadow-md">
-                  疾视 <sup className="text-[10px] text-yellow-300 font-bold ml-1">BETA</sup>
+                  病影药寻 <sup className="text-[10px] text-yellow-300 font-bold ml-1">BETA</sup>
                 </span>
                 <span className="text-[10px] text-blue-200 font-semibold tracking-widest uppercase">RGMI PLATFORM</span>
               </div>

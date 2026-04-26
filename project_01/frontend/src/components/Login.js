@@ -138,7 +138,7 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
             </div>
             <div>
               <div style={{ fontSize: 26, fontWeight: 900, letterSpacing: 3, background: 'linear-gradient(135deg, #EFF6FF, #60A5FA)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                疾视
+                病影药寻
                 <sup style={{ fontSize: 9, background: 'linear-gradient(135deg, #D4AF37, #F59E0B)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 800, position: 'relative', top: -10, marginLeft: 3, letterSpacing: 0.5 }}>BETA</sup>
               </div>
               <div style={{ color: 'rgba(191,219,254,0.5)', fontSize: 12, letterSpacing: 1 }}>RGMI Disease Platform</div>

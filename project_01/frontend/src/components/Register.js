@@ -117,7 +117,7 @@ const Register = ({ onRegister, onBackToLogin }) => {
             </div>
             <div>
               <div style={{ fontSize: 26, fontWeight: 900, letterSpacing: 3, background: 'linear-gradient(135deg, #EFF6FF, #60A5FA)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                疾视
+                病影药寻
               </div>
               <div style={{ color: 'rgba(191,219,254,0.5)', fontSize: 12, letterSpacing: 1 }}>RGMI Disease Platform</div>
             </div>
@@ -207,7 +207,7 @@ const Register = ({ onRegister, onBackToLogin }) => {
               创建账号
             </h2>
             <p style={{ color: '#475569', fontSize: 14, margin: 0 }}>
-              注册新账号，开始使用疾视平台
+              注册新账号，开始使用病影药寻平台
             </p>
           </div>
 

@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded flex items-center justify-center shadow-md">
                 <span className="text-white font-black text-xs">RG</span>
              </div>
-            <span className="text-blue-700 font-bold tracking-tight">疾视 V2.0 <span className="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded ml-1">PLATFORM</span></span>
+            <span className="text-blue-700 font-bold tracking-tight">病影药寻<span className="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded ml-1">PLATFORM</span></span>
           </div>
           <div className="flex space-x-8 font-medium">
             <span className="hover:text-blue-600 transition-all cursor-pointer">隐私政策</span>
