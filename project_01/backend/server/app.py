@@ -7,6 +7,8 @@ import logging
 import random
 import io
 import csv
+import re
+import requests
 import torch
 import numpy as np
 from flask import Flask, request, jsonify, current_app, Response
@@ -130,13 +132,52 @@ class BioDataEngine:
                     for item in data:
                         did = item.get('disease_id')
                         name = item.get('name')
-                        if did and name:
+                        if did and name and not str(name).startswith("Disease C") and str(name).strip():
                             self.id2disease_name[did] = name
                 logger.info(f"从汇总文件加载了 {len(self.id2disease_name)} 条疾病名称")
             except:
                 pass
         
-        # 如果还是空的，id2name 接口将依赖 NCBI 实时抓取
+        # 源 2: server/saves/*.json（相似性缓存/详情缓存中通常包含真实名称）
+        try:
+            saves_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "saves")
+            if os.path.isdir(saves_dir):
+                loaded = 0
+                for fname in os.listdir(saves_dir):
+                    if not fname.lower().endswith(".json"):
+                        continue
+                    if not fname.upper().startswith("C"):
+                        continue
+                    path = os.path.join(saves_dir, fname)
+                    try:
+                        with open(path, "r", encoding="utf-8") as f:
+                            payload = json.load(f)
+                    except Exception:
+                        continue
+
+                    items = payload if isinstance(payload, list) else [payload]
+                    for it in items[:200]:
+                        if not isinstance(it, dict):
+                            continue
+                        did = it.get("disease_id") or it.get("Disease ID") or it.get("id")
+                        name = it.get("name")
+                        if not did or not name:
+                            continue
+                        did = str(did).strip().upper()
+                        name = str(name).strip()
+                        if not name or name.startswith("Disease C"):
+                            continue
+                        if did in self.dis2id and did not in self.id2disease_name:
+                            self.id2disease_name[did] = name
+                            loaded += 1
+                    if loaded >= 5000:
+                        break
+                if loaded:
+                    logger.info(f"从 server/saves 缓存补全了 {loaded} 条疾病名称（累计 {len(self.id2disease_name)}）")
+        except Exception:
+            pass
+
+        # 如果还是空的，后续接口将依赖 NCBI 实时抓取/搜索
 
     def safe_get_row(self, matrix, idx):
         """安全获取矩阵的行，处理越界问题"""
@@ -751,7 +792,7 @@ def get_disease_detail(disease_id):
         return jsonify({"error": str(e)}), 500
 
 # 从保存的文件中获取疾病相似性数据
-def get_similarity_from_file(disease_id, top_n=20):
+def get_similarity_from_file(disease_id, top_n=20, enrich_names=True):
     """从保存的文件中读取疾病相似性数据 - 全局分值校准与名称补全版"""
     save_dir = os.path.join(os.path.dirname(__file__), 'saves')
     save_file = os.path.join(save_dir, f"{disease_id}-{top_n}.json")
@@ -776,27 +817,26 @@ def get_similarity_from_file(disease_id, top_n=20):
                         pass
                     return None
 
-                fetch_budget = 20
+                fetch_budget = 20 if enrich_names else 0
                 target_item = None
                 other_items = []
                 
                 for item in data:
                     did = item.get('disease_id') or item.get('Disease ID')
-                    # --- 核心修复：名称补全 ---
-                    # 如果名称缺失或为占位符，尝试实时补全
-                    if not item.get('name') or item['name'].startswith('Disease C') or item['name'] == '未知':
-                        real_name = engine.id2disease_name.get(did)
-                        if not real_name and model_available and fetch_budget > 0:
-                            try:
-                                info = fetch_disease_info(did)
-                                if info and not info.get('error') and info.get('name'):
-                                    real_name = info['name']
-                                    fetch_budget -= 1
-                            except:
-                                pass
-                        if real_name:
-                            item['name'] = real_name
-                            engine.id2disease_name[did] = real_name
+                    if enrich_names:
+                        if not item.get('name') or item['name'].startswith('Disease C') or item['name'] == '未知':
+                            real_name = engine.id2disease_name.get(did)
+                            if not real_name and model_available and fetch_budget > 0:
+                                try:
+                                    info = fetch_disease_info(did)
+                                    if info and not info.get('error') and info.get('name'):
+                                        real_name = info['name']
+                                        fetch_budget -= 1
+                                except:
+                                    pass
+                            if real_name:
+                                item['name'] = real_name
+                                engine.id2disease_name[did] = real_name
 
                     # --- 终极校准逻辑：彻底消除 97.9% 虚高现象 ---
                     raw_sim = float(item.get('similarity') or item.get('Similarity') or 0.0)
@@ -837,20 +877,20 @@ def get_similarity_from_file(disease_id, top_n=20):
                     item['confidence'] = round(final_score, 4)
                     item['similarity'] = round(final_score, 4)
                     
-                    # 补充缺失的名称信息（如果缓存中只有 ID）
-                    if not item.get('name') or item['name'].startswith('Disease C'):
-                        real_name = engine.id2disease_name.get(did)
-                        if not real_name and model_available and fetch_budget > 0:
-                            try:
-                                info = fetch_disease_info(did)
-                                if info and not info.get('error') and info.get('name'):
-                                    real_name = info['name']
-                                    fetch_budget -= 1
-                            except:
-                                pass
-                        if real_name:
-                            engine.id2disease_name[did] = real_name
-                        item['name'] = real_name or f"Disease {did}"
+                    if enrich_names:
+                        if not item.get('name') or item['name'].startswith('Disease C'):
+                            real_name = engine.id2disease_name.get(did)
+                            if not real_name and model_available and fetch_budget > 0:
+                                try:
+                                    info = fetch_disease_info(did)
+                                    if info and not info.get('error') and info.get('name'):
+                                        real_name = info['name']
+                                        fetch_budget -= 1
+                                except:
+                                    pass
+                            if real_name:
+                                engine.id2disease_name[did] = real_name
+                            item['name'] = real_name or f"Disease {did}"
                     
                     if abs(final_score) > 0.01:
                         other_items.append(item)
@@ -870,7 +910,7 @@ def get_similarity_from_file(disease_id, top_n=20):
                     return None
 
                 final_list = []
-                if target_item:
+                if target_item and enrich_names:
                     if not target_item.get('name') or str(target_item.get('name')).startswith('Disease C'):
                         real_name = engine.id2disease_name.get(disease_id)
                         if not real_name and model_available:
@@ -1535,6 +1575,186 @@ def _truthy(v):
 def _clean_disease_id(v):
     return str(v or "").strip().upper()
 
+_DISEASE_ID_PATTERN = re.compile(r"\bC\d{7}\b", re.IGNORECASE)
+_disease_name_index = {"size": 0, "map": {}, "built_at": 0.0}
+_ncbi_search_cache = {}
+
+def _get_disease_name_index():
+    current_size = len(getattr(engine, "id2disease_name", {}) or {})
+    if _disease_name_index["map"] and _disease_name_index["size"] == current_size and (time.time() - float(_disease_name_index.get("built_at") or 0.0)) < 60:
+        return _disease_name_index["map"]
+
+    name_map = {}
+    id2name = getattr(engine, "id2disease_name", {}) or {}
+    dis2id = getattr(engine, "dis2id", {}) or {}
+    for did, name in id2name.items():
+        if did not in dis2id:
+            continue
+        if not name:
+            continue
+        key = str(name).strip().lower()
+        if not key:
+            continue
+        if key not in name_map:
+            name_map[key] = did
+
+    _disease_name_index["map"] = name_map
+    _disease_name_index["size"] = current_size
+    _disease_name_index["built_at"] = time.time()
+    return name_map
+
+def _resolve_disease_id(v):
+    if v is None:
+        return None, None
+    s = str(v).strip()
+    if not s:
+        return None, None
+
+    s_upper = s.upper()
+    m = _DISEASE_ID_PATTERN.search(s_upper)
+    if m:
+        did = m.group(0).upper()
+        if did in engine.dis2id:
+            return did, None
+
+    if s_upper in engine.dis2id:
+        return s_upper, None
+
+    name_key = s.strip().lower()
+    idx = _get_disease_name_index()
+    did = idx.get(name_key)
+    if did:
+        return did, None
+
+    candidates = []
+    if len(name_key) >= 2:
+        for nm, cid in idx.items():
+            if name_key in nm:
+                candidates.append({"disease_id": cid, "name": engine.id2disease_name.get(cid) or cid})
+                if len(candidates) >= 10:
+                    break
+    if len(candidates) == 1:
+        return candidates[0]["disease_id"], None
+    if candidates:
+        return None, {"error": "疾病名匹配到多个候选，请使用更精确的名称或直接传入疾病ID", "query": s, "candidates": candidates}
+    return None, {"error": "未找到对应疾病（请检查疾病名或疾病ID）", "query": s}
+
+def _ncbi_medgen_search(term, limit=20):
+    term = str(term or "").strip()
+    if not term:
+        return []
+
+    cache_key = term.lower()
+    cached = _ncbi_search_cache.get(cache_key)
+    now = time.time()
+    if cached and (now - float(cached.get("ts") or 0.0)) < 86400:
+        return cached.get("results") or []
+
+    base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+    try:
+        search_url = f"{base_url}esearch.fcgi"
+        resp = requests.get(
+            search_url,
+            params={"db": "medgen", "term": term, "retmode": "json", "retmax": int(limit)},
+            timeout=8
+        )
+        if resp.status_code != 200:
+            _ncbi_search_cache[cache_key] = {"ts": now, "results": []}
+            return []
+
+        data = resp.json()
+        idlist = (((data or {}).get("esearchresult") or {}).get("idlist") or [])
+        if not idlist:
+            _ncbi_search_cache[cache_key] = {"ts": now, "results": []}
+            return []
+
+        summary_url = f"{base_url}esummary.fcgi"
+        resp2 = requests.get(
+            summary_url,
+            params={"db": "medgen", "id": ",".join(idlist), "retmode": "json"},
+            timeout=10
+        )
+        if resp2.status_code != 200:
+            _ncbi_search_cache[cache_key] = {"ts": now, "results": []}
+            return []
+
+        summ = resp2.json() or {}
+        results = []
+        result_obj = summ.get("result") or {}
+        for mid in idlist:
+            item = result_obj.get(str(mid))
+            if not isinstance(item, dict):
+                continue
+            concept_id = item.get("conceptid") or item.get("uid")
+            title = item.get("title")
+            if not concept_id or not title:
+                continue
+            concept_id = str(concept_id).strip().upper()
+            title = str(title).strip()
+            if concept_id in engine.dis2id:
+                if concept_id not in engine.id2disease_name and not title.startswith("Disease C"):
+                    engine.id2disease_name[concept_id] = title
+                results.append({"disease_id": concept_id, "name": engine.id2disease_name.get(concept_id) or title})
+
+        uniq = {}
+        for r in results:
+            uniq[r["disease_id"]] = r
+        out = list(uniq.values())[: int(limit)]
+        _ncbi_search_cache[cache_key] = {"ts": now, "results": out}
+        return out
+    except Exception:
+        _ncbi_search_cache[cache_key] = {"ts": now, "results": []}
+        return []
+
+def _search_diseases_local(term, limit=20):
+    term = str(term or "").strip().lower()
+    if not term:
+        out = []
+        for did, name in (getattr(engine, "id2disease_name", {}) or {}).items():
+            if did in engine.dis2id and name and not str(name).startswith("Disease C"):
+                out.append({"disease_id": did, "name": str(name).strip()})
+        out.sort(key=lambda x: x["name"].lower())
+        return out[: int(limit)]
+
+    out = []
+    for did, name in (getattr(engine, "id2disease_name", {}) or {}).items():
+        if did not in engine.dis2id:
+            continue
+        if not name or str(name).startswith("Disease C"):
+            continue
+        n = str(name).strip()
+        if term in n.lower() or term in did.lower():
+            out.append({"disease_id": did, "name": n})
+
+    out.sort(key=lambda x: (0 if x["name"].lower().startswith(term) else 1, len(x["name"])))
+    return out[: int(limit)]
+
+@app.route('/api/diseases/search', methods=['GET'])
+@cross_origin()
+def diseases_search():
+    q = (request.args.get("q") or "").strip()
+    limit = request.args.get("limit")
+    limit = int(limit) if str(limit).strip().isdigit() else 20
+    limit = max(1, min(50, limit))
+    source = (request.args.get("source") or "auto").strip().lower()
+
+    local = _search_diseases_local(q, limit=limit)
+    if source == "local":
+        return jsonify(local)
+
+    if source in {"auto", "ncbi"}:
+        if q and (len(local) < min(5, limit)):
+            ncbi = _ncbi_medgen_search(q, limit=limit)
+            merged = {it["disease_id"]: it for it in local}
+            for it in ncbi:
+                merged[it["disease_id"]] = it
+            out = list(merged.values())[:limit]
+            return jsonify(out)
+        if source == "ncbi":
+            return jsonify(_ncbi_medgen_search(q, limit=limit))
+
+    return jsonify(local)
+
 def _get_model_similarity(id1, id2):
     model_sim = 0.485
     source = "default"
@@ -1595,24 +1815,6 @@ def _compare_diseases(id1, id2, top_k=10, algorithm="avg_smooth", include_chord=
         jitter = (seed % 100) / 4000.0 - 0.012
         return round(max(0.3, min(0.998, final + jitter)), 4)
 
-    v1_g = engine.safe_get_row(engine.d2g_matrix, idx1)
-    v2_g = engine.safe_get_row(engine.d2g_matrix, idx2)
-    raw_gene_sim = calculate_jaccard(v1_g, v2_g)
-    gene_sim = smooth_sim(raw_gene_sim, model_sim, "gene")
-
-    v1_m = engine.safe_get_row(engine.m2d_matrix, idx1)
-    v2_m = engine.safe_get_row(engine.m2d_matrix, idx2)
-    raw_mirna_sim = calculate_jaccard(v1_m, v2_m)
-    mirna_sim = smooth_sim(raw_mirna_sim, model_sim, "mirna")
-
-    v1_h = engine.safe_get_row(engine.d2h_matrix, idx1)
-    v2_h = engine.safe_get_row(engine.d2h_matrix, idx2)
-    raw_hpo_sim = calculate_jaccard(v1_h, v2_h)
-    hpo_sim = smooth_sim(raw_hpo_sim, model_sim, "hpo")
-
-    avg_raw = round((raw_gene_sim + raw_mirna_sim + raw_hpo_sim) / 3, 4)
-    avg_smooth = round((gene_sim + mirna_sim + hpo_sim) / 3, 4)
-
     alg = (algorithm or "avg_smooth").strip().lower()
     aliases = {
         "default": "avg_smooth",
@@ -1630,33 +1832,77 @@ def _compare_diseases(id1, id2, top_k=10, algorithm="avg_smooth", include_chord=
     }
     alg = aliases.get(alg, alg)
 
+    need_gene = include_chord or alg in {"avg_raw", "avg_smooth", "gene_raw", "gene_smooth"} or explain
+    need_mirna = alg in {"avg_raw", "avg_smooth", "mirna_raw", "mirna_smooth"} or explain
+    need_hpo = alg in {"avg_raw", "avg_smooth", "hpo_raw", "hpo_smooth"} or explain
+
+    v1_g = v2_g = v1_m = v2_m = v1_h = v2_h = None
+    raw_gene_sim = raw_mirna_sim = raw_hpo_sim = None
+    gene_sim = mirna_sim = hpo_sim = None
+
+    if need_gene:
+        v1_g = engine.safe_get_row(engine.d2g_matrix, idx1)
+        v2_g = engine.safe_get_row(engine.d2g_matrix, idx2)
+        raw_gene_sim = calculate_jaccard(v1_g, v2_g)
+        gene_sim = smooth_sim(raw_gene_sim, model_sim, "gene")
+
+    if need_mirna:
+        v1_m = engine.safe_get_row(engine.m2d_matrix, idx1)
+        v2_m = engine.safe_get_row(engine.m2d_matrix, idx2)
+        raw_mirna_sim = calculate_jaccard(v1_m, v2_m)
+        mirna_sim = smooth_sim(raw_mirna_sim, model_sim, "mirna")
+
+    if need_hpo:
+        v1_h = engine.safe_get_row(engine.d2h_matrix, idx1)
+        v2_h = engine.safe_get_row(engine.d2h_matrix, idx2)
+        raw_hpo_sim = calculate_jaccard(v1_h, v2_h)
+        hpo_sim = smooth_sim(raw_hpo_sim, model_sim, "hpo")
+
+    avg_raw = None
+    avg_smooth = None
+    if need_gene and need_mirna and need_hpo:
+        avg_raw = round((float(raw_gene_sim) + float(raw_mirna_sim) + float(raw_hpo_sim)) / 3, 4)
+        avg_smooth = round((float(gene_sim) + float(mirna_sim) + float(hpo_sim)) / 3, 4)
+
     if alg == "model":
         final_similarity = round(float(model_sim), 4)
     elif alg == "gene_raw":
-        final_similarity = round(float(raw_gene_sim), 4)
+        final_similarity = round(float(raw_gene_sim or 0.0), 4)
     elif alg == "mirna_raw":
-        final_similarity = round(float(raw_mirna_sim), 4)
+        final_similarity = round(float(raw_mirna_sim or 0.0), 4)
     elif alg == "hpo_raw":
-        final_similarity = round(float(raw_hpo_sim), 4)
+        final_similarity = round(float(raw_hpo_sim or 0.0), 4)
     elif alg == "gene_smooth":
-        final_similarity = round(float(gene_sim), 4)
+        final_similarity = round(float(gene_sim or 0.0), 4)
     elif alg == "mirna_smooth":
-        final_similarity = round(float(mirna_sim), 4)
+        final_similarity = round(float(mirna_sim or 0.0), 4)
     elif alg == "hpo_smooth":
-        final_similarity = round(float(hpo_sim), 4)
+        final_similarity = round(float(hpo_sim or 0.0), 4)
     elif alg == "avg_raw":
-        final_similarity = avg_raw
+        final_similarity = avg_raw if avg_raw is not None else 0.0
     else:
         alg = "avg_smooth"
-        final_similarity = avg_smooth
+        final_similarity = avg_smooth if avg_smooth is not None else 0.0
 
-    max_dim = max([("基因交互", gene_sim), ("miRNA 调控", mirna_sim), ("表型症状", hpo_sim)], key=lambda x: x[1])
-    min_dim = min([("基因交互", gene_sim), ("miRNA 调控", mirna_sim), ("表型症状", hpo_sim)], key=lambda x: x[1])
+    dim_pairs = []
+    if gene_sim is not None:
+        dim_pairs.append(("基因交互", float(gene_sim)))
+    if mirna_sim is not None:
+        dim_pairs.append(("miRNA 调控", float(mirna_sim)))
+    if hpo_sim is not None:
+        dim_pairs.append(("表型症状", float(hpo_sim)))
 
-    scientific_summary = f"RGMI 跨模态分析显示，这两类疾病在【{max_dim[0]}】维度表现出最显著的生物学重叠（相似度 {round(max_dim[1]*100,1)}%），这暗示了它们可能共享关键的分子致病通路。"
-    if max_dim[0] != min_dim[0]:
-        scientific_summary += f"相比之下，【{min_dim[0]}】维度的差异性（相似度 {round(min_dim[1]*100,1)}%）则反映了它们在临床表现上的特异性分化。"
-    scientific_summary += "总体而言，多维相似度分布证实了它们属于具有共同遗传背景的关联疾病簇。"
+    if alg == "model" or not dim_pairs:
+        scientific_summary = f"RGMI 语义嵌入评估显示，两类疾病的综合相似度为 {round(final_similarity * 100, 1)}%，提示其潜在共享病理机制与相关分子通路。"
+    elif len(dim_pairs) == 1:
+        scientific_summary = f"RGMI 分析显示，两类疾病在【{dim_pairs[0][0]}】维度呈现相似度 {round(dim_pairs[0][1] * 100, 1)}%，提示存在关键生物学重叠。"
+    else:
+        max_dim = max(dim_pairs, key=lambda x: x[1])
+        min_dim = min(dim_pairs, key=lambda x: x[1])
+        scientific_summary = f"RGMI 跨模态分析显示，这两类疾病在【{max_dim[0]}】维度表现出最显著的生物学重叠（相似度 {round(max_dim[1]*100,1)}%），这暗示了它们可能共享关键的分子致病通路。"
+        if max_dim[0] != min_dim[0]:
+            scientific_summary += f"相比之下，【{min_dim[0]}】维度的差异性（相似度 {round(min_dim[1]*100,1)}%）则反映了它们在临床表现上的特异性分化。"
+        scientific_summary += "总体而言，多维相似度分布证实了它们属于具有共同遗传背景的关联疾病簇。"
 
     payload = {
         "id1": id1,
@@ -1752,9 +1998,16 @@ def favicon():
 def compare_diseases_api():
     """合并了相似度计算与弦图共性因子提取的单一接口"""
     data = request.get_json() or {}
-    id1 = _clean_disease_id(data.get("id1"))
-    id2 = _clean_disease_id(data.get("id2"))
+    raw1 = data.get("id1") or data.get("name1") or data.get("disease1")
+    raw2 = data.get("id2") or data.get("name2") or data.get("disease2")
+    id1, err1 = _resolve_disease_id(raw1)
+    id2, err2 = _resolve_disease_id(raw2)
     top_k = int(data.get("top_k", 10) or 10)
+
+    if err1:
+        return jsonify(err1), 400
+    if err2:
+        return jsonify(err2), 400
 
     try:
         payload, status = _compare_diseases(
@@ -1792,6 +2045,34 @@ def similarity_algorithms():
         {"id": "mirna_raw", "label": "miRNA 维度（原始 Jaccard）", "note": "不做平滑"},
         {"id": "hpo_raw", "label": "HPO 维度（原始 Jaccard）", "note": "不做平滑"},
     ])
+
+@app.route('/api/compare_diseases_advanced', methods=['POST'])
+@cross_origin()
+def compare_diseases_advanced():
+    data = request.get_json() or {}
+    raw1 = data.get("id1") or data.get("name1") or data.get("disease1")
+    raw2 = data.get("id2") or data.get("name2") or data.get("disease2")
+    id1, err1 = _resolve_disease_id(raw1)
+    id2, err2 = _resolve_disease_id(raw2)
+    if err1:
+        return jsonify(err1), 400
+    if err2:
+        return jsonify(err2), 400
+
+    algorithm = str(data.get("algorithm") or "avg_smooth").strip()
+    top_k = int(data.get("top_k", 10) or 10)
+    include_chord = _truthy(data.get("include_chord", True))
+    explain = _truthy(data.get("explain", True))
+
+    payload, status = _compare_diseases(
+        id1=id1,
+        id2=id2,
+        top_k=top_k,
+        algorithm=algorithm,
+        include_chord=include_chord,
+        explain=explain
+    )
+    return jsonify(payload), status
 
 @app.route('/api/custom_similarity/options', methods=['GET'])
 @cross_origin()
@@ -1847,12 +2128,18 @@ def _smooth_custom(val, model_val, id1, id2, dim_type, metric_tag):
     return round(max(0.3, min(0.998, final + jitter)), 4)
 
 def _custom_similarity_compute(data):
-    id1 = _clean_disease_id((data or {}).get("id1"))
-    id2 = _clean_disease_id((data or {}).get("id2"))
+    raw1 = (data or {}).get("id1") or (data or {}).get("name1") or (data or {}).get("disease1")
+    raw2 = (data or {}).get("id2") or (data or {}).get("name2") or (data or {}).get("disease2")
+    id1, err1 = _resolve_disease_id(raw1)
+    id2, err2 = _resolve_disease_id(raw2)
     top_k = int((data or {}).get("top_k", 10) or 10)
     include_chord = _truthy((data or {}).get("include_chord", False))
     explain = _truthy((data or {}).get("explain", True))
 
+    if err1:
+        return err1, 400
+    if err2:
+        return err2, 400
     if not id1 or not id2 or id1 not in engine.dis2id or id2 not in engine.dis2id:
         return {"error": "疾病ID缺失或不存在"}, 404
 
@@ -2188,10 +2475,14 @@ def export_disease_info():
     if not ids_raw:
         return jsonify({"error": "未提供 disease_id 或 ids 参数"}), 400
 
-    ids = [_clean_disease_id(x) for x in ids_raw.split(",") if _clean_disease_id(x)]
-    invalid = [d for d in ids if d not in engine.dis2id]
-    if invalid:
-        return jsonify({"error": "存在无效的疾病ID", "invalid_ids": invalid}), 400
+    ids = []
+    for raw in [x for x in ids_raw.split(",") if str(x).strip()]:
+        did, err = _resolve_disease_id(raw)
+        if err:
+            return jsonify(err), 400
+        if not did or did not in engine.dis2id:
+            return jsonify({"error": "存在无效的疾病ID/名称", "value": raw}), 400
+        ids.append(did)
 
     details = []
     for did in ids:
@@ -2219,12 +2510,15 @@ def export_disease_info():
 @cross_origin()
 def export_similarity():
     fmt = (request.args.get("format") or "json").strip().lower()
-    disease_id = _clean_disease_id(request.args.get("disease_id"))
+    raw = request.args.get("disease_id") or request.args.get("name") or request.args.get("disease")
+    disease_id, derr = _resolve_disease_id(raw)
     top_n = int(request.args.get("top_n", 20) or 20)
     source = (request.args.get("source") or "auto").strip().lower()
 
+    if derr:
+        return jsonify(derr), 400
     if not disease_id or disease_id not in engine.dis2id:
-        return jsonify({"error": "未提供疾病ID或ID无效", "disease_id": disease_id}), 400
+        return jsonify({"error": "未提供疾病ID/名称或无效", "disease_id": disease_id}), 400
 
     data = None
     if source in {"auto", "file"}:
@@ -2265,12 +2559,19 @@ def export_similarity():
 @cross_origin()
 def export_compare_diseases():
     fmt = (request.args.get("format") or "json").strip().lower()
-    id1 = _clean_disease_id(request.args.get("id1"))
-    id2 = _clean_disease_id(request.args.get("id2"))
+    raw1 = request.args.get("id1") or request.args.get("name1") or request.args.get("disease1")
+    raw2 = request.args.get("id2") or request.args.get("name2") or request.args.get("disease2")
+    id1, err1 = _resolve_disease_id(raw1)
+    id2, err2 = _resolve_disease_id(raw2)
     algorithm = (request.args.get("algorithm") or "avg_smooth").strip()
     top_k = int(request.args.get("top_k", 10) or 10)
     include_chord = _truthy(request.args.get("include_chord", False))
     explain = _truthy(request.args.get("explain", True))
+
+    if err1:
+        return jsonify(err1), 400
+    if err2:
+        return jsonify(err2), 400
 
     payload, status = _compare_diseases(
         id1=id1,
@@ -2311,9 +2612,12 @@ def export_compare_diseases():
 @cross_origin()
 def export_drug_recommendations():
     fmt = (request.args.get("format") or "json").strip().lower()
-    disease_id = _clean_disease_id(request.args.get("disease_id"))
+    raw = request.args.get("disease_id") or request.args.get("name") or request.args.get("disease")
+    disease_id, derr = _resolve_disease_id(raw)
+    if derr:
+        return jsonify(derr), 400
     if not disease_id or disease_id not in engine.dis2id:
-        return jsonify({"error": "未提供疾病ID或ID无效", "disease_id": disease_id}), 400
+        return jsonify({"error": "未提供疾病ID/名称或无效", "disease_id": disease_id}), 400
 
     try:
         payload = _get_drug_recommendations(disease_id)
@@ -2340,6 +2644,9 @@ def export_drug_repositioning():
     return export_drug_recommendations()
 
 def _get_drug_recommendations(target_disease_id):
+    target_disease_id, derr = _resolve_disease_id(target_disease_id)
+    if derr:
+        raise ValueError(derr.get("error") or "invalid disease")
     target_disease_id = _clean_disease_id(target_disease_id)
 
     disease_to_drug_map = {
@@ -2357,7 +2664,7 @@ def _get_drug_recommendations(target_disease_id):
         "C2265792": ["Creatine (肌酸)", "HMB (β-羟基-β-甲基丁酸)", "Protein Supplements (蛋白质补充剂)"]
     }
 
-    results = get_similarity_from_file(target_disease_id, top_n=50)
+    results = get_similarity_from_file(target_disease_id, top_n=50, enrich_names=False)
     if not results:
         raw_results = []
         if model_available:
@@ -2391,7 +2698,7 @@ def _get_drug_recommendations(target_disease_id):
             seen_drugs.add(drug)
 
     if results:
-        for res in results:
+        for res in results[:30]:
             sim_id = res.get('disease_id') or res.get('Disease ID') or res.get('id')
             sim_name = res.get('name') or f"关联疾病 {sim_id}"
             sim_score = float(res.get('similarity') or 0.0)
@@ -2402,9 +2709,14 @@ def _get_drug_recommendations(target_disease_id):
             final_confidence = (sim_score ** 1.05) * 0.9 + 0.02
 
             if sim_id in disease_to_drug_map:
-                shared_info = get_intersections(engine.dis2id[target_disease_id], engine.dis2id[sim_id], engine)
-                top_genes = [g['label'] for g in shared_info.get('shared_genes', [])[:2]]
-                gene_evidence = f"及核心靶点 {', '.join(top_genes)}" if top_genes else ""
+                gene_evidence = ""
+                if sim_id in engine.dis2id:
+                    try:
+                        shared_info = get_intersections(engine.dis2id[target_disease_id], engine.dis2id[sim_id], engine)
+                        top_genes = [g.get('label') for g in (shared_info.get('shared_genes', []) or [])[:2] if isinstance(g, dict) and g.get('label')]
+                        gene_evidence = f"及核心靶点 {', '.join(top_genes)}" if top_genes else ""
+                    except Exception:
+                        gene_evidence = ""
 
                 for drug in disease_to_drug_map[sim_id]:
                     if drug not in seen_drugs:
@@ -2414,6 +2726,10 @@ def _get_drug_recommendations(target_disease_id):
                             "evidence": f"RGMI 跨模态网络挖掘：系统识别到目标疾病与 {sim_name} ({sim_id}) 在分子调控层级具有 {round(sim_score*100, 1)}% 的显著性重叠{gene_evidence}。基于 GDFM 拓扑演算法，该已知药物通过靶向共性致病通路，表现出极高的重定位潜力。"
                         })
                         seen_drugs.add(drug)
+                        if len(final_recommendations) >= 8:
+                            break
+                if len(final_recommendations) >= 8:
+                    break
 
     if len(final_recommendations) < 3 and results:
         backup_real_drugs = [
@@ -2484,9 +2800,12 @@ def get_gene_interactions():
 @cross_origin()
 def drug_repositioning():
     data = request.json
-    target_disease_id = str((data or {}).get('disease_id') or '').strip().upper()
+    raw = (data or {}).get('disease_id') or (data or {}).get('name') or (data or {}).get('disease')
+    target_disease_id, derr = _resolve_disease_id(raw)
+    if derr:
+        return jsonify(derr), 400
     if not target_disease_id or target_disease_id not in engine.dis2id:
-        return jsonify({"error": "未提供疾病ID或ID无效", "disease_id": target_disease_id}), 400
+        return jsonify({"error": "未提供疾病ID/名称或无效", "disease_id": target_disease_id}), 400
     
     # 扩展后的高质量药物-疾病知识库 (用于演示与竞赛，基于真实药理学)
     disease_to_drug_map = {
@@ -2511,7 +2830,7 @@ def drug_repositioning():
 
     try:
         # --- 2026 核心修复：优先从校准后的缓存获取，确保与列表页完全一致 ---
-        results = get_similarity_from_file(target_disease_id, top_n=50)
+        results = get_similarity_from_file(target_disease_id, top_n=50, enrich_names=False)
         
         # 如果缓存没有，再调用模型
         if not results:
@@ -2552,7 +2871,7 @@ def drug_repositioning():
 
         # 1. 基于关联疾病的真实药物重定位 (Drug Repositioning)
         if results:
-            for res in results:
+            for res in results[:30]:
                 sim_id = res.get('disease_id') or res.get('Disease ID') or res.get('id')
                 sim_name = res.get('name') or f"关联疾病 {sim_id}"
                 sim_score = float(res.get('similarity') or 0.0)
@@ -2565,9 +2884,14 @@ def drug_repositioning():
                 
                 if sim_id in disease_to_drug_map:
                     # 针对大数据应用：提取具体共享基因作为药理依据
-                    shared_info = get_intersections(engine.dis2id[target_disease_id], engine.dis2id[sim_id], engine)
-                    top_genes = [g['label'] for g in shared_info.get('shared_genes', [])[:2]]
-                    gene_evidence = f"及核心靶点 {', '.join(top_genes)}" if top_genes else ""
+                    gene_evidence = ""
+                    if sim_id in engine.dis2id:
+                        try:
+                            shared_info = get_intersections(engine.dis2id[target_disease_id], engine.dis2id[sim_id], engine)
+                            top_genes = [g.get('label') for g in (shared_info.get('shared_genes', []) or [])[:2] if isinstance(g, dict) and g.get('label')]
+                            gene_evidence = f"及核心靶点 {', '.join(top_genes)}" if top_genes else ""
+                        except Exception:
+                            gene_evidence = ""
 
                     for drug in disease_to_drug_map[sim_id]:
                         if drug not in seen_drugs:
@@ -2577,6 +2901,10 @@ def drug_repositioning():
                                 "evidence": f"RGMI 跨模态网络挖掘：系统识别到目标疾病与 {sim_name} ({sim_id}) 在分子调控层级具有 {round(sim_score*100, 1)}% 的显著性重叠{gene_evidence}。基于 GDFM 拓扑演算法，该已知药物通过靶向共性致病通路，表现出极高的重定位潜力。"
                             })
                             seen_drugs.add(drug)
+                            if len(final_recommendations) >= 8:
+                                break
+                    if len(final_recommendations) >= 8:
+                        break
 
         # 2. 深度挖掘：针对未覆盖疾病，基于生物指纹生成高针对性候选药物 (筛选自高质量真实药物库)
         if len(final_recommendations) < 3 and results:

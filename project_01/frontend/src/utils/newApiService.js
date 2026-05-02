@@ -259,6 +259,30 @@ class NewApiService {
   }
 
   /**
+   * 搜索疾病（按名称/ID，后端返回候选列表）
+   * @param {string} query 搜索关键词
+   * @param {number} limit 返回数量
+   * @returns {Promise<Array>} 候选疾病列表
+   */
+  async searchDiseases(query, limit = 20) {
+    try {
+      const params = { q: query || '', limit };
+      const response = await apiClient.get('/diseases/search', { params });
+      return response.data || [];
+    } catch (error) {
+      this.log('warn', '搜索疾病失败:', {
+        message: error.message,
+        code: error.code,
+        response: error.response ? {
+          status: error.response.status,
+          data: error.response.data
+        } : null
+      });
+      return [];
+    }
+  }
+
+  /**
    * 获取疾病详情
    * @param {string} diseaseId 疾病ID
    * @returns {Promise<Object>} 疾病详情
