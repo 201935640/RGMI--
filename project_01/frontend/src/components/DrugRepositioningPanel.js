@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Card, List, Spin, Alert, Empty, Progress, Tag, Space, Typography, Button, Tooltip, Divider, Row, Col, Statistic } from 'antd';
-import { MedicineBoxOutlined, ExperimentOutlined, InfoCircleOutlined, LinkOutlined, ThunderboltOutlined, CheckCircleOutlined } from '@ant-design/icons';
+import { Card, List, Spin, Alert, Empty, Progress, Tag, Space, Typography, Button, Tooltip, Divider, Row, Col, Statistic, Dropdown, Menu, message } from 'antd';
+import { MedicineBoxOutlined, ExperimentOutlined, InfoCircleOutlined, LinkOutlined, ThunderboltOutlined, CheckCircleOutlined, DownloadOutlined } from '@ant-design/icons';
 import newApiService from '../utils/newApiService';
+import { exportDrugRepositioning } from '../utils/exportService';
 import './DrugRepositioningPanel.css';
 
 const { Title, Text, Paragraph } = Typography;
@@ -105,6 +106,24 @@ const DrugRepositioningPanel = ({ diseaseId, language = 'zh' }) => {
       return `https://go.drugbank.com/drugs/${drugId}`;
     }
     return null;
+  };
+
+  /**
+   * 导出推荐药物
+   */
+  const handleExportDrugs = async (format) => {
+    if (!diseaseId) {
+      message.warning('请先选择疾病');
+      return;
+    }
+
+    try {
+      await exportDrugRepositioning(diseaseId, format);
+      message.success('导出成功');
+    } catch (err) {
+      console.error('导出失败:', err);
+      message.error('导出失败，请稍后重试');
+    }
   };
 
   /**

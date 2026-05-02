@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Layout as AntLayout, Spin, Badge, notification, Button, Tabs, Switch, Card, Alert, Typography, Space, Avatar, Dropdown, Menu, Row, Col, List, Timeline, Modal, Divider, Radio, Form, Input, Empty, Select, InputNumber, Statistic, Slider, message, Descriptions, Tag, Tooltip } from 'antd';
-import { InfoCircleOutlined, HomeOutlined, AppstoreOutlined, AimOutlined, TranslationOutlined, ApiOutlined, UserOutlined, LogoutOutlined, SettingOutlined, TeamOutlined, SearchOutlined, NodeIndexOutlined, PieChartOutlined, LinkOutlined, QuestionCircleOutlined, BulbOutlined, FileTextOutlined, HistoryOutlined, DownOutlined, ExperimentOutlined, PartitionOutlined, DatabaseOutlined, RadarChartOutlined, MedicineBoxOutlined } from '@ant-design/icons';
+import { InfoCircleOutlined, HomeOutlined, AppstoreOutlined, AimOutlined, TranslationOutlined, ApiOutlined, UserOutlined, LogoutOutlined, SettingOutlined, TeamOutlined, SearchOutlined, NodeIndexOutlined, PieChartOutlined, LinkOutlined, QuestionCircleOutlined, BulbOutlined, FileTextOutlined, HistoryOutlined, DownOutlined, ExperimentOutlined, PartitionOutlined, DatabaseOutlined, RadarChartOutlined, MedicineBoxOutlined, DownloadOutlined } from '@ant-design/icons';
 // 新组件
 import CustomLayout from './components/Layout';
 import { useUIStore } from './store/uiStore';
@@ -12,6 +12,7 @@ import WelcomePage from './components/WelcomePage';
 import NewDiseaseSimilarityGraph from './components/NewDiseaseSimilarityGraph';
 import DiseaseSimilarityNetwork from './components/DiseaseSimilarityNetwork';
 import DiseaseRadarComparison from './components/DiseaseRadarComparison';
+import DiseaseSimilarityQuery from './components/DiseaseSimilarityQuery';
 import DrugRepositioningPanel from './components/DrugRepositioningPanel';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -21,6 +22,7 @@ import NodeDetailCard from './components/NodeDetailCard';
 import './App.css';
 // 导入API服务
 import newApiService from './utils/newApiService';
+import { exportDiseaseInfo, exportDrugRepositioning } from './utils/exportService';
 import { useTranslation } from 'react-i18next';
 import { useApiStatus } from './contexts/ApiStatusContext';
 
@@ -61,16 +63,15 @@ function App() {
       case '/search':
         setActiveTab('1'); // 疾病查询
         break;
+      case '/similarity':
+        setActiveTab('similarity'); // 疾病相似度查询
+        break;
       case '/network':
         setActiveTab('3'); // 疾病相似性网络
         break;
       case '/history':
         setActiveTab('home');
         setShowHistoryModal(true); // 显示历史记录模态框
-        break;
-      case '/about':
-        setActiveTab('home');
-        setShowHelpModal(true); // 显示帮助模态框
         break;
       default:
         break;
@@ -1001,9 +1002,51 @@ function App() {
   
 
   
-  // 添加首页导航函数
-  const navigateToHome = () => {
-    setActiveTab('home');
+  // 渲染疾病相似度查询模态框
+  const renderSimilarityQueryModal = () => (
+    <Modal
+      title="疾病相似度查询"
+      open={showSimilarityQueryModal}
+      onCancel={() => setShowSimilarityQueryModal(false)}
+      footer={null}
+      width="90%"
+      style={{ maxWidth: 1400 }}
+      bodyStyle={{ maxHeight: '90vh', overflowY: 'auto' }}
+    >
+      <DiseaseSimilarityQuery diseaseData={diseaseData} />
+    </Modal>
+  );
+
+  // 导出疾病详细信息
+  const handleExportDiseaseInfo = async (format) => {
+    if (!selectedDisease) {
+      message.warning('请先选择疾病');
+      return;
+    }
+
+    try {
+      await exportDiseaseInfo(selectedDisease.disease_id, format);
+      message.success('导出成功');
+    } catch (err) {
+      console.error('导出失败:', err);
+      message.error('导出失败，请稍后重试');
+    }
+  };
+
+  // 导出推荐药物
+  const handleExportDrugRepositioning = async (format) => {
+    if (!selectedDisease) {
+      message.warning('请先选择疾病');
+      return;
+    }
+
+    try {
+      await exportDrugRepositioning(selectedDisease.disease_id, format);
+      message.success('导出成功');
+    } catch (err) {
+      console.error('导出失败:', err);
+      message.error('导出失败，请稍后重试');
+    }
   };
 
   // 渲染主要内容 - 更新为使用新组件
@@ -1038,7 +1081,8 @@ function App() {
           </div>
 
           <Row gutter={[40, 40]} justify="center" style={{ maxWidth: 1200, margin: '0 auto' }}>
-            <Col xs={24} sm={12} lg={10}>
+            {/* 左上：疾病查询 */}
+            <Col xs={24} sm={12} lg={12}>
               <Card
                 className="feature-card"
                 hoverable
@@ -1068,7 +1112,39 @@ function App() {
               </Card>
             </Col>
 
-            <Col xs={24} sm={12} lg={10}>
+            {/* 右上：疾病相似度查询 */}
+            <Col xs={24} sm={12} lg={12}>
+              <Card
+                className="feature-card"
+                hoverable
+                cover={
+                  <div className="card-icon-container" style={{
+                    background: 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)',
+                    height: 160,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px'
+                    }} />
+                    <RadarChartOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
+                  </div>
+                }
+                onClick={() => navigate('/similarity')}
+              >
+                <div className="feature-title">疾病相似度查询</div>
+                <div className="feature-desc">查询两种疾病的相似度，进行多维度对比分析</div>
+              </Card>
+            </Col>
+
+            {/* 左下：疾病相似性网络 */}
+            <Col xs={24} sm={12} lg={12}>
               <Card
                 className="feature-card"
                 hoverable
@@ -1098,7 +1174,8 @@ function App() {
               </Card>
             </Col>
 
-            <Col xs={24} sm={12} lg={10}>
+            {/* 右下：历史记录 */}
+            <Col xs={24} sm={12} lg={12}>
               <Card
                 className="feature-card"
                 hoverable
@@ -1128,40 +1205,8 @@ function App() {
               </Card>
             </Col>
 
-            {!isAdmin && (
-              <Col xs={24} sm={12} lg={10}>
-                <Card
-                  className="feature-card"
-                  hoverable
-                  cover={
-                    <div className="card-icon-container" style={{
-                      background: 'linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%)',
-                      height: 160,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      position: 'relative',
-                      overflow: 'hidden'
-                    }}>
-                      <div style={{
-                        position: 'absolute',
-                        inset: 0,
-                        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                        backgroundSize: '20px 20px'
-                      }} />
-                      <BulbOutlined style={{ fontSize: 64, color: 'white', zIndex: 1 }} />
-                    </div>
-                  }
-                  onClick={() => setShowHelpModal(true)}
-                >
-                  <div className="feature-title">关于</div>
-                  <div className="feature-desc">获取系统操作帮助，了解可视化组件的交互方式</div>
-                </Card>
-              </Col>
-            )}
-
             {isAdmin && (
-              <Col xs={24} sm={12} lg={10}>
+              <Col xs={24} sm={12} lg={12}>
                 <Card
                   className="feature-card"
                   hoverable
@@ -1221,6 +1266,49 @@ function App() {
             variant="borderless"
             extra={
               <Space>
+                <Dropdown
+                  overlay={
+                    <Menu>
+                      <Menu.Item key="csv" onClick={() => handleExportDiseaseInfo('csv')}>
+                        <Space size={8}>
+                          <DownloadOutlined />
+                          <span>导出为 CSV</span>
+                        </Space>
+                      </Menu.Item>
+                      <Menu.Item key="json" onClick={() => handleExportDiseaseInfo('json')}>
+                        <Space size={8}>
+                          <DownloadOutlined />
+                          <span>导出为 JSON</span>
+                        </Space>
+                      </Menu.Item>
+                    </Menu>
+                  }
+                  placement="bottomRight"
+                >
+                  <Button
+                    type="primary"
+                    size="small"
+                    icon={<DownloadOutlined />}
+                    style={{
+                      background: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)',
+                      border: 'none',
+                      borderRadius: '4px',
+                      fontWeight: '600',
+                      boxShadow: '0 2px 8px rgba(59, 130, 246, 0.3)',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.boxShadow = '0 4px 12px rgba(59, 130, 246, 0.5)';
+                      e.target.style.transform = 'translateY(-1px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.boxShadow = '0 2px 8px rgba(59, 130, 246, 0.3)';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    导出疾病信息
+                  </Button>
+                </Dropdown>
                 <Button
                   type="primary"
                   size="small"
@@ -1666,6 +1754,52 @@ function App() {
                 }
                 key="drugs"
               >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+                  <div></div>
+                  <Dropdown
+                    overlay={
+                      <Menu>
+                        <Menu.Item key="csv" onClick={() => handleExportDrugRepositioning('csv')}>
+                          <Space size={8}>
+                            <DownloadOutlined />
+                            <span>导出为 CSV</span>
+                          </Space>
+                        </Menu.Item>
+                        <Menu.Item key="json" onClick={() => handleExportDrugRepositioning('json')}>
+                          <Space size={8}>
+                            <DownloadOutlined />
+                            <span>导出为 JSON</span>
+                          </Space>
+                        </Menu.Item>
+                      </Menu>
+                    }
+                    placement="bottomRight"
+                  >
+                    <Button
+                      type="primary"
+                      size="small"
+                      icon={<DownloadOutlined />}
+                      style={{
+                        background: 'linear-gradient(135deg, #1890ff 0%, #40a9ff 100%)',
+                        border: 'none',
+                        borderRadius: '4px',
+                        fontWeight: '600',
+                        boxShadow: '0 2px 8px rgba(24, 144, 255, 0.3)',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.boxShadow = '0 4px 12px rgba(24, 144, 255, 0.5)';
+                        e.target.style.transform = 'translateY(-1px)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.boxShadow = '0 2px 8px rgba(24, 144, 255, 0.3)';
+                        e.target.style.transform = 'translateY(0)';
+                      }}
+                    >
+                      导出推荐药物
+                    </Button>
+                  </Dropdown>
+                </div>
                 <DrugRepositioningPanel diseaseId={selectedDisease.disease_id} />
               </TabPane>
             </Tabs>
@@ -1694,8 +1828,8 @@ function App() {
       if (!selectedDisease) {
         return (
           <div className="disease-network-empty">
-            <Empty 
-              image={Empty.PRESENTED_IMAGE_SIMPLE} 
+            <Empty
+              image={Empty.PRESENTED_IMAGE_SIMPLE}
               description={
                 <span>
                   请先通过<a href="#" onClick={() => setActiveTab('1')}>疾病查询</a>搜索疾病
@@ -1705,7 +1839,7 @@ function App() {
           </div>
         );
       }
-      
+
       return (
         <DiseaseSimilarityNetwork
           targetDisease={selectedDisease}
@@ -1713,6 +1847,13 @@ function App() {
           onNodeClick={handleDiseaseSelect}
           loading={loading}
         />
+      );
+    }
+
+    // 疾病相似度查询内容
+    if (activeTab === 'similarity') {
+      return (
+        <DiseaseSimilarityQuery diseaseData={diseaseData} />
       );
     }
 

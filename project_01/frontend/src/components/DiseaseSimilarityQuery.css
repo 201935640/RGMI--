@@ -1,0 +1,89 @@
+.disease-similarity-query-page {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: calc(100vh - 64px);
+}
+
+.similarity-search-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.disease-selection-area {
+  padding: 24px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+  border-radius: 8px;
+  border: 2px solid #d4e6f7;
+}
+
+.disease-select-wrapper {
+  position: relative;
+}
+
+.select-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e40af;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.selected-disease-info {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #e6f7ff;
+  border-left: 3px solid #1890ff;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #0050b3;
+  display: flex;
+  align-items: center;
+}
+
+.detailed-analysis-area {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .disease-similarity-query-page {
+    padding: 20px 12px;
+  }
+
+  .similarity-search-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .disease-selection-area {
+    padding: 16px;
+  }
+
+  .detailed-analysis-area {
+    padding: 20px;
+  }
+}

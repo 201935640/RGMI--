@@ -12,7 +12,8 @@ import {
   HistoryOutlined,
   AppstoreOutlined,
   ArrowLeftOutlined,
-  LogoutOutlined
+  LogoutOutlined,
+  RadarChartOutlined
 } from '@ant-design/icons';
 
 const Navbar: React.FC = () => {
@@ -23,9 +24,9 @@ const Navbar: React.FC = () => {
   const navItems = [
     { label: '工作台', icon: <AppstoreOutlined />, path: '/' },
     { label: '疾病查询', icon: <SearchOutlined />, path: '/search' },
+    { label: '疾病相似度查询', icon: <RadarChartOutlined />, path: '/similarity' },
     { label: '疾病相似性网络', icon: <NodeIndexOutlined />, path: '/network' },
     { label: '历史记录', icon: <HistoryOutlined />, path: '/history' },
-    { label: '关于', icon: <BulbOutlined />, path: '/about' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
