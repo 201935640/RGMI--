@@ -25,6 +25,7 @@ import {
   TeamOutlined,
   InfoCircleOutlined
 } from '@ant-design/icons';
+import newApiService from '../utils/newApiService';
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -39,60 +40,37 @@ const UserAdmin = () => {
   const [showModal, setShowModal] = useState(false);
   const [form] = Form.useForm();
   const [editingUser, setEditingUser] = useState(null);
+  const [pagination, setPagination] = useState({ current: 1, pageSize: 8, total: 0 });
+
+  const mapUser = (u) => ({
+    id: u.id,
+    username: u.username,
+    name: u.nickname || u.username,
+    email: u.email,
+    role: u.role,
+    status: u.status,
+    phone: u.phone || '',
+    lastLogin: u.last_login_at ? new Date(u.last_login_at).toLocaleString() : '-'
+  });
+
+  const fetchUsers = async (page = 1, pageSize = 8) => {
+    setLoading(true);
+    try {
+      const res = await newApiService.listUsers({ page, page_size: pageSize });
+      const rows = (res.items || []).map(mapUser);
+      setUsers(rows);
+      setPagination({ current: page, pageSize, total: res.total || rows.length });
+    } catch (e) {
+      message.error(e?.response?.data?.error || '加载用户失败');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // 初始化加载用户数据
   useEffect(() => {
-    // 模拟从API获取用户数据
-    const fetchUsers = () => {
-      setLoading(true);
-
-      // 模拟数据
-      const mockUsers = [
-        {
-          id: '1',
-          username: 'admin',
-          name: '管理员',
-          email: 'admin@example.com',
-          role: 'admin',
-          status: 'active',
-          lastLogin: '2026-04-10 14:30:45'
-        },
-        {
-          id: '2',
-          username: 'researcher_lxy',
-          name: 'LXY',
-          email: 'lxy@rgmi.bio',
-          role: 'researcher',
-          status: 'active',
-          lastLogin: '2026-04-14 09:15:22'
-        },
-        {
-          id: '3',
-          username: 'researcher_01',
-          name: '张教授',
-          email: 'zhang@university.edu',
-          role: 'researcher',
-          status: 'active',
-          lastLogin: '2026-04-13 16:45:10'
-        },
-        {
-          id: '4',
-          username: 'intern_v',
-          name: '实习生王',
-          email: 'wang@rgmi.bio',
-          role: 'guest',
-          status: 'active',
-          lastLogin: '2026-04-12 11:20:35'
-        }
-      ];
-
-      setTimeout(() => {
-        setUsers(mockUsers);
-        setLoading(false);
-      }, 500);
-    };
-
-    fetchUsers();
+    fetchUsers(1, pagination.pageSize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // 表格列定义
@@ -216,6 +194,7 @@ const UserAdmin = () => {
       username: user.username,
       name: user.name,
       email: user.email,
+      phone: user.phone,
       role: user.role,
       status: user.status,
       password: '' // 编辑时不显示密码
@@ -225,37 +204,45 @@ const UserAdmin = () => {
 
   // 处理删除用户
   const handleDelete = (userId) => {
-    // 在实际应用中，这里应该调用API删除用户
-    setUsers(users.filter(user => user.id !== userId));
-    message.success('用户权限已收回');
+    newApiService.adminDeleteUser(userId).then(() => {
+      message.success('用户权限已收回');
+      fetchUsers(pagination.current, pagination.pageSize);
+    }).catch((e) => {
+      message.error(e?.response?.data?.error || '删除失败');
+    });
   };
 
   // 处理表单提交
-  const handleSubmit = () => {
-    form.validateFields().then(values => {
+  const handleSubmit = async () => {
+    try {
+      const values = await form.validateFields();
       if (editingUser) {
-        // 更新现有用户
-        const updatedUsers = users.map(user => {
-          if (user.id === editingUser.id) {
-            return { ...user, ...values };
-          }
-          return user;
+        await newApiService.adminUpdateUser(editingUser.id, {
+          nickname: values.name,
+          email: values.email,
+          phone: values.phone,
+          role: values.role,
+          status: values.status
         });
-        setUsers(updatedUsers);
         message.success('用户信息更新成功');
       } else {
-        // 添加新用户
-        const newUser = {
-          id: Date.now().toString(), // 生成临时ID
-          ...values,
-          lastLogin: '刚刚'
-        };
-        setUsers([...users, newUser]);
+        await newApiService.adminCreateUser({
+          username: values.username,
+          nickname: values.name,
+          email: values.email,
+          phone: values.phone,
+          role: values.role,
+          status: values.status,
+          password: values.password
+        });
         message.success('新用户已加入系统');
       }
-
       setShowModal(false);
-    });
+      fetchUsers(pagination.current, pagination.pageSize);
+    } catch (e) {
+      if (e?.errorFields) return;
+      message.error(e?.response?.data?.error || '保存失败');
+    }
   };
 
   return (
@@ -305,10 +292,13 @@ const UserAdmin = () => {
           loading={loading}
           className="custom-table"
           pagination={{
-            pageSize: 8,
+            current: pagination.current,
+            pageSize: pagination.pageSize,
+            total: pagination.total,
             showSizeChanger: false,
             showTotal: (total) => <span className="text-slate-400 text-xs">共计 {total} 位授权用户</span>,
-            className: 'custom-pagination'
+            className: 'custom-pagination',
+            onChange: (page, pageSize) => fetchUsers(page, pageSize)
           }}
         />
       </Card>
@@ -343,7 +333,7 @@ const UserAdmin = () => {
           layout="vertical"
           className="mt-4"
           initialValues={{
-            role: 'user',
+            role: 'researcher',
             status: 'active'
           }}
         >
@@ -377,6 +367,13 @@ const UserAdmin = () => {
             ]}
           >
             <Input className="h-10 rounded-lg border-slate-200" placeholder="researcher@rgmi.bio" />
+          </Form.Item>
+
+          <Form.Item
+            name="phone"
+            label={<span className="text-xs font-black uppercase tracking-wider text-slate-400">手机号</span>}
+          >
+            <Input className="h-10 rounded-lg border-slate-200" placeholder="13800000000" />
           </Form.Item>
 
           {!editingUser && (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Select, Space, Spin, Alert, Typography, Tag, Divider, Row, Col, Statistic,
   Form, Input, message, Empty, Tooltip, Progress, Button, Dropdown, Menu
@@ -14,7 +14,6 @@ import DiseaseRadarComparison from './DiseaseRadarComparison';
 import './DiseaseSimilarityQuery.css';
 
 const { Title, Text, Paragraph } = Typography;
-const { Option } = Select;
 
 /**
  * 疾病相似度查询组件
@@ -28,20 +27,27 @@ const DiseaseSimilarityQuery = ({ diseaseData = [] }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const [options1, setOptions1] = useState([]);
+  const [options2, setOptions2] = useState([]);
+  const [searching1, setSearching1] = useState(false);
+  const [searching2, setSearching2] = useState(false);
+  const searchTimer1 = useRef(null);
+  const searchTimer2 = useRef(null);
+
   // 处理疾病选择
-  const handleDisease1Change = (value) => {
-    const selected = diseaseData.find(d => d.disease_id === value);
+  const handleDisease1Change = (value, option) => {
+    const name = option?.name || option?.label || value;
+    const selected = { disease_id: value, name };
     setDisease1(selected);
-    // 如果选择的疾病与disease2相同，清除disease2
     if (disease2 && selected.disease_id === disease2.disease_id) {
       setDisease2(null);
     }
   };
 
-  const handleDisease2Change = (value) => {
-    const selected = diseaseData.find(d => d.disease_id === value);
+  const handleDisease2Change = (value, option) => {
+    const name = option?.name || option?.label || value;
+    const selected = { disease_id: value, name };
     setDisease2(selected);
-    // 如果选择的疾病与disease1相同，清除disease1
     if (disease1 && selected.disease_id === disease1.disease_id) {
       setDisease1(null);
     }
@@ -144,6 +150,56 @@ const DiseaseSimilarityQuery = ({ diseaseData = [] }) => {
   const similarityScore = getSimilarityScore();
   const similarityLevel = getSimilarityLevel();
 
+  const buildSelectOptions = (items, disabledId) => {
+    return (items || []).map(it => {
+      const diseaseId = it.disease_id || it.id;
+      const diseaseName = it.name || diseaseId;
+      return {
+        value: diseaseId,
+        label: `${diseaseName} (${diseaseId})`,
+        name: diseaseName,
+        disabled: disabledId ? diseaseId === disabledId : false
+      };
+    });
+  };
+
+  const fetchSearchOptions = async (query, setOptions, setSearching) => {
+    setSearching(true);
+    const list = await newApiService.searchDiseases(query, 20);
+    setOptions(list || []);
+    setSearching(false);
+  };
+
+  const onSearchDisease1 = (value) => {
+    if (searchTimer1.current) {
+      clearTimeout(searchTimer1.current);
+    }
+    searchTimer1.current = setTimeout(() => {
+      fetchSearchOptions(value, setOptions1, setSearching1);
+    }, 250);
+  };
+
+  const onSearchDisease2 = (value) => {
+    if (searchTimer2.current) {
+      clearTimeout(searchTimer2.current);
+    }
+    searchTimer2.current = setTimeout(() => {
+      fetchSearchOptions(value, setOptions2, setSearching2);
+    }, 250);
+  };
+
+  const onOpenDisease1 = async (open) => {
+    if (!open) return;
+    if ((options1 || []).length > 0) return;
+    await fetchSearchOptions('', setOptions1, setSearching1);
+  };
+
+  const onOpenDisease2 = async (open) => {
+    if (!open) return;
+    if ((options2 || []).length > 0) return;
+    await fetchSearchOptions('', setOptions2, setSearching2);
+  };
+
   return (
     <div className="disease-similarity-query-page">
       {/* 搜索区域 */}
@@ -161,27 +217,18 @@ const DiseaseSimilarityQuery = ({ diseaseData = [] }) => {
               <div className="disease-select-wrapper">
                 <label className="select-label">疾病1</label>
                 <Select
-                  placeholder="选择第一个疾病"
+                  placeholder="输入疾病名称或ID"
                   value={disease1?.disease_id}
                   onChange={handleDisease1Change}
                   showSearch
-                  filterOption={(input, option) =>
-                    (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
-                  }
+                  filterOption={false}
+                  onSearch={onSearchDisease1}
+                  onDropdownVisibleChange={onOpenDisease1}
                   style={{ width: '100%' }}
                   size="large"
-                >
-                  {diseaseData.map(disease => (
-                    <Option
-                      key={disease.disease_id}
-                      value={disease.disease_id}
-                      label={`${disease.name} (${disease.disease_id})`}
-                      disabled={disease2 && disease.disease_id === disease2.disease_id}
-                    >
-                      {disease.name} ({disease.disease_id})
-                    </Option>
-                  ))}
-                </Select>
+                  options={buildSelectOptions(options1, disease2?.disease_id)}
+                  notFoundContent={searching1 ? <Spin size="small" /> : null}
+                />
                 {disease1 && (
                   <div className="selected-disease-info">
                     <CheckCircleOutlined style={{ color: '#52c41a', marginRight: 8 }} />
@@ -214,27 +261,18 @@ const DiseaseSimilarityQuery = ({ diseaseData = [] }) => {
               <div className="disease-select-wrapper">
                 <label className="select-label">疾病2</label>
                 <Select
-                  placeholder="选择第二个疾病"
+                  placeholder="输入疾病名称或ID"
                   value={disease2?.disease_id}
                   onChange={handleDisease2Change}
                   showSearch
-                  filterOption={(input, option) =>
-                    (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
-                  }
+                  filterOption={false}
+                  onSearch={onSearchDisease2}
+                  onDropdownVisibleChange={onOpenDisease2}
                   style={{ width: '100%' }}
                   size="large"
-                >
-                  {diseaseData.map(disease => (
-                    <Option
-                      key={disease.disease_id}
-                      value={disease.disease_id}
-                      label={`${disease.name} (${disease.disease_id})`}
-                      disabled={disease1 && disease.disease_id === disease1.disease_id}
-                    >
-                      {disease.name} ({disease.disease_id})
-                    </Option>
-                  ))}
-                </Select>
+                  options={buildSelectOptions(options2, disease1?.disease_id)}
+                  notFoundContent={searching2 ? <Spin size="small" /> : null}
+                />
                 {disease2 && (
                   <div className="selected-disease-info">
                     <CheckCircleOutlined style={{ color: '#52c41a', marginRight: 8 }} />

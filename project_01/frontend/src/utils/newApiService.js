@@ -23,8 +23,34 @@ class NewApiService {
     this.cache = {};
     this.cacheTimeout = 3600 * 1000; // 缓存超时时间（毫秒）
     this.logLevel = 'info'; // 日志级别: debug, info, warn, error
+    this.accessToken = localStorage.getItem('accessToken') || '';
+    this.refreshToken = localStorage.getItem('refreshToken') || '';
     
     console.log(`API服务初始化完成 - 基础URL: ${this.apiUrl}, 超时时间: ${this.cacheTimeout}ms`);
+  }
+
+  setTokens(accessToken = '', refreshToken = '') {
+    this.accessToken = accessToken || '';
+    this.refreshToken = refreshToken || '';
+    if (this.accessToken) {
+      localStorage.setItem('accessToken', this.accessToken);
+    } else {
+      localStorage.removeItem('accessToken');
+    }
+    if (this.refreshToken) {
+      localStorage.setItem('refreshToken', this.refreshToken);
+    } else {
+      localStorage.removeItem('refreshToken');
+    }
+  }
+
+  clearTokens() {
+    this.setTokens('', '');
+  }
+
+  getAuthHeaders() {
+    if (!this.accessToken) return {};
+    return { Authorization: `Bearer ${this.accessToken}` };
   }
 
   /**
@@ -255,6 +281,30 @@ class NewApiService {
       
       this.log('error', '获取疾病列表失败:', errorDetails);
       throw new Error(`无法获取疾病列表: ${error.message}`);
+    }
+  }
+
+  /**
+   * 搜索疾病（按名称/ID，后端返回候选列表）
+   * @param {string} query 搜索关键词
+   * @param {number} limit 返回数量
+   * @returns {Promise<Array>} 候选疾病列表
+   */
+  async searchDiseases(query, limit = 20) {
+    try {
+      const params = { q: query || '', limit };
+      const response = await apiClient.get('/diseases/search', { params });
+      return response.data || [];
+    } catch (error) {
+      this.log('warn', '搜索疾病失败:', {
+        message: error.message,
+        code: error.code,
+        response: error.response ? {
+          status: error.response.status,
+          data: error.response.data
+        } : null
+      });
+      return [];
     }
   }
 
@@ -492,7 +542,10 @@ class NewApiService {
   async get(endpoint, params = {}) {
     try {
       this.log('debug', `GET请求: ${endpoint}`, params);
-      const response = await apiClient.get(endpoint, { params });
+      const response = await apiClient.get(endpoint, {
+        params,
+        headers: this.getAuthHeaders()
+      });
       return response.data;
     } catch (error) {
       this.log('error', `GET请求失败: ${endpoint}`, error);
@@ -509,12 +562,110 @@ class NewApiService {
   async post(endpoint, data = {}) {
     try {
       this.log('debug', `POST请求: ${endpoint}`, data);
-      const response = await apiClient.post(endpoint, data);
+      const response = await apiClient.post(endpoint, data, {
+        headers: this.getAuthHeaders()
+      });
       return response.data;
     } catch (error) {
       this.log('error', `POST请求失败: ${endpoint}`, error);
       throw error;
     }
+  }
+
+  async patch(endpoint, data = {}) {
+    try {
+      this.log('debug', `PATCH请求: ${endpoint}`, data);
+      const response = await apiClient.patch(endpoint, data, {
+        headers: this.getAuthHeaders()
+      });
+      return response.data;
+    } catch (error) {
+      this.log('error', `PATCH请求失败: ${endpoint}`, error);
+      throw error;
+    }
+  }
+
+  async delete(endpoint, data = null) {
+    try {
+      this.log('debug', `DELETE请求: ${endpoint}`, data);
+      const response = await apiClient.delete(endpoint, {
+        data,
+        headers: this.getAuthHeaders()
+      });
+      return response.data;
+    } catch (error) {
+      this.log('error', `DELETE请求失败: ${endpoint}`, error);
+      throw error;
+    }
+  }
+
+  async registerAccount(payload) {
+    return this.post('/auth/register', payload);
+  }
+
+  async loginAccount(username, password) {
+    const res = await this.post('/auth/login', { username, password });
+    this.setTokens(res.access_token, res.refresh_token);
+    return res;
+  }
+
+  async resetPasswordRequest(email) {
+    return this.post('/auth/password-reset/request', { email });
+  }
+
+  async resetPasswordConfirm(token, newPassword) {
+    return this.post('/auth/password-reset/confirm', {
+      token,
+      new_password: newPassword
+    });
+  }
+
+  async getCurrentUser() {
+    return this.get('/users/me');
+  }
+
+  async fetchUserHistory(params = {}) {
+    return this.get('/history', params);
+  }
+
+  async createUserHistory(payload) {
+    return this.post('/history', payload);
+  }
+
+  async clearUserHistory() {
+    return this.post('/history/clear', {});
+  }
+
+  async updateUserProfile(payload) {
+    return this.patch('/users/me', payload);
+  }
+
+  async deleteHistoryRecord(recordId) {
+    return this.delete(`/history/${recordId}`);
+  }
+
+  async updateHistoryRecord(recordId, payload) {
+    return this.patch(`/history/${recordId}`, payload);
+  }
+
+  async listUsers(params = {}) {
+    return this.get('/users', params);
+  }
+
+  async adminCreateUser(payload) {
+    return this.post('/users', payload);
+  }
+
+  async adminUpdateUser(userId, payload) {
+    return this.patch(`/users/${userId}`, payload);
+  }
+
+  async setUserStatus(userId, status) {
+    return this.patch(`/users/${userId}/status`, { status });
+  }
+
+  async adminDeleteUser(userId) {
+    return this.delete(`/users/${userId}`);
   }
 
   // 从NCBI MedGen获取疾病详细信息
