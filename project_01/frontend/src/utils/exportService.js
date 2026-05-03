@@ -4,8 +4,11 @@
  */
 import axios from 'axios';
 
+// 从环境变量读取 API 地址，默认值为 /api
+const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+
 const apiClient = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: API_BASE_URL,
   timeout: 120000,
   headers: {
     'Content-Type': 'application/json',
