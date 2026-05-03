@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // 默认API基础URL
-const DEFAULT_API_BASE_URL = 'http://localhost:5000/api';
+const DEFAULT_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
 
 // 创建axios实例
 const apiClient = axios.create({
