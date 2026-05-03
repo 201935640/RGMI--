@@ -5,6 +5,7 @@ import {
   SafetyOutlined, NodeIndexOutlined, PartitionOutlined, DatabaseOutlined
 } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
+import newApiService from '../utils/newApiService';
 import './Login.css';
 
 const { Title, Text } = Typography;
@@ -24,39 +25,42 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
     { label: t('administrator'), value: 'admin' }
   ];
 
-  const validateUser = (values) => {
+  const validateUser = async (values) => {
     setLoading(true);
     setError(null);
-    setTimeout(() => {
-      if (userType === 'admin') {
-        if (values.username === 'admin' && values.password === 'admin123') {
-          handleSuccessfulLogin({ id: 'admin1', username: values.username, role: 'admin', name: t('administrator') });
-        } else {
-          setError('管理员用户名或密码不正确');
-          setLoading(false);
-        }
-      } else {
-        const registeredUsers = JSON.parse(localStorage.getItem('users') || '[]');
-        const registeredUser = registeredUsers.find(u => u.username === values.username && u.password === values.password);
-        if (registeredUser) {
-          registeredUser.lastLogin = new Date().toISOString();
-          localStorage.setItem('users', JSON.stringify(registeredUsers));
-          handleSuccessfulLogin({ id: registeredUser.id, username: registeredUser.username, role: registeredUser.role, name: registeredUser.name || registeredUser.username });
-          return;
-        }
-        const validUsers = [
-          { username: 'user1', password: 'user123', name: '用户一' },
-          { username: 'user2', password: 'user123', name: '用户二' }
-        ];
-        const user = validUsers.find(u => u.username === values.username && u.password === values.password);
-        if (user) {
-          handleSuccessfulLogin({ id: user.username, username: user.username, role: 'user', name: user.name });
-        } else {
-          setError('用户名或密码不正确');
-          setLoading(false);
-        }
+    try {
+      const res = await newApiService.loginAccount(values.username, values.password);
+      const user = res?.user;
+      if (!user) {
+        setError('登录响应异常，请稍后重试');
+        setLoading(false);
+        return;
       }
-    }, 1000);
+
+      if (userType === 'admin' && user.role !== 'admin') {
+        setError('该账号不是管理员，请切换为普通用户登录');
+        newApiService.clearTokens();
+        setLoading(false);
+        return;
+      }
+      if (userType === 'user' && user.role === 'admin') {
+        setError('管理员请切换为管理员登录');
+        newApiService.clearTokens();
+        setLoading(false);
+        return;
+      }
+
+      handleSuccessfulLogin({
+        id: user.id,
+        username: user.username,
+        role: user.role,
+        name: user.nickname || user.username,
+        lastLogin: user.last_login_at
+      });
+    } catch (e) {
+      setError(e?.response?.data?.error || '用户名或密码不正确');
+      setLoading(false);
+    }
   };
 
   const handleSuccessfulLogin = (user) => {
@@ -334,8 +338,8 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
               </Text>
               {userType === 'user' ? (
                 <Space direction="vertical" size={6} style={{ width: '100%' }}>
-                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user1/ user123</Text>
-                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user2/ user123</Text>
+                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user1 / user123</Text>
+                  <Text code style={{ borderRadius: 6, fontSize: 13 }}>user2 / user123</Text>
                 </Space>
               ) : (
                 <Text code style={{ borderRadius: 6, fontSize: 13 }}>admin/ admin123</Text>

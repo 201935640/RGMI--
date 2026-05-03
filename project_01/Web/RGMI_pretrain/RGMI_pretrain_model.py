@@ -445,7 +445,7 @@ def fetch_disease_info(disease_id):
         disease_name = result.get("title", "Unknown name")
         definition = result.get("definition", {}).get("value", "No definition") if isinstance(result.get("definition"), dict) else "No definition"
         
-        # --- 2026 升级：提取 HPO 术语 (本体论数据) ---
+        # 提取 HPO 术语 (本体论数据) 
         hpo_terms = []
         # 尝试从 ConceptId 或相关属性中解析 HP: 开头的术语
         if "conceptid" in result:
@@ -714,7 +714,6 @@ def predict_with_loaded_model(disease_id, top_n=20, return_results=False):
         }
         result.append(similar_disease)
     
-    # --- 2026 内部验证报告 ---
     if return_results and len(result) > 1:
         # 计算药物重定位建议
         drug_reps = calculate_drug_repositioning(disease_id, result[1:])

@@ -294,6 +294,7 @@ function App() {
 
   // 处理用户登出
   const handleLogout = () => {
+    newApiService.clearTokens();
     sessionStorage.removeItem('currentUser');
     setCurrentUser(null);
     setIsAdmin(false);

@@ -5,6 +5,7 @@ import {
   NodeIndexOutlined, PartitionOutlined, DatabaseOutlined, SafetyOutlined
 } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
+import newApiService from '../utils/newApiService';
 import './Login.css';
 
 const { Text } = Typography;
@@ -18,7 +19,7 @@ const Register = ({ onRegister, onBackToLogin }) => {
   const [error, setError] = useState(null);
   const { t } = useTranslation();
 
-  const handleRegister = (values) => {
+  const handleRegister = async (values) => {
     setLoading(true);
     setError(null);
 
@@ -28,39 +29,27 @@ const Register = ({ onRegister, onBackToLogin }) => {
       return;
     }
 
-    setTimeout(() => {
-      const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
-      const userExists = existingUsers.some(user => user.username === values.username);
-      if (userExists) {
-        setError('用户名已存在，请选择其他用户名');
-        setLoading(false);
-        return;
-      }
-
-      const newUser = {
-        id: Date.now().toString(),
+    try {
+      const payload = {
         username: values.username,
-        name: values.username,
         email: values.email,
         password: values.password,
         role: 'user',
         status: 'active',
-        createdAt: new Date().toISOString(),
-        lastLogin: null
+        nickname: values.username
       };
-
-      existingUsers.push(newUser);
-      localStorage.setItem('users', JSON.stringify(existingUsers));
-
+      const res = await newApiService.registerAccount(payload);
       notification.success({
         message: '注册成功',
         description: '您的账号已创建成功，现在可以登录系统',
         placement: 'topRight'
       });
-
       setLoading(false);
-      if (onRegister) onRegister(newUser);
-    }, 1000);
+      if (onRegister) onRegister(res?.user || payload);
+    } catch (e) {
+      setError(e?.response?.data?.error || '注册失败，请稍后重试');
+      setLoading(false);
+    }
   };
 
   // 左侧亮点

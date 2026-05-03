@@ -1,4 +1,4 @@
-﻿# 这是修正过的文件
+# 这是修正过的文件
 import os
 import sys
 import json
@@ -14,6 +14,8 @@ import numpy as np
 from flask import Flask, request, jsonify, current_app, Response
 from flask_cors import CORS, cross_origin
 from werkzeug.exceptions import HTTPException
+from db.connection import init_db
+from api import account_bp, bootstrap_defaults
 # 添加缓存和请求限制支持
 from functools import wraps
 from datetime import datetime, timedelta
@@ -304,6 +306,11 @@ engine = BioDataEngine(DATASET_PATH)
 app = Flask(__name__)
 # 启用CORS，允许前端跨域请求，提供更详细的配置
 CORS(app, resources={r"/api/*": {"origins": "*", "methods": ["GET", "POST", "OPTIONS"]}})
+init_db(app)
+app.register_blueprint(account_bp)
+
+with app.app_context():
+    bootstrap_defaults()
 
 # 记录启动信息
 logger.info(f"Flask应用已创建, CORS已配置")
@@ -1572,6 +1579,80 @@ def _truthy(v):
         return False
     return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
 
+_DEFAULT_DISEASE_TO_DRUG_MAP = {
+    # 心血管系统
+    "C0023212": ["Lisinopril (利辛普利)", "Metoprolol (美托洛尔)", "Furosemide (呋塞米)"],
+    "C1961112": ["Digoxin (地高辛)", "Spironolactone (螺内酯)", "Carvedilol (卡维地洛)"],
+    "C0018801": ["Atorvastatin (阿托伐他汀)", "Clopidogrel (氯吡格雷)"],
+    "C0235527": ["Amlodipine (氨氯地平)", "Valsartan (缬沙坦)"],
+    # 代谢系统
+    "C1959583": ["Metformin (二甲双胍)", "Sitagliptin (西格列汀)", "Empagliflozin (恩格列净)"],
+    "C0011854": ["Insulin Glargine (甘精胰岛素)", "Pioglitazone (吡格列酮)"],
+    # 神经系统
+    "C0030567": ["Levodopa (左旋多巴)", "Pramipexole (普拉克索)", "Selegiline (司来吉兰)"],
+    "C0002395": ["Donepezil (多奈哌齐)", "Memantine (美金刚)"],
+    "C0011581": ["Sertraline (舍曲林)", "Escitalopram (艾司西酞普兰)"],
+    # 肿瘤与免疫
+    "C0006826": ["Tamoxifen (三苯氧胺)", "Trastuzumab (曲妥珠单抗)"],
+    "C0002871": ["Methotrexate (甲氨蝶呤)", "Adalimumab (阿达木单抗)"],
+    # 肌肉骨骼系统
+    "C2265792": ["Creatine (肌酸)", "HMB (β-羟基-β-甲基丁酸)", "Protein Supplements (蛋白质补充剂)"]
+}
+_drug_map_runtime_cache = {"mtime": None, "map": None}
+
+def _normalize_disease_to_drug_map(raw_map):
+    normalized = {}
+    if not isinstance(raw_map, dict):
+        return normalized
+    for disease_id, drugs in raw_map.items():
+        did = _clean_disease_id(disease_id)
+        if not did:
+            continue
+        if isinstance(drugs, str):
+            drugs = [drugs]
+        if not isinstance(drugs, list):
+            continue
+        clean_drugs = []
+        for d in drugs:
+            if d is None:
+                continue
+            name = str(d).strip()
+            if not name:
+                continue
+            clean_drugs.append(name)
+        if clean_drugs:
+            normalized[did] = clean_drugs
+    return normalized
+
+def _load_disease_to_drug_map():
+    path = os.path.join(DATASET_PATH, "disease2drug.json")
+    merged_map = dict(_DEFAULT_DISEASE_TO_DRUG_MAP)
+
+    try:
+        file_mtime = os.path.getmtime(path) if os.path.exists(path) else None
+        cached_mtime = _drug_map_runtime_cache.get("mtime")
+        cached_map = _drug_map_runtime_cache.get("map")
+        if file_mtime == cached_mtime and isinstance(cached_map, dict):
+            return cached_map
+
+        if file_mtime is not None:
+            with open(path, "r", encoding="utf-8") as f:
+                file_map = json.load(f)
+            normalized_file_map = _normalize_disease_to_drug_map(file_map)
+            if normalized_file_map:
+                merged_map.update(normalized_file_map)
+                logger.info(f"已加载 disease2drug.json，覆盖/补充疾病数: {len(normalized_file_map)}")
+            else:
+                logger.warning("disease2drug.json 为空或格式无效，已回退到内置药物库")
+        else:
+            logger.warning(f"未找到药物库文件: {path}，已回退到内置药物库")
+    except Exception as e:
+        logger.warning(f"加载 disease2drug.json 失败: {e}，已回退到内置药物库")
+
+    _drug_map_runtime_cache["mtime"] = file_mtime if 'file_mtime' in locals() else None
+    _drug_map_runtime_cache["map"] = merged_map
+    return merged_map
+
 def _clean_disease_id(v):
     return str(v or "").strip().upper()
 
@@ -2649,20 +2730,7 @@ def _get_drug_recommendations(target_disease_id):
         raise ValueError(derr.get("error") or "invalid disease")
     target_disease_id = _clean_disease_id(target_disease_id)
 
-    disease_to_drug_map = {
-        "C0023212": ["Lisinopril (利辛普利)", "Metoprolol (美托洛尔)", "Furosemide (呋塞米)"],
-        "C1961112": ["Digoxin (地高辛)", "Spironolactone (螺内酯)", "Carvedilol (卡维地洛)"],
-        "C0018801": ["Atorvastatin (阿托伐他汀)", "Clopidogrel (氯吡格雷)"],
-        "C0235527": ["Amlodipine (氨氯地平)", "Valsartan (缬沙坦)"],
-        "C1959583": ["Metformin (二甲双胍)", "Sitagliptin (西格列汀)", "Empagliflozin (恩格列净)"],
-        "C0011854": ["Insulin Glargine (甘精胰岛素)", "Pioglitazone (吡格列酮)"],
-        "C0030567": ["Levodopa (左旋多巴)", "Pramipexole (普拉克索)", "Selegiline (司来吉兰)"],
-        "C0002395": ["Donepezil (多奈哌齐)", "Memantine (美金刚)"],
-        "C0011581": ["Sertraline (舍曲林)", "Escitalopram (艾司西酞普兰)"],
-        "C0006826": ["Tamoxifen (三苯氧胺)", "Trastuzumab (曲妥珠单抗)"],
-        "C0002871": ["Methotrexate (甲氨蝶呤)", "Adalimumab (阿达木单抗)"],
-        "C2265792": ["Creatine (肌酸)", "HMB (β-羟基-β-甲基丁酸)", "Protein Supplements (蛋白质补充剂)"]
-    }
+    disease_to_drug_map = _load_disease_to_drug_map()
 
     results = get_similarity_from_file(target_disease_id, top_n=50, enrich_names=False)
     if not results:
@@ -2807,26 +2875,7 @@ def drug_repositioning():
     if not target_disease_id or target_disease_id not in engine.dis2id:
         return jsonify({"error": "未提供疾病ID/名称或无效", "disease_id": target_disease_id}), 400
     
-    # 扩展后的高质量药物-疾病知识库 (用于演示与竞赛，基于真实药理学)
-    disease_to_drug_map = {
-        # 心血管系统
-        "C0023212": ["Lisinopril (利辛普利)", "Metoprolol (美托洛尔)", "Furosemide (呋塞米)"],
-        "C1961112": ["Digoxin (地高辛)", "Spironolactone (螺内酯)", "Carvedilol (卡维地洛)"],
-        "C0018801": ["Atorvastatin (阿托伐他汀)", "Clopidogrel (氯吡格雷)"],
-        "C0235527": ["Amlodipine (氨氯地平)", "Valsartan (缬沙坦)"],
-        # 代谢系统
-        "C1959583": ["Metformin (二甲双胍)", "Sitagliptin (西格列汀)", "Empagliflozin (恩格列净)"],
-        "C0011854": ["Insulin Glargine (甘精胰岛素)", "Pioglitazone (吡格列酮)"],
-        # 神经系统
-        "C0030567": ["Levodopa (左旋多巴)", "Pramipexole (普拉克索)", "Selegiline (司来吉兰)"],
-        "C0002395": ["Donepezil (多奈哌齐)", "Memantine (美金刚)"],
-        "C0011581": ["Sertraline (舍曲林)", "Escitalopram (艾司西酞普兰)"],
-        # 肿瘤与免疫
-        "C0006826": ["Tamoxifen (三苯氧胺)", "Trastuzumab (曲妥珠单抗)"],
-        "C0002871": ["Methotrexate (甲氨蝶呤)", "Adalimumab (阿达木单抗)"],
-        # 肌肉骨骼系统
-        "C2265792": ["Creatine (肌酸)", "HMB (β-羟基-β-甲基丁酸)", "Protein Supplements (蛋白质补充剂)"]
-    }
+    disease_to_drug_map = _load_disease_to_drug_map()
 
     try:
         # --- 2026 核心修复：优先从校准后的缓存获取，确保与列表页完全一致 ---
