@@ -3,6 +3,7 @@ import os
 import time
 import requests
 import json
+from functools import lru_cache
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -422,22 +423,37 @@ def construct_gene_miRNA_network(path):
     return g2m_adj
 
 # 主程序部分
+@lru_cache(maxsize=4096)
 def fetch_disease_info(disease_id):
     """
     获取疾病详情，并尝试提取 HPO 表型术语
     """
     base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+    timeout_s = os.environ.get("NCBI_TIMEOUT")
     try:
-        search_url = f"{base_url}esearch.fcgi?db=medgen&term={disease_id}&retmode=json"
-        search_response = requests.get(search_url)
+        timeout_s = float(timeout_s) if timeout_s is not None else 6.0
+    except Exception:
+        timeout_s = 6.0
+    timeout = (3.05, timeout_s)
+    try:
+        search_url = f"{base_url}esearch.fcgi"
+        search_response = requests.get(
+            search_url,
+            params={"db": "medgen", "term": disease_id, "retmode": "json"},
+            timeout=timeout
+        )
         if search_response.status_code != 200:
             return {"disease_id": disease_id, "error": f"Search failed: HTTP {search_response.status_code}"}
         search_data = search_response.json()
         if "esearchresult" not in search_data or not search_data["esearchresult"]["idlist"]:
             return {"disease_id": disease_id, "error": "No records found"}
         medgen_id = search_data["esearchresult"]["idlist"][0]
-        summary_url = f"{base_url}esummary.fcgi?db=medgen&id={medgen_id}&retmode=json"
-        summary_response = requests.get(summary_url)
+        summary_url = f"{base_url}esummary.fcgi"
+        summary_response = requests.get(
+            summary_url,
+            params={"db": "medgen", "id": medgen_id, "retmode": "json"},
+            timeout=timeout
+        )
         if summary_response.status_code != 200:
             return {"disease_id": disease_id, "error": f"Summary failed: HTTP {summary_response.status_code}"}
         summary_data = summary_response.json()
