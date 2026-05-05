@@ -70,7 +70,6 @@ const UserAdmin = () => {
   // 初始化加载用户数据
   useEffect(() => {
     fetchUsers(1, pagination.pageSize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // 表格列定义
