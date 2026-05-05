@@ -54,14 +54,36 @@ function App() {
   const [radarModalVisible, setRadarModalVisible] = useState(false);
   const [selectedCompareDisease, setSelectedCompareDisease] = useState(null);
 
+  const lastPathRef = useRef(location.pathname);
+  const selectedDiseaseRef = useRef(null);
+  const forceSearchResultRef = useRef(false);
+  const lastSearchTabRef = useRef('1');
+
+  useEffect(() => {
+    selectedDiseaseRef.current = selectedDisease;
+  }, [selectedDisease]);
+
   // 监听路由变化，同步activeTab
   useEffect(() => {
+    const prevPath = lastPathRef.current;
+    lastPathRef.current = location.pathname;
     switch (location.pathname) {
       case '/':
         setActiveTab('home');
         break;
       case '/search':
+        if (forceSearchResultRef.current) {
+          setActiveTab('2');
+          lastSearchTabRef.current = '2';
+          forceSearchResultRef.current = false;
+          break;
+        }
+        if (prevPath === '/network' && !!selectedDiseaseRef.current) {
+          setActiveTab(lastSearchTabRef.current === '2' ? '2' : '1');
+          break;
+        }
         setActiveTab('1'); // 疾病查询
+        lastSearchTabRef.current = '1';
         break;
       case '/similarity':
         setActiveTab('similarity'); // 疾病相似度查询
@@ -410,12 +432,29 @@ function App() {
       description: t('historyCleared'),
       duration: 3
     });
-    setShowHistoryModal(false); // 关闭历史记录模态框
+    setShowHistoryModal(false);
+    navigate('/', { replace: true });
+    setActiveTab('home');
   };
 
   // 查看搜索历史
   const viewSearchHistory = () => {
     setShowHistoryModal(true);
+  };
+
+  const closeHistoryModal = () => {
+    setShowHistoryModal(false);
+    navigate('/', { replace: true });
+    setActiveTab('home');
+  };
+
+  const viewHistoryItem = (diseaseId, topN = 50) => {
+    if (!diseaseId) return;
+    forceSearchResultRef.current = true;
+    lastSearchTabRef.current = '2';
+    setShowHistoryModal(false);
+    handleDiseaseSelect(diseaseId, topN);
+    navigate('/search');
   };
 
   // 从历史记录中选择疾病
@@ -424,7 +463,9 @@ function App() {
     setLoading(true);
     handleDiseaseSelect(diseaseId, topN);
     setShowHistoryModal(false);
-    setActiveTab('detail');
+    lastSearchTabRef.current = '2';
+    forceSearchResultRef.current = true;
+    navigate('/search');
   };
 
   const refreshHistoryNames = async () => {
@@ -672,6 +713,7 @@ function App() {
       setSimilarDiseases(processedData.related_diseases || []);
       setSelectedDisease(processedData);
       setActiveTab('2');
+      lastSearchTabRef.current = '2';
       
       // 记录搜索历史
       recordSearchHistory({
@@ -958,12 +1000,12 @@ function App() {
       <Modal
         title="搜索历史"
         visible={showHistoryModal}
-        onCancel={() => setShowHistoryModal(false)}
+        onCancel={closeHistoryModal}
         footer={[
           <Button key="clear" danger onClick={clearSearchHistory}>
             清空历史
           </Button>,
-          <Button key="close" onClick={() => setShowHistoryModal(false)}>
+          <Button key="close" onClick={closeHistoryModal}>
             关闭
           </Button>
         ]}
@@ -978,8 +1020,7 @@ function App() {
                   <Button
                     type="link"
                     onClick={() => {
-                      setShowHistoryModal(false);
-                      handleDiseaseSelect(item.id, 50);
+                      viewHistoryItem(item.id, 50);
                     }}
                   >
                     查看
@@ -1251,7 +1292,12 @@ function App() {
               image={Empty.PRESENTED_IMAGE_SIMPLE} 
               description={
                 <span>
-                  请先通过<a href="#" onClick={() => setActiveTab('1')}>疾病查询</a>搜索疾病
+                  请先通过<a href="#" onClick={(e) => {
+                    e.preventDefault();
+                    lastSearchTabRef.current = '1';
+                    setActiveTab('1');
+                    navigate('/search');
+                  }}>疾病查询</a>搜索疾病
                 </span>
               }
             />
@@ -1314,7 +1360,11 @@ function App() {
                   type="primary"
                   size="small"
                   icon={<SearchOutlined />}
-                  onClick={() => setActiveTab('1')}
+                  onClick={() => {
+                    lastSearchTabRef.current = '1';
+                    setActiveTab('1');
+                    navigate('/search');
+                  }}
                 >
                   返回搜索
                 </Button>
@@ -1833,7 +1883,12 @@ function App() {
               image={Empty.PRESENTED_IMAGE_SIMPLE}
               description={
                 <span>
-                  请先通过<a href="#" onClick={() => setActiveTab('1')}>疾病查询</a>搜索疾病
+                  请先通过<a href="#" onClick={(e) => {
+                    e.preventDefault();
+                    lastSearchTabRef.current = '1';
+                    setActiveTab('1');
+                    navigate('/search');
+                  }}>疾病查询</a>搜索疾病
                 </span>
               }
             />
