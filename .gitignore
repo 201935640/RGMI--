@@ -28,3 +28,13 @@ __pycache__/
 # project_01/backend/Dataset/
 # *.pth
 # *.pt
+# runtime / secrets
+**/.env
+**/.env.*
+!**/.env.example
+*.log
+*.out
+*.bak
+*.db
+**/instance/
+DiseaseSeek/

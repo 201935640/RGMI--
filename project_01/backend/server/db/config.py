@@ -14,7 +14,7 @@ class DatabaseConfig:
 
     SQLALCHEMY_DATABASE_URI = os.getenv(
         "DATABASE_URL",
-        f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?charset={DB_CHARSET}",
+        "mysql+pymysql://DiseaseSeek_user:DiseaseSeek_123@localhost/DiseaseSeek_db",
     )
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False

@@ -34,3 +34,4 @@ tqdm==4.66.1
 # --- Utilities ---
 python-dotenv==1.0.0
 pytest==8.2.2
+cryptography>=47.0.0
