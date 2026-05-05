@@ -307,11 +307,37 @@ engine = BioDataEngine(DATASET_PATH)
 app = Flask(__name__)
 # 启用CORS，允许前端跨域请求，提供更详细的配置
 CORS(app, resources={r"/api/*": {"origins": "*", "methods": ["GET", "POST", "OPTIONS"]}})
-init_db(app)
-app.register_blueprint(account_bp)
 
-with app.app_context():
-    bootstrap_defaults()
+ENABLE_DB = str(os.environ.get("ENABLE_DB", "1")).strip().lower() in {"1", "true", "yes", "y"}
+REQUIRE_DB = str(os.environ.get("REQUIRE_DB", "0")).strip().lower() in {"1", "true", "yes", "y"}
+DB_AVAILABLE = False
+
+if ENABLE_DB:
+    try:
+        init_db(app)
+        try:
+            from db.connection import check_connection
+            with app.app_context():
+                DB_AVAILABLE = bool(check_connection())
+        except Exception:
+            DB_AVAILABLE = False
+    except Exception as e:
+        logger.error(f"数据库初始化失败: {e}", exc_info=True)
+        if REQUIRE_DB:
+            raise
+        DB_AVAILABLE = False
+
+if DB_AVAILABLE:
+    app.register_blueprint(account_bp)
+    with app.app_context():
+        try:
+            bootstrap_defaults()
+        except Exception as e:
+            logger.error(f"默认数据引导失败: {e}", exc_info=True)
+            if REQUIRE_DB:
+                raise
+else:
+    logger.warning("数据库不可用：账号/历史记录相关接口已禁用（不影响核心疾病/相似度/导出/药物推荐接口）")
 
 # 记录启动信息
 logger.info(f"Flask应用已创建, CORS已配置")
